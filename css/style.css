@@ -1,0 +1,106 @@
+
+.rsOverflow{
+	min-height: 100%;
+}
+
+img.rsImg, img.rsMainSlideImage{
+	margin-top: 0px;
+}
+
+div.us{
+	background-image: url(../img/us.jpg);
+}
+
+div.shirts{
+	background-image: url(../img/shirts.jpg);
+}
+
+div.contact{
+	background-image: url(../img/contact.jpg);
+}
+
+div.us, div.shirts, div.contact{
+	background-size:100% auto;
+	background-repeat:no-repeat;
+}
+
+div.background_black{
+	background-color:#000;
+	opacity:0.4;
+	min-height: 100%;
+	min-width: 100%;
+	position: relative;
+}
+
+h1.main_title{
+	color: #fff;
+	position:absolute;
+	font-size: 100px;
+	width: 100%;
+	text-align: center;
+	top:0;
+}
+
+.navbar-fixed-top{
+	top:-90px;
+}
+
+nav{
+	height:90px;
+}
+
+.navbar-default{
+	background-color: transparent;
+	border:hidden;
+}
+
+div.background_white{
+	background-color:#fff;
+	height:100%;
+	opacity: 0.7;
+	position: absolute;
+	width: 100%;
+	z-index: -1;
+}
+
+.container-fluid{
+	margin-top:17px;
+}
+
+.navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:focus, .navbar-default .navbar-nav>.active>a:hover{
+	color:#000;
+	background-color: transparent;
+	font-size: 18px;
+}
+
+.navbar-default .navbar-nav>li>a{
+	color:#000;
+	font-size: 18px;
+}
+
+.nav>li>a{
+	padding-left: 30px;
+}
+
+div.menu-toggle{
+	position:absolute;
+	top:30px;
+	left:50px;
+	height:55px;
+	width:85px;
+	background-image:url(../img/braggart_diamond_2.png);
+	background-size:100% 100%;
+	background-repeat: no-repeat;
+}
+
+div.text_toggle{
+	position:absolute;
+	top:70px;
+	left:50px;
+	height:45px;
+	width:85px;
+}
+
+div.text_toggle h5{
+	width:100%;color:#fff;text-align:center;font-size:14px;font-weight:400;
+}

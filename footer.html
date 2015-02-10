@@ -1,0 +1,85 @@
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>-->
+    <script src="js/jquery.js"></script>
+
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/scripts.js"></script>
+    <script src="js/jquery.fullPage.min.js"></script>
+    <script src="royalslider/jquery.royalslider.min.js"></script>
+    <script>
+	$(document).ready(function() {
+	    $('#fullpage').fullpage({
+        //Navigation
+        menu: false,
+        anchors:['firstSlide', 'secondSlide'],
+        navigation: true,
+        navigationPosition: 'right',
+        navigationTooltips: ['Slide', 'La Tienda', 'Camisas', 'Contacto'],
+        slidesNavigation: false,
+        slidesNavPosition: 'bottom',
+
+        //Scrolling
+        css3: true,
+        scrollingSpeed: 700,
+        autoScrolling: true,
+        scrollBar: false,
+        easing: 'easeInQuart',
+        easingcss3: 'ease',
+        loopBottom: false,
+        loopTop: false,
+        loopHorizontal: true,
+        continuousVertical: false,
+        normalScrollElements: '#element1, .element2',
+        scrollOverflow: false,
+        touchSensitivity: 15,
+        normalScrollElementTouchThreshold: 5,
+
+        //Accessibility
+        keyboardScrolling: true,
+        animateAnchor: true,
+        recordHistory: true,
+
+        //Design
+        controlArrows: true,
+        verticalCentered: true,
+        resize : true,
+        sectionsColor : ['#ccc', '#fff'],
+        fixedElements: '#header, .footer',
+        responsive: 0,
+
+        //Custom selectors
+        sectionSelector: '.section',
+        slideSelector: '.slide',
+
+        //events
+        onLeave: function(index, nextIndex, direction){},
+        afterLoad: function(anchorLink, index){},
+        afterRender: function(){},
+        afterResize: function(){},
+        afterSlideLoad: function(anchorLink, index, slideAnchor, slideIndex){},
+        onSlideLeave: function(anchorLink, index, slideIndex, direction){}
+    });
+	});
+
+	jQuery(document).ready(function($) {
+	  $('#full-width-slider').royalSlider({
+	  	loop:true,
+	    keyboardNavEnabled: true,
+	    imageScaleMode: "fill",
+	    controlNavigation: "none",
+	    navigateByClick: true,
+	    usePreloader: true,
+	    sliderDrag: false
+	  });
+
+	  var width = $(window).width();
+	  var height = $(window).height();
+
+	  $('#full-width-slider').css({width: width+"px", height:height+"px"})
+
+	});
+
+	</script>
+  </body>
+</html>
