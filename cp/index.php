@@ -26,8 +26,8 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Panel Locker Agencia Digital S.A. de C.V.">
-    <meta name="author" content="Luis Josué Caamal Barbosa">
+    <meta name="description" content="Control Panel by Braggart Development">
+    <meta name="author" content="Braggart Web Development">
 
     <title>Login</title>
 
@@ -50,21 +50,18 @@
     	<div class="styled-large">
             <div id="navBlack" class="jumbotron navbar-fixed-top">
                 <div class="col-lg-4 col-md-4 col-sm-3 col-xs-3">
-                    <img id="imgLogo" class="imgNavBlack" src="img/logolocker.png">
-                    <spam id="urlLocker">www.locker.com.mx</spam>
+                    <img id="imgLogo" class="imgNavBlack" src="img/braggart_diamond_2.png" height="50" width="auto">
+                    <spam id="urlLocker">Braggart - Made for me</spam>
                 </div>
                 <div class="col-lg-8 col-md-8 col-sm-9 col-xs-9">
-                    <p id="fecha"><?php echo date('d')." ".$meses[date('n')-1]. " ".date('Y') ;?></p>      	
+                    <p id="fecha"><?php echo date('d')." de ".$meses[date('n')-1]. " del ".date('Y') ;?></p>      	
                 </div>
             </div>
             <div id="navBlue" class="jumbotron navbar-fixed-top">
-                <div class="col-lg-1 col-md-2">
-                    <div id="barraazul">
+                <div class="col-xs-12">
+                    <div id="barraazul" style="width:100%;">
                         <p id="panel">PANEL DE CONTROL</p>
                     </div>
-                </div>
-                <div class="col-lg-11 col-md-10">
-                    <p class="urlweb">Bienvenido al panel de control de www.notmonday.mx</p>
                 </div>
             </div>
         </div>
@@ -77,9 +74,6 @@
             </div>
             <div id="navBlueMovil" class="jumbotron navbar-fixed-top">
             	<p id="panel">PANEL DE CONTROL</p>
-            </div>
-            <div id="navBlueMovil2" class="jumbotron navbar-fixed-top">
-            	 <p class="urlweb">Bienvenido al panel de control de www.notmonday.mx</p>
             </div>
         </div>
     </header>
@@ -97,7 +91,7 @@
                     	<div class="row">
                         	<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                         		<?=$alert?>
-                            	<p class="login">Login</p>
+                            	<p class="login">Inicio de sesión</p>
                             </div>
                             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                     			<hr class="hrmenu">
@@ -111,7 +105,7 @@
                         			<input type="password" name="pass" class="form-control" placeholder="Contraseña" value="">
                         		</div>
                                 <div class="text-center">
-                                	<button type="submit"  name="operaciones" value="ingresar" class="buttonacceder">Acceder</button>
+                                	<button type="submit"  name="operaciones" value="ingresar" class="buttonacceder" style="background-color:rgb(0,91,127)">Iniciar Sesión</button>
                                 </div>
                             </form>        
                             </div>

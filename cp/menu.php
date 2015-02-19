@@ -26,20 +26,5 @@
                 <li <?php if ( $page == "listOrden.php" or $page == "formOrden.php"){ echo "class='active'";} ?>><a href="listOrden.php">Ventas</a>
                 </li>
                 <hr class="hrmenu">
-                <li <?php if ( $page == "formredsocial.php"){ echo "class='active'";} ?>><a href="formredsocial.php">Redes Sociales</a>
-                </li>
-                <hr class="hrmenu">
-
-                <!--<li <?php // if ($page == "listboletin.php" or $page == "formboletin.php"){ echo "class='active'";} ?>><a href="listboletin.php">Boletines</a>
-                </li>-->
-               	<!-- <hr class="hrmenu">  
-                <li <?php // if ($page == "mailing.php"){ echo "class='active'";} ?>><a href="mailing.php">Mailing</a>
-                </li>-->
-                <!--<hr class="hrmenu">-->
-                 <!--<li <?php //if ($page == "listplantillasmailing.php" or $page == "formplantillamailing.php"){ echo "class='active'";} ?>><a href="listplantillasmailing.php">Plantillas Mailing</a>
-                </li>-->
-                <li <?php if ($page == "formfaq.php"){ echo "class='active'";} ?>><a href="formfaq.php">FAQ</a>
-                </li>
-                <hr class="hrmenu">      
             </ul>
         </div>
