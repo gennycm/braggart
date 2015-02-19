@@ -12,9 +12,9 @@ var $conexion;
 		$this->host='localhost';
 		/*$this->user='locker07_yelmy';
 		$this->password='ympm16mc';*/
-		$this->user='locker07_brent';
-		$this->password='10Hooligans92';
-		$this->bd='locker07_notmonday';
+		$this->user='root';
+		$this->password='root';
+		$this->bd='braggart';
 	}
 	
 	function conectar()
