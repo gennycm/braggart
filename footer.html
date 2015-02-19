@@ -3,13 +3,51 @@
     <script src="js/jquery.js"></script>
 
     <!-- Include all compiled plugins (below), or include individual files as needed -->
+   <!-- Javascript -->
+    <script src="js/jquery.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/scripts.js"></script>
-    <script src="js/jquery.fullPage.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+    <script type="text/javascript" src="js/jquery.pagepiling.min.js"></script>
     <script src="royalslider/jquery.royalslider.min.js"></script>
+
     <script>
-	$(document).ready(function() {
-	    $('#fullpage').fullpage({
+    /*Parallax scrolling*/
+        var deleteLog = false;
+        $(document).ready(function() {
+            $('#pagepiling').pagepiling({
+                menu: false,
+                anchors: ['home', 'shirts', 'us', 'contact'],
+                navigation: {
+                    'textColor': '#f2f2f2',
+                    'bulletsColor': '#ccc',
+                    'position': 'right',
+                    'tooltips': ['INICIO', 'CAMISAS', 'LA TIENDA', 'CONTACTO']
+                }
+
+            });
+        });
+
+    jQuery(document).ready(function($) {
+      $('#full-width-slider').royalSlider({
+        loop:true,
+        keyboardNavEnabled: true,
+        imageScaleMode: "fill",
+        controlNavigation: "none",
+        navigateByClick: true,
+        usePreloader: true,
+        sliderDrag: false
+      });
+
+      var width = $(window).width();
+      var height = $(window).height();
+
+      $('#full-width-slider').css({width: width+"px", height:height+"px"})
+
+    });
+
+    $(document).ready(function() {
+        $('#fullpage').fullpage({
         //Navigation
         menu: false,
         anchors:['firstSlide', 'secondSlide'],
@@ -60,26 +98,7 @@
         afterSlideLoad: function(anchorLink, index, slideAnchor, slideIndex){},
         onSlideLeave: function(anchorLink, index, slideIndex, direction){}
     });
-	});
-
-	jQuery(document).ready(function($) {
-	  $('#full-width-slider').royalSlider({
-	  	loop:true,
-	    keyboardNavEnabled: true,
-	    imageScaleMode: "fill",
-	    controlNavigation: "none",
-	    navigateByClick: true,
-	    usePreloader: true,
-	    sliderDrag: false
-	  });
-
-	  var width = $(window).width();
-	  var height = $(window).height();
-
-	  $('#full-width-slider').css({width: width+"px", height:height+"px"})
-
-	});
-
-	</script>
+    });
+    </script>
   </body>
 </html>
