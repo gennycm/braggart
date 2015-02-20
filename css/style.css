@@ -295,3 +295,58 @@ table.contact td.decoration{
     transition-timing-function: cubic-bezier(0.550, 0.085, 0.000, 0.990);
     /* custom */
 }
+
+/*Slidebar*/
+html.sb-active #sb-site, .sb-toggle-left, .sb-toggle-right, .sb-open-left, .sb-open-right, .sb-close{
+	cursor: pointer;
+}
+
+p.login{
+	color: inherit;
+	margin-left: 20px;
+}
+
+/*Form*/
+.login-form{
+	margin: 20px;
+}
+
+.login-form p{
+	border-bottom: 1.5pt solid #000000;
+}
+
+.login-form label{
+	color: #7F7F7F;
+
+}
+
+.login-form input[type="text"], .login-form input[type="password"] {
+	text-align: left;
+	position: relative;
+	width: 92%;
+	padding: 1%;
+	background: transparent;
+	margin-bottom: 2%;
+	font-family: 'Montserrat', sans-serif;
+	color: #000000;
+	font-weight: 200;
+	font-size: 16px;
+	outline: none;
+	border: none;
+	-webkit-appearance: none;
+}
+
+::-webkit-input-placeholder { /* WebKit browsers */
+    color:    #000;
+}
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+   color:    #000;
+   opacity:  1;
+}
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+   color:    #000;
+   opacity:  1;
+}
+:-ms-input-placeholder { /* Internet Explorer 10+ */
+   color:    #000;
+}

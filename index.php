@@ -78,6 +78,15 @@
     </div>
 </div><!-- /.container-fluid -->
 
+<!--Login Slidebar-->
+<div class="sb-slidebar sb-right sb-style-overlay">
+    <form class="login-form"  method="post" onsubmit="" action="">
+      <p> <label><i class="fa fa-envelope fa-lg"></i></label> <input name="username" type="text" class="text" placeholder=" CORREO ELECTR&Oacute;NICO" ></p>
+
+
+    </form>
+</div>
+
 <!--BODY-->
 <?php include_once("footer.html");?>
 <script>
@@ -114,6 +123,13 @@
       $('#full-width-slider').css({width: width+"px", height:height+"px"})
 
     });
+
+    /*Slidebar*/
+    (function($) {
+        $(document).ready(function() {
+            $.slidebars();
+        });
+    }) (jQuery);
 
     /*$(document).ready(function() {
         $('#fullpage').fullpage({
