@@ -32,15 +32,17 @@
         </div>
         
         <div class="section" id="us">
-            <div class="background_black"></div>
-            <h1>LA TIENDA</h1>
-            <p></p>
+            <a style="display:block;" href="store.php">
+                <div class="background_black"></div>
+                <h1>LA TIENDA</h1>
+            </a>
         </div>
         
         <div class="section" id="shirts">
-            <div class="background_black"></div>
-            <h1>CAMISAS</h1>
-            <p></p>
+             <a style="display:block;" href="shirts.php">
+                <div class="background_black"></div>
+                <h1>CAMISAS</h1>
+            </a>
         </div>
         
         <div class="section" id="contact">
