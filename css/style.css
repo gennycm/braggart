@@ -6,35 +6,20 @@
 
 
 @font-face {
-font-family: 'FoglihtenDeH02';
-src: url("fonts/FoglihtenDeH02.otf") format("opentype");
+	font-family: 'Conv_FoglihtenDeH02';
+	src: url('../fonts/FoglihtenDeH02.eot');
+	src: local('☺'), url('../fonts/FoglihtenDeH02.woff') format('woff'), url('../fonts/FoglihtenDeH02.ttf') format('truetype'), url('../fonts/FoglihtenDeH02.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
 }
 
 @font-face {
-font-family: 'FoglihtenDeH02';
-font-weight: bold;
-src: url("fonts/FoglihtenDeH02.otf") format("opentype");
+	font-family: 'Conv_FoglihtenDeH02';
+	src: url('../fonts/FoglihtenDeH02.eot');
+	src: local('☺'), url('../fonts/FoglihtenDeH02.woff') format('woff'), url('../fonts/FoglihtenDeH02.ttf') format('truetype'), url('../fonts/FoglihtenDeH02.svg') format('svg');
+	font-weight: bold;
+	font-style: normal;
 }
-
-@font-face {
-font-family: 'FoglihtenDeH04';
-src: url("fonts/FoglihtenDeH04.otf") format("opentype");
-}
-
-@font-face {
-font-family: 'FoglihtenDeH04';
-font-weight: bold;
-src: url("fonts/FoglihtenDeH04.otf") format("opentype");
-}
-
-@font-face {
-  font-family: "Your italic typeface";
-  src: url("type/filename-ital.eot");
-  src: local("☺"),
-    url("type/filename-ital.woff") format("woff"),
-    url("type/filename-ital.otf") format("opentype"),
-    url("type/filename-ital.svg#filename-ital") format("svg");
-  }
 
 /*END FONTS*/
 body{
@@ -264,6 +249,7 @@ div.shirt{
 table.contact td{
 	display: table-cell;
 	padding: 0 5px 10px 10px;
+	z-index: 10;
 }
 
 
@@ -277,7 +263,7 @@ table.contact td.text{
 
 table.contact td.decoration{
 	text-align: center;
-	font-family: 'FoglihtenDeH02';
+	font-family:'Conv_FoglihtenDeH02',Sans-Serif;
 	font-size: 45pt;
 }
 
