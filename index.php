@@ -82,10 +82,19 @@
 
 <!--Login Slidebar-->
 <div class="sb-slidebar sb-right sb-style-overlay">
+    <i class="fa fa-times fa-2x sb-close"></i>
+    <form class="register-form"  method="post" onsubmit="" action="">
+      <p><label><i class="fa fa-envelope fa-lg"></i></label><input name="username" type="text" class="text" placeholder=" CORREO ELECTR&Oacute;NICO" ></p>
+      <p><label><i class="fa fa-key fa-lg"></i></label><input name="regPassword" type="password" class="text" placeholder=" CONTRASE&Ntilde;A" ></p>
+      <p><label><i class="fa fa-key fa-lg"></i></label><input name="confPassword" type="password" class="text" placeholder=" CONFIRMA CONTRASE&Ntilde;A" ></p>
+      <input type="submit" value="REGISTRARSE" >
+    </form>
+    <p style="height:30%"></p>
+
     <form class="login-form"  method="post" onsubmit="" action="">
-      <p> <label><i class="fa fa-envelope fa-lg"></i></label> <input name="username" type="text" class="text" placeholder=" CORREO ELECTR&Oacute;NICO" ></p>
-
-
+      <p><label><i class="fa fa-envelope fa-lg"></i></label><input name="username" type="text" class="text" placeholder=" CORREO ELECTR&Oacute;NICO" ></p>
+      <p><label><i class="fa fa-key fa-lg"></i></label><input name="iniPassword" type="password" class="text" placeholder=" CONTRASE&Ntilde;A" ></p>
+      <input type="submit" value="ENTRAR" >
     </form>
 </div>
 
@@ -138,6 +147,13 @@
         });
     }) (jQuery);
 
+/*Password placeholder , so the placeholder actually shows, and not just dots*/
+    $(function() {
+    // Invoke the plugin
+    $('input, textarea').placeholder({customClass:'my-placeholder'});
+    // That’s it, really.
+    });
+    
     /*$(document).ready(function() {
         $('#fullpage').fullpage({
         //Navigation

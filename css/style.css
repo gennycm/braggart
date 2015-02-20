@@ -299,26 +299,24 @@ html.sb-active #sb-site, .sb-toggle-left, .sb-toggle-right, .sb-open-left, .sb-o
 	cursor: pointer;
 }
 
-p.login{
-	color: inherit;
-	margin-left: 20px;
+
+/*Login form and Register form*/
+.login-form, .register-form{
+	margin-left: 50px;
+	margin-top: 25%;
 }
 
-/*Form*/
-.login-form{
-	margin: 20px;
-}
-
-.login-form p{
+.register-form p,.login-form p{
 	border-bottom: 1.5pt solid #000000;
+	float:left;
+	width: 75%;
 }
 
-.login-form label{
+.register-form label, .login-form label{
 	color: #7F7F7F;
-
 }
 
-.login-form input[type="text"], .login-form input[type="password"] {
+.login-form input[type="text"], .login-form input[type="password"],.register-form input[type="text"], .register-form input[type="password"] {
 	text-align: left;
 	position: relative;
 	width: 92%;
@@ -328,7 +326,7 @@ p.login{
 	font-family: 'Montserrat', sans-serif;
 	color: #000000;
 	font-weight: 200;
-	font-size: 16px;
+	font-size: 12pt;
 	outline: none;
 	border: none;
 	-webkit-appearance: none;
@@ -348,6 +346,35 @@ p.login{
 :-ms-input-placeholder { /* Internet Explorer 10+ */
    color:    #000;
 }
+
+.login-form input[type="submit"], .register-form input[type="submit"] {
+	padding: 3%;
+	margin-bottom: 8%;
+	background: #444444;
+	font-family: 'Montserrat', sans-serif;
+	color: #FFF;
+	font-size: 12pt;
+	outline: none;
+	border: none;
+	cursor: pointer;
+	font-weight: 500;
+	float: right;
+	margin-right:25%;
+
+}
+.login-form input[type="submit"]:hover, .register-form input[type="submit"]:hover {
+	background: #000;
+	color: #fff;
+}
+
+.fa-times{
+	float: right;
+	margin-right:10%;
+	margin-top: 6%;
+	color: black;
+}
+
+
 /*THE STORE*/
 
 div.icon-container{
