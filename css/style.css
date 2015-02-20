@@ -54,7 +54,17 @@ h1.main_title{
 	top:0;
 }
 
+div.logo-slide{
+	position: absolute;
+	right:30px;
+	bottom:20px;
+	z-index: 999;
+}
 
+div.logo-slide img{
+	height:150px;
+	width:auto;
+}
 
 div.background_white{
 	background-color:#fff;
@@ -205,6 +215,7 @@ div.shirt{
 
 #shirts h1,
 #shirts p{
+	text-shadow: 1px 5px 20px #000;
 	color: #fff;
 	position:absolute;
 	top:50%;
@@ -217,7 +228,7 @@ div.shirt{
 
 #us h1,
 #us p{
-	/*text-shadow: 1px 5px 20px #000;*/
+	text-shadow: 1px 5px 20px #000;
 	color: #fff;
 	position:absolute;
 	top:50%;

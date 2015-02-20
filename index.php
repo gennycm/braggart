@@ -11,6 +11,9 @@
        
         <div class="section" id="home">
             <div class="background_black"></div>
+            <div class="logo-slide">
+                <img src="./img/logo-slide.png" alt="">
+            </div>
             <div id="full-width-slider" class="royalSlider heroSlider rsMinW" style="width:100%;">
               <div class="rsContent">
                 <img class="rsImg" src="img_product/img_1.png" alt="">
