@@ -97,12 +97,12 @@
         $(document).ready(function() {
             $('#pagepiling').pagepiling({
                 menu: false,
-                anchors: ['home', 'shirts', 'us', 'contact'],
+                anchors: ['home', 'us', 'shirts', 'contact'],
                 navigation: {
                     'textColor': '#f2f2f2',
                     'bulletsColor': '#ccc',
                     'position': 'right',
-                    'tooltips': ['INICIO', 'CAMISAS', 'LA TIENDA', 'CONTACTO']
+                    'tooltips': ['INICIO', 'LA TIENDA', 'CAMISAS', 'CONTACTO']
                 }
 
             });
