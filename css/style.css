@@ -248,6 +248,10 @@ div.shirt{
 /*Tables*/
 
   table.contact {
+  	position: absolute;
+  	top:50%;
+  	margin-top: -100px;
+  	right:180px;
     margin-left:auto; 
     margin-right:auto;
     text-align: left;
@@ -255,6 +259,7 @@ div.shirt{
     color: white;
     line-height: 30px;
     opacity: 0.80;
+    z-index: 999;
   }
 
 table.contact td{

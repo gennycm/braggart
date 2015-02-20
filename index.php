@@ -45,41 +45,34 @@
         
         <div class="section" id="contact">
             <div class="background_black"></div>
-            <div class="row">
-                    <div class="col-lg-6 col-md-6 col-sm-6">
-                    </div>
-                   <div class="col-lg-6 col-md-6 col-sm-6">
-                        <div>
-                            <table class="contact">
-                                <tr>
-                                    <td colspan="2" class="decoration">
-                                        /+-'"-+?
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="icon"><i class="fa fa-phone fa-lg"></i></td>
-                                    <td class="text">(999) 9 48 30 46 </td>
-                                </tr>
-                                <tr>
-                                    <td class="icon"><i class="fa fa-envelope fa-lg"></i></td>
-                                    <td class="text">contacto@braggart.com </td>
-                                </tr>
-                                <tr>
-                                    <td class="icon"><i class="fa fa-facebook-official fa-lg"></i></td>
-                                    <td class="text">Tienda Braggart</td>
-                                </tr>
-                                <tr>
-                                    <td class="icon"><i class="fa fa-insta-official fa-lg"></i></td>
-                                    <td class="text">@BraggartMX </td>
-                                </tr>
-                                <tr>
-                                    <td colspan="2" class="decoration">
-                                        U+-'"-+u
-                                    </td>
-                                </tr>   
-                            </table>
-                        </div>
-                    </div>
+            <table class="contact">
+                <tr>
+                    <td colspan="2" class="decoration">
+                        U+-'"-+u
+                    </td>
+                </tr>
+                <tr>
+                    <td class="icon"><i class="fa fa-phone fa-lg"></i></td>
+                    <td class="text">(999) 9 48 30 46 </td>
+                </tr>
+                <tr>
+                    <td class="icon"><i class="fa fa-envelope fa-lg"></i></td>
+                    <td class="text">contacto@braggart.com </td>
+                </tr>
+                <tr>
+                    <td class="icon"><i class="fa fa-facebook-official fa-lg"></i></td>
+                    <td class="text">Tienda Braggart</td>
+                </tr>
+                <tr>
+                    <td class="icon"><i class="fa fa-insta-official fa-lg"></i></td>
+                    <td class="text">@BraggartMX </td>
+                </tr>
+                <tr>
+                    <td colspan="2" class="decoration">
+                        U+-'"-+u
+                    </td>
+                </tr>   
+            </table>
             </div>
         </div>
     </div>
