@@ -2,8 +2,15 @@
 <!--BODY-->
 
 <div id="pagepiling">
-	    <div class="background_black"></div>
+		<a href="#" style="display:block; position:fixed;z-index:1000;" onclick="display_menu()">
+			<div class="menu-toggle"></div>
+			<div class="text_toggle">
+				<h5>MENÚ</h5>
+			</div>
+		</a>	   
+	   
 	    <div class="section" id="home">
+	    	 <div class="background_black"></div>
 	    	<div id="full-width-slider" class="royalSlider heroSlider rsMinW" style="width:100%;">
 			  <div class="rsContent">
 			    <img class="rsImg" src="img_product/img_1.png" alt="">
@@ -18,25 +25,23 @@
 			    <img class="rsImg" src="img_product/img_4.jpg" alt="">
 			  </div>
 			</div>
-			<a href="#" style="display:block" onclick="display_menu()">
-			<div class="menu-toggle"></div>
-			<div class="text_toggle">
-				<h5>MENÚ</h5>
-			</div>
-		</a>	    	
+			 	
 	    </div>
-	    <div class="background_black"></div>
+	    
 	    <div class="section" id="us">
-	    		<h1>La tienda</h1>
-	    		<p></p>
+	    	<div class="background_black"></div>
+    		<h1>LA TIENDA</h1>
+    		<p></p>
 	    </div>
-	    <div class="background_black"></div>
+	    
 	    <div class="section" id="shirts">
-	    		<h1>Camisas</h1>
-	    		<p></p>
+	    	<div class="background_black"></div>
+    		<h1>CAMISAS</h1>
+    		<p></p>
 	    </div>
-    	<div class="background_black"></div>
+    	
 	    <div class="section" id="contact">
+	    	<div class="background_black"></div>
 	    	<div class="row">
                     <div class="col-lg-6 col-md-6 col-sm-6">
                     </div>

@@ -55,7 +55,8 @@ div.background_black{
 	opacity:0.4;
 	min-height: 100%;
 	min-width: 100%;
-	position: relative;
+	position: absolute;
+	top:0;
 }
 
 h1.main_title{
@@ -83,7 +84,7 @@ div.background_white{
 }
 
 .navbar-fixed-top{
-	top:-90px;
+	top:-120px;
 }
 
 nav{
@@ -102,14 +103,15 @@ nav{
 	font-size: 18px;
 }
 .navbar-default .navbar-nav>.active>a:after {
-		content: ' ';
+	content: ' ';
 	height: 0;
 	position: absolute;
+	opacity: 0.7;
 	width: 0;
 	border: 30px solid transparent;
-	border-top-color: #333;
-	top: 100%;
-	left: 50%;
+	border-top-color: #fff;
+	top: 73px;
+	left: 35px;
 	margin-left: -10px;
 }
 .navbar-default .navbar-nav>li>a{
@@ -211,13 +213,25 @@ h1{
 
 #shirts h1,
 #shirts p{
-	text-shadow: 1px 5px 20px #000;
+	color: #fff;
+	position:absolute;
+	top:50%;
+	font-size: 90px;
+	margin-top: -24px;
+	width: 100%;
+	text-align: center;
 }
 
 #us h1,
 #us p{
-	text-shadow: 1px 5px 20px #000;
+	/*text-shadow: 1px 5px 20px #000;*/
 	color: #fff;
+	position:absolute;
+	top:50%;
+	font-size: 90px;
+	margin-top: -24px;
+	width: 100%;
+	text-align: center;
 }
 
 #contact h1,

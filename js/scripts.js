@@ -6,7 +6,7 @@ function display_menu(){
 }
 
 function hide_menu(){
-	$("nav").animate({top:"-90px"});
+	$("nav").animate({top:"-120px"});
 	$(".menu-toggle").fadeIn();
 	$(".text_toggle").fadeIn();
 }
