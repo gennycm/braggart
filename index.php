@@ -119,6 +119,11 @@
         sliderDrag: false
       });
 
+      setInterval(function(){
+        var slider = $(".royalSlider").data('royalSlider');
+        slider.next();  // next slide
+    }, 4500);
+
       var width = $(window).width();
       var height = $(window).height();
 
