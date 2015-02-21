@@ -62,7 +62,7 @@ div.logo-slide{
 }
 
 div.logo-slide img{
-	height:150px;
+	height:300px;
 	width:auto;
 }
 
@@ -392,7 +392,8 @@ div.icon-container{
 
 p.icon-p{
 	color:#fff;
-	font-family: Arial;
+	font-family: 'Montserrat', sans-serif;
+	font-weight: 200;
 	font-size: 18px;
 	text-align: center;
 	width:250px;
