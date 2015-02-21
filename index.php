@@ -87,14 +87,14 @@
       <p><label><i class="fa fa-envelope fa-lg"></i></label><input name="username" type="text" class="text" placeholder=" CORREO ELECTR&Oacute;NICO" ></p>
       <p><label><i class="fa fa-key fa-lg"></i></label><input name="regPassword" type="password" class="text" placeholder=" CONTRASE&Ntilde;A" ></p>
       <p><label><i class="fa fa-key fa-lg"></i></label><input name="confPassword" type="password" class="text" placeholder=" CONFIRMA CONTRASE&Ntilde;A" ></p>
-      <input type="submit" value="REGISTRARSE" >
+      <input type="submit" class="hvr-sweep-to-right" value="REGISTRARSE" >
     </form>
     <p style="height:30%"></p>
 
     <form class="login-form"  method="post" onsubmit="" action="">
       <p><label><i class="fa fa-envelope fa-lg"></i></label><input name="username" type="text" class="text" placeholder=" CORREO ELECTR&Oacute;NICO" ></p>
       <p><label><i class="fa fa-key fa-lg"></i></label><input name="iniPassword" type="password" class="text" placeholder=" CONTRASE&Ntilde;A" ></p>
-      <input type="submit" value="ENTRAR" >
+      <input type="submit" class="hvr-sweep-to-right" value="ENTRAR" >
     </form>
 </div>
 
