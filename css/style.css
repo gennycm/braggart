@@ -21,9 +21,50 @@
 	font-style: normal;
 }
 
+@font-face {
+	font-family: 'Conv_Mission Gothic Thin';
+	src: url('../fonts/Mission Gothic Thin.eot');
+	src: local('☺'), url('../fonts/Mission Gothic Thin.woff') format('woff'), url('../fonts/Mission Gothic Thin.ttf') format('truetype'), url('../fonts/Mission Gothic Thin.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Conv_MissionGothicRegular';
+	src: url('../fonts/Conv_MissionGothicRegular.eot');
+	src: local('☺'), url('../fonts/MissionGothicRegular.woff') format('woff'), url('../fonts/MissionGothicRegular.ttf') format('truetype'), url('../fonts/MissionGothicRegular.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Conv_Mission Gothic Light';
+	src: url('../fonts/Mission Gothic Light.eot');
+	src: local('☺'), url('../fonts/Mission Gothic Light.woff') format('woff'), url('../fonts/Mission Gothic Light.ttf') format('truetype'), url('../fonts/Mission Gothic Light.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Conv_Mission Gothic Bold';
+	src: url('../fonts/Mission Gothic Bold.eot');
+	src: local('☺'), url('../fonts/Mission Gothic Bold.woff') format('woff'), url('../fonts/Mission Gothic Bold.ttf') format('truetype'), url('../fonts/Mission Gothic Bold.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Conv_Mission Gothic Black';
+	src: url('../fonts/Mission Gothic Black.eot');
+	src: local('☺'), url('../fonts/Mission Gothic Black.woff') format('woff'), url('../fonts/Mission Gothic Black.ttf') format('truetype'), url('../fonts/Mission Gothic Black.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+
 /*END FONTS*/
 body{
-	font-family: 'Montserrat', sans-serif;
+	font-family: 'Conv_Mission Gothic Light', sans-serif;
 }
 
 
@@ -85,7 +126,7 @@ div.background_white{
 
 nav{
 	height:90px;
-	font-family: 'Raleway', sans-serif;
+	font-family: 'Conv_Mission Gothic Light', sans-serif;
 }
 
 .navbar-default{
@@ -155,7 +196,7 @@ div.text_toggle h5{
 	text-align:center;
 	font-size:18px;
 	font-weight:200;
-	font-family: 'Montserrat', sans-serif;
+	font-family: 'Conv_Mission Gothic Light', sans-serif;
 
 }
 
@@ -163,7 +204,7 @@ div.text_toggle h5{
 * --------------------------------------- */
 h1{
 	font-size: 5em;
-	font-family: 'Raleway', sans-serif;	
+	font-family: 'Conv_Mission Gothic Light', sans-serif;	
 	color: #fff;
 	margin:0;
 	padding:0;
@@ -323,7 +364,7 @@ html.sb-active #sb-site, .sb-toggle-left, .sb-toggle-right, .sb-open-left, .sb-o
 	padding: 1%;
 	background: transparent;
 	margin-bottom: 2%;
-	font-family: 'Montserrat', sans-serif;
+	font-family: 'Conv_Mission Gothic Light', sans-serif;
 	color: #000000;
 	font-weight: 200;
 	font-size: 12pt;
@@ -351,7 +392,7 @@ html.sb-active #sb-site, .sb-toggle-left, .sb-toggle-right, .sb-open-left, .sb-o
 	padding: 3%;
 	margin-bottom: 8%;
 	background: #444444;
-	font-family: 'Montserrat', sans-serif;
+	font-family: 'Conv_Mission Gothic Light', sans-serif;
 	color: #FFF;
 	font-size: 12pt;
 	outline: none;
@@ -392,7 +433,7 @@ div.icon-container{
 
 p.icon-p{
 	color:#fff;
-	font-family: 'Montserrat', sans-serif;
+	font-family: 'Conv_Mission Gothic Light', sans-serif;
 	font-weight: 200;
 	font-size: 18px;
 	text-align: center;

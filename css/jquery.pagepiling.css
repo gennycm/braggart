@@ -11,6 +11,15 @@
 @import url(http://fonts.googleapis.com/css?family=Raleway:400,500,300,200);
 /*font-family: 'Raleway', sans-serif;*/
 
+@font-face {
+    font-family: 'Conv_Mission Gothic Thin';
+    src: url('../fonts/Mission Gothic Thin.eot');
+    src: local('☺'), url('../fonts/Mission Gothic Thin.woff') format('woff'), url('../fonts/Mission Gothic Thin.ttf') format('truetype'), url('../fonts/Mission Gothic Thin.svg') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
 html, body {
     overflow:hidden;
     margin:0;
@@ -82,7 +91,7 @@ html, body {
     height: 13px;
     margin: 7px;
     position:relative;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Conv_Mission Gothic Thin', sans-serif;
 
 }
 .pp-slidesNav li {
@@ -120,7 +129,7 @@ html, body {
     top: -2px;
     color: #fff;
     font-size: 14px;
-    font-family: arial, helvetica, sans-serif;
+    font-family: 'Conv_Mission Gothic Thin', sans-serif;
     white-space: nowrap;
     max-width: 220px;
 }
