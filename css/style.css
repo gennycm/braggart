@@ -200,6 +200,62 @@ div.text_toggle h5{
 
 }
 
+/*right-floating-menu*/
+div.right-floating-menu{
+	top:120px;
+	width:150px;
+	background:transparent;
+	position: absolute;
+	right:-175px;
+	z-index: 999;
+
+}
+
+div.cart-icon i{
+	font-size: 24px;
+	color:#fff;
+	float: right;
+	cursor: pointer;
+}
+
+div.search-icon{
+	margin-top: 20px;
+}
+
+div.search-icon i{
+	font-size: 24px;
+	color:#fff;
+	float: right;
+	clear: none;
+	cursor: pointer;
+}
+
+div.search-icon input{
+	background-color: transparent;
+	color:#fff;
+	border:hidden;
+	float: left;
+	clear: none;
+	width: 120px;
+	display: none;
+}
+
+div.search-icon ::-webkit-input-placeholder { /* WebKit browsers */
+    color:    #fff;
+}
+div.search-icon :-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+   color:    #fff;
+   opacity:  1;
+}
+div.search-icon ::-moz-placeholder { /* Mozilla Firefox 19+ */
+   color:    #fff;
+   opacity:  1;
+}
+div.search-icon:-ms-input-placeholder { /* Internet Explorer 10+ */
+   color:    #fff;
+}
+/*right-floating-menu*/
+
 /* Style for our header texts
 * --------------------------------------- */
 h1{
@@ -229,7 +285,7 @@ h1{
 /* Defining each section background and styles
 * --------------------------------------- */
 #home{
-	background-image: url(../imgs/bg1.jpg);
+	/*background-image: url(../img/bg1.jpg);*/
 }
 #shirts{
 	background-image: url(../img/shirts.jpg);
