@@ -80,10 +80,16 @@
 			var $right = $('.sb-right'), // Cache the selector.
 			rightActive = false; // Used to check whether the right Slidebar is open or closed.
 		}
+
+				// Right Slidebar
+		if ($('.sb-right2').length) { // Check if the right Slidebar exists.
+			var $right = $('.sb-right2'), // Cache the selector.
+			rightActive = false; // Used to check whether the right Slidebar is open or closed.
+		}
 				
 		var init = false, // Initialisation variable.
 		windowWidth = $(window).width(), // Get width of window.
-		$controls = $('.sb-toggle-left, .sb-toggle-right, .sb-open-left, .sb-open-right, .sb-close'), // Cache the control classes.
+		$controls = $('.sb-toggle-left, .sb-toggle-right, .sb-open-left, .sb-open-right, .sb-open-right2 .sb-close'), // Cache the control classes.
 		$slide = $('.sb-slide'); // Cache users elements to animate.
 		
 		// Initailise Slidebars
@@ -315,6 +321,12 @@
 		
 		// Open right Slidebar
 		$('.sb-open-right').on('touchend click', function(event) {
+			eventHandler(event, $(this)); // Handle the event.
+			open('right'); // Open the right Slidebar.
+		});
+
+		// Open right Slidebar
+		$('.sb-open-right2').on('touchend click', function(event) {
 			eventHandler(event, $(this)); // Handle the event.
 			open('right'); // Open the right Slidebar.
 		});

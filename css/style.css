@@ -86,6 +86,42 @@ div.background_black{
 	z-index: 1;
 }
 
+#triangleWrapper {
+    width: 100%;
+    height:100%;
+    float:right;
+}
+
+.segmentTriangle {
+    width: 100%;
+    height: 40%;
+    right: 0px;
+    bottom:0px;
+    position: fixed;
+    background: linear-gradient(to right bottom,  transparent 50%,white 50%);
+    opacity: 0.4;
+    z-index: 2;
+
+}
+
+.sc_icon{
+	z-index: 20;
+	bottom: 10%;
+	color: white;
+	position: fixed;
+	margin-left: -5%;
+
+}
+
+.wl_icon{
+	z-index: 20;
+	bottom: 10%;
+	color: white;
+	position: fixed;
+	margin-left: 10%;
+}
+
+
 h1.main_title{
 	color: #fff;
 	position:absolute;
@@ -99,7 +135,7 @@ div.logo-slide{
 	position: absolute;
 	right:30px;
 	bottom:20px;
-	z-index: 999;
+	z-index: 888;
 }
 
 div.logo-slide img{
@@ -207,7 +243,7 @@ div.right-floating-menu{
 	background:transparent;
 	position: absolute;
 	right:-175px;
-	z-index: 999;
+	z-index: 888;
 
 }
 
@@ -343,14 +379,11 @@ div.shirt{
 /*Tables*/
 
   table.contact {
-  	position: absolute;
-  	top:50%;
-  	margin-top: -100px;
-  	right:180px;
+  	position: relative;
     margin-left:auto; 
     margin-right:auto;
     text-align: left;
-    font-size: 16px;
+    font-size: 20px;
     color: white;
     line-height: 30px;
     opacity: 0.80;
@@ -392,7 +425,7 @@ table.contact td.decoration{
 }
 
 /*Slidebar*/
-html.sb-active #sb-site, .sb-toggle-left, .sb-toggle-right, .sb-open-left, .sb-open-right, .sb-close{
+html.sb-active #sb-site, .sb-toggle-left, .sb-toggle-right, .sb-open-left, .sb-open-right2, .sb-close{
 	cursor: pointer;
 }
 
@@ -512,3 +545,95 @@ div.delivery{
 	background-size: 70% auto;
 }
 /*THE STORE*/
+
+
+
+/*SLIDER 2*/
+
+.sidebar.left {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 270px;
+  background: rgba(68, 68, 68,.9);
+  color: white;
+  padding: 30px;
+  box-shadow: 0 0 5px black;
+  font-size: 31px;
+  text-align: center;
+}
+
+.sidebar.right {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 70%;
+  background: white;
+  color: black;
+ /* padding: 30px;*/
+ /* box-shadow: 0 0 5px black;*/
+  font-size: 18px;
+  text-align: center;
+}
+
+.sidebar.bottom {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 270px;
+  background: rgb(68, 68, 68);
+  color: white;
+  padding: 30px;
+  box-shadow: 0 0 5px black;
+  font-size: 31px;
+  text-align: center;
+}
+
+.sidebar.top {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  height: 120px;
+  background: rgb(68, 68, 68);
+  color: white;
+  padding: 30px;
+  box-shadow: 0 0 5px black;
+  font-size: 31px;
+  text-align: center;
+}
+
+.sidebar{
+	z-index: 999;
+}
+
+.sidebar.closeright{
+	float: right;
+	top: 5%;
+	color: black;
+}
+
+.decoration{
+	text-align: center;
+	font-family:'Conv_FoglihtenDeH02',Sans-Serif;
+	margin-top: -15px;
+}
+/*END sLIDER 2*/
+
+/*SHOPPING CART*/
+.square {
+    background: blue;
+    width: 2vw;
+    height: 2vw;
+    float: right;
+    right: -10px;
+}
+
+ .shirt_mini{
+ 	background-image: url(../img/blue-shirt.jpg);
+ 	width: 100%;
+ 	z-index: 1000;
+ }

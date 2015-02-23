@@ -47,6 +47,11 @@
         
         <div class="section" id="contact">
             <div class="background_black"></div>
+            <div class="row">
+                    <div class="col-lg-6 col-md-6 col-sm-6">
+                    </div>
+                   <div class="col-lg-6 col-md-6 col-sm-6">
+                        <div>
             <table class="contact">
                 <tr>
                     <td colspan="2" class="decoration">
@@ -75,6 +80,9 @@
                     </td>
                 </tr>   
             </table>
+        </div>
+    </div>
+</div>
             </div>
         </div>
     </div>
