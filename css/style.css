@@ -103,7 +103,7 @@ div.logo-slide{
 }
 
 div.logo-slide img{
-	height:300px;
+	height:200px;
 	width:auto;
 }
 
@@ -185,7 +185,7 @@ div.menu-toggle{
 div.text_toggle{
 	position:absolute;
 	top:70px;
-	left:50px;
+	left:47px;
 	height:45px;
 	width:85px;
 }
@@ -194,7 +194,7 @@ div.text_toggle h5{
 	width:100%;
 	color:#fff;
 	text-align:center;
-	font-size:18px;
+	font-size:14px;
 	font-weight:200;
 	font-family: 'Conv_Mission Gothic Light', sans-serif;
 
@@ -444,7 +444,7 @@ html.sb-active #sb-site, .sb-toggle-left, .sb-toggle-right, .sb-open-left, .sb-o
    color:    #000;
 }
 
-.login-form input[type="submit"], .register-form input[type="submit"] {
+.login-form a, .register-form a {
 	padding: 3%;
 	margin-bottom: 8%;
 	background: #444444;
@@ -453,14 +453,21 @@ html.sb-active #sb-site, .sb-toggle-left, .sb-toggle-right, .sb-open-left, .sb-o
 	font-size: 12pt;
 	outline: none;
 	border: none;
+	border-radius: 0;
 	cursor: pointer;
 	font-weight: 500;
 	float: right;
 	margin-right:25%;
+	width: 100px;
 
 }
-.login-form input[type="submit"]:hover, .register-form input[type="submit"]:hover {
-	background: #000;
+
+.hvr-sweep-to-right:before{
+	background:#000;
+}
+
+.login-form a:hover, .register-form a:hover {
+	/*background: #000;*/
 	color: #fff;
 }
 
