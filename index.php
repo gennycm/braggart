@@ -82,7 +82,7 @@
 
 <!--Login Slidebar-->
 <?php include_once("login_register.html");?>
-
+<?php include_once("cart.html");?>
 
 <!--BODY-->
 <?php include_once("footer.html");?>

@@ -396,6 +396,41 @@ html.sb-active #sb-site, .sb-toggle-left, .sb-toggle-right, .sb-open-left, .sb-o
 	cursor: pointer;
 }
 
+/*Cart*/
+div.cart-window{
+	position: absolute;
+	height:100%;
+	background-color: #fff;
+	width:50%;
+	z-index: 1000;
+	right:0;
+}
+
+h1.cart-header{
+	color:#000;
+	font-family: 'Conv_Mission Gothic Light', sans-serif;
+	font-size: 24px;
+	width: 100%;
+	text-align: center;
+}
+
+.cart-window table{
+	width:100%;
+}
+
+.cart-window table  thead  th{
+	text-align: center;
+}
+
+div.color-square{
+	border:solid 1px #000;
+	height:50px;
+	width:50px;
+	margin:0 auto;
+	display: table;
+}
+
+/*Cart*/
 
 /*Login form and Register form*/
 .login-form, .register-form{
