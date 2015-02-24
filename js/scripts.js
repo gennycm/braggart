@@ -32,3 +32,7 @@ function search_product(){
 	var search_string = $(".search-icon input").val();
 	window.location.href = "shirts.php?s="+search_string;
 }
+
+function validateRegister(){
+	return false;
+}
