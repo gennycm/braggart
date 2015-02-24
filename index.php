@@ -90,6 +90,7 @@
 
 <!--Login Slidebar-->
 <?php include_once("login_register.html");?>
+<!--Cart Slidebar-->
 <?php include_once("cart.html");?>
 
 <!--BODY-->
@@ -147,58 +148,28 @@
     $('input, textarea').placeholder({customClass:'my-placeholder'});
     // That’s it, really.
     });
-    
-    /*$(document).ready(function() {
-        $('#fullpage').fullpage({
-        //Navigation
-        menu: false,
-        anchors:['firstSlide', 'secondSlide'],
-        navigation: true,
-        navigationPosition: 'right',
-        navigationTooltips: ['Slide', 'La Tienda', 'Camisas', 'Contacto'],
-        slidesNavigation: false,
-        slidesNavPosition: 'bottom',
+       
+    /*2nd slidebar*/
 
-        //Scrolling
-        css3: true,
-        scrollingSpeed: 700,
-        autoScrolling: true,
-        scrollBar: false,
-        easing: 'easeInQuart',
-        easingcss3: 'ease',
-        loopBottom: false,
-        loopTop: false,
-        loopHorizontal: true,
-        continuousVertical: false,
-        normalScrollElements: '#element1, .element2',
-        scrollOverflow: false,
-        touchSensitivity: 15,
-        normalScrollElementTouchThreshold: 5,
+    // All sides
+    var sides = ["left", "top", "right", "bottom"];
 
-        //Accessibility
-        keyboardScrolling: true,
-        animateAnchor: true,
-        recordHistory: true,
+    // Initialize sidebars
+    for (var i = 0; i < sides.length; ++i) {
+        var cSide = sides[i];
+        $(".sidebar." + cSide).sidebar({side: cSide}).hide().trigger("sidebar:close").on("sidebar:closed", function () {
+            $(this).show();
+        });
+    }
 
-        //Design
-        controlArrows: true,
-        verticalCentered: true,
-        resize : true,
-        sectionsColor : ['#ccc', '#fff'],
-        fixedElements: '#header, .footer',
-        responsive: 0,
-
-        //Custom selectors
-        sectionSelector: '.section',
-        slideSelector: '.slide',
-
-        //events
-        onLeave: function(index, nextIndex, direction){},
-        afterLoad: function(anchorLink, index){},
-        afterRender: function(){},
-        afterResize: function(){},
-        afterSlideLoad: function(anchorLink, index, slideAnchor, slideIndex){},
-        onSlideLeave: function(anchorLink, index, slideIndex, direction){}
+    // Click handlers
+    $(".sidebar").on("click", function () {
+        var $this = $(this);
+        var action = $this.attr("data-action");
+        var side = $this.attr("data-side");
+        $(".sidebar." + side).trigger("sidebar:" + action);
+        return false;
     });
-    });*/
+        
+   
     </script>

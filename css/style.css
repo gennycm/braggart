@@ -425,7 +425,7 @@ table.contact td.decoration{
 }
 
 /*Slidebar*/
-html.sb-active #sb-site, .sb-toggle-left, .sb-toggle-right, .sb-open-left, .sb-open-right2, .sb-close{
+html.sb-active #sb-site, .sb-toggle-left, .sb-toggle-right, .sb-open-left, .sb-close{
 	cursor: pointer;
 }
 
@@ -592,20 +592,22 @@ div.delivery{
 
 /*SLIDER 2*/
 
+/*Product info*/
 .sidebar.left {
   position: fixed;
   top: 0;
   left: 0;
   bottom: 0;
-  width: 270px;
-  background: rgba(68, 68, 68,.9);
-  color: white;
-  padding: 30px;
-  box-shadow: 0 0 5px black;
-  font-size: 31px;
+  width: 40%;
+  background: white;
+  color: black;
+ /** padding: 30px;
+  box-shadow: 0 0 5px black;**/
+  font-size: 18px;
   text-align: center;
 }
 
+/*Shopping cart*/
 .sidebar.right {
   position: fixed;
   top: 0;
@@ -652,11 +654,6 @@ div.delivery{
 	z-index: 999;
 }
 
-.sidebar.closeright{
-	float: right;
-	top: 5%;
-	color: black;
-}
 
 .decoration{
 	text-align: center;
@@ -678,4 +675,8 @@ div.delivery{
  	background-image: url(../img/blue-shirt.jpg);
  	width: 100%;
  	z-index: 1000;
+ }
+
+ table.shopping{
+
  }

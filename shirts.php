@@ -10,6 +10,7 @@
         </a>       
        
         <div class="section shirt" id="shirt1" style="background-image:url(./img_product/img_4.jpg);">
+            <div class="background_black"></div>
                <div id="triangleWrapper">
                     <div  class="segmentTriangle">
                     </div>
@@ -17,8 +18,10 @@
                         <div class="col-lg-6 col-md-6 col-sm-6">
                         </div>
                         <div class="col-lg-6 col-md-6 col-sm-6">
-<a href="#" class="sidebar" data-action="open" data-side="right"><i class=" sc_icon fa fa-shopping-cart fa-3x"></i></a>                            
-                            <i class="wl_icon fa fa-heart-o fa-3x"></i>
+                            <a href="#" class="sidebar" data-action="open" data-side="left">
+                                <i class=" sc_icon fa fa-shopping-cart fa-3x"></i> 
+                            </a>                          
+                            <i class="wl_icon fa fa-heart-o fa-3x sb-open-left"></i>
                         </div>
 
                     </div>
@@ -27,16 +30,61 @@
         
         <div class="section shirt" id="shirt2" style="background-image:url(./img_product/img_6.jpg);">
             <div class="background_black"></div>
+            <div id="triangleWrapper">
+                    <div  class="segmentTriangle">
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-6 col-md-6 col-sm-6">
+                        </div>
+                        <div class="col-lg-6 col-md-6 col-sm-6">
+                            <a href="#" class="sidebar" data-action="open" data-side="left">
+                                <i class=" sc_icon fa fa-shopping-cart fa-3x"></i> 
+                            </a>                          
+                            <i class="wl_icon fa fa-heart-o fa-3x sb-open-left"></i>
+                        </div>
+
+                    </div>
+                </div>
             
         </div>
         
         <div class="section shirt" id="shirt3" style="background-image:url(./img_product/img_3.jpg);">
             <div class="background_black"></div>
+            <div id="triangleWrapper">
+                    <div  class="segmentTriangle">
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-6 col-md-6 col-sm-6">
+                        </div>
+                        <div class="col-lg-6 col-md-6 col-sm-6">
+                            <a href="#" class="sidebar" data-action="open" data-side="left">
+                                <i class=" sc_icon fa fa-shopping-cart fa-3x"></i> 
+                            </a>                          
+                            <i class="wl_icon fa fa-heart-o fa-3x sb-open-left"></i>
+                        </div>
+
+                    </div>
+                </div>
             
         </div>
          
         <div class="section shirt" id="shirt4" style="background-image:url(./img_product/img_5.jpg);">
             <div class="background_black"></div>
+            <div id="triangleWrapper">
+                    <div  class="segmentTriangle">
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-6 col-md-6 col-sm-6">
+                        </div>
+                        <div class="col-lg-6 col-md-6 col-sm-6">
+                            <a href="#" class="sidebar" data-action="open" data-side="left">
+                                <i class=" sc_icon fa fa-shopping-cart fa-3x"></i> 
+                            </a>                          
+                            <i class="wl_icon fa fa-heart-o fa-3x sb-open-left"></i>
+                        </div>
+
+                    </div>
+                </div>
            
         </div>
     </div>
@@ -44,59 +92,16 @@
 
 
 <!--Login Slidebar-->
-<div class="sb-slidebar sb-right sb-style-overlay">
-    <i class="fa fa-times fa-2x sb-close"></i>
-    <form class="register-form"  method="post" onsubmit="" action="">
-      <p><label><i class="fa fa-envelope fa-lg"></i></label><input name="username" type="text" class="text" placeholder=" CORREO ELECTR&Oacute;NICO" ></p>
-      <p><label><i class="fa fa-key fa-lg"></i></label><input name="regPassword" type="password" class="text" placeholder=" CONTRASE&Ntilde;A" ></p>
-      <p><label><i class="fa fa-key fa-lg"></i></label><input name="confPassword" type="password" class="text" placeholder=" CONFIRMA CONTRASE&Ntilde;A" ></p>
-      <input type="submit" class="hvr-sweep-to-right" value="REGISTRARSE" >
-    </form>
-    <p style="height:30%"></p>
-
-    <form class="login-form"  method="post" onsubmit="" action="">
-      <p><label><i class="fa fa-envelope fa-lg"></i></label><input name="username" type="text" class="text" placeholder=" CORREO ELECTR&Oacute;NICO" ></p>
-      <p><label><i class="fa fa-key fa-lg"></i></label><input name="iniPassword" type="password" class="text" placeholder=" CONTRASE&Ntilde;A" ></p>
-      <input type="submit" class="hvr-sweep-to-right" value="ENTRAR" >
-    </form>
-</div>
+<?php include_once("login_register.html");?>
 
 <!--Cart Slidebar-->
-  <div class="sidebar right">
-     <div class="row">
-        <div class="col-lg-4 col-md-4 col-sm-4"></div>
-        <div class="col-lg-4 col-md-4 col-sm-4">
-            <h3>CARRITO DE COMPRAS</h3>
-        </div>
-        <div class="col-lg-4 col-md-4 col-sm-4">
-            <a href="#" class="sidebar" data-action="close" data-side="right">
-                <i class="fa fa-times fa-lg"></i>
-             </a>
-        </div>
-      </div>
-    <div class="row"></div>
-    <div class="row">
-        <div class="col-lg-4 col-md-4 col-sm-4"></div>
-        <div class="col-lg-4 col-md-4 col-sm-4">
-            <h3 class="decoration">U++-++-4$+-+-++u</h3>
-        </div>
-        <div class="col-lg-4 col-md-4 col-sm-4">
-        </div>
-      </div>
-      <div class="row">
-         <div class="col-md-4">
-            <div class="col-xs-4">
-                <div class="square"></div>
-            </div>
-                <div class="shirt_mini"></div>
-            
-         </div>
-        <div class="col-md-4"><div class="square"></div></div>
+<?php include_once("cart.html");?>
 
+<!--Product Slidebar-->
+<?php include_once("product_info.html");?>
 
-      </div>
-</div>
-
+<!--Product Slidebar-->
+<?php include_once("wishlist.html");?>
 
 <!--BODY-->
 <?php include_once("footer.html");?>

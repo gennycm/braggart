@@ -35,22 +35,9 @@
 
 
 <!--Login Slidebar-->
-<div class="sb-slidebar sb-right sb-style-overlay">
-    <i class="fa fa-times fa-2x sb-close"></i>
-    <form class="register-form"  method="post" onsubmit="" action="">
-      <p><label><i class="fa fa-envelope fa-lg"></i></label><input name="username" type="text" class="text" placeholder=" CORREO ELECTR&Oacute;NICO" ></p>
-      <p><label><i class="fa fa-key fa-lg"></i></label><input name="regPassword" type="password" class="text" placeholder=" CONTRASE&Ntilde;A" ></p>
-      <p><label><i class="fa fa-key fa-lg"></i></label><input name="confPassword" type="password" class="text" placeholder=" CONFIRMA CONTRASE&Ntilde;A" ></p>
-      <input type="submit" class="hvr-sweep-to-right" value="REGISTRARSE" >
-    </form>
-    <p style="height:30%"></p>
-
-    <form class="login-form"  method="post" onsubmit="" action="">
-      <p><label><i class="fa fa-envelope fa-lg"></i></label><input name="username" type="text" class="text" placeholder=" CORREO ELECTR&Oacute;NICO" ></p>
-      <p><label><i class="fa fa-key fa-lg"></i></label><input name="iniPassword" type="password" class="text" placeholder=" CONTRASE&Ntilde;A" ></p>
-      <input type="submit" class="hvr-sweep-to-right" value="ENTRAR" >
-    </form>
-</div>
+<?php include_once("login_register.html");?>
+<!--Cart Slidebar-->
+<?php include_once("cart.html");?>
 
 <!--BODY-->
 <?php include_once("footer.html");?>
@@ -70,5 +57,29 @@
 
             });
         });
+
+   
+    /*2nd slidebar*/
+
+    // All sides
+    var sides = ["left", "top", "right", "bottom"];
+
+    // Initialize sidebars
+    for (var i = 0; i < sides.length; ++i) {
+        var cSide = sides[i];
+        $(".sidebar." + cSide).sidebar({side: cSide}).hide().trigger("sidebar:close").on("sidebar:closed", function () {
+            $(this).show();
+        });
+    }
+
+    // Click handlers
+    $(".sidebar").on("click", function () {
+        var $this = $(this);
+        var action = $this.attr("data-action");
+        var side = $this.attr("data-side");
+        $(".sidebar." + side).trigger("sidebar:" + action);
+        return false;
+    });
+        
 
     </script>
