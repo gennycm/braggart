@@ -12,16 +12,15 @@
         <div class="section shirt" id="shirt1" style="background-image:url(./img_product/img_4.jpg);">
             <div class="background_black"></div>
                <div id="triangleWrapper">
-                    <div  class="segmentTriangle">
-                    </div>
+                    <div class="triangle-img"></div>
                     <div class="row">
                         <div class="col-lg-6 col-md-6 col-sm-6">
                         </div>
                         <div class="col-lg-6 col-md-6 col-sm-6">
                             <a href="#" class="sidebar" data-action="open" data-side="left">
-                                <i class=" sc_icon fa fa-shopping-cart fa-3x"></i> 
+                                <i class=" sc_icon fa fa-shopping-cart fa-2x"></i> 
                             </a>                          
-                            <i class="wl_icon fa fa-heart-o fa-3x sb-open-left"></i>
+                            <i class="wl_icon fa fa-heart-o fa-2x sb-open-left"></i>
                         </div>
 
                     </div>
@@ -31,16 +30,16 @@
         <div class="section shirt" id="shirt2" style="background-image:url(./img_product/img_6.jpg);">
             <div class="background_black"></div>
             <div id="triangleWrapper">
-                    <div  class="segmentTriangle">
+                    <div class="triangle-img"></div>
                     </div>
                     <div class="row">
                         <div class="col-lg-6 col-md-6 col-sm-6">
                         </div>
                         <div class="col-lg-6 col-md-6 col-sm-6">
                             <a href="#" class="sidebar" data-action="open" data-side="left">
-                                <i class=" sc_icon fa fa-shopping-cart fa-3x"></i> 
+                                <i class=" sc_icon fa fa-shopping-cart fa-2x"></i> 
                             </a>                          
-                            <i class="wl_icon fa fa-heart-o fa-3x sb-open-left"></i>
+                            <i class="wl_icon fa fa-heart-o fa-2x sb-open-left"></i>
                         </div>
 
                     </div>
@@ -51,16 +50,16 @@
         <div class="section shirt" id="shirt3" style="background-image:url(./img_product/img_3.jpg);">
             <div class="background_black"></div>
             <div id="triangleWrapper">
-                    <div  class="segmentTriangle">
+                    <div class="triangle-img"></div>
                     </div>
                     <div class="row">
                         <div class="col-lg-6 col-md-6 col-sm-6">
                         </div>
                         <div class="col-lg-6 col-md-6 col-sm-6">
                             <a href="#" class="sidebar" data-action="open" data-side="left">
-                                <i class=" sc_icon fa fa-shopping-cart fa-3x"></i> 
+                                <i class=" sc_icon fa fa-shopping-cart fa-2x"></i> 
                             </a>                          
-                            <i class="wl_icon fa fa-heart-o fa-3x sb-open-left"></i>
+                            <i class="wl_icon fa fa-heart-o fa-2x sb-open-left"></i>
                         </div>
 
                     </div>
@@ -71,16 +70,16 @@
         <div class="section shirt" id="shirt4" style="background-image:url(./img_product/img_5.jpg);">
             <div class="background_black"></div>
             <div id="triangleWrapper">
-                    <div  class="segmentTriangle">
+                    <div class="triangle-img"></div>
                     </div>
                     <div class="row">
                         <div class="col-lg-6 col-md-6 col-sm-6">
                         </div>
                         <div class="col-lg-6 col-md-6 col-sm-6">
                             <a href="#" class="sidebar" data-action="open" data-side="left">
-                                <i class=" sc_icon fa fa-shopping-cart fa-3x"></i> 
+                                <i class=" sc_icon fa fa-shopping-cart fa-2x"></i> 
                             </a>                          
-                            <i class="wl_icon fa fa-heart-o fa-3x sb-open-left"></i>
+                            <i class="wl_icon fa fa-heart-o fa-2x sb-open-left"></i>
                         </div>
 
                     </div>
@@ -111,12 +110,12 @@
         $(document).ready(function() {
             $('#pagepiling').pagepiling({
                 menu: false,
-                anchors: ['home', 'us', 'shirts', 'contact'],
+                anchors: ['camisa-sport-ajustada', 'camisa-elegante-ajustada', 'camisa-oficina-ajustada', 'camisa-casual-ajustada'],
                 navigation: {
                     'textColor': '#f2f2f2',
                     'bulletsColor': '#ccc',
                     'position': 'right',
-                    'tooltips': ['INICIO', 'LA TIENDA', 'CAMISAS', 'CONTACTO']
+                    'tooltips': ['SPORT AJUSTADA', 'ELEGANTE AJUSTADA', 'OFICINA AJUSTADA', 'CASUAL AJUSTADA']
                 }
 
             });
