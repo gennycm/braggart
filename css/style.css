@@ -607,6 +607,10 @@ div.delivery{
   text-align: center;
 }
 
+.sidebar th{
+	text-align: center;
+}
+
 /*Shopping cart*/
 .sidebar.right {
   position: fixed;
@@ -620,6 +624,7 @@ div.delivery{
  /* box-shadow: 0 0 5px black;*/
   font-size: 18px;
   text-align: center;
+  z-index: 1031;
 }
 
 .sidebar.bottom {
