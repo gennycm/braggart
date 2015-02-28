@@ -106,8 +106,13 @@
 <?php include_once("footer.html");?>
 <script>
     /*Parallax scrolling*/
-        var deleteLog = false;
+        
+
+    /*Slidebar*/
+    (function($) {
         $(document).ready(function() {
+            $.slidebars();
+            var deleteLog = false;
             $('#pagepiling').pagepiling({
                 menu: false,
                 anchors: ['camisa-sport-ajustada', 'camisa-elegante-ajustada', 'camisa-oficina-ajustada', 'camisa-casual-ajustada'],
@@ -119,35 +124,22 @@
                 }
 
             });
-        });
 
-    jQuery(document).ready(function($) {
-      $('#full-width-slider').royalSlider({
-        loop:true,
-        keyboardNavEnabled: true,
-        imageScaleMode: "fill",
-        controlNavigation: "none",
-        navigateByClick: true,
-        usePreloader: true,
-        sliderDrag: false
-      });
+            $('#full-width-slider_shirt').royalSlider({
+                loop:true,
+                keyboardNavEnabled: true,
+                imageScaleMode: "fill",
+                controlNavigation: "none",
+                navigateByClick: true,
+                usePreloader: true,
+                sliderDrag: false
+            });
+            setTimeout(function(){
+                 var slider = $(".royalSlider").data('royalSlider');
+                slider.updateSliderSize();
+            }, 1000);
+           
 
-      setInterval(function(){
-        var slider = $(".royalSlider").data('royalSlider');
-        slider.next();  // next slide
-    }, 4500);
-
-      var width = $(window).width();
-      var height = $(window).height();
-
-      $('#full-width-slider').css({width: width+"px", height:height+"px"})
-
-    });
-
-    /*Slidebar*/
-    (function($) {
-        $(document).ready(function() {
-            $.slidebars();
         });
     }) (jQuery);
 

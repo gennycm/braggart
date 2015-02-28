@@ -69,7 +69,7 @@
         var settings = $.extend({
 
             // Animation speed
-            speed: 500,
+            speed: 800,
 
             // Side: left|right|top|bottom
             side: "left",

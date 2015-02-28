@@ -611,17 +611,65 @@ div.delivery{
   top: 0;
   left: 0;
   bottom: 0;
-  width: 40%;
+  width: 512px;
   background: white;
   color: black;
  /** padding: 30px;
   box-shadow: 0 0 5px black;**/
-  font-size: 18px;
+  font-size: 16px;
   text-align: center;
+}
+
+.nombre-camisa{
+	font-size:18px;
+	color:#000;
+	font-family: 'Conv_Mission Gothic Light', sans-serif;	
+	text-align: left;
+	width: 100%;
 }
 
 .sidebar th{
 	text-align: center;
+}
+
+#full-width-slider_shirt{
+	height:270px;
+}
+
+#full-width-slider_shirt .rsOverflow{
+	height:270px;
+}
+
+.txt-camisa{
+	text-align: left;
+	font-size: 14px;
+	font-family: 'Conv_Mission Gothic Light', sans-serif;	
+}
+
+.precio-camisa{
+	text-align: left;
+	font-size: 16px;
+	font-weight: 900;
+	font-family: 'Conv_Mission Gothic Light', sans-serif;	
+}
+
+.color-square-shirt{
+	height:25px;
+	width:25px;
+	float:left;
+	clear:none;
+	border: solid 1px #000;
+	border-radius: 3px;
+	margin-left: 5px;
+	cursor: pointer;
+}
+
+.selectpicker{
+	float:left;
+	clear: none;
+	display: inline-block;
+	margin-left:15px;
+	width: 120px;
 }
 
 /*Shopping cart*/
