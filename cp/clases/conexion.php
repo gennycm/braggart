@@ -10,8 +10,6 @@ var $conexion;
 	function conexion()
 	{
 		$this->host='localhost';
-		/*$this->user='locker07_yelmy';
-		$this->password='ympm16mc';*/
 		$this->user='root';
 		$this->password='root';
 		$this->bd='braggart';

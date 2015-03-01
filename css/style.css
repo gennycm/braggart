@@ -400,7 +400,7 @@ div.shirt{
 
 #contact h1,
 #contact p{
-	text-shadow: 1px 5px 20px #000;
+	/*text-shadow: 1px 5px 20px #000;*/
 	color: #fff;
 }
 
@@ -570,9 +570,18 @@ div.color-square{
 
 .fa-times{
 	float: right;
-	margin-right:10%;
-	margin-top: 6%;
+	margin-right:8%;
+	margin-top: 5%;
 	color: black;
+}
+
+.close_wl{
+	margin-right:3%;
+	margin-top: 2%;
+}
+
+.sb-left{
+	 overflow-x: hidden;
 }
 
 
@@ -722,7 +731,7 @@ button.boton-producto-agregar:hover{
   font-size: 18px;
   text-align: center;
   z-index: 1031;
-  overflow: scroll;
+  overflow-x: hidden;
 }
 
 .sidebar.bottom {
@@ -786,6 +795,8 @@ button.boton-producto-agregar:hover{
 
  table.shopping td{
  	padding: 8px;
+ 	font-size: 16px;
+ 	color: black;
  }
 .wrapper-dropdown-1, .wrapper-dropdown-2{
     /* Size and position */
@@ -897,4 +908,8 @@ button.boton-producto-agregar:hover{
 .cart_shirt{
 	width: 15%;
 	margin: 20px;
+}
+
+.center{
+	text-align: center;
 }
