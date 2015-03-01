@@ -180,7 +180,7 @@
             <tfoot></tfoot>
         </table>
                 <div class="paybutton cl-effect-2">
-                    <a href="#"><span data-hover="Pagar">$600</span></a>
+                    <a href="payment.php"><span data-hover="Pagar">$600</span></a>
                 </div>
     </div>
       </div>
@@ -245,5 +245,8 @@
             });
 
 
+ $('.paybutton a').on('click',function() {           
+        window.location.href = "payment.php"; 
+});
             
         </script>

@@ -1,41 +1,27 @@
 <?php include_once("header.html");?>
 <!--BODY-->
 
-<div id="pagepiling">
-    <a href="#" style="display:block; position:fixed;z-index:1000;" onclick="display_menu()">
-        <div class="menu-toggle"></div>
-        <div class="text_toggle">
-            <h5>MENÚ</h5>
+<div>
+        <a href="#" style="display:block; position:fixed;z-index:1000;" onclick="display_menu()">
+            <div class="menu-toggle"></div>
+            <div class="text_toggle">
+                <h5>MENÚ</h5>
+            </div>
+        </a>       
+       
+        <div class="background_pay">
+            <div class="background_black"></div>
+                </div>
         </div>
-    </a>       
-    <div class="section" id="us">
-        <div class="background_black"></div>
-        <div class="col-lg-12 col-md-12 col-sm-12" style="margin-top:-150px;position:absolute;z-index:999;">
-            <div class="col-lg-4 col-md-4 col-sm-4 store-section">
-                <div class="col-lg-12">
-                    <div class="icon-container fabric"></div>
-                    <p class="icon-p">BRAGGART  ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-4 col-sm-4 store-section">
-               <div class="col-lg-12">
-                    <div class="icon-container delivery"></div>
-                    <p class="icon-p">Se hacen envíos a la república mexicana por el servicio de paquetería XYZ.</p>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-4 col-sm-4 store-section">
-                <div class="col-lg-12">
-                    <div class="icon-container payment"></div>
-                    <p class="icon-p">Los pagos se realizan a través de la plataforma Conekta. Puede ser por tarjeta de crédito, pago en ventanilla o pago en el OXXO.</p>
-                </div>
-            </div>
-        </div>
+        
+        
     </div>
 </div><!-- /.container-fluid -->
 
 
 <!--Login Slidebar-->
 <?php include_once("login_register.html");?>
+
 <!--Cart Slidebar-->
 <?php include_once("cart.html");?>
 
