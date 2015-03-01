@@ -113,7 +113,7 @@
         $(document).ready(function() {
             $.slidebars();
             var deleteLog = false;
-            $('#pagepiling').pagepiling({
+            /*$('#pagepiling').pagepiling({
                 menu: false,
                 anchors: ['camisa-sport-ajustada', 'camisa-elegante-ajustada', 'camisa-oficina-ajustada', 'camisa-casual-ajustada'],
                 navigation: {
@@ -123,7 +123,7 @@
                     'tooltips': ['SPORT AJUSTADA', 'ELEGANTE AJUSTADA', 'OFICINA AJUSTADA', 'CASUAL AJUSTADA']
                 }
 
-            });
+            });*/
 
             $('#full-width-slider_shirt').royalSlider({
                 loop:true,
