@@ -1,7 +1,14 @@
 <?php include_once("header.html");?>
+<?php
+    function __autoload($nombre_clase) {
+        include 'cp/clases/'.$nombre_clase .'.php';
+    }
+    $temporal = new slide();
+    $listaTemporal = $temporal -> listarslide();
+?>
 <!--BODY-->
 
-<div id="pagepiling">
+<!--<div id="pagepiling">-->
         <a href="#" style="display:block; position:fixed;z-index:1000;" onclick="display_menu()">
             <div class="menu-toggle"></div>
             <div class="text_toggle">
@@ -9,45 +16,38 @@
             </div>
         </a>       
        
-        <div class="section" id="home">
-            <div class="background_black"></div>
+        <section id="home" class="parallax" data-background-speed-y="0" data-parallax-align="bottom">
+            <!--<div class="background_black"></div>-->
             <div class="logo-slide">
                 <img src="./img/logo-slide.png" alt="">
             </div>
             <div id="full-width-slider" class="royalSlider heroSlider rsMinW" style="width:100%;">
-              <div class="rsContent">
-                <img class="rsImg" src="img_product/img_1.png" alt="">
-              </div>
-              <div class="rsContent">
-                <img class="rsImg" src="img_product/img_2.jpg" alt="">
-              </div>
-             <div class="rsContent">
-                <img class="rsImg" src="img_product/img_3.jpg" alt="">
-              </div>
-              <div class="rsContent">
-                <img class="rsImg" src="img_product/img_4.jpg" alt="">
-              </div>
-            </div>
-                
-        </div>
+            <?php 
+                foreach($listaTemporal as $elementoTemporal){
+                    echo '<div class="rsContent">
+                            <img class="rsImg" src="slide/'.$elementoTemporal["ruta"].'" alt="">
+                          </div>';
+                            }
+            ?>  
+        </section>
         
-        <div class="section" id="us">
-            <a style="display:block;" href="store.php">
-                <div class="background_black"></div>
-                <h1>LA TIENDA</h1>
-            </a>
-        </div>
+        <section id="us" class="parallax" data-background-speed-y="0" data-parallax-align="top">
+                <a style="display:block;" href="store.php">
+                <!--<div class="background_black"></div>-->
+                    <h1>LA TIENDA</h1>
+                </a>
+        </section>
         
-        <div class="section" id="shirts">
+        <div  class="parallax" data-background-speed-y="0" data-parallax-align="bottom" id="shirts">
              <a style="display:block;" href="shirts.php">
-                <div class="background_black"></div>
+                <!--<div class="background_black"></div>-->
                 <h1>CAMISAS</h1>
             </a>
         </div>
         
-        <div class="section" id="contact">
+        <div class="parallax" data-background-speed-y="0" data-parallax-align="bottom" id="contact">
             <div class="background_black"></div>
-            <div class="row">
+            <div class="col-xs-12">
                     <div class="col-lg-6 col-md-6 col-sm-6">
                     </div>
                    <div class="col-lg-6 col-md-6 col-sm-6">
@@ -81,12 +81,8 @@
                 </tr>   
             </table>
         </div>
-    </div>
-</div>
-            </div>
-        </div>
-    </div>
-</div><!-- /.container-fluid -->
+    <!--</div>-->
+</div><!--Container-->
 
 <!--Login Slidebar-->
 <?php include_once("login_register.html");?>
@@ -98,8 +94,8 @@
 <script>
     /*Parallax scrolling*/
         var deleteLog = false;
-        $(document).ready(function() {
-            $('#pagepiling').pagepiling({
+        /*$(document).ready(function() {
+            /*$('#pagepiling').pagepiling({
                 menu: false,
                 anchors: ['home', 'us', 'shirts', 'contact'],
                 navigation: {
@@ -110,7 +106,8 @@
                 }
 
             });
-        });
+
+        });*/
 
     jQuery(document).ready(function($) {
       $('#full-width-slider').royalSlider({
@@ -123,10 +120,15 @@
         sliderDrag: false
       });
 
-      setInterval(function(){
+      $.slidebars();
+
+      $(fullscreenParallax);
+
+
+      /*setInterval(function(){
         var slider = $(".royalSlider").data('royalSlider');
         slider.next();  // next slide
-    }, 4500);
+    }, 4500);*/
 
       var width = $(window).width();
       var height = $(window).height();
@@ -135,12 +137,6 @@
 
     });
 
-    /*Slidebar*/
-    (function($) {
-        $(document).ready(function() {
-            $.slidebars();
-        });
-    }) (jQuery);
 
 /*Password placeholder , so the placeholder actually shows, and not just dots*/
     $(function() {

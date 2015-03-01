@@ -12,6 +12,9 @@
 /*------------------------------
 Estilos para la barra negra
 -------------------------------*/
+footer{
+	display: none;
+}
 #navBlack{
 	padding:0;
 	margin-bottom:0;

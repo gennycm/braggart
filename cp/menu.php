@@ -10,9 +10,9 @@
                 <hr class="hrmenu">
                 <li <?php if ($page =="listproducto.php"  or $page == "formproducto.php"){ echo "class='active'";} ?>><a href="listproducto.php">Productos</a>
                 </li>
-                <hr class="hrmenu">
+                <!--<hr class="hrmenu">
                 <li <?php if ($page =="listmarca.php"  or $page == "formmarca.php"){ echo "class='active'";} ?>><a href="listmarca.php">Marcas</a>
-                </li>
+                </li>-->
                  <hr class="hrmenu">
                 <li <?php if ($page =="listatributo.php"  or $page == "formatributo.php"){ echo "class='active'";} ?>><a href="listatributo.php">Atributos y Valores</a>
                 </li>

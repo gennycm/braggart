@@ -14,7 +14,7 @@
   <link href="css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="css/font-awesome.css" />
   <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css" />
-  <link rel="stylesheet" type="text/css" href="css/jquery.pagepiling.css" />
+  <!--<link rel="stylesheet" type="text/css" href="css/jquery.pagepiling.css" />-->
   <link href="royalslider/royalslider.css" rel="stylesheet">
   <link href="royalslider/skins/minimal-white/rs-minimal-white.css" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="css/hover.css" />
@@ -31,42 +31,43 @@
     <![endif]-->
   </head>
   <body>
-  <nav class="navbar navbar-default navbar-fixed-top">
-  <div class="background_white"></div>
-  <div class="container-fluid">
-    <!-- Brand and toggle get grouped for better mobile display -->
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a class="navbar-brand" href="#"><img src="img/braggart_diamond.png" style="height:45px;margin-top:-15px;width:auto;"></a>
-    </div>
+    <div class="container" style="padding-left:0;padding-right:0;width:100% !important;">
+      <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="background_white"></div>
+        <div class="container-fluid">
+          <!-- Brand and toggle get grouped for better mobile display -->
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#"><img src="img/braggart_diamond.png" style="height:45px;margin-top:-15px;width:auto;"></a>
+          </div>
 
-    <!-- Collect the nav links, forms, and other content for toggling -->
-    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-      <ul class="nav navbar-nav">
-        <li <?php echo ($actual_link == "index.php")?'class="active arrow-down"':'';?> ><a href="index.php">INICIO<span class="sr-only"></span></a></li>
-        <li <?php echo ($actual_link == "shirts.php")?'class="active arrow-down"':'';?>><a href="shirts.php">CAMISAS</a></li>
-        <li <?php echo ($actual_link == "store.php")?'class="active arrow-down"':'';?>><a href="store.php">LA TIENDA</a></li>
-        <li><a href="index.php#contact">CONTACTO</a></li>
-      </ul>
-      <ul class="nav navbar-nav navbar-right">
-        <li><a href="#" class="sb-open-right">INICIAR SESI&Oacute;N | REGISTRO</a></li>
-        <li><a href="#" onclick="hide_menu()"><i class="fa fa-chevron-up"></i></a></li>
-      </ul>
-    </div><!-- /.navbar-collapse -->
-</nav>
-<div class="right-floating-menu">
-  <div class="cart-icon">
-     <a href="#" class="sidebar" data-action="open" data-side="right">
-        <i class="fa fa-shopping-cart"></i>
-      </a>
-  </div>
-  <div class="clearfix"></div>
-  <div class="search-icon">
-    <input class="search-input" type="text" placeholder="Buscar"><i class="fa fa-search" onclick="search_click()"></i>
-  </div>
-</div>
+          <!-- Collect the nav links, forms, and other content for toggling -->
+          <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+              <li <?php echo ($actual_link == "index.php")?'class="active arrow-down"':'';?> ><a href="index.php">INICIO<span class="sr-only"></span></a></li>
+              <li <?php echo ($actual_link == "shirts.php")?'class="active arrow-down"':'';?>><a href="shirts.php">CAMISAS</a></li>
+              <li <?php echo ($actual_link == "store.php")?'class="active arrow-down"':'';?>><a href="store.php">LA TIENDA</a></li>
+              <li><a href="index.php#contact">CONTACTO</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+              <li><a href="#" class="sb-open-right">INICIAR SESI&Oacute;N | REGISTRO</a></li>
+              <li><a href="#" onclick="hide_menu()"><i class="fa fa-chevron-up"></i></a></li>
+            </ul>
+          </div><!-- /.navbar-collapse -->
+      </nav>
+      <div class="right-floating-menu">
+        <div class="cart-icon">
+           <a href="#" class="sidebar" data-action="open" data-side="right">
+              <i class="fa fa-shopping-cart"></i>
+            </a>
+        </div>
+        <div class="clearfix"></div>
+        <div class="search-icon">
+          <input class="search-input" type="text" placeholder="Buscar"><i class="fa fa-search" onclick="search_click()"></i>
+        </div>
+      </div>

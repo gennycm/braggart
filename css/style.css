@@ -1,9 +1,13 @@
 /*FONTS*/
-@import url(http://fonts.googleapis.com/css?family=Montserrat:400,700);
+/*@import url(http://fonts.googleapis.com/css?family=Montserrat:400,700);*/
 /*font-family: 'Montserrat', sans-serif;*/
-@import url(http://fonts.googleapis.com/css?family=Raleway:400,500,300,200);
+/*@import url(http://fonts.googleapis.com/css?family=Raleway:400,500,300,200);*/
 /*font-family: 'Raleway', sans-serif;*/
 
+body{
+	overflow: auto;
+	overflow-x:hidden;
+}
 
 @font-face {
 	font-family: 'Conv_FoglihtenDeH02';
@@ -65,6 +69,8 @@
 /*END FONTS*/
 body{
 	font-family: 'Conv_Mission Gothic Light', sans-serif;
+	overflow: auto;
+	overflow-x:hidden;
 }
 
 
@@ -81,7 +87,7 @@ div.background_black{
 	opacity:0.4;
 	min-height: 100%;
 	min-width: 100%;
-	position: absolute;
+	position: fixed;
 	top:0;
 	z-index: 1;
 }
@@ -254,7 +260,7 @@ div.right-floating-menu{
 	top:120px;
 	width:150px;
 	background:transparent;
-	position: absolute;
+	position: fixed;
 	right:-175px;
 	z-index: 888;
 
@@ -328,7 +334,7 @@ h1{
 #shirts,
 #us,
 #contact{
-	background-size: cover;
+	/*background-size: cover;*/
 }
 
 /* Defining each section background and styles
@@ -362,10 +368,10 @@ div.shirt{
 #shirts h1{
 	text-shadow: 1px 5px 20px #000;
 	color: #fff;
-	position:absolute;
+	position:relative;
 	top:50%;
 	font-size: 90px;
-	margin-top: -44px;
+	margin-top: -90px;
 	width: 100%;
 	text-align: center;
 	z-index: 2;
@@ -374,13 +380,22 @@ div.shirt{
 #us h1{
 	text-shadow: 1px 5px 20px #000;
 	color: #fff;
-	position:absolute;
-	top:50%;
+	position:relative;
 	font-size: 90px;
-	margin-top: -44px;
+	top:50%;
 	width: 100%;
+	margin-top: -90px;
 	text-align: center;
 	z-index: 2;
+}
+
+#us a, #shirts a{
+	text-decoration: none;
+	height: 100%;
+}
+
+#us a:hover, #shirts a:hover{
+	text-decoration: none;
 }
 
 #contact h1,
@@ -400,6 +415,7 @@ div.shirt{
     color: white;
     line-height: 30px;
     opacity: 0.80;
+    margin-top: 200px;
     z-index: 999;
   }
 
@@ -606,6 +622,11 @@ div.delivery{
 /*SLIDER 2*/
 
 /*Product info*/
+
+.header-seccion-producto{
+	text-align: center;
+}
+
 .sidebar.left {
   position: fixed;
   top: 0;
@@ -647,10 +668,25 @@ div.delivery{
 }
 
 .precio-camisa{
-	text-align: left;
+	text-align: right;
 	font-size: 16px;
 	font-weight: 900;
 	font-family: 'Conv_Mission Gothic Light', sans-serif;	
+	width: 100%;
+}
+
+button.boton-producto-agregar{
+	color:#fff;
+	background-color: #000;
+	text-decoration: none;	
+	height:35px;
+	border: hidden;
+	padding-left: 5px;
+	padding-right: 5px;
+}
+
+button.boton-producto-agregar:hover{
+	background-color: #333;
 }
 
 .color-square-shirt{
