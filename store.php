@@ -1,16 +1,15 @@
 <?php include_once("header.html");?>
 <!--BODY-->
 
-<div id="pagepiling">
     <a href="#" style="display:block; position:fixed;z-index:1000;" onclick="display_menu()">
         <div class="menu-toggle"></div>
         <div class="text_toggle">
             <h5>MENÚ</h5>
         </div>
     </a>       
-    <div class="section" id="us">
+    <div class="section full_background" id="us">
         <div class="background_black"></div>
-        <div class="col-lg-12 col-md-12 col-sm-12" style="margin-top:-150px;position:absolute;z-index:999;">
+        <div class="col-lg-12 col-md-12 col-sm-12" style="margin-top:10%;position:relative;z-index:999; ">
             <div class="col-lg-4 col-md-4 col-sm-4 store-section">
                 <div class="col-lg-12">
                     <div class="icon-container fabric"></div>
@@ -30,7 +29,6 @@
                 </div>
             </div>
         </div>
-    </div>
 </div><!-- /.container-fluid -->
 
 

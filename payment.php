@@ -8,13 +8,89 @@
                 <h5>MENÚ</h5>
             </div>
         </a>       
-       
-        <div class="background_pay">
+        <div class="full_background pay">
             <div class="background_black"></div>
+            <div class="col-lg-12 col-md-12 col-sm-12" style="margin-top:10%;position:relative;z-index:999; ">
+                 <div class="col-lg-6 col-md-6 col-sm-6 center">
+                    <div class="white_block">
+                        <p class="center" style="width:100%; font-size:18pt; font-weight:bold;">PASO 1</p>
+                        <p class="Foglihten center" style="font-size:20pt;">P1+{}+!p</p>
+                        <p class="left_align" style="width:100%; font-size:15pt; font-weight:bold;">DATOS DE ENV&Iacute;O</p>
+                        <table class="payment">
+                            <thead>
+                                <th ></th>
+                            </thead>
+                            <tr>
+                                <td>
+                                 <form class="payment-form"  method="post" onsubmit="" action="#">
+                                      <p><label><i class="fa fa-user fa-lg"></i></label><input name="nombre" type="text" class="text" placeholder=" NOMBRE COMPLETO" ></p>
+                                      <p><label><i class="fa fa-map-marker fa-lg"></i></label><input name="numCalle" type="text" class="text" placeholder=" N&Uacute;MERO DE CALLE" ></p>
+                                      <p><label></label><input name="numExt" type="text" class="text" placeholder=" N&Uacute;MERO EXTERIOR" ></p>
+                                      <p><label></label><input name="numExt" type="text" class="text" placeholder=" N&Uacute;MERO INTERIOR" ></p>
+                                      <p><label></label><input name="codP" type="text" class="text" placeholder=" C&Oacute;DIGO POSTAL" ></p>
+                                      <p><label></label><input name="colFracc" type="text" class="text" placeholder=" COLONIA O FRACCIONAMIENTO" ></p>
+                                      <p>
+                                        <label class="select">
+                                            <select class="state">
+                                                <option selected>AGUASCALIENTES</option>
+                                                <option>YUCAT&Aacute;N</option>
+                                                <option>ZACATECAS</option>
+                                            </select>
+                                        </label>
+                                     </form>
+                                      </p>      
+                                </td>
+                            </tr>                          
+                            <tfoot></tfoot>
+                        </table>
+                    </div>
                 </div>
+                <div class="col-lg-6 col-md-6 col-sm-6 center">
+                    <div class="white_block">
+                        <p class="center" style="width:100%; font-size:18pt; font-weight:bold;">PASO 2</p>
+                        <p class="Foglihten center" style="font-size:20pt;">P1+{}+!p</p>
+                        <p></p>
+                        <table class="payment">
+                            <thead>
+                                <th ></th>
+                            </thead>
+                            <tr>
+                                <td>
+                                 <form class="payment-form"  method="post" onsubmit="" action="#">
+                                    <p>
+                                        <label class="select">
+                                            <select class="formPago">
+                                                <option selected>TARJETA DE CR&Eacute;DITO</option>
+                                                <option>TARJETA DE D&Eacute;BITO</option>
+                                            </select>
+                                        </label>
+                                      </p> 
+                                      <p>
+                                        <label class="select">
+                                            <select class="formPago">
+                                                <option selected>MASTERCARD</option>
+                                                <option>VISA</option>
+                                            </select>
+                                        </label>
+                                      </p> 
+                                      <p><label><i class="fa fa-credit-card fa-lg"></i></label><input name="numTarj" type="text" class="text" placeholder=" N&Uacute;MERO DE TARJETA" ></p>
+                                      <p><label><i class="fa fa-calendar fa-lg"></i></label><input name="expDt" type="text" class="text" placeholder=" FECHA DE EXPIRACI&Oacute;N" ></p>
+                                      <p><label><i class="fa fa-key fa-lg"></i></label><input name="segCod" type="text" class="text" placeholder=" C&Oacute;DIGO DE SEGURIDAD" ></p>
+                                       <p style="border:none"><button>LISTO</button></p> 
+                                      </form>
+     
+                                </td>
+                            </tr>                          
+                            <tfoot></tfoot>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+
+
         </div>
-        
-        
+        </div>        
     </div>
 </div><!-- /.container-fluid -->
 
