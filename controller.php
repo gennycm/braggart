@@ -1,5 +1,5 @@
 <?php 
-include("includes/path.php");
+//include("includes/path.php");
 function __autoload($nombre_clase) {
 	$nombre_clase = strtolower($nombre_clase);
     include 'cp/clases/'.$nombre_clase .'.php';
@@ -13,6 +13,36 @@ switch ($operaciones) {
 		$id_producto = $_REQUEST["idp"];
 		$producto = new producto($id_producto);
 		$producto -> obtener_producto_ajax();
+	break;
+	case "ru":
+		$email = $_REQUEST["em"];
+		$password = $_REQUEST["pass"];
+		$user = new userend(0, $email, $password);
+		if($user -> disponibilidadCorreo($email)){
+			$user -> inserta_userend();
+			echo json_encode("true");
+		}
+		else{
+			echo json_encode("registered");
+		}
+		
+	break;
+	case "is":
+		$email = $_REQUEST["em"];
+		$password = $_REQUEST["pass"];
+		$user = new userend(0, $email, $password);
+		$user -> obtener_usuario_por_login();
+
+		if($user -> iduserend != 0){
+			$_SESSION["braggart_id_user"] = $user -> iduserend;
+			$_SESSION["braggart_email_user"] = $user -> correo;
+			$_SESSION["braggart_user_token"] = $user -> token;
+			echo json_encode("true");
+		}
+		else{
+			echo json_encode("false");
+		}
+		
 	break;
 	/*case "listar_proyecto_categoria":
 		$id_categoria = $_REQUEST["id_categoria"];

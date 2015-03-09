@@ -24,8 +24,18 @@
     <p style="height:30%"></p>
 
     <form class="login-form"  method="post" onsubmit="" action="">
-      <p><label><i class="fa fa-envelope fa-lg"></i></label><input name="username" type="text" class="text" placeholder=" CORREO ELECTR&Oacute;NICO" ></p>
-      <p><label><i class="fa fa-key fa-lg"></i></label><input name="iniPassword" type="password" class="text" placeholder=" CONTRASE&Ntilde;A" ></p>
-       <a href="#" type="submit" class=" btn hvr-sweep-to-right">Entrar</a>
+      <p id="p-email-login">
+        <label>
+          <i class="fa fa-envelope fa-lg"></i>
+        </label>
+        <input name="email-login" id="" type="text" class="text" placeholder=" CORREO ELECTR&Oacute;NICO" >
+      </p>
+      <p id="p-pass-login">
+        <label>
+          <i class="fa fa-key fa-lg"></i>
+        </label>
+        <input name="pass-login" type="password" class="text" placeholder=" CONTRASE&Ntilde;A" >
+      </p>
+       <a href="#" type="submit" onclick="validateUserLogin()" class=" btn hvr-sweep-to-right">Entrar</a>
     </form>
 </div>

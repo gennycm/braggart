@@ -172,6 +172,21 @@ class userend
 		mysqli_free_result($result);
 		return $resultados;
 	}
+
+	function obtener_usuario_por_login(){
+		$conexion=new conexion();
+		$sql="select * from userend where correo='".$this -> correo."' and password='".md5($this -> password)."'";
+		$result=$conexion->ejecutar_sentencia($sql);
+		while($row=mysqli_fetch_array($result))
+		{
+			$this->iduserend=$row['iduserend'];
+			$this->correo=$row['correo'];
+			$this->password=$row['password'];
+			$this->status=$row['status'];
+			$this->token=$row['token'];
+		}
+		mysqli_free_result($result);
+	}
 	
 	function obten_userend()
 	{
