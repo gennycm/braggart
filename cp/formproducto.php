@@ -134,14 +134,14 @@ include'menu.php';//Contiene a todo el menu.
                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
 
                             <ul class="nav nav-tabs" role="tablist">
-                                <li class="active"><a href="#esp" role="tab" data-toggle="tab">Español</a></li>
-                                <li><a href="#eng" role="tab" data-toggle="tab">English</a></li>
+                                <li class="active"><a href="#esp" role="tab" data-toggle="tab">Información</a></li>
+                                <!--<li><a href="#eng" role="tab" data-toggle="tab">English</a></li>-->
                                 <li><a href="#imp" role="tab" data-toggle="tab">Precio</a></li>
-                                <li><a href="#aso" role="tab" data-toggle="tab">Asociaciones</a></li>
-                                <li><a href="#marc" role="tab" data-toggle="tab">Marcas</a></li>
+                                <!--<li><a href="#aso" role="tab" data-toggle="tab">Asociaciones</a></li>-->
+                                <!--<li><a href="#marc" role="tab" data-toggle="tab">Marcas</a></li>-->
                                 <li><a href="#comb" role="tab" data-toggle="tab">Combinaciones</a></li>
                                 <li><a href="#img" role="tab" data-toggle="tab">Imágenes</a></li>
-                                <li><a href="#adj" role="tab" data-toggle="tab">Adjuntos</a></li>
+                                <!--<li><a href="#adj" role="tab" data-toggle="tab">Adjuntos</a></li>-->
                                 <li><a href="#trans" role="tab" data-toggle="tab">Transportes</a></li>
 
                             </ul>

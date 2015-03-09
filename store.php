@@ -7,7 +7,7 @@
             <h5>MENÚ</h5>
         </div>
     </a>       
-    <div class="section full_background" id="us">
+    <div class="parallax" data-background-speed-y="0" data-parallax-align="top" id="us">
         <div class="background_black"></div>
         <div class="col-lg-12 col-md-12 col-sm-12" style="margin-top:10%;position:relative;z-index:999; ">
             <div class="col-lg-4 col-md-4 col-sm-4 store-section">
@@ -48,31 +48,8 @@
         $(document).ready(function() {
             $.slidebars();
             var deleteLog = false;
-            /*$('#pagepiling').pagepiling({
-                menu: false,
-                anchors: ['camisa-sport-ajustada', 'camisa-elegante-ajustada', 'camisa-oficina-ajustada', 'camisa-casual-ajustada'],
-                navigation: {
-                    'textColor': '#f2f2f2',
-                    'bulletsColor': '#ccc',
-                    'position': 'right',
-                    'tooltips': ['SPORT AJUSTADA', 'ELEGANTE AJUSTADA', 'OFICINA AJUSTADA', 'CASUAL AJUSTADA']
-                }
 
-            });*/
-
-            $('#full-width-slider_shirt').royalSlider({
-                loop:true,
-                keyboardNavEnabled: true,
-                imageScaleMode: "fill",
-                controlNavigation: "none",
-                navigateByClick: true,
-                usePreloader: true,
-                sliderDrag: false
-            });
-            setTimeout(function(){
-                 var slider = $(".royalSlider").data('royalSlider');
-                slider.updateSliderSize();
-            }, 1000);
+            $(fullscreenParallax);
            
 
         });

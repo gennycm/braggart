@@ -339,7 +339,6 @@ class producto extends Archivo {
 			$registro['clave'] = htmlspecialchars_decode($fila['clave']);
 			$registro['descripcion_esp'] = htmlspecialchars_decode($fila['descripcion_esp']);
 			$registro['descripcion_eng'] = htmlspecialchars_decode($fila['descripcion_eng']);
-			$registro['tags'] = $fila['tags'];
 			$registro['url_amigable_esp'] = $fila['url_amigable_esp'];
 			$registro['url_amigable_eng'] = $fila['url_amigable_eng'];
 			$registro['precio_mxn'] = $fila["precio_mxn"];
@@ -505,7 +504,50 @@ class producto extends Archivo {
 			$this -> fecha_modificacion=$fila['fecha_modificacion'];
 			$this -> ruta_final = $this -> directorio . $fila['img_principal'];
 		}
+	}
+
+	function obtener_producto_ajax(){
+		$sql = "SELECT * FROM productos WHERE id_producto =".$this -> id_producto.";";
+		$con = new conexion();
+		$resultados = array();
+		$temporal = $con -> ejecutar_sentencia($sql);
+		while ($fila = mysqli_fetch_array($temporal)) {
+			$registro = array();
+			$registro['id_producto'] = $fila['id_producto'];
+			$registro['img_principal'] = $fila['img_principal'];
+			$registro['titulo_esp'] = htmlspecialchars_decode(htmlspecialchars_decode($fila['titulo_esp']));
+			$registro['titulo_eng'] = htmlspecialchars_decode($fila['titulo_eng']);
+			$registro['clave'] = htmlspecialchars_decode($fila['clave']);
+			$registro['descripcion_esp'] = htmlspecialchars_decode(htmlspecialchars_decode($fila['descripcion_esp']));
+			$registro['descripcion_eng'] = htmlspecialchars_decode($fila['descripcion_eng']);
+			$registro['tags'] = $fila['tags'];
+			$registro['url_amigable_esp'] = $fila['url_amigable_esp'];
+			$registro['url_amigable_eng'] = $fila['url_amigable_eng'];
+			$registro['precio_mxn'] = $fila["precio_mxn"];
+			$registro['precio_usd'] = $fila["precio_usd"];
+			$registro['peso'] = $fila["peso"];
+			$registro['impuesto'] = $fila["impuesto"];
+			$registro['stock_general'] = $fila["stock_general"];
+			$registro['meta_titulo_esp'] = $fila["meta_titulo_esp"];
+			$registro['meta_descripcion_esp'] = $fila["meta_descripcion_esp"];
+			$registro['meta_titulo_eng'] = $fila["meta_titulo_eng"];
+			$registro['meta_descripcion_eng'] = $fila["meta_descripcion_eng"];
+			$registro['id_marca'] = $fila["id_marca"];
+			$registro['tags_esp'] = $fila["tags_esp"];
+			$registro['tags_eng'] = $fila["tags_eng"];
+			$registro['pdf_adjunto'] = $fila["pdf_adjunto"];
+			$registro['fecha_creacion'] = $fila['fecha_creacion'];
+			$registro['fecha_modificacion'] = $fila['fecha_modificacion'];
+			$registro['status'] = $fila['status'];
+			$registro['mostrar'] = $fila['mostrar'];
+			$this -> listar_img_secundarias_producto();
+			$registro["imagenes_secundarias"] = $this -> lista_imagenes_secundarias;
+			array_push($resultados, $registro);
+		}
+
+		echo json_encode($resultados);
 	}	
+
 	function recuperar_producto() {
 		$sql = "SELECT * FROM productos WHERE id_producto =" . $this -> id_producto . ";";
 		$con = new conexion();

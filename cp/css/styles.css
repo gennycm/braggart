@@ -1042,7 +1042,7 @@ span label.img{
 }
 
 .nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus{
-	background-color:transparent;
+	background-color:rgb(0,174,239);
 	color:#000;
 }
 

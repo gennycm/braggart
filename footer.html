@@ -1,13 +1,32 @@
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>-->
-    <script src="js/jquery.js"></script>
+    
+    <div class="modal fade" id="myModal">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title" id="header-modal"></h4>
+          </div>
+          <div class="modal-body">
+            <p id="content-modal" style="color:#000;font-size:14px;"></p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Aceptar</button>
+          </div>
+        </div><!-- /.modal-content -->
+      </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
+    <!--<script src="js/jquery.js"></script>-->
 
     <!-- Include all compiled plugins (below), or include individual files as needed -->
    <!-- Javascript -->
-    <script src="js/jquery.js"></script>
+    <!--<script src="js/jquery.js"></script>-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
+    <script>
+        var mypath = "http://localhost:8888/braggart/";
+    </script>
     <script src="js/scripts.js"></script>
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
     <script src="js/fullscreenParallax.js"></script>
     <!--<script type="text/javascript" src="js/jquery.pagepiling.min.js"></script>-->
     <script src="royalslider/jquery.royalslider.min.js"></script>

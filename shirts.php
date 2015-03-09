@@ -1,92 +1,41 @@
 <?php include_once("header.html");?>
 <!--BODY-->
-
-<div id="pagepiling">
+    <?php
+        include_once("./cp/clases/producto.php");
+        $producto = new producto();
+        $productos = $producto -> listar_productos_activos();
+    ?>
+<!--<div id="pagepiling">-->
+<style>
+    <?php 
+        foreach ($productos as $producto_tmp){
+            echo "#p".$producto_tmp["id_producto"]."{background-image: url(./imgProductos/".$producto_tmp["img_principal"].");position:relative;}";
+        }
+    ?>
+</style>
         <a href="#" style="display:block; position:fixed;z-index:1000;" onclick="display_menu()">
             <div class="menu-toggle"></div>
             <div class="text_toggle">
                 <h5>MENÚ</h5>
             </div>
-        </a>       
-       
-        <div class="section shirt" id="shirt1" style="background-image:url(./img_product/img_4.jpg);">
-            <div class="background_black"></div>
-               <div id="triangleWrapper">
-                    <div class="triangle-img"></div>
-                    <div class="row">
-                        <div class="col-lg-6 col-md-6 col-sm-6">
-                        </div>
-                        <div class="col-lg-6 col-md-6 col-sm-6">
-                            <a href="#" class="sidebar" data-action="open" data-side="left">
-                                <i class=" sc_icon fa fa-shopping-cart fa-2x"></i> 
-                            </a>                          
-                            <i class="wl_icon fa fa-heart-o fa-2x sb-open-left"></i>
-                        </div>
+        </a>
 
-                    </div>
-                </div>
-        </div>
-        
-        <div class="section shirt" id="shirt2" style="background-image:url(./img_product/img_6.jpg);">
-            <div class="background_black"></div>
-            <div id="triangleWrapper">
-                    <div class="triangle-img"></div>
-                    </div>
-                    <div class="row">
-                        <div class="col-lg-6 col-md-6 col-sm-6">
+        <?php 
+            foreach ($productos as $producto_tmp){
+               echo '<div id="p'.$producto_tmp["id_producto"].'" class="parallax" data-background-speed-y="0" data-parallax-align="top">
+                       <div class="background_black"></div>
+                       <div id="triangleWrapper">
+                            <div class="triangle-img"></div>
+                            <div class="cart-wish-container pull-right">
+                                <a href="#" class="sidebar" onclick="showProductoInfo('.$producto_tmp["id_producto"].')" data-action="open" data-side="left">
+                                    <i class=" sc_icon fa fa-shopping-cart fa-2x"></i> 
+                                </a>                          
+                                <i class="wl_icon fa fa-heart-o fa-2x sb-open-left"></i>
+                            </div>
                         </div>
-                        <div class="col-lg-6 col-md-6 col-sm-6">
-                            <a href="#" class="sidebar" data-action="open" data-side="left">
-                                <i class=" sc_icon fa fa-shopping-cart fa-2x"></i> 
-                            </a>                          
-                            <i class="wl_icon fa fa-heart-o fa-2x sb-open-left"></i>
-                        </div>
-
-                    </div>
-                </div>
-            
-        </div>
-        
-        <div class="section shirt" id="shirt3" style="background-image:url(./img_product/img_3.jpg);">
-            <div class="background_black"></div>
-            <div id="triangleWrapper">
-                    <div class="triangle-img"></div>
-                    </div>
-                    <div class="row">
-                        <div class="col-lg-6 col-md-6 col-sm-6">
-                        </div>
-                        <div class="col-lg-6 col-md-6 col-sm-6">
-                            <a href="#" class="sidebar" data-action="open" data-side="left">
-                                <i class=" sc_icon fa fa-shopping-cart fa-2x"></i> 
-                            </a>                          
-                            <i class="wl_icon fa fa-heart-o fa-2x sb-open-left"></i>
-                        </div>
-
-                    </div>
-                </div>
-            
-        </div>
-         
-        <div class="section shirt" id="shirt4" style="background-image:url(./img_product/img_5.jpg);">
-            <div class="background_black"></div>
-            <div id="triangleWrapper">
-                    <div class="triangle-img"></div>
-                    </div>
-                    <div class="row">
-                        <div class="col-lg-6 col-md-6 col-sm-6">
-                        </div>
-                        <div class="col-lg-6 col-md-6 col-sm-6">
-                            <a href="#" class="sidebar" data-action="open" data-side="left">
-                                <i class=" sc_icon fa fa-shopping-cart fa-2x"></i> 
-                            </a>                          
-                            <i class="wl_icon fa fa-heart-o fa-2x sb-open-left"></i>
-                        </div>
-
-                    </div>
-                </div>
-           
-        </div>
-    </div>
+                    </div>';
+            }
+        ?>
 </div><!-- /.container-fluid -->
 
 
@@ -125,19 +74,7 @@
 
             });*/
 
-            $('#full-width-slider_shirt').royalSlider({
-                loop:true,
-                keyboardNavEnabled: true,
-                imageScaleMode: "fill",
-                controlNavigation: "none",
-                navigateByClick: true,
-                usePreloader: true,
-                sliderDrag: false
-            });
-            setTimeout(function(){
-                 var slider = $(".royalSlider").data('royalSlider');
-                slider.updateSliderSize();
-            }, 1000);
+             $(fullscreenParallax);
            
 
         });

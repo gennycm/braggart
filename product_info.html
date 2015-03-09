@@ -1,35 +1,24 @@
  <div class="sidebar left">
-     <div class="row">
+     <div class="col-xs-12">
         <div class="col-lg-3 col-md-4 col-sm-4"></div>
         <div class="col-lg-6 col-md-4 col-sm-4">
             <h3>Info del producto</h3>
         </div>
         <div class="col-lg-3 col-md-4 col-sm-4">
-            <a href="#" class="sidebar" data-action="close" data-side="left">
+            <a href="#" class="sidebar" data-action="close" data-side="left" style="top:15px;right:15px;">
                 <i class="fa fa-times fa-lg"></i>
              </a>
         </div>
       </div>
       <div class="col-xs-12">
-          <h5 class="nombre-camisa">+ Camisa Casual Ajustada</h5>
-          <div id="full-width-slider_shirt" class="royalSlider heroSlider rsMinW" style="width:100%;">
-              <div class="rsContent">
-                <img class="rsImg" src="img_product/img_1.png" alt="">
-              </div>
-              <div class="rsContent">
-                <img class="rsImg" src="img_product/img_2.jpg" alt="">
-              </div>
-             <div class="rsContent">
-                <img class="rsImg" src="img_product/img_3.jpg" alt="">
-              </div>
-              <div class="rsContent">
-                <img class="rsImg" src="img_product/img_4.jpg" alt="">
-              </div>
+          <h5 class="nombre-camisa" id="nombre_camisa">+ </h5>
+          <div id="full-width-slider_shirt" class="royalSlider heroSlider rsMinW" style="width:100%;overflow:auto;">
+              
           </div>
           <div class="col-lg-6">
              <h5 class="nombre-camisa">+ Detalles</h5>
-            <p class="txt-camisa">
-              Camisa de algodón ajustada para uso casual.
+            <p class="txt-camisa" id="descripcion">
+              
             </p>
           </div>
           <div class="col-lg-6">
@@ -40,22 +29,30 @@
           </div>
          <div class="col-xs-12">
            <h5 class="nombre-camisa">+ Pedido</h5>
-           <select class="selectpicker" title="Talla">
-             <option>Extra Chica</option>
-             <option>Chica</option>
-             <option>Mediana</option>
-             <option>Grande</option>
-           </select>
-           <select class="selectpicker" title="Cantidad">
-             <option>1</option>
-             <option>2</option>
-             <option>3</option>
-           </select>
+            <label class="select" style="margin-left:-330px;">
+             <select class="size" title="Talla">
+               <option>Extra Chica</option>
+               <option>Chica</option>
+               <option>Mediana</option>
+               <option>Grande</option>
+             </select>
+           </label>
            <br>
-            <p class="precio-camisa">
-              $600 MXN
-            </p>
-            <button class="boton-producto-agregar pull-right">Agregar Al Carrito</button>
+           <label class="select" style="margin-left:-330px;">
+             <select class="qty2" title="Cantidad">
+               <option>1</option>
+               <option>2</option>
+               <option>3</option>
+           </select>
+           </label>
+           <br>
+            <!--<p class="precio-camisa" >
+             
+            </p>-->
+            <div class="paybutton cl-effect-2">
+                <a href="#"><span data-hover="Agregar al carrito" id="precio" style="width:150px;font-size:14px;">$600</span></a>
+            </div>
+            <!--<button class="boton-producto-agregar pull-right">Agregar Al Carrito</button>-->
          </div>
       </div>
 </div>

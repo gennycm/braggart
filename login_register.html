@@ -1,10 +1,25 @@
 <div class="sb-slidebar sb-right sb-style-overlay">
     <i class="fa fa-times fa-2x sb-close"></i>
-    <form class="register-form"  method="post" onsubmit="return validateRegister()" action="#">
-      <p><label><i class="fa fa-envelope fa-lg"></i></label><input name="username" type="text" class="text" placeholder=" CORREO ELECTR&Oacute;NICO" ></p>
-      <p><label><i class="fa fa-key fa-lg"></i></label><input name="regPassword" type="password" class="text" placeholder=" CONTRASE&Ntilde;A" ></p>
-      <p><label><i class="fa fa-key fa-lg"></i></label><input name="confPassword" type="password" class="text" placeholder=" CONFIRMA CONTRASE&Ntilde;A" ></p>
-      <a href="#" type="submit" class=" btn hvr-sweep-to-right">Registrarse</a>
+    <form class="register-form"  method="post" action="#">
+      <p id="p-email">
+        <label>
+          <i class="fa fa-envelope fa-lg"></i>
+        </label>
+        <input name="email" type="text" class="text" placeholder=" CORREO ELECTR&Oacute;NICO" >
+      </p>
+      <p id="p-pass">
+        <label>
+          <i class="fa fa-key fa-lg"></i>
+        </label>
+        <input name="regPassword" type="password" class="text" placeholder=" CONTRASE&Ntilde;A" >
+      </p>
+      <p id="p-pass2">
+        <label>
+          <i class="fa fa-key fa-lg"></i>
+        </label>
+        <input name="confPassword" type="password" class="text" placeholder=" CONFIRMA CONTRASE&Ntilde;A" >
+      </p>
+      <a href="#" type="submit" onclick="validateUserRegister()" class=" btn hvr-sweep-to-right">Registrarse</a>
     </form>
     <p style="height:30%"></p>
 
