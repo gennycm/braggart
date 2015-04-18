@@ -98,7 +98,7 @@ class slide extends Archivo
 	function listarslideActivas()
 	{
 		$resultados=array();
-		$sql="select * from slide where status=1 order by orden DESC";
+		$sql="select * from slide where status=0 order by orden DESC";
 		$con=new conexion();
 		$temporal= $con->ejecutar_sentencia($sql);
 		while ($fila=mysqli_fetch_array($temporal))

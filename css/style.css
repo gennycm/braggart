@@ -149,6 +149,16 @@ div.pay{
     z-index: 2;
 }
 
+.title-shirt{
+	color: #fff;
+	font-size: 70px;
+	position: relative;
+	float: left;
+	margin-right: 90px;
+	z-index: 1;
+	top: -25px;
+}
+
 div.cart-wish-container{
 	position: absolute;
 	bottom:50px;
@@ -651,7 +661,7 @@ div.icon-container{
     display: table;
 }
 
-p.icon-p{
+div.icon-p p{
 	color:#fff;
 	font-family: 'Conv_Mission Gothic Light', sans-serif;
 	font-weight: 200;
@@ -733,6 +743,16 @@ div.delivery{
 	font-weight: 900;
 	font-family: 'Conv_Mission Gothic Light', sans-serif;	
 	width: 100%;
+}
+
+.img-size{
+	height:100%;
+	width:100%;
+	background-image:url(../img/braggart_diamond_2.png);
+	background-size:35px auto;
+	background-position:center;
+	background-repeat:no-repeat;
+	border:solid 2px white;
 }
 
 button.boton-producto-agregar{
@@ -1074,8 +1094,9 @@ button.boton-producto-agregar:hover{
 }
 
 .cart_shirt{
-	width: 15%;
+	width: 150px;
 	margin: 20px;
+	margin-left:0;
 }
 
 .center{

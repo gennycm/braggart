@@ -55,6 +55,16 @@ switch($operaciones){
 			}			
 		}
 	break;
+	case "modificarlatienda":
+		$descripcion1 = (isset($_POST["descripcion1"]) && $_POST["descripcion1"] != "")? $_POST["descripcion1"]:"";
+		$descripcion2 = (isset($_POST["descripcion2"]) && $_POST["descripcion2"] != "")? $_POST["descripcion2"]:"";
+		$descripcion3 = (isset($_POST["descripcion3"]) && $_POST["descripcion3"] != "")? $_POST["descripcion3"]:"";
+
+		$latienda = new latienda(1,$descripcion1, $descripcion2, $descripcion3);
+		$latienda -> modificar_latienda();
+		header('location: formlatienda.php?success=2');
+
+	break;
 	case 'listaprueba':
 		$dr = new userend();
 		$l = $dr->listaTodos();

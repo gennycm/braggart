@@ -26,5 +26,8 @@
                 <li <?php if ( $page == "listOrden.php" or $page == "formOrden.php"){ echo "class='active'";} ?>><a href="listOrden.php">Ventas</a>
                 </li>
                 <hr class="hrmenu">
+                <li <?php if ( $page == "formlatienda.php"){ echo "class='active'";} ?>><a href="formlatienda.php">La Tienda</a>
+                </li>
+                <hr class="hrmenu">
             </ul>
         </div>

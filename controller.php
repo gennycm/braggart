@@ -44,6 +44,89 @@ switch ($operaciones) {
 		}
 		
 	break;
+	case "ac":
+		$id_producto = $_REQUEST["idp"];
+		$size = $_REQUEST["size"];
+		$amount = $_REQUEST["amount"];
+		$producto = new producto($id_producto);
+		$producto -> obtener_producto();
+		if(isset($_SESSION["braggart_cart"])){
+			$cart = $_SESSION["braggart_cart"];
+			if($id_producto != 0){
+				$unique_id = uniqid();
+				$array_producto = array("unique_id" => $unique_id, "id" => $producto -> id_producto, "amount" => $amount, "price" => $producto -> precio_mxn, "name" => $producto -> titulo_esp, "img" => $producto -> img_principal, "size" => $size, "stock" => $producto -> stock_general);
+				array_push($cart, $array_producto);
+				$_SESSION["braggart_cart"] = $cart;
+				echo json_encode("true");
+			}
+			else{
+				echo json_encode("false");
+			}
+		}
+		else{
+			$cart = array();
+			if($id_producto != 0){
+				$unique_id = uniqid();
+				$array_producto = array("unique_id" => $unique_id, "id" => $producto -> id_producto, "amount" => $amount, "price" => $producto -> precio_mxn, "name" => $producto -> titulo_esp, "img" => $producto -> img_principal, "size" => $size, "stock" => $producto -> stock_general);
+				array_push($cart, $array_producto);
+				$_SESSION["braggart_cart"] = $cart;
+				echo json_encode("true");
+			}
+			else{
+				echo json_encode("false");
+			}
+		}
+	break;
+	case "ep":
+		$unique_id = $_REQUEST["idp"];
+		if(isset($_SESSION["braggart_cart"])){
+			$found = false;
+			$newCart = array();
+			$cart = $_SESSION["braggart_cart"];
+			foreach ($cart as $array_producto){
+				if($array_producto["unique_id"] != $unique_id){
+					array_push($newCart, $array_producto);
+				}
+				else{
+					$found = true;
+				}
+			}
+			$_SESSION["braggart_cart"] = $newCart;
+			if($found){
+				echo json_encode("true");
+			}
+			else{
+				echo json_encode("notfound");
+			}
+			
+		}
+		else{
+			echo json_encode("false");
+		}
+	break;
+	case "gc":
+		if(isset($_SESSION["braggart_cart"])){
+			$cart = $_SESSION["braggart_cart"];
+			$cart2 = array();
+			foreach ($cart as $key => $product) {
+				$id = $product["id"];
+				$producto = new producto($id);
+				$producto -> obtener_producto();
+				$product["stock"] = $producto -> stock_general;
+				array_push($cart2, $product);
+			}
+			$cart = $cart2;
+			echo json_encode($cart);
+		}
+		else{
+			echo json_encode("empty");
+		}
+	break;
+	case "rc":
+		if(isset($_SESSION["braggart_cart"])){
+			$_SESSION["braggart_cart"] = array();
+		}
+	break;
 	/*case "listar_proyecto_categoria":
 		$id_categoria = $_REQUEST["id_categoria"];
 		$proyecto = new proyecto();

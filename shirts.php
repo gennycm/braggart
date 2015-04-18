@@ -13,7 +13,7 @@
         }
     ?>
 </style>
-        <a href="#" style="display:block; position:fixed;z-index:1000;" onclick="display_menu()">
+        <a href="#" id="menu_a" style="display:block; position:fixed;z-index:1000;" onclick="display_menu()">
             <div class="menu-toggle"></div>
             <div class="text_toggle">
                 <h5>MENÚ</h5>
@@ -27,6 +27,7 @@
                        <div id="triangleWrapper">
                             <div class="triangle-img"></div>
                             <div class="cart-wish-container pull-right">
+                                <p class="title-shirt">'.$producto_tmp["titulo_esp"].'</p>
                                 <a href="#" class="sidebar" onclick="showProductoInfo('.$producto_tmp["id_producto"].')" data-action="open" data-side="left">
                                     <i class=" sc_icon fa fa-shopping-cart fa-2x"></i> 
                                 </a>                          

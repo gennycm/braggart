@@ -1,5 +1,10 @@
 <?php include_once("header.html");?>
 <!--BODY-->
+<?php
+    include_once("./cp/clases/latienda.php");
+    $latienda = new latienda(1);
+    $latienda ->  obtener_latienda();
+?>
 
     <a href="#" style="display:block; position:fixed;z-index:1000;" onclick="display_menu()">
         <div class="menu-toggle"></div>
@@ -13,19 +18,28 @@
             <div class="col-lg-4 col-md-4 col-sm-4 store-section">
                 <div class="col-lg-12">
                     <div class="icon-container fabric"></div>
-                    <p class="icon-p">BRAGGART  ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+                    <div class="icon-p">
+                        <?=$latienda -> descripcion1;?>
+                    <!--BRAGGART  ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.-->
+                    </div>
                 </div>
             </div>
             <div class="col-lg-4 col-md-4 col-sm-4 store-section">
                <div class="col-lg-12">
                     <div class="icon-container delivery"></div>
-                    <p class="icon-p">Se hacen envíos a la república mexicana por el servicio de paquetería XYZ.</p>
+                    <div class="icon-p">
+                        <?=$latienda -> descripcion2;?>
+                        <!--Se hacen envíos a la república mexicana por el servicio de paquetería XYZ.-->
+                    </div>
                 </div>
             </div>
             <div class="col-lg-4 col-md-4 col-sm-4 store-section">
                 <div class="col-lg-12">
                     <div class="icon-container payment"></div>
-                    <p class="icon-p">Los pagos se realizan a través de la plataforma Conekta. Puede ser por tarjeta de crédito, pago en ventanilla o pago en el OXXO.</p>
+                    <div class="icon-p">
+                        <?=$latienda -> descripcion3;?>
+                    <!--Los pagos se realizan a través de la plataforma Conekta. Puede ser por tarjeta de crédito, pago en ventanilla o pago en el OXXO.-->
+                    </div>
                 </div>
             </div>
         </div>

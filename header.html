@@ -64,14 +64,14 @@
                 if($email != ""){
                   echo '<li><a href="#" class="sb-open-right" id="login-button">'.$email.'</a></li>'.
                        '<li><a href="#" onclick="logOut()">Cerrar Sesión</a></li>'.
-                       '<li><a href="#" onclick="hide_menu()"><i class="fa fa-chevron-up"></i></a></li>';
+                       '<li><a href="#" id="menu_chevron" onclick="hide_menu()"><i class="fa fa-chevron-up"></i></a></li>';
                 }
                 else{
                   echo '<li>
                           <a href="#" class="sb-open-right" id="login-button">INICIAR SESI&Oacute;N | REGISTRO</a>
                         </li>
                         <li>
-                          <a href="#" onclick="hide_menu()"><i class="fa fa-chevron-up"></i></a>
+                          <a href="#" id="menu_chevron" onclick="hide_menu()"><i class="fa fa-chevron-up"></i></a>
                         </li>';
                 }
               ?>
@@ -87,5 +87,9 @@
         <div class="clearfix"></div>
         <div class="search-icon">
           <input class="search-input" type="text" placeholder="Buscar"><i class="fa fa-search" onclick="search_click()"></i>
+        </div>
+        <br>
+        <div class="search-icon">
+          <i class=" fa fa-heart-o fa-2x sb-open-left"></i>
         </div>
       </div>

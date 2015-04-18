@@ -299,7 +299,6 @@ class producto extends Archivo {
 			$registro['clave'] = htmlspecialchars_decode($fila['clave']);
 			$registro['descripcion_esp'] = htmlspecialchars_decode($fila['descripcion_esp']);
 			$registro['descripcion_eng'] = htmlspecialchars_decode($fila['descripcion_eng']);
-			$registro['tags'] = $fila['tags'];
 			$registro['url_amigable_esp'] = $fila['url_amigable_esp'];
 			$registro['url_amigable_eng'] = $fila['url_amigable_eng'];
 			$registro['precio_mxn'] = $fila["precio_mxn"];
@@ -418,7 +417,6 @@ class producto extends Archivo {
 			$registro['clave'] = htmlspecialchars_decode($fila['clave']);
 			$registro['descripcion_esp'] = htmlspecialchars_decode($fila['descripcion_esp']);
 			$registro['descripcion_eng'] = htmlspecialchars_decode($fila['descripcion_eng']);
-			$registro['tags'] = $fila['tags'];
 			$registro['url_amigable_esp'] = $fila['url_amigable_esp'];
 			$registro['url_amigable_eng'] = $fila['url_amigable_eng'];
 			$registro['precio_mxn'] = $fila["precio_mxn"];
@@ -520,7 +518,6 @@ class producto extends Archivo {
 			$registro['clave'] = htmlspecialchars_decode($fila['clave']);
 			$registro['descripcion_esp'] = htmlspecialchars_decode(htmlspecialchars_decode($fila['descripcion_esp']));
 			$registro['descripcion_eng'] = htmlspecialchars_decode($fila['descripcion_eng']);
-			$registro['tags'] = $fila['tags'];
 			$registro['url_amigable_esp'] = $fila['url_amigable_esp'];
 			$registro['url_amigable_eng'] = $fila['url_amigable_eng'];
 			$registro['precio_mxn'] = $fila["precio_mxn"];
@@ -596,7 +593,6 @@ class producto extends Archivo {
 			$registro['clave'] = htmlspecialchars_decode($fila['clave']);
 			$registro['descripcion_esp'] = htmlspecialchars_decode($fila['descripcion_esp']);
 			$registro['descripcion_eng'] = htmlspecialchars_decode($fila['descripcion_eng']);
-			$registro['tags'] = $fila['tags'];
 			$registro['url_amigable_esp'] = $fila['url_amigable_esp'];
 			$registro['url_amigable_eng'] = $fila['url_amigable_eng'];
 			$registro['precio_mxn'] = $fila["precio_mxn"];
@@ -636,7 +632,6 @@ class producto extends Archivo {
 			$registro['clave'] = htmlspecialchars_decode($fila['clave']);
 			$registro['descripcion_esp'] = htmlspecialchars_decode($fila['descripcion_esp']);
 			$registro['descripcion_eng'] = htmlspecialchars_decode($fila['descripcion_eng']);
-			$registro['tags'] = $fila['tags'];
 			$registro['url_amigable_esp'] = $fila['url_amigable_esp'];
 			$registro['url_amigable_eng'] = $fila['url_amigable_eng'];
 			$registro['precio_mxn'] = $fila["precio_mxn"];
@@ -676,7 +671,6 @@ class producto extends Archivo {
 			$registro['clave'] = htmlspecialchars_decode($fila['clave']);
 			$registro['descripcion_esp'] = htmlspecialchars_decode($fila['descripcion_esp']);
 			$registro['descripcion_eng'] = htmlspecialchars_decode($fila['descripcion_eng']);
-			$registro['tags'] = $fila['tags'];
 			$registro['url_amigable_esp'] = $fila['url_amigable_esp'];
 			$registro['url_amigable_eng'] = $fila['url_amigable_eng'];
 			$registro['precio_mxn'] = $fila["precio_mxn"];
@@ -716,7 +710,6 @@ class producto extends Archivo {
 			$registro['clave'] = htmlspecialchars_decode($fila['clave']);
 			$registro['descripcion_esp'] = htmlspecialchars_decode($fila['descripcion_esp']);
 			$registro['descripcion_eng'] = htmlspecialchars_decode($fila['descripcion_eng']);
-			$registro['tags'] = $fila['tags'];
 			$registro['url_amigable_esp'] = $fila['url_amigable_esp'];
 			$registro['url_amigable_eng'] = $fila['url_amigable_eng'];
 			$registro['precio_mxn'] = $fila["precio_mxn"];
@@ -763,7 +756,6 @@ class producto extends Archivo {
 			$registro['clave'] = htmlspecialchars_decode($fila['clave']);
 			$registro['descripcion_esp'] = htmlspecialchars_decode($fila['descripcion_esp']);
 			$registro['descripcion_eng'] = htmlspecialchars_decode($fila['descripcion_eng']);
-			$registro['tags'] = $fila['tags'];
 			$registro['url_amigable_esp'] = $fila['url_amigable_esp'];
 			$registro['url_amigable_eng'] = $fila['url_amigable_eng'];
 			$registro['precio_mxn'] = $fila["precio_mxn"];
@@ -817,7 +809,6 @@ class producto extends Archivo {
 			$registro['clave'] = htmlspecialchars_decode($fila['clave']);
 			$registro['descripcion_esp'] = htmlspecialchars_decode($fila['descripcion_esp']);
 			$registro['descripcion_eng'] = htmlspecialchars_decode($fila['descripcion_eng']);
-			$registro['tags'] = $fila['tags'];
 			$registro['url_amigable_esp'] = $fila['url_amigable_esp'];
 			$registro['url_amigable_eng'] = $fila['url_amigable_eng'];
 			$registro['precio_mxn'] = $fila["precio_mxn"];
@@ -863,7 +854,6 @@ class producto extends Archivo {
 			$registro['clave'] = htmlspecialchars_decode($fila['clave']);
 			$registro['descripcion_esp'] = htmlspecialchars_decode($fila['descripcion_esp']);
 			$registro['descripcion_eng'] = htmlspecialchars_decode($fila['descripcion_eng']);
-			$registro['tags'] = $fila['tags'];
 			$registro['url_amigable_esp'] = $fila['url_amigable_esp'];
 			$registro['url_amigable_eng'] = $fila['url_amigable_eng'];
 			$registro['precio_mxn'] = $fila["precio_mxn"];
@@ -904,7 +894,6 @@ class producto extends Archivo {
 			$registro['clave'] = htmlspecialchars_decode($fila['clave']);
 			$registro['descripcion_esp'] = htmlspecialchars_decode($fila['descripcion_esp']);
 			$registro['descripcion_eng'] = htmlspecialchars_decode($fila['descripcion_eng']);
-			$registro['tags'] = $fila['tags'];
 			$registro['url_amigable_esp'] = $fila['url_amigable_esp'];
 			$registro['url_amigable_eng'] = $fila['url_amigable_eng'];
 			$registro['precio_mxn'] = $fila["precio_mxn"];

@@ -4,12 +4,12 @@
         include 'cp/clases/'.$nombre_clase .'.php';
     }
     $temporal = new slide();
-    $listaTemporal = $temporal -> listarslide();
+    $listaTemporal = $temporal -> listarslideActivas();
 ?>
 <!--BODY-->
 
 <!--<div id="pagepiling">-->
-        <a href="#" style="display:block; position:fixed;z-index:1000;" onclick="display_menu()">
+        <a href="#" id="menu_a" style="display:block; position:fixed;z-index:1000;" onclick="display_menu()">
             <div class="menu-toggle"></div>
             <div class="text_toggle">
                 <h5>MENÚ</h5>
@@ -39,14 +39,14 @@
                 </a>
         </div>
         
-        <div  class="parallax" data-background-speed-y="0" data-parallax-align="bottom" id="shirts">
+        <div id="shirts" class="parallax" data-background-speed-y="0" data-parallax-align="top">
              <a style="display:block;" href="shirts.php">
                 <div class="background_black"></div>
                 <h1>CAMISAS</h1>
             </a>
         </div>
         
-        <div class="parallax" data-background-speed-y="0" data-parallax-align="bottom" id="contact">
+        <div id="contact" class="parallax" data-background-speed-y="0" data-parallax-align="top">
             <div class="background_black"></div>
             <div class="col-xs-12">
                 <div class="col-lg-6 col-md-6 col-sm-6"></div>
@@ -93,21 +93,7 @@
 <?php include_once("footer.html");?>
 <script>
     /*Parallax scrolling*/
-        var deleteLog = false;
-        /*$(document).ready(function() {
-            /*$('#pagepiling').pagepiling({
-                menu: false,
-                anchors: ['home', 'us', 'shirts', 'contact'],
-                navigation: {
-                    'textColor': '#f2f2f2',
-                    'bulletsColor': '#ccc',
-                    'position': 'right',
-                    'tooltips': ['INICIO', 'LA TIENDA', 'CAMISAS', 'CONTACTO']
-                }
-
-            });
-
-        });*/
+    var deleteLog = false;
 
     jQuery(document).ready(function($) {
       $('#full-width-slider').royalSlider({
@@ -125,15 +111,15 @@
       $(fullscreenParallax);
 
 
-      /*setInterval(function(){
+      setInterval(function(){
         var slider = $(".royalSlider").data('royalSlider');
         slider.next();  // next slide
-    }, 4500);*/
+    }, 4500);
 
       var width = $(window).width();
       var height = $(window).height();
 
-      $('#full-width-slider').css({width: width+"px", height:height+"px"})
+      $('#full-width-slider').css({width: width+"px", height:height+"px"});
 
     });
 

@@ -1,3 +1,24 @@
+$('.navbar-default .navbar-nav> a').click(function(event){
+    event.preventDefault();
+});
+
+$('#menu_a').click(function(event){
+    event.preventDefault();
+});
+
+$('#menu_chevron').click(function(event){
+    event.preventDefault();
+});
+
+
+
+var size = "";
+
+function setSize(id, shirt_size){
+    $(".img-size").css({borderColor:"white"});
+    $("#img-"+id).css({borderColor:"red"});
+    size = shirt_size;
+}
 
 function display_menu(){
 	$("nav").animate({top:"0px"});
@@ -161,13 +182,12 @@ function logIn(){
         cache:false,
         async:false,
         success:function(data){
-            console.log(data);
             if(data.indexOf("true") != -1){
                 mensaje = "¡Bienvenido "+ email+"!";
                 $("input[name='email-login']").val("");
                 $("input[name='pass-login']").val("");
                 var newHtml = '<li><a href="#" class="sb-open-right" id="login-button">'+email+'</a></li>'+
-                              '<li><a href="#" onclick="logOut()">| Cerrar Sesión</a></li>'+
+                              '<li><a href="#" onclick="logOut()"> Cerrar Sesión</a></li>'+
                               '<li><a href="#" onclick="hide_menu()"><i class="fa fa-chevron-up"></i></a></li>';
                 $(".navbar-right").html(newHtml);
             }
@@ -198,7 +218,6 @@ function showProductoInfo(id_product){
         cache:false,
         async:false,
         success:function(data){
-        	console.log(data);
             if(data != ""){
             	producto_existente = true;
             	resultado = JSON.parse(data);
@@ -207,12 +226,14 @@ function showProductoInfo(id_product){
     });
 
     if(producto_existente){
+        var id_producto = resultado[0].id_producto;
     	var nombre_producto = resultado[0].titulo_esp;
     	var descripcion_producto = resultado[0].descripcion_esp;
     	var precio_producto = resultado[0].precio_mxn;
     	var stock = resultado[0].stock_general;
     	var imagenes_secundarias = resultado[0].imagenes_secundarias;
     	var html_imagenes = "";
+        var html_qty = "";
     	var html_colores = "";
     	var html_tamaños = "";
     	var html_cantidad = "";
@@ -223,11 +244,18 @@ function showProductoInfo(id_product){
 				              "</div>";
     	}
 
+        for(var i = 0; i < stock; i++){
+            html_qty += '<option value="'+(i + 1)+'">'+(i + 1)+'</option>';
+        }   
     	$("#nombre_camisa").html("+ "+nombre_producto);
     	$("#full-width-slider_shirt").html(html_imagenes);
     	$("#descripcion").html(descripcion_producto);
     	$("#precio").html("$ "+precio_producto+" MXN");
     	$('#full-width-slider_shirt').royalSlider('destroy');
+        $("#qty2").html(html_qty);
+
+        $("#add_to_cart_button").attr("onclick", "addProductToCart("+id_producto+")");
+
 
     	setTimeout(function(){
     		
@@ -243,6 +271,206 @@ function showProductoInfo(id_product){
 
     	},100);
     }
+}
+
+function addProductToCart(id_product){
+    var producto_existente = false;
+    var amount = $("#qty2").val();
+    var data = new FormData;
+        data.append('operaciones',"ac");
+        data.append("idp", id_product);
+        data.append("size", size);
+        data.append("amount", amount);
+    var resultado;
+
+    $.ajax({ 
+        url: mypath+"controller.php",
+        type:'POST',
+        contentType:false,
+        data:data,
+        processData:false,
+        cache:false,
+        async:false,
+        success:function(data){
+            if(data.indexOf("false") != -1){
+                mensaje = "No se pudo agregar el producto al carrito. Inténtalo de nuevo.";
+            }
+            if(data.indexOf("true") != -1){
+                mensaje = "Se agrego el producto a tu carrito.";
+                size = "";
+                updateCart();
+            }
+
+            $("#header-modal").html("Agregar Producto");
+            $("#content-modal").html(mensaje);
+            $('#myModal').modal('toggle');
+        }
+    });
+
+}
+
+updateCart();
+function updateCart(){
+    var data = new FormData;
+        data.append('operaciones',"gc");
+    var resultado;
+    var carrito_vacio = true;
+
+    $.ajax({ 
+        url: mypath+"controller.php",
+        type:'POST',
+        contentType:false,
+        data:data,
+        processData:false,
+        cache:false,
+        async:false,
+        success:function(data){
+            console.log(data);
+            if(data.indexOf("empty") != -1){
+
+            }
+            else{
+                carrito_vacio = false;
+                resultado = JSON.parse(data);
+            }
+        }
+    });
+
+    if(!carrito_vacio){
+        var total_carrito = 0;
+        var html_carrito = "";
+        for (var i = 0; i < $(resultado).size(); i++){
+            console.log(resultado);
+            var unique_id = resultado[i].unique_id;
+            var id_producto = resultado[i].id;
+            var nombre = resultado[i].name;
+            var precio = resultado[i].price;
+            var img_principal = resultado[i].img;
+            var cantidad = resultado[i].amount;
+            var size = resultado[i].size;
+            var stock  = resultado[i].stock;
+            var html_size = "";
+            var html_producto = "";
+            total_carrito = parseInt(total_carrito) + parseInt(precio) * parseInt(cantidad);
+            switch(size){
+                case "S":
+                    html_size = '<select class="size">'+
+                                    '<option selected>S</option>'+
+                                    '<option>M</option>'+
+                                    '<option>L</option>'+
+                                    '<option>XL</option>'+
+                                '</select>';
+                break;
+                case "M":
+                    html_size = '<select class="size">'+
+                                    '<option>S</option>'+
+                                    '<option selected>M</option>'+
+                                    '<option>L</option>'+
+                                    '<option>XL</option>'+
+                                '</select>';
+                break;
+                case "L":
+                    html_size = '<select class="size">'+
+                                    '<option selected>S</option>'+
+                                    '<option>M</option>'+
+                                    '<option selected>L</option>'+
+                                    '<option>XL</option>'+
+                                '</select>';
+                break;
+                case "XL":
+                    html_size = '<select class="size">'+
+                                    '<option>S</option>'+
+                                    '<option>M</option>'+
+                                    '<option>L</option>'+
+                                    '<option selected>XL</option>'+
+                                '</select>';
+                break;
+            }
+
+            var html_stock = "";
+            for(var j = 0; j < stock; j++){
+                if(j + 1 == cantidad){
+                   html_stock += "<option selected value='"+(j + 1)+"'>"+(j + 1)+"</option>";
+                }
+                else{
+                   html_stock += "<option value='"+(j + 1)+"'>"+(j + 1)+"</option>";
+
+                }
+            }
+
+            html_producto = '<tr>'+
+                                //'<td><div class="color-square-shirt-cart" style="background-color:#000;"></div></td>'+
+                                '<td class="shirt-name"><img src="imgProductos/'+img_principal+'" class="cart_shirt">+ '+nombre+'</td>'+
+                                '<td class="shirt-num">'+
+                                '<label class="select">'+
+                                    '<select class="qty">'+
+                                        html_stock +
+                                    '</select>'+
+                                '</label>'+                 
+                                '</td>'+
+                                '<td class="shirt-size">'+
+                                '<label class="select">'+
+                                html_size +
+                                '</label>'+
+                                '</td>'+
+                                '<td class="shirt-price">$'+parseInt(precio)+' MXN</td>'+
+                                '<td class="delete-icon" onclick="deleteProductFromCart(\''+unique_id+'\')" style="cursor:pointer;"><i class="fa fa-times"></i></td>'+
+                            '</tr>';
+            html_carrito+= html_producto;
+        }
+        $("#cart-body").html(html_carrito);
+        $("#button_pay").html("$"+total_carrito+" MXN");
+    }
+}
+
+function deleteProductFromCart(unique_id){
+    var data = new FormData;
+        data.append('operaciones',"ep");
+        data.append('idp', unique_id);
+
+    $.ajax({ 
+        url: mypath+"controller.php",
+        type:'POST',
+        contentType:false,
+        data:data,
+        processData:false,
+        cache:false,
+        async:false,
+        success:function(data){
+            if(data.indexOf("false") != -1){
+                mensaje = "No se pudo eliminar el producto al carrito. Inténtalo de nuevo.";
+            }
+            if(data.indexOf("true") != -1){
+                mensaje = "Se elimino el producto a tu carrito.";
+                updateCart();
+            }
+            if(data.indexOf("notfound") != -1){
+                 mensaje = "No se encontró el producto en tu carrito, o ya expiró.";
+            }
+
+            $("#header-modal").html("Eliminar Producto");
+            $("#content-modal").html(mensaje);
+            $('#myModal').modal('toggle');
+        }
+    });
+}
+
+function resetCart(){
+    var data = new FormData;
+        data.append('operaciones',"rc");
+
+    $.ajax({ 
+        url: mypath+"controller.php",
+        type:'POST',
+        contentType:false,
+        data:data,
+        processData:false,
+        cache:false,
+        async:false,
+        success:function(data){
+            updateCart();
+        }
+    });
 }
 
 function search_product(){
