@@ -544,14 +544,16 @@ div.color-square{
 }
 
 .payment-form{
-	margin-left: 15%;
-	margin-top: 5%;
+	/*margin-left: 15%;
+	margin-top: 5%;*/
+	height:450px;
+	overflow: auto;
 }
 
-.register-form p,.login-form p, .payment-form p{
+.register-form > p,.login-form > p, .payment-form p.form{
 	border-bottom: 1.5pt solid #000000;
 	float:left;
-	width: 75%;
+	width: 100%;
 }
 
 .register-form label, .login-form label{

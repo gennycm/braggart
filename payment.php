@@ -10,7 +10,8 @@
         </a>       
         <div class="full_background pay">
             <div class="background_black"></div>
-            <div class="col-lg-12 col-md-12 col-sm-12" style="margin-top:10%;position:relative;z-index:999; ">
+            <div class="col-lg-12 col-md-12 col-sm-12" style="margin-top:10%;position:relative;z-index:999;overflow:auto; ">
+                <form class="payment-form"  method="post" id="card-form" action="controller.php">
                  <div class="col-lg-6 col-md-6 col-sm-6 center">
                     <div class="white_block">
                         <p class="center" style="width:100%; font-size:18pt; font-weight:bold;">PASO 1</p>
@@ -22,23 +23,15 @@
                             </thead>
                             <tr>
                                 <td>
-                                 <form class="payment-form"  method="post" onsubmit="" action="#">
-                                      <p><label><i class="fa fa-user fa-lg"></i></label><input name="nombre" type="text" class="text" placeholder=" NOMBRE COMPLETO" ></p>
-                                      <p><label><i class="fa fa-map-marker fa-lg"></i></label><input name="numCalle" type="text" class="text" placeholder=" N&Uacute;MERO DE CALLE" ></p>
-                                      <p><label></label><input name="numExt" type="text" class="text" placeholder=" N&Uacute;MERO EXTERIOR" ></p>
-                                      <p><label></label><input name="numExt" type="text" class="text" placeholder=" N&Uacute;MERO INTERIOR" ></p>
-                                      <p><label></label><input name="codP" type="text" class="text" placeholder=" C&Oacute;DIGO POSTAL" ></p>
-                                      <p><label></label><input name="colFracc" type="text" class="text" placeholder=" COLONIA O FRACCIONAMIENTO" ></p>
-                                      <p>
-                                        <label class="select">
-                                            <select class="state">
-                                                <option selected>AGUASCALIENTES</option>
-                                                <option>YUCAT&Aacute;N</option>
-                                                <option>ZACATECAS</option>
-                                            </select>
-                                        </label>
-                                     </form>
-                                      </p>      
+                                      <p class="form"><label><i class="fa fa-user fa-lg"></i></label><input name="nombre" type="text" class="text" placeholder=" NOMBRE COMPLETO" ></p>
+                                      <p class="form"><label><i class="fa fa-map-marker fa-lg"></i></label><input name="numCalle" type="text" class="text" placeholder=" N&Uacute;MERO DE CALLE" ></p>
+                                      <p class="form"><label></label><input name="numExt" type="text" class="text" placeholder=" N&Uacute;MERO EXTERIOR" ></p>
+                                      <p class="form"><label></label><input name="numInt" type="text" class="text" placeholder=" N&Uacute;MERO INTERIOR" ></p>
+                                      <p class="form"><label></label><input name="codP" type="text" class="text" placeholder=" C&Oacute;DIGO POSTAL" ></p>
+                                      <p class="form"><label></label><input name="colFracc" type="text" class="text" placeholder=" COLONIA O FRACCIONAMIENTO" ></p>
+                                      <p class="form"><label></label><input name="municipio" type="text" class="text" placeholder=" MUNICIPIO" ></p>
+                                      <p class="form"><label></label><input name="ciudad" type="text" class="text" placeholder=" CIUDAD" ></p>
+                                      <p class="form"><label></label><input name="estado" type="text" class="text" placeholder=" ESTADO" ></p>
                                 </td>
                             </tr>                          
                             <tfoot></tfoot>
@@ -56,7 +49,7 @@
                             </thead>
                             <tr>
                                 <td>
-                                 <form class="payment-form"  method="post" onsubmit="" action="#">
+                                 <!--<form class="payment-form"  method="post" onsubmit="" action="#">
                                     <p>
                                         <label class="select">
                                             <select class="formPago">
@@ -76,7 +69,16 @@
                                       <p><label><i class="fa fa-credit-card fa-lg"></i></label><input name="numTarj" type="text" class="text" placeholder=" N&Uacute;MERO DE TARJETA" ></p>
                                       <p><label><i class="fa fa-calendar fa-lg"></i></label><input name="expDt" type="text" class="text" placeholder=" FECHA DE EXPIRACI&Oacute;N" ></p>
                                       <p><label><i class="fa fa-key fa-lg"></i></label><input name="segCod" type="text" class="text" placeholder=" C&Oacute;DIGO DE SEGURIDAD" ></p>
-                                       <p style="border:none"><button>LISTO</button></p> 
+                                       <p style="border:none"><button>LISTO</button></p> -->
+                                       <!--<form action="controller" method="POST" id="card-form">-->
+                                          <span class="card-errors"></span>
+                                          <p class="form"><label><i class="fa fa-user fa-lg"></i></label><input size="20" data-conekta="card[name]" type="text" class="text" placeholder="NOMBRE DEL TARJETAHABIENTE" ></p>
+                                          <p class="form"><label><i class="fa fa-credit-card fa-md"></i></label><input size="20" type="text" data-conekta="card[number]" class="text" placeholder=" # DE TARJETA" ></p>
+                                          <p class="form"><label><i class="fa fa-key fa-lg"></i></label><input size="4" data-conekta="card[cvc]" type="text" class="text" placeholder=" C&Oacute;DIGO DE SEGURIDAD" ></p>
+                                          <p class="form"><label><i class="fa fa-calendar fa-lg"></i></label><input size="2" data-conekta="card[exp_month]" type="text" class="text" placeholder=" MES DE EXPIRACI&Oacute;N 01, 02, 10" ></p>
+                                          <p class="form"><label><i class="fa fa-calendar fa-lg"></i></label><input size="4" data-conekta="card[exp_year]" type="text" class="text" placeholder=" AÑO DE EXPIRACI&Oacute;N 2016, 2017, 2020" ></p>
+                                          <p class="form" style="border:none"><button type="submit">LISTO</button></p>
+                                          <input type="hidden" name="op" value="rp">
                                       </form>
      
                                 </td>
@@ -103,6 +105,35 @@
 
 <!--BODY-->
 <?php include_once("footer.html");?>
+<script type="text/javascript" src="https://conektaapi.s3.amazonaws.com/v0.3.2/js/conekta.js"></script>
+<script type="text/javascript">
+   Conekta.setPublishableKey('key_PEQaseCZ5q7iDZDWVSy11Rg');
+   jQuery(function($) {
+      $("#card-form").submit(function(event) {
+        var $form;
+        $form = $(this);
+        $form.find("button").prop("disabled", true);
+        Conekta.token.create($form, conektaSuccessResponseHandler, conektaErrorResponseHandler);
+        return false;
+      });
+
+        var conektaSuccessResponseHandler;
+        conektaSuccessResponseHandler = function(token) {
+          var $form;
+          $form = $("#card-form");          
+          $form.append($("<input type=\"hidden\" name=\"conektaTokenId\" />").val(token.id));
+          $form.get(0).submit();
+        };
+
+        var conektaErrorResponseHandler;
+        conektaErrorResponseHandler = function(response) {
+          var $form;
+          $form = $("#card-form");
+          $form.find(".card-errors").text(response.message);
+          $form.find("button").prop("disabled", false);
+        };
+    });
+</script>
 <script>
     /*Parallax scrolling*/
         
@@ -123,21 +154,6 @@
                 }
 
             });*/
-
-            $('#full-width-slider_shirt').royalSlider({
-                loop:true,
-                keyboardNavEnabled: true,
-                imageScaleMode: "fill",
-                controlNavigation: "none",
-                navigateByClick: true,
-                usePreloader: true,
-                sliderDrag: false
-            });
-            setTimeout(function(){
-                 var slider = $(".royalSlider").data('royalSlider');
-                slider.updateSliderSize();
-            }, 1000);
-           
 
         });
     }) (jQuery);

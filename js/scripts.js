@@ -190,12 +190,46 @@ function logIn(){
                               '<li><a href="#" onclick="logOut()"> Cerrar Sesión</a></li>'+
                               '<li><a href="#" onclick="hide_menu()"><i class="fa fa-chevron-up"></i></a></li>';
                 $(".navbar-right").html(newHtml);
+                $(".sb-close").click();
             }
             if(data.indexOf("false") != -1){
                 mensaje = "Usuario o contraseña incorrectos, intentalo de nuevo.";
             }
 
             $("#header-modal").html("Inicio de Sesión");
+            $("#content-modal").html(mensaje);
+            $('#myModal').modal('toggle');
+        }
+    });
+}
+
+function logOut(){
+    var data = new FormData;
+        data.append('operaciones',"cs");
+    var resultado;
+    var mensaje = "";
+
+    $.ajax({ 
+        url: mypath+"controller.php",
+        type:'POST',
+        contentType:false,
+        data:data,
+        processData:false,
+        cache:false,
+        async:false,
+        success:function(data){
+            if(data.indexOf("true") != -1){
+                mensaje = "Se ha cerrado tu sesión con éxito.";
+                var newHtml = '<li><a href="#" class="sb-open-right" id="login-button">INICIAR SESI&Oacute;N | REGISTRO</a></li>'+
+                              '<li><a href="#" id="menu_chevron" onclick="hide_menu()"><i class="fa fa-chevron-up"></i></a></li>';
+                $(".navbar-right").html(newHtml);
+                $(".sb-close").click();
+            }
+            if(data.indexOf("false") != -1){
+                mensaje = "No se pudo cerrar tu sesión, intentalo de nuevo.";
+            }
+
+            $("#header-modal").html("Cerrar Sesión");
             $("#content-modal").html(mensaje);
             $('#myModal').modal('toggle');
         }

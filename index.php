@@ -25,26 +25,40 @@
             <?php 
                 foreach($listaTemporal as $elementoTemporal){
                     echo '<div class="rsContent">
-                            <img class="rsImg" src="slide/'.$elementoTemporal["ruta"].'" alt="">
+                            <img class="rsImg" src="slide/'.$elementoTemporal["ruta"].'" alt=""/>
                           </div>';
                             }
             ?>  
             </div>
         </div>
         
-        <div id="us" class="parallax" data-background-speed-y="0" data-parallax-align="top">
+        <!--<div id="us" class="parallax" data-background-speed-y="0" data-parallax-align="top">
                 <a style="display:block;" href="store.php">
                     <div class="background_black"></div>
                     <h1>LA TIENDA</h1>
                 </a>
+        </div>-->
+        <?php echo ''; ?>
+        <div id="us" class="parallax" data-background-speed-y="0" data-parallax-align="top">
+            <div class="background_black"></div>
+            <a style="display:block;" href="store.php">
+                <h1>LA TIENDA</h1>
+            </a>
+        </div>
+
+        <div id="shirts" class="parallax" data-background-speed-y="0" data-parallax-align="top">
+            <div class="background_black"></div>
+            <a style="display:block;" href="shirts.php">
+                <h1>CAMISAS</h1>
+            </a>
         </div>
         
-        <div id="shirts" class="parallax" data-background-speed-y="0" data-parallax-align="top">
+        <!--<div id="shirts" class="parallax" data-background-speed-y="0" data-parallax-align="top">
              <a style="display:block;" href="shirts.php">
                 <div class="background_black"></div>
                 <h1>CAMISAS</h1>
             </a>
-        </div>
+        </div>-->
         
         <div id="contact" class="parallax" data-background-speed-y="0" data-parallax-align="top">
             <div class="background_black"></div>

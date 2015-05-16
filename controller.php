@@ -1,5 +1,5 @@
 <?php 
-//include("includes/path.php");
+include("cp/lib/Conekta.php");
 function __autoload($nombre_clase) {
 	$nombre_clase = strtolower($nombre_clase);
     include 'cp/clases/'.$nombre_clase .'.php';
@@ -13,6 +13,42 @@ switch ($operaciones) {
 		$id_producto = $_REQUEST["idp"];
 		$producto = new producto($id_producto);
 		$producto -> obtener_producto_ajax();
+	break;
+	case "rp":
+		$_SESSION["braggart_pay_token"] = $_POST['conektaTokenId'];
+		
+		$payment_data = array("nombre" => $_POST["nombre"],
+							  "calle" => $_POST["numCalle"],
+							  "numExt" => $_POST["numExt"],
+							  "numInt" => $_POST["numInt"],
+							  "codP" => $_POST["codP"],
+							  "colFracc" => $_POST["colFracc"],
+							  "municipio" => $_POST["municipio"],
+							  "ciudad" => $_POST["ciudad"],
+							  "estado" => $_POST["estado"]
+							  );
+
+		$_SESSION["braggar_payment_data"] = $payment_data;                        
+		/*Conekta::setApiKey("key_nxPDYXpi5rbSSLQvLLN58Q");
+		try{
+		  $charge = Conekta_Charge::create(array(
+		    "amount"=> 51000,
+		    "currency"=> "MXN",
+		    "description"=> "Compra de Camisas",
+		    "reference_id"=> "orden_de_id_interno",
+		    "card"=> $_POST['conektaTokenId'],
+		 //"tok_a4Ff0dD2xYZZq82d9",
+		    "details"=> array(
+		      "email"=>"logan@x-men.org"
+		      )
+		  ));
+		}catch (Conekta_Error $e){
+		  echo $e->getMessage();
+		 //el pago no pudo ser procesado
+		}
+		echo $charge->status;
+		*/
+
 	break;
 	case "ru":
 		$email = $_REQUEST["em"];
@@ -43,6 +79,14 @@ switch ($operaciones) {
 			echo json_encode("false");
 		}
 		
+	break;
+	case "cs":
+		unset($_SESSION["braggart_id_user"]);
+		unset($_SESSION["braggart_email_user"]);
+		unset($_SESSION["braggart_user_token"]);
+		unset($_SESSION["braggart_cart"]);
+		unset($_SESSION["braggart_pay_token"]);
+		echo "true";
 	break;
 	case "ac":
 		$id_producto = $_REQUEST["idp"];
