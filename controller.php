@@ -48,6 +48,7 @@ switch ($operaciones) {
 		}
 		echo $charge->status;
 		*/
+		header("Location: payment2.php");
 
 	break;
 	case "ru":

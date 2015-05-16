@@ -2,22 +2,22 @@
 -- version 4.2.10
 -- http://www.phpmyadmin.net
 --
--- Host: localhost
--- Generation Time: Mar 01, 2015 at 06:24 AM
--- Server version: 5.5.38
--- PHP Version: 5.6.2
+-- Servidor: localhost:8889
+-- Tiempo de generación: 16-05-2015 a las 05:43:47
+-- Versión del servidor: 5.5.38
+-- Versión de PHP: 5.6.2
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
 
 --
--- Database: `braggart`
+-- Base de datos: `braggart`
 --
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `atributos`
+-- Estructura de tabla para la tabla `atributos`
 --
 
 CREATE TABLE `atributos` (
@@ -26,12 +26,19 @@ CREATE TABLE `atributos` (
   `nombre_eng` text COLLATE utf8_unicode_ci NOT NULL,
   `status` int(1) NOT NULL,
   `mostrar` tinyint(1) NOT NULL
-) ENGINE=MyISAM AUTO_INCREMENT=14 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=15 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+--
+-- Volcado de datos para la tabla `atributos`
+--
+
+INSERT INTO `atributos` (`id_atributo`, `nombre_esp`, `nombre_eng`, `status`, `mostrar`) VALUES
+(14, 'Talla', 'Size', 1, 0);
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `atributos_valores`
+-- Estructura de tabla para la tabla `atributos_valores`
 --
 
 CREATE TABLE `atributos_valores` (
@@ -43,10 +50,19 @@ CREATE TABLE `atributos_valores` (
   `mostrar` tinyint(1) NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
+--
+-- Volcado de datos para la tabla `atributos_valores`
+--
+
+INSERT INTO `atributos_valores` (`id_atributo`, `id_valor`, `nombre_esp`, `nombre_eng`, `status`, `mostrar`) VALUES
+(14, 3, 'Grande', 'Large', 1, 0),
+(14, 2, 'Mediana', 'Medium', 1, 0),
+(14, 1, 'Chica', 'Small', 1, 0);
+
 -- --------------------------------------------------------
 
 --
--- Table structure for table `boletin`
+-- Estructura de tabla para la tabla `boletin`
 --
 
 CREATE TABLE `boletin` (
@@ -57,7 +73,7 @@ CREATE TABLE `boletin` (
 ) ENGINE=MyISAM AUTO_INCREMENT=5 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
--- Dumping data for table `boletin`
+-- Volcado de datos para la tabla `boletin`
 --
 
 INSERT INTO `boletin` (`idboletin`, `correo`, `token`, `status`) VALUES
@@ -69,7 +85,7 @@ INSERT INTO `boletin` (`idboletin`, `correo`, `token`, `status`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `categorias_productos`
+-- Estructura de tabla para la tabla `categorias_productos`
 --
 
 CREATE TABLE `categorias_productos` (
@@ -80,7 +96,7 @@ CREATE TABLE `categorias_productos` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `combinaciones_atributos_valores`
+-- Estructura de tabla para la tabla `combinaciones_atributos_valores`
 --
 
 CREATE TABLE `combinaciones_atributos_valores` (
@@ -89,10 +105,17 @@ CREATE TABLE `combinaciones_atributos_valores` (
   `id_valor` int(11) NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
+--
+-- Volcado de datos para la tabla `combinaciones_atributos_valores`
+--
+
+INSERT INTO `combinaciones_atributos_valores` (`id_combinacion`, `id_atributo`, `id_valor`) VALUES
+(55, 14, 3);
+
 -- --------------------------------------------------------
 
 --
--- Table structure for table `combinaciones_imagenes`
+-- Estructura de tabla para la tabla `combinaciones_imagenes`
 --
 
 CREATE TABLE `combinaciones_imagenes` (
@@ -100,10 +123,18 @@ CREATE TABLE `combinaciones_imagenes` (
   `id_imagen` int(11) NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
+--
+-- Volcado de datos para la tabla `combinaciones_imagenes`
+--
+
+INSERT INTO `combinaciones_imagenes` (`id_combinacion`, `id_imagen`) VALUES
+(55, 15),
+(55, 16);
+
 -- --------------------------------------------------------
 
 --
--- Table structure for table `combinaciones_productos`
+-- Estructura de tabla para la tabla `combinaciones_productos`
 --
 
 CREATE TABLE `combinaciones_productos` (
@@ -113,12 +144,19 @@ CREATE TABLE `combinaciones_productos` (
   `stock` text COLLATE utf8_unicode_ci NOT NULL,
   `status` tinyint(1) NOT NULL,
   `mostrar` tinyint(1) NOT NULL
-) ENGINE=MyISAM AUTO_INCREMENT=55 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=56 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+--
+-- Volcado de datos para la tabla `combinaciones_productos`
+--
+
+INSERT INTO `combinaciones_productos` (`id_combinacion`, `id_producto`, `nombre`, `stock`, `status`, `mostrar`) VALUES
+(55, 4, 'Grande', '5', 1, 0);
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `config_mailing`
+-- Estructura de tabla para la tabla `config_mailing`
 --
 
 CREATE TABLE `config_mailing` (
@@ -132,7 +170,7 @@ CREATE TABLE `config_mailing` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
--- Dumping data for table `config_mailing`
+-- Volcado de datos para la tabla `config_mailing`
 --
 
 INSERT INTO `config_mailing` (`idconfig`, `correo_noreply`, `correo_standard`, `facebook`, `twitter`, `instagram`, `youtube`) VALUES
@@ -141,7 +179,7 @@ INSERT INTO `config_mailing` (`idconfig`, `correo_noreply`, `correo_standard`, `
 -- --------------------------------------------------------
 
 --
--- Table structure for table `contacto`
+-- Estructura de tabla para la tabla `contacto`
 --
 
 CREATE TABLE `contacto` (
@@ -151,7 +189,7 @@ CREATE TABLE `contacto` (
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
--- Dumping data for table `contacto`
+-- Volcado de datos para la tabla `contacto`
 --
 
 INSERT INTO `contacto` (`idcontacto`, `correo`, `emisor`) VALUES
@@ -160,7 +198,7 @@ INSERT INTO `contacto` (`idcontacto`, `correo`, `emisor`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `correo1`
+-- Estructura de tabla para la tabla `correo1`
 --
 
 CREATE TABLE `correo1` (
@@ -188,7 +226,7 @@ CREATE TABLE `correo1` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `correo1img`
+-- Estructura de tabla para la tabla `correo1img`
 --
 
 CREATE TABLE `correo1img` (
@@ -201,7 +239,7 @@ CREATE TABLE `correo1img` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `correo1img2`
+-- Estructura de tabla para la tabla `correo1img2`
 --
 
 CREATE TABLE `correo1img2` (
@@ -214,7 +252,7 @@ CREATE TABLE `correo1img2` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `datosuserend`
+-- Estructura de tabla para la tabla `datosuserend`
 --
 
 CREATE TABLE `datosuserend` (
@@ -230,7 +268,7 @@ CREATE TABLE `datosuserend` (
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
--- Dumping data for table `datosuserend`
+-- Volcado de datos para la tabla `datosuserend`
 --
 
 INSERT INTO `datosuserend` (`iduserend`, `nombre`, `apellido`, `company`, `telefono`, `ciudad`, `direccion`, `postal`, `tipo`) VALUES
@@ -253,7 +291,7 @@ INSERT INTO `datosuserend` (`iduserend`, `nombre`, `apellido`, `company`, `telef
 -- --------------------------------------------------------
 
 --
--- Table structure for table `datosusuario`
+-- Estructura de tabla para la tabla `datosusuario`
 --
 
 CREATE TABLE `datosusuario` (
@@ -265,7 +303,7 @@ CREATE TABLE `datosusuario` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `datosusuario`
+-- Volcado de datos para la tabla `datosusuario`
 --
 
 INSERT INTO `datosusuario` (`idusuario`, `nombre`, `email`, `telefono`, `token`) VALUES
@@ -276,7 +314,7 @@ INSERT INTO `datosusuario` (`idusuario`, `nombre`, `email`, `telefono`, `token`)
 -- --------------------------------------------------------
 
 --
--- Table structure for table `detalle_orden`
+-- Estructura de tabla para la tabla `detalle_orden`
 --
 
 CREATE TABLE `detalle_orden` (
@@ -290,7 +328,7 @@ CREATE TABLE `detalle_orden` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `direcciones`
+-- Estructura de tabla para la tabla `direcciones`
 --
 
 CREATE TABLE `direcciones` (
@@ -310,7 +348,7 @@ CREATE TABLE `direcciones` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `faq`
+-- Estructura de tabla para la tabla `faq`
 --
 
 CREATE TABLE `faq` (
@@ -320,7 +358,7 @@ CREATE TABLE `faq` (
 ) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
--- Dumping data for table `faq`
+-- Volcado de datos para la tabla `faq`
 --
 
 INSERT INTO `faq` (`id_faq`, `contenido_esp`, `contenido_eng`) VALUES
@@ -329,7 +367,7 @@ INSERT INTO `faq` (`id_faq`, `contenido_esp`, `contenido_eng`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `img_producto`
+-- Estructura de tabla para la tabla `img_producto`
 --
 
 CREATE TABLE `img_producto` (
@@ -338,12 +376,34 @@ CREATE TABLE `img_producto` (
   `ruta` varchar(100) NOT NULL,
   `titulo` varchar(100) NOT NULL,
   `orden` int(7) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=17 DEFAULT CHARSET=latin1;
+
+--
+-- Volcado de datos para la tabla `img_producto`
+--
+
+INSERT INTO `img_producto` (`id_img_producto`, `id_producto`, `ruta`, `titulo`, `orden`) VALUES
+(1, 1, '2eb70b63.jpg', '', 1),
+(2, 1, 'c3b63e40.jpg', '', 2),
+(3, 1, '1583bf94.jpg', '', 3),
+(4, 1, 'd225d8dd.jpg', '', 4),
+(5, 2, '56266874.jpg', '', 5),
+(6, 2, '4508f98e.jpg', '', 6),
+(7, 2, 'f341f08b.jpg', '', 7),
+(8, 2, '8d3a212c.jpg', '', 8),
+(9, 3, '77ea0d48.jpg', '', 9),
+(10, 3, 'c4346469.jpg', '', 10),
+(11, 3, '7ccaa1e7.jpg', '', 11),
+(12, 3, '3cb2e7e7.jpg', '', 12),
+(13, 4, 'c308bcaf.jpg', '', 13),
+(14, 4, 'f823a7f7.jpg', '', 14),
+(15, 4, 'a67b5eae.jpg', '', 15),
+(16, 4, '913b34b3.jpg', '', 16);
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `impuestos`
+-- Estructura de tabla para la tabla `impuestos`
 --
 
 CREATE TABLE `impuestos` (
@@ -353,7 +413,7 @@ CREATE TABLE `impuestos` (
 ) ENGINE=MyISAM AUTO_INCREMENT=6 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
--- Dumping data for table `impuestos`
+-- Volcado de datos para la tabla `impuestos`
 --
 
 INSERT INTO `impuestos` (`id_impuesto`, `nombre`, `porcentaje`) VALUES
@@ -362,7 +422,27 @@ INSERT INTO `impuestos` (`id_impuesto`, `nombre`, `porcentaje`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `marcas`
+-- Estructura de tabla para la tabla `latienda`
+--
+
+CREATE TABLE `latienda` (
+`id_latienda` int(11) NOT NULL,
+  `descripcion1` text COLLATE utf8_unicode_ci NOT NULL,
+  `descripcion2` text COLLATE utf8_unicode_ci NOT NULL,
+  `descripcion3` text COLLATE utf8_unicode_ci NOT NULL
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+--
+-- Volcado de datos para la tabla `latienda`
+--
+
+INSERT INTO `latienda` (`id_latienda`, `descripcion1`, `descripcion2`, `descripcion3`) VALUES
+(1, '&lt;p&gt;BRAGGART es una marca orgullosamente mexicana, elegante y hecha para ti.&amp;nbsp;&lt;br&gt;&lt;/p&gt;', '&lt;p&gt;Tenemos envÃ­o a toda la repÃºblica.&lt;br&gt;&lt;/p&gt;', '&lt;p&gt;Aceptamos pagos con tarjeta de crÃ©dito y de dÃ©bito.&lt;br&gt;&lt;/p&gt;');
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `marcas`
 --
 
 CREATE TABLE `marcas` (
@@ -375,7 +455,7 @@ CREATE TABLE `marcas` (
 ) ENGINE=MyISAM AUTO_INCREMENT=17 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
--- Dumping data for table `marcas`
+-- Volcado de datos para la tabla `marcas`
 --
 
 INSERT INTO `marcas` (`id_marca`, `nombre`, `status`, `img_principal`, `mostrar`, `descripcion`) VALUES
@@ -399,7 +479,7 @@ INSERT INTO `marcas` (`id_marca`, `nombre`, `status`, `img_principal`, `mostrar`
 -- --------------------------------------------------------
 
 --
--- Table structure for table `marcas_productos`
+-- Estructura de tabla para la tabla `marcas_productos`
 --
 
 CREATE TABLE `marcas_productos` (
@@ -410,7 +490,7 @@ CREATE TABLE `marcas_productos` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `orden`
+-- Estructura de tabla para la tabla `orden`
 --
 
 CREATE TABLE `orden` (
@@ -430,7 +510,7 @@ CREATE TABLE `orden` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `permiso`
+-- Estructura de tabla para la tabla `permiso`
 --
 
 CREATE TABLE `permiso` (
@@ -441,7 +521,7 @@ CREATE TABLE `permiso` (
 ) ENGINE=InnoDB AUTO_INCREMENT=87 DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `permiso`
+-- Volcado de datos para la tabla `permiso`
 --
 
 INSERT INTO `permiso` (`idpermiso`, `nompermiso`, `clavepermiso`, `status`) VALUES
@@ -487,7 +567,7 @@ INSERT INTO `permiso` (`idpermiso`, `nompermiso`, `clavepermiso`, `status`) VALU
 -- --------------------------------------------------------
 
 --
--- Table structure for table `plantilla_mailing`
+-- Estructura de tabla para la tabla `plantilla_mailing`
 --
 
 CREATE TABLE `plantilla_mailing` (
@@ -500,7 +580,7 @@ CREATE TABLE `plantilla_mailing` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `productos`
+-- Estructura de tabla para la tabla `productos`
 --
 
 CREATE TABLE `productos` (
@@ -531,12 +611,22 @@ CREATE TABLE `productos` (
   `stock_general` int(11) NOT NULL,
   `impuesto` double NOT NULL,
   `id_marca` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=latin1;
+
+--
+-- Volcado de datos para la tabla `productos`
+--
+
+INSERT INTO `productos` (`id_producto`, `img_principal`, `titulo_esp`, `descripcion_esp`, `url_amigable_esp`, `fecha_creacion`, `fecha_modificacion`, `mostrar`, `status`, `orden`, `titulo_eng`, `descripcion_eng`, `url_amigable_eng`, `precio_mxn`, `precio_usd`, `peso`, `clave`, `tags_esp`, `meta_titulo_esp`, `meta_descripcion_esp`, `tags_eng`, `meta_titulo_eng`, `meta_descripcion_eng`, `pdf_adjunto`, `stock_general`, `impuesto`, `id_marca`) VALUES
+(1, 'c22412a7.jpg', 'Navy Scarlet', '&amp;lt;p&amp;gt;Camisa 100% de algodÃ³n.&amp;amp;nbsp;&amp;lt;/p&amp;gt;', 'navy-scarlet', '2015-03-05', '2015-04-18', 0, 1, 1, 'CAMISA 1', '&amp;lt;p&amp;gt;Camisa 100% de algodÃ³n.&amp;amp;nbsp;&amp;lt;/p&amp;gt;', 'camisa-1', 600, 600, '0.200', 'SRSECS-123', 'camisa,algodon', 'CAMISA 1', 'Camisa 100% de algodÃ³n. ', 'camisa,algodon', 'CAMISA 1', 'Camisa 100% de algodÃ³n. ', '', 3, 16, 0),
+(2, '341b8e25.jpg', 'Retro Seafarer', '&amp;lt;p&amp;gt;Camisa 100% de algodÃ³n, excelente para el calor.&amp;lt;/p&amp;gt;', 'retro-seafarer', '2015-03-05', '2015-04-18', 0, 1, 2, 'CAMISA 2', '&amp;lt;p&amp;gt;Camisa 100% de algodÃ³n, excelente para el calor.&amp;lt;/p&amp;gt;', 'camisa-2', 550, 550, '0.200', 'DRDFDDFD-213', 'algodÃ³n,calor,camisa', 'CAMISA 2', 'Camisa 100% de algodÃ³n, excelente para el calor.', 'algodÃ³n,calor,camisa', 'CAMISA 2', 'Camisa 100% de algodÃ³n, excelente para el calor.', '', 3, 16, 0),
+(3, '2f0d379a.jpg', 'Oxblood', '&amp;lt;p&amp;gt;Camisa 100% de algodÃ³n&amp;lt;/p&amp;gt;', 'oxblood', '2015-03-05', '2015-04-18', 0, 1, 3, 'CAMISA 3', '&amp;lt;p&amp;gt;Camisa 100% de algodÃ³n&amp;lt;/p&amp;gt;', 'camisa-3', 750, 750, '0.200', 'C-1234', 'algodon,camisa', 'CAMISA 3', 'Camisa 100% de algodÃ³n', 'algodon,camisa', 'CAMISA 3', 'Camisa 100% de algodÃ³n', '', 3, 16, 0),
+(4, 'ab65797d.jpg', 'Vintage Navy', '&amp;lt;p&amp;gt;Camisa 100% de algÃ³don, con encaje blanco.&amp;lt;/p&amp;gt;', 'vintage-navy', '2015-03-05', '2015-04-18', 0, 1, 4, 'CAMISA 4', '&amp;lt;p&amp;gt;Camisa 100% de algÃ³don, con encaje blanco.&amp;lt;/p&amp;gt;', 'camisa-4', 600, 600, '0.300', 'SRDFE-12345', 'encaje,algodon,camisa', 'CAMISA 4', 'Camisa 100% de algÃ³don, con encaje blanco.', 'encaje,algodon,camisa', 'CAMISA 4', 'Camisa 100% de algÃ³don, con encaje blanco.', '', 3, 16, 0);
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `productos_categorias`
+-- Estructura de tabla para la tabla `productos_categorias`
 --
 
 CREATE TABLE `productos_categorias` (
@@ -547,7 +637,7 @@ CREATE TABLE `productos_categorias` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `productos_transportes`
+-- Estructura de tabla para la tabla `productos_transportes`
 --
 
 CREATE TABLE `productos_transportes` (
@@ -555,10 +645,25 @@ CREATE TABLE `productos_transportes` (
   `id_transporte` int(11) NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
+--
+-- Volcado de datos para la tabla `productos_transportes`
+--
+
+INSERT INTO `productos_transportes` (`id_producto`, `id_transporte`) VALUES
+(1, 3),
+(1, 6),
+(2, 1),
+(2, 5),
+(3, 3),
+(3, 4),
+(3, 6),
+(4, 1),
+(4, 5);
+
 -- --------------------------------------------------------
 
 --
--- Table structure for table `progreso_mailing`
+-- Estructura de tabla para la tabla `progreso_mailing`
 --
 
 CREATE TABLE `progreso_mailing` (
@@ -576,7 +681,7 @@ CREATE TABLE `progreso_mailing` (
 ) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
--- Dumping data for table `progreso_mailing`
+-- Volcado de datos para la tabla `progreso_mailing`
 --
 
 INSERT INTO `progreso_mailing` (`idmailing`, `idcorreo`, `tipocorreo`, `numcorreos`, `enviados`, `status`, `fechayhorainicio`, `fechayhorafinal`, `duracion`, `plantilla`, `permitido`) VALUES
@@ -586,7 +691,7 @@ INSERT INTO `progreso_mailing` (`idmailing`, `idcorreo`, `tipocorreo`, `numcorre
 -- --------------------------------------------------------
 
 --
--- Table structure for table `rangos_transporte`
+-- Estructura de tabla para la tabla `rangos_transporte`
 --
 
 CREATE TABLE `rangos_transporte` (
@@ -600,7 +705,7 @@ CREATE TABLE `rangos_transporte` (
 ) ENGINE=MyISAM AUTO_INCREMENT=18 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
--- Dumping data for table `rangos_transporte`
+-- Volcado de datos para la tabla `rangos_transporte`
 --
 
 INSERT INTO `rangos_transporte` (`id_rango_transporte`, `peso_maximo`, `peso_minimo`, `id_transporte`, `status`, `cargo_por_envio`, `mostrar`) VALUES
@@ -620,7 +725,7 @@ INSERT INTO `rangos_transporte` (`id_rango_transporte`, `peso_maximo`, `peso_min
 -- --------------------------------------------------------
 
 --
--- Table structure for table `redes_sociales`
+-- Estructura de tabla para la tabla `redes_sociales`
 --
 
 CREATE TABLE `redes_sociales` (
@@ -632,7 +737,7 @@ CREATE TABLE `redes_sociales` (
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
--- Dumping data for table `redes_sociales`
+-- Volcado de datos para la tabla `redes_sociales`
 --
 
 INSERT INTO `redes_sociales` (`id_redes_sociales`, `facebook`, `twitter`, `instagram`, `pinterest`) VALUES
@@ -641,7 +746,7 @@ INSERT INTO `redes_sociales` (`id_redes_sociales`, `facebook`, `twitter`, `insta
 -- --------------------------------------------------------
 
 --
--- Table structure for table `slide`
+-- Estructura de tabla para la tabla `slide`
 --
 
 CREATE TABLE `slide` (
@@ -652,22 +757,23 @@ CREATE TABLE `slide` (
   `status` int(2) NOT NULL,
   `texto` text NOT NULL,
   `orden` int(7) NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `slide`
+-- Volcado de datos para la tabla `slide`
 --
 
 INSERT INTO `slide` (`idslide`, `ruta`, `titulo`, `urlvideo`, `status`, `texto`, `orden`) VALUES
-(2, 'bcc6ff63.png', 'Slide 1', '', 1, '&lt;p&gt;Primera imagen&lt;/p&gt;', 3),
-(3, '676a4fea.jpg', 'Slide 2', '', 1, '&lt;p&gt;Imagen 2&lt;/p&gt;', 2),
+(2, 'bcc6ff63.png', 'Slide 1', '', 1, '&lt;p&gt;Primera imagen&lt;/p&gt;', 2),
+(3, '676a4fea.jpg', 'Slide 2', '', 0, '&lt;p&gt;Imagen 2&lt;/p&gt;', 3),
 (4, '6e5d7575.jpg', 'Slide 3', '', 1, '&lt;p&gt;Imagen 3&lt;/p&gt;', 1),
-(5, '8c8e5fed.jpg', 'Slide 4', '', 1, '&lt;p&gt;Imagen 4&lt;/p&gt;', 0);
+(5, '8c8e5fed.jpg', 'Slide 4', '', 1, '&lt;p&gt;Imagen 4&lt;/p&gt;', 0),
+(6, '0e5ea138.jpg', 'Imagen 4', '', 0, '&lt;p&gt;&lt;br&gt;&lt;/p&gt;', 6);
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tiposusuario`
+-- Estructura de tabla para la tabla `tiposusuario`
 --
 
 CREATE TABLE `tiposusuario` (
@@ -677,7 +783,7 @@ CREATE TABLE `tiposusuario` (
 ) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `tiposusuario`
+-- Volcado de datos para la tabla `tiposusuario`
 --
 
 INSERT INTO `tiposusuario` (`idtipousuario`, `nomtipousuario`, `status`) VALUES
@@ -687,7 +793,7 @@ INSERT INTO `tiposusuario` (`idtipousuario`, `nomtipousuario`, `status`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tipousuarioxpermiso`
+-- Estructura de tabla para la tabla `tipousuarioxpermiso`
 --
 
 CREATE TABLE `tipousuarioxpermiso` (
@@ -696,7 +802,7 @@ CREATE TABLE `tipousuarioxpermiso` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `tipousuarioxpermiso`
+-- Volcado de datos para la tabla `tipousuarioxpermiso`
 --
 
 INSERT INTO `tipousuarioxpermiso` (`idtipousuario`, `idpermiso`) VALUES
@@ -754,7 +860,7 @@ INSERT INTO `tipousuarioxpermiso` (`idtipousuario`, `idpermiso`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `transportes`
+-- Estructura de tabla para la tabla `transportes`
 --
 
 CREATE TABLE `transportes` (
@@ -768,7 +874,7 @@ CREATE TABLE `transportes` (
 ) ENGINE=MyISAM AUTO_INCREMENT=7 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
--- Dumping data for table `transportes`
+-- Volcado de datos para la tabla `transportes`
 --
 
 INSERT INTO `transportes` (`id_transporte`, `nombre`, `tiempo_transito`, `status`, `img_principal`, `descripcion`, `mostrar`) VALUES
@@ -782,7 +888,7 @@ INSERT INTO `transportes` (`id_transporte`, `nombre`, `tiempo_transito`, `status
 -- --------------------------------------------------------
 
 --
--- Table structure for table `userend`
+-- Estructura de tabla para la tabla `userend`
 --
 
 CREATE TABLE `userend` (
@@ -791,33 +897,20 @@ CREATE TABLE `userend` (
   `password` varchar(250) COLLATE utf8_unicode_ci NOT NULL,
   `status` int(2) NOT NULL,
   `token` varchar(250) COLLATE utf8_unicode_ci NOT NULL
-) ENGINE=MyISAM AUTO_INCREMENT=16 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=22 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
--- Dumping data for table `userend`
+-- Volcado de datos para la tabla `userend`
 --
 
 INSERT INTO `userend` (`iduserend`, `correo`, `password`, `status`, `token`) VALUES
-(1, 'luisjcaamal2@gmail.com', '827ccb0eea8a706c4c34a16891f84e7b', 1, '8656925cf58e70f240f561a627866fd7'),
-(2, 'calladoconejo@hotmail.com', 'af4258b8ea969f6b048d43f68f2bacf2', 1, 'aba2f33fd463ba5084ff35ac4427009a'),
-(3, 'lcaamals@locker.com.mx', '827ccb0eea8a706c4c34a16891f84e7b', 1, 'cd4be225ef50e5e642995867873a13d0'),
-(4, 'bheftye92@gmail.com', 'f119eba430fdec0ce91cf4f310bcfafc', 1, 'd9d5fcd0bc01d355dcf53ad7b90be4ea'),
-(5, 'aguila-josue@hotmail.com', '827ccb0eea8a706c4c34a16891f84e7b', 0, 'fd298b929a174c00a762697aa9263451'),
-(6, 'brent@locker.com.mx', 'f119eba430fdec0ce91cf4f310bcfafc', 1, '4a32f0ff41dcbd6dd43997df22e3d5fe'),
-(7, 'bheftye92@hotmail.com', 'f119eba430fdec0ce91cf4f310bcfafc', 0, '937cdd64317746d9874acf3f4ebcdf7b'),
-(8, 'luisjcaamal@gmail.com', '827ccb0eea8a706c4c34a16891f84e7b', 1, '8656925cf58e70f240f561a627866fd7'),
-(9, 'dsabidoc@gmail.com', 'e120ea280aa50693d5568d0071456460', 1, '9b181f9f53637808b95c786624f27dcb'),
-(10, 'luiseffe@gmail.com', 'f07b94d11270b301407093cb188420ea', 1, '89412c026c22b8a202c64c2f27402c8c'),
-(11, 'lcaamal2@locker.com.mx', '827ccb0eea8a706c4c34a16891f84e7b', 0, 'cd4be225ef50e5e642995867873a13d0'),
-(12, 'lcaamal@locker.com.mx', '827ccb0eea8a706c4c34a16891f84e7b', 1, 'cd4be225ef50e5e642995867873a13d0'),
-(13, 'david@locker.com.mx', 'e120ea280aa50693d5568d0071456460', 1, 'e6d975b221479aa05a7c91247baedfc6'),
-(14, 'developercaamal@gmail.com', '827ccb0eea8a706c4c34a16891f84e7b', 1, '3426b6eeb6b7cc31439d937386a8fece'),
-(15, 'developercaamal2@gmail.com', '827ccb0eea8a706c4c34a16891f84e7b', 1, 'f03e3655b8fa7980a55c8cc586abfe1a');
+(21, 'brent@gmail.com', '202cb962ac59075b964b07152d234b70', 0, '1871691f21c022b364af4be6e0a5c279'),
+(20, 'bheftye92@gmail.com', '202cb962ac59075b964b07152d234b70', 0, 'd9d5fcd0bc01d355dcf53ad7b90be4ea');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `usuario`
+-- Estructura de tabla para la tabla `usuario`
 --
 
 CREATE TABLE `usuario` (
@@ -829,317 +922,328 @@ CREATE TABLE `usuario` (
 ) ENGINE=InnoDB AUTO_INCREMENT=18 DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `usuario`
+-- Volcado de datos para la tabla `usuario`
 --
 
 INSERT INTO `usuario` (`idusuario`, `nomusuario`, `password`, `status`, `idtipousuario`) VALUES
 (17, 'admin', '202cb962ac59075b964b07152d234b70', 1, 9);
 
 --
--- Indexes for dumped tables
+-- Índices para tablas volcadas
 --
 
 --
--- Indexes for table `atributos`
+-- Indices de la tabla `atributos`
 --
 ALTER TABLE `atributos`
  ADD PRIMARY KEY (`id_atributo`);
 
 --
--- Indexes for table `atributos_valores`
+-- Indices de la tabla `atributos_valores`
 --
 ALTER TABLE `atributos_valores`
  ADD PRIMARY KEY (`id_atributo`,`id_valor`);
 
 --
--- Indexes for table `boletin`
+-- Indices de la tabla `boletin`
 --
 ALTER TABLE `boletin`
  ADD PRIMARY KEY (`idboletin`);
 
 --
--- Indexes for table `categorias_productos`
+-- Indices de la tabla `categorias_productos`
 --
 ALTER TABLE `categorias_productos`
  ADD PRIMARY KEY (`id_categoria`);
 
 --
--- Indexes for table `combinaciones_atributos_valores`
+-- Indices de la tabla `combinaciones_atributos_valores`
 --
 ALTER TABLE `combinaciones_atributos_valores`
  ADD PRIMARY KEY (`id_combinacion`,`id_atributo`,`id_valor`);
 
 --
--- Indexes for table `combinaciones_imagenes`
+-- Indices de la tabla `combinaciones_imagenes`
 --
 ALTER TABLE `combinaciones_imagenes`
  ADD PRIMARY KEY (`id_combinacion`,`id_imagen`);
 
 --
--- Indexes for table `combinaciones_productos`
+-- Indices de la tabla `combinaciones_productos`
 --
 ALTER TABLE `combinaciones_productos`
  ADD PRIMARY KEY (`id_combinacion`,`id_producto`);
 
 --
--- Indexes for table `correo1`
+-- Indices de la tabla `correo1`
 --
 ALTER TABLE `correo1`
  ADD PRIMARY KEY (`idcorreo1`);
 
 --
--- Indexes for table `correo1img`
+-- Indices de la tabla `correo1img`
 --
 ALTER TABLE `correo1img`
  ADD PRIMARY KEY (`idcorreoimg1`);
 
 --
--- Indexes for table `correo1img2`
+-- Indices de la tabla `correo1img2`
 --
 ALTER TABLE `correo1img2`
  ADD PRIMARY KEY (`idcorreo1img2`);
 
 --
--- Indexes for table `direcciones`
+-- Indices de la tabla `direcciones`
 --
 ALTER TABLE `direcciones`
  ADD PRIMARY KEY (`iddireccion`);
 
 --
--- Indexes for table `faq`
+-- Indices de la tabla `faq`
 --
 ALTER TABLE `faq`
  ADD PRIMARY KEY (`id_faq`);
 
 --
--- Indexes for table `img_producto`
+-- Indices de la tabla `img_producto`
 --
 ALTER TABLE `img_producto`
  ADD PRIMARY KEY (`id_img_producto`);
 
 --
--- Indexes for table `impuestos`
+-- Indices de la tabla `impuestos`
 --
 ALTER TABLE `impuestos`
  ADD PRIMARY KEY (`id_impuesto`);
 
 --
--- Indexes for table `marcas`
+-- Indices de la tabla `latienda`
+--
+ALTER TABLE `latienda`
+ ADD PRIMARY KEY (`id_latienda`);
+
+--
+-- Indices de la tabla `marcas`
 --
 ALTER TABLE `marcas`
  ADD PRIMARY KEY (`id_marca`);
 
 --
--- Indexes for table `marcas_productos`
+-- Indices de la tabla `marcas_productos`
 --
 ALTER TABLE `marcas_productos`
  ADD PRIMARY KEY (`id_marca`,`id_producto`);
 
 --
--- Indexes for table `orden`
+-- Indices de la tabla `orden`
 --
 ALTER TABLE `orden`
  ADD PRIMARY KEY (`idorden`);
 
 --
--- Indexes for table `permiso`
+-- Indices de la tabla `permiso`
 --
 ALTER TABLE `permiso`
  ADD PRIMARY KEY (`idpermiso`);
 
 --
--- Indexes for table `plantilla_mailing`
+-- Indices de la tabla `plantilla_mailing`
 --
 ALTER TABLE `plantilla_mailing`
  ADD PRIMARY KEY (`idplantilla`);
 
 --
--- Indexes for table `productos`
+-- Indices de la tabla `productos`
 --
 ALTER TABLE `productos`
  ADD PRIMARY KEY (`id_producto`);
 
 --
--- Indexes for table `productos_categorias`
+-- Indices de la tabla `productos_categorias`
 --
 ALTER TABLE `productos_categorias`
  ADD PRIMARY KEY (`id_producto`,`id_categoria`);
 
 --
--- Indexes for table `productos_transportes`
+-- Indices de la tabla `productos_transportes`
 --
 ALTER TABLE `productos_transportes`
  ADD PRIMARY KEY (`id_producto`,`id_transporte`);
 
 --
--- Indexes for table `progreso_mailing`
+-- Indices de la tabla `progreso_mailing`
 --
 ALTER TABLE `progreso_mailing`
  ADD PRIMARY KEY (`idmailing`);
 
 --
--- Indexes for table `rangos_transporte`
+-- Indices de la tabla `rangos_transporte`
 --
 ALTER TABLE `rangos_transporte`
  ADD PRIMARY KEY (`id_rango_transporte`);
 
 --
--- Indexes for table `redes_sociales`
+-- Indices de la tabla `redes_sociales`
 --
 ALTER TABLE `redes_sociales`
  ADD PRIMARY KEY (`id_redes_sociales`);
 
 --
--- Indexes for table `slide`
+-- Indices de la tabla `slide`
 --
 ALTER TABLE `slide`
  ADD PRIMARY KEY (`idslide`);
 
 --
--- Indexes for table `tiposusuario`
+-- Indices de la tabla `tiposusuario`
 --
 ALTER TABLE `tiposusuario`
  ADD PRIMARY KEY (`idtipousuario`);
 
 --
--- Indexes for table `transportes`
+-- Indices de la tabla `transportes`
 --
 ALTER TABLE `transportes`
  ADD PRIMARY KEY (`id_transporte`);
 
 --
--- Indexes for table `userend`
+-- Indices de la tabla `userend`
 --
 ALTER TABLE `userend`
  ADD PRIMARY KEY (`iduserend`);
 
 --
--- Indexes for table `usuario`
+-- Indices de la tabla `usuario`
 --
 ALTER TABLE `usuario`
  ADD PRIMARY KEY (`idusuario`);
 
 --
--- AUTO_INCREMENT for dumped tables
+-- AUTO_INCREMENT de las tablas volcadas
 --
 
 --
--- AUTO_INCREMENT for table `atributos`
+-- AUTO_INCREMENT de la tabla `atributos`
 --
 ALTER TABLE `atributos`
-MODIFY `id_atributo` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=14;
+MODIFY `id_atributo` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=15;
 --
--- AUTO_INCREMENT for table `atributos_valores`
+-- AUTO_INCREMENT de la tabla `atributos_valores`
 --
 ALTER TABLE `atributos_valores`
 MODIFY `id_valor` int(11) NOT NULL AUTO_INCREMENT;
 --
--- AUTO_INCREMENT for table `boletin`
+-- AUTO_INCREMENT de la tabla `boletin`
 --
 ALTER TABLE `boletin`
 MODIFY `idboletin` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=5;
 --
--- AUTO_INCREMENT for table `categorias_productos`
+-- AUTO_INCREMENT de la tabla `categorias_productos`
 --
 ALTER TABLE `categorias_productos`
 MODIFY `id_categoria` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=3;
 --
--- AUTO_INCREMENT for table `combinaciones_productos`
+-- AUTO_INCREMENT de la tabla `combinaciones_productos`
 --
 ALTER TABLE `combinaciones_productos`
-MODIFY `id_combinacion` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=55;
+MODIFY `id_combinacion` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=56;
 --
--- AUTO_INCREMENT for table `correo1`
+-- AUTO_INCREMENT de la tabla `correo1`
 --
 ALTER TABLE `correo1`
 MODIFY `idcorreo1` int(11) NOT NULL AUTO_INCREMENT;
 --
--- AUTO_INCREMENT for table `correo1img`
+-- AUTO_INCREMENT de la tabla `correo1img`
 --
 ALTER TABLE `correo1img`
 MODIFY `idcorreoimg1` int(11) NOT NULL AUTO_INCREMENT;
 --
--- AUTO_INCREMENT for table `correo1img2`
+-- AUTO_INCREMENT de la tabla `correo1img2`
 --
 ALTER TABLE `correo1img2`
 MODIFY `idcorreo1img2` int(11) NOT NULL AUTO_INCREMENT;
 --
--- AUTO_INCREMENT for table `direcciones`
+-- AUTO_INCREMENT de la tabla `direcciones`
 --
 ALTER TABLE `direcciones`
 MODIFY `iddireccion` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=17;
 --
--- AUTO_INCREMENT for table `faq`
+-- AUTO_INCREMENT de la tabla `faq`
 --
 ALTER TABLE `faq`
 MODIFY `id_faq` tinyint(1) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
 --
--- AUTO_INCREMENT for table `img_producto`
+-- AUTO_INCREMENT de la tabla `img_producto`
 --
 ALTER TABLE `img_producto`
-MODIFY `id_img_producto` int(11) NOT NULL AUTO_INCREMENT;
+MODIFY `id_img_producto` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=17;
 --
--- AUTO_INCREMENT for table `impuestos`
+-- AUTO_INCREMENT de la tabla `impuestos`
 --
 ALTER TABLE `impuestos`
 MODIFY `id_impuesto` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=6;
 --
--- AUTO_INCREMENT for table `marcas`
+-- AUTO_INCREMENT de la tabla `latienda`
+--
+ALTER TABLE `latienda`
+MODIFY `id_latienda` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
+--
+-- AUTO_INCREMENT de la tabla `marcas`
 --
 ALTER TABLE `marcas`
 MODIFY `id_marca` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=17;
 --
--- AUTO_INCREMENT for table `orden`
+-- AUTO_INCREMENT de la tabla `orden`
 --
 ALTER TABLE `orden`
 MODIFY `idorden` int(11) NOT NULL AUTO_INCREMENT;
 --
--- AUTO_INCREMENT for table `permiso`
+-- AUTO_INCREMENT de la tabla `permiso`
 --
 ALTER TABLE `permiso`
 MODIFY `idpermiso` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=87;
 --
--- AUTO_INCREMENT for table `plantilla_mailing`
+-- AUTO_INCREMENT de la tabla `plantilla_mailing`
 --
 ALTER TABLE `plantilla_mailing`
 MODIFY `idplantilla` int(11) NOT NULL AUTO_INCREMENT;
 --
--- AUTO_INCREMENT for table `productos`
+-- AUTO_INCREMENT de la tabla `productos`
 --
 ALTER TABLE `productos`
-MODIFY `id_producto` int(11) NOT NULL AUTO_INCREMENT;
+MODIFY `id_producto` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=5;
 --
--- AUTO_INCREMENT for table `progreso_mailing`
+-- AUTO_INCREMENT de la tabla `progreso_mailing`
 --
 ALTER TABLE `progreso_mailing`
 MODIFY `idmailing` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=3;
 --
--- AUTO_INCREMENT for table `rangos_transporte`
+-- AUTO_INCREMENT de la tabla `rangos_transporte`
 --
 ALTER TABLE `rangos_transporte`
 MODIFY `id_rango_transporte` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=18;
 --
--- AUTO_INCREMENT for table `slide`
+-- AUTO_INCREMENT de la tabla `slide`
 --
 ALTER TABLE `slide`
-MODIFY `idslide` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=6;
+MODIFY `idslide` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=7;
 --
--- AUTO_INCREMENT for table `tiposusuario`
+-- AUTO_INCREMENT de la tabla `tiposusuario`
 --
 ALTER TABLE `tiposusuario`
 MODIFY `idtipousuario` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=11;
 --
--- AUTO_INCREMENT for table `transportes`
+-- AUTO_INCREMENT de la tabla `transportes`
 --
 ALTER TABLE `transportes`
 MODIFY `id_transporte` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=7;
 --
--- AUTO_INCREMENT for table `userend`
+-- AUTO_INCREMENT de la tabla `userend`
 --
 ALTER TABLE `userend`
-MODIFY `iduserend` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=16;
+MODIFY `iduserend` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=22;
 --
--- AUTO_INCREMENT for table `usuario`
+-- AUTO_INCREMENT de la tabla `usuario`
 --
 ALTER TABLE `usuario`
 MODIFY `idusuario` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=18;

@@ -14,6 +14,7 @@ class transporte extends Archivo
 	var $directorio = '/home1/locker07/public_html/clientes/notmonday/imgTransportes/';
 	var $ruta_final;
 	var $ruta_temporal;
+	var $rangos_transporte;
 	
 	function transporte($id_transporte = 0, $nombre = "", $tiempo_transito = "", $descripcion = "",$img_principal = "", $ruta_temporal = '', $status = 0)
 	{
@@ -92,6 +93,7 @@ class transporte extends Archivo
 			$registro["descripcion"] = $fila["descripcion"];
 			$registro["img_principal"] = $fila["img_principal"];
 			$registro["status"] = $fila["status"];
+			$registro["rangos_transporte"] = $this -> listar_rangos_transporte_activos();
 			array_push($resultados, $registro);
 		}
 		mysqli_free_result($temporal);
