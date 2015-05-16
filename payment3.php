@@ -3,16 +3,27 @@
 <?php 
       include_once("cp/clases/transporte.php");
       include_once("cp/clases/producto.php");
+      include_once("cp/clases/rango_transporte.php");
 
-      $transporte = new transporte();
-      $transportes = $transporte -> listar_transportes_activos();
+      
+      if(isset($_SESSION["braggart_transport_token"])){
+
+        $transporte_token = explode("/", $_SESSION["braggart_transport_token"]);
+        $transporte = new transporte($transporte_token[1]);
+        $transporte -> obtener_transporte();
+        $rango_transporte = new rango_transporte($transporte_token[0]);
+        $rango_transporte -> obtener_rango_transporte();
+      }
       $cart = $_SESSION["braggart_cart"];
-      $peso_total = 0;
+      $precio_total = 0;
       foreach ($cart as $producto) {
         $product = new producto($producto["id"]);
         $product -> obtener_producto();
-        $peso_total += $product -> peso * $producto["amount"];
+        $precio_total += $product -> precio_mxn * $producto["amount"];
       }
+
+      $total = $precio_total + $rango_transporte -> cargo_por_envio;
+      $_SESSION["braggart_total_shop"] = $total;
 ?>
 <div>
         <a href="#" id="menu_a" style="display:block; position:fixed;z-index:1000;" onclick="display_menu()">
@@ -27,30 +38,19 @@
                 <form class="payment-form"  method="post" id="card-form" action="controller.php">
                  <div class="col-lg-6 col-md-6 col-sm-6 center">
                     <div class="white_block">
-                        <p class="center" style="width:100%; font-size:18pt; font-weight:bold;">PASO 3</p>
+                        <p class="center" style="width:100%; font-size:18pt; font-weight:bold;">PASO 4</p>
                         <p class="Foglihten center" style="font-size:20pt;">P1+{}+!p</p>
-                        <p class="left_align" style="width:100%; font-size:15pt; font-weight:bold;">SELECCIONA UN TRANSPORTE</p>
+                        <p class="left_align" style="width:100%; font-size:15pt; font-weight:bold;">FINALIZAR COMPRA</p>
                         <table class="payment">
                             <tr>
                                 <td>
                                   <p class="form">
-                                    <label class="pull-left"><i class="fa fa-truck fa-lg"></i></label>
-                                    <select name="transporte">
-                                      <option value="0" style="width:100%;">Selecciona un transporte</option>
-                                      <?php
-                                        foreach ($transportes as $transporte) {
-                                          foreach ($transporte["rangos_transporte"] as $rango_transporte) {
-                                            if($peso_total >= $rango_transporte["peso_minimo"] && $peso_total < $rango_transporte["peso_maximo"] ){
-                                               echo "<option value='".$rango_transporte["id_rango_transporte"]."/".$transporte["id_transporte"]."'>".$transporte["nombre"]." - $".$rango_transporte["cargo_por_envio"]." MXN - ".$transporte["tiempo_transito"]." d&iacute;as</option>";
-                                               break;
-                                            }
-                                          }
-                                        }
-                                      ?>
-                                    </select>
+                                      Camisas: $ <?=$precio_total?> MXN<br><br>
+                                      Transporte: $ <?=$rango_transporte -> cargo_por_envio?> MXN<br><br>
+                                      Total: $ <?=$total?>  MXN
                                   </p>
-                                  <p class="form" style="border:none"><button type="submit">LISTO</button></p>
-                                  <input type="hidden" name="operaciones" value="cht">
+                                  <p class="form" style="border:none"><button type="submit">PAGAR</button></p>
+                                  <input type="hidden" name="operaciones" value="ccc">
                                 </td>
                             </tr>                          
                             <tfoot></tfoot>

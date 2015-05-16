@@ -78,7 +78,7 @@
                                           <p class="form"><label><i class="fa fa-calendar fa-lg"></i></label><input size="2" data-conekta="card[exp_month]" type="text" class="text" placeholder=" MES DE EXPIRACI&Oacute;N 01, 02, 10" ></p>
                                           <p class="form"><label><i class="fa fa-calendar fa-lg"></i></label><input size="4" data-conekta="card[exp_year]" type="text" class="text" placeholder=" AÑO DE EXPIRACI&Oacute;N 2016, 2017, 2020" ></p>
                                           <p class="form" style="border:none"><button type="submit">LISTO</button></p>
-                                          <input type="hidden" name="op" value="rp">
+                                          <input type="hidden" name="operaciones" value="rp">
                                       </form>
      
                                 </td>

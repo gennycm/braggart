@@ -93,11 +93,32 @@ class transporte extends Archivo
 			$registro["descripcion"] = $fila["descripcion"];
 			$registro["img_principal"] = $fila["img_principal"];
 			$registro["status"] = $fila["status"];
-			$registro["rangos_transporte"] = $this -> listar_rangos_transporte_activos();
+			$registro["rangos_transporte"] = $this -> listar_rangos_transporte_activos($fila['id_transporte']);
 			array_push($resultados, $registro);
 		}
 		mysqli_free_result($temporal);
 		return $resultados;
+	}
+
+	function listar_rangos_transporte_activos($id_transporte){
+		$resultados=array();
+		$sql="SELECT * FROM `rangos_transporte` WHERE `id_transporte` = ".$id_transporte." ORDER BY `peso_minimo` ASC;";
+		$con=new conexion();
+		$temporal= $con->ejecutar_sentencia($sql);
+		while ($fila=mysqli_fetch_array($temporal))
+		{
+			$registro=array();
+			$registro['id_rango_transporte']=$fila['id_rango_transporte'];
+			$registro['peso_maximo']=$fila['peso_maximo'];
+			$registro['peso_minimo']=$fila['peso_minimo'];
+			$registro['cargo_por_envio']=$fila['cargo_por_envio'];
+			$registro['id_transporte']=$fila['id_transporte'];
+			$registro["status"] = $fila["status"];
+			array_push($resultados, $registro);
+		}
+		mysqli_free_result($temporal);
+		return $resultados;
+		
 	}
 
 	function listarTransportes(){

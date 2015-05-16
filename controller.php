@@ -29,28 +29,31 @@ switch ($operaciones) {
 							  );
 
 		$_SESSION["braggar_payment_data"] = $payment_data;                        
-		/*Conekta::setApiKey("key_nxPDYXpi5rbSSLQvLLN58Q");
+		header("Location: payment2.php");
+
+	break;
+	case 'ccc':
+		Conekta::setApiKey("key_nxPDYXpi5rbSSLQvLLN58Q");
 		try{
 		  $charge = Conekta_Charge::create(array(
-		    "amount"=> 51000,
+		    "amount"=> intval($_SESSION["braggart_total_shop"]),
 		    "currency"=> "MXN",
 		    "description"=> "Compra de Camisas",
 		    "reference_id"=> "orden_de_id_interno",
-		    "card"=> $_POST['conektaTokenId'],
+		    "card"=> "tok_test_visa_4242",
 		 //"tok_a4Ff0dD2xYZZq82d9",
 		    "details"=> array(
-		      "email"=>"logan@x-men.org"
+		      "email"=>"bheftye92@gmail.com"
 		      )
 		  ));
 		}catch (Conekta_Error $e){
 		  echo $e->getMessage();
+		  
 		 //el pago no pudo ser procesado
 		}
-		echo $charge->status;
-		*/
-		header("Location: payment2.php");
-
-	break;
+		header("Location: finished_order.php");
+		//echo $charge->status;
+		break;
 	case "ru":
 		$email = $_REQUEST["em"];
 		$password = $_REQUEST["pass"];
@@ -148,6 +151,16 @@ switch ($operaciones) {
 		else{
 			echo json_encode("false");
 		}
+	break;
+	case "cht":
+		if(isset($_POST["transporte"])){
+			$_SESSION["braggart_transport_token"] = $_POST["transporte"];
+			header("Location: payment3.php");
+		}
+		else{
+			header("Location: payment2.php");
+		}
+
 	break;
 	case "gc":
 		if(isset($_SESSION["braggart_cart"])){
