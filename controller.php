@@ -36,7 +36,7 @@ switch ($operaciones) {
 		Conekta::setApiKey("key_nxPDYXpi5rbSSLQvLLN58Q");
 		try{
 		  $charge = Conekta_Charge::create(array(
-		    "amount"=> intval($_SESSION["braggart_total_shop"]).".00",
+		    "amount"=> intval($_SESSION["braggart_total_shop"])*100,
 		    "currency"=> "MXN",
 		    "description"=> "Compra de Camisas",
 		    "reference_id"=> "orden_de_id_interno",
