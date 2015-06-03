@@ -351,7 +351,20 @@ div.search-icon ::-moz-placeholder { /* Mozilla Firefox 19+ */
 div.search-icon:-ms-input-placeholder { /* Internet Explorer 10+ */
    color:    #fff;
 }
-/*right-floating-menu*/
+
+.wishlist{
+	width: 600px;
+	margin-left: -600px;
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	bottom: 0px;
+	background: #FFF none repeat scroll 0% 0%;
+	color: #000;
+	font-size: 16px;
+	text-align: center;
+	z-index: 999;
+}
 
 /* Style for our header texts
 * --------------------------------------- */
@@ -877,6 +890,7 @@ button.boton-producto-agregar:hover{
   overflow-x: hidden;
   margin-right: -70%;
 }
+
 
 
 

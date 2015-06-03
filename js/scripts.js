@@ -41,7 +41,6 @@ function hide_menu(){
 
 function display_cart(){
     $(".shopping-cart").animate({marginRight:"0px"});
-     console.log("Display cart");
 }
 
 function hide_cart(){
@@ -56,9 +55,22 @@ function hide_cart(){
 function hide_info(){
     var width = $(".product_info").width();
     $(".product_info").animate({marginLeft:"-"+width+"px"});
-    console.log("close");
-
 }
+
+
+//Show -hide WISHLIST
+
+function display_wishlist(){
+    $(".wishlist").animate({marginLeft:"0px"});
+    console.log("in wishlist");
+}
+
+function hide_wishlist(){
+     var width = $(".wishlist").width();
+    $(".wishlist").animate({marginLeft:"-"+width+"px"});
+}
+
+
 
 
 
@@ -209,6 +221,7 @@ function logIn(){
         cache:false,
         async:false,
         success:function(data){
+            console.log(data);
             if(data.indexOf("true") != -1){
                 mensaje = "¡Bienvenido "+ email+"!";
                 $("input[name='email-login']").val("");

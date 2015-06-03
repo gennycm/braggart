@@ -24,6 +24,7 @@
 ;(function($) {
 
 	$.slidebars = function(options) {
+		console.log("in");
 
 		// ----------------------
 		// 001 - Default Settings

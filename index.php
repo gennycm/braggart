@@ -107,7 +107,8 @@
 <?php include_once("login_register.html");?>
 <!--Cart Slidebar-->
 <?php include_once("cart.html");?>
-
+<!--Product Slidebar-->
+<?php include_once("wishlist.html");?>
 <!--BODY-->
 <?php include_once("footer.html");?>
 <script>
@@ -125,7 +126,6 @@
         sliderDrag: false
       });
 
-      $.slidebars();
 
       $(fullscreenParallax);
 
@@ -140,14 +140,13 @@
 
       $('#full-width-slider').css({width: width+"px", height:height+"px"});
 
-
-
       //effects
 
       var controller = $.superscrollorama();
       // individual element tween examples
       controller.addTween('#title', TweenMax.fromTo( $('#title'), .50, {css:{opacity:0, 'letter-spacing':'30px'}, immediateRender:true, ease:Quad.easeInOut}, {css:{opacity:1, 'letter-spacing':'-10px'}, ease:Quad.easeInOut}), 0, 10); // 100 px offset for better timing
       controller.addTween('#fly-it', TweenMax.from( $('#fly-it'), .25, {css:{right:'1000px'}, ease:Quad.easeInOut}));
+     
 
 
     });
@@ -158,28 +157,6 @@
     // Invoke the plugin
     $('input, textarea').placeholder({customClass:'my-placeholder'});
     // That’s it, really.
-    });
-       
-    /*2nd slidebar*/
-
-    // All sides
-    var sides = ["left", "top", "right", "bottom"];
-
-    // Initialize sidebars
-    for (var i = 0; i < sides.length; ++i) {
-        var cSide = sides[i];
-        $(".sidebar." + cSide).sidebar({side: cSide}).hide().trigger("sidebar:close").on("sidebar:closed", function () {
-            $(this).show();
-        });
-    }
-
-    // Click handlers
-    $(".sidebar").on("click", function () {
-        var $this = $(this);
-        var action = $this.attr("data-action");
-        var side = $this.attr("data-side");
-        $(".sidebar." + side).trigger("sidebar:" + action);
-        return false;
     });
         
    

@@ -12,10 +12,9 @@
             <h5>MENÚ</h5>
         </div>
     </a>       
-    <div class="parallax" data-background-speed-y="0" data-parallax-align="top" id="history">
+    <div class="parallax" data-background-speed-y="0" data-parallax-align="bottom" id="history">
         <div class="background_black"></div>
-            <h1 id = "fly-it">HISTORIA</h1>
-        <div class="col-lg-12 col-md-12 col-sm-12 align-center" style="position:relative;z-index:999;">
+        <div class="col-lg-12 col-md-12 col-sm-12 align-center" style="position:relative;z-index:800;">
             <img src="img/logo-slide.png" width="30%">
             <p class="history  scrollflow -slide-left" style="filter: opacity(1); transform: translate3d(0px, 50px, 0px) scale(0.8); transition: all 800ms ease-out 0s;">
                 BRAGGART es una marca orgullosamente yucateca con sede en la ciudad de Mérida. 
@@ -63,7 +62,8 @@
 <?php include_once("login_register.html");?>
 <!--Cart Slidebar-->
 <?php include_once("cart.html");?>
-
+<!--Product Slidebar-->
+<?php include_once("wishlist.html");?>
 <!--BODY-->
 <?php include_once("footer.html");?>
 <script>
@@ -73,7 +73,6 @@
     /*Slidebar*/
     (function($) {
         $(document).ready(function() {
-            $.slidebars();
             var deleteLog = false;
 
             $(fullscreenParallax);
@@ -91,28 +90,6 @@
     // Invoke the plugin
     $('input, textarea').placeholder({customClass:'my-placeholder'});
     // That’s it, really.
-    });
-    
-    /*2nd slidebar*/
-
-    // All sides
-    var sides = ["left", "top", "right", "bottom"];
-
-    // Initialize sidebars
-    for (var i = 0; i < sides.length; ++i) {
-        var cSide = sides[i];
-        $(".sidebar." + cSide).sidebar({side: cSide}).hide().trigger("sidebar:close").on("sidebar:closed", function () {
-            $(this).show();
-        });
-    }
-
-    // Click handlers
-    $(".sidebar").on("click", function () {
-        var $this = $(this);
-        var action = $this.attr("data-action");
-        var side = $this.attr("data-side");
-        $(".sidebar." + side).trigger("sidebar:" + action);
-        return false;
     });
                 
 </script>

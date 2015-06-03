@@ -71,7 +71,7 @@
      // controller.addTween('#menu', TweenMax.fromTo( $('#scale-it'), .25, {css:{opacity:0, fontSize:'20px'}, immediateRender:true, ease:Quad.easeInOut}, {css:{opacity:1, fontSize:'240px'}, ease:Quad.easeInOut}),10,0);
 
 
-            $.slidebars();
+  //   $.slidebars()
 
       
 
