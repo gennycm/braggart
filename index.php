@@ -6,20 +6,21 @@
     $temporal = new slide();
     $listaTemporal = $temporal -> listarslideActivas();
 ?>
+
 <!--BODY-->
 
 <!--<div id="pagepiling">-->
         <a href="#" id="menu_a" style="display:block; position:fixed;z-index:1000;" onclick="display_menu()">
             <div class="menu-toggle"></div>
             <div class="text_toggle">
-                <h5>MENÚ</h5>
+                <h5 id = "menu">MENÚ</h5>
             </div>
         </a>       
        
         <div id="home" class="parallax" data-background-speed-y="0" data-parallax-align="bottom">
             <div class="background_black"></div>
             <div class="logo-slide">
-                <img src="./img/logo-slide.png" alt="">
+                <img id="logo" src="./img/logo-slide.png" alt="">
             </div>
             <div id="full-width-slider" class="royalSlider heroSlider rsMinW" style="width:100%;">
             <?php 
@@ -42,14 +43,17 @@
         <div id="us" class="parallax" data-background-speed-y="0" data-parallax-align="top">
             <div class="background_black"></div>
             <a style="display:block;" href="store.php">
-                <h1>LA TIENDA</h1>
+                <h1><div id="title">LA TIENDA</div></h1>
             </a>
+            <p class="decoration scrollflow -slide-top" data-scrollflow-start="0" data-scrollflow-distance="15" data-scrollflow-amount="30">U------------q(Q-----------u</p>
+
+
         </div>
 
         <div id="shirts" class="parallax" data-background-speed-y="0" data-parallax-align="top">
             <div class="background_black"></div>
             <a style="display:block;" href="shirts.php">
-                <h1>CAMISAS</h1>
+                <h1 id = "fly-it">CAMISAS</h1>
             </a>
         </div>
         
@@ -65,37 +69,38 @@
             <div class="col-xs-12">
                 <div class="col-lg-6 col-md-6 col-sm-6"></div>
                 <div class="col-lg-6 col-md-6 col-sm-6"><div>
-                <table class="contact">
+                <table class="contact" >
                     <tr>
                         <td colspan="2" class="decoration">
-                            U+-'"-+u
+                            <p class="scrollflow -slide-top" data-scrollflow-start="0" data-scrollflow-distance="15" data-scrollflow-amount="30">U+-'"-+u</p>
                         </td>
                     </tr>
                     <tr>
-                        <td class="icon"><i class="fa fa-phone fa-lg"></i></td>
-                        <td class="text">(999) 9 48 30 46 </td>
+                        <td class="icon"><p class="scrollflow -slide-left" data-scrollflow-start="-50" data-scrollflow-distance="5" data-scrollflow-amount="30"><i class="fa fa-phone fa-lg"></i></p></td>
+                        <td class="text"><p class="scrollflow -slide-right" data-scrollflow-start="-50" data-scrollflow-distance="5" data-scrollflow-amount="30">(999) 9 48 30 46</p> </td>
                     </tr>
                     <tr>
-                        <td class="icon"><i class="fa fa-envelope fa-lg"></i></td>
-                        <td class="text">contacto@braggart.com </td>
+                        <td class="icon"><p class="scrollflow -slide-left" data-scrollflow-start="-50" data-scrollflow-distance="5" data-scrollflow-amount="30"><i class="fa fa-envelope fa-lg"></i></p></td>
+                        <td class="text"><p class="scrollflow -slide-right" data-scrollflow-start="-50" data-scrollflow-distance="5" data-scrollflow-amount="30">contacto@braggart.com</p> </td>
                     </tr>
                     <tr>
-                        <td class="icon"><i class="fa fa-facebook-official fa-lg"></i></td>
-                        <td class="text">Tienda Braggart</td>
+                        <td class="icon"><p class="scrollflow -slide-left" data-scrollflow-start="-50" data-scrollflow-distance="5" data-scrollflow-amount="30"><i class="fa fa-facebook-official fa-lg"></i></p></td>
+                        <td class="text"><p class="scrollflow -slide-right" data-scrollflow-start="-50" data-scrollflow-distance="5" data-scrollflow-amount="30">Tienda Braggart</p></td>
                     </tr>
                     <tr>
-                        <td class="icon"><i class="fa fa-insta-official fa-lg"></i></td>
-                        <td class="text">@BraggartMX </td>
+                        <td class="icon"><p class="scrollflow -slide-left" data-scrollflow-start="-50" data-scrollflow-distance="5" data-scrollflow-amount="30"><i class="fa fa-insta-official fa-lg"></i></p></td>
+                        <td class="text"><p class="scrollflow -slide-right" data-scrollflow-start="-50" data-scrollflow-distance="5" data-scrollflow-amount="30"> @BraggartMX </p></td>
                     </tr>
                     <tr>
                         <td colspan="2" class="decoration">
-                            U+-'"-+u
+                            <p class="scrollflow -slide-bottom" data-scrollflow-start="-50" data-scrollflow-distance="5" data-scrollflow-amount="30">U+-'"-+u</p>
                         </td>
                     </tr>   
                 </table>
             </div>
         </div>
     <!--</div>-->
+</div>
 </div><!--Container-->
 
 <!--Login Slidebar-->
@@ -134,6 +139,16 @@
       var height = $(window).height();
 
       $('#full-width-slider').css({width: width+"px", height:height+"px"});
+
+
+
+      //effects
+
+      var controller = $.superscrollorama();
+      // individual element tween examples
+      controller.addTween('#title', TweenMax.fromTo( $('#title'), .50, {css:{opacity:0, 'letter-spacing':'30px'}, immediateRender:true, ease:Quad.easeInOut}, {css:{opacity:1, 'letter-spacing':'-10px'}, ease:Quad.easeInOut}), 0, 10); // 100 px offset for better timing
+      controller.addTween('#fly-it', TweenMax.from( $('#fly-it'), .25, {css:{right:'1000px'}, ease:Quad.easeInOut}));
+
 
     });
 

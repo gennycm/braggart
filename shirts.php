@@ -27,11 +27,11 @@
                        <div id="triangleWrapper">
                             <div class="triangle-img"></div>
                             <div class="cart-wish-container pull-right">
-                                <p class="title-shirt">'.$producto_tmp["titulo_esp"].'</p>
-                                <a href="#" class="sidebar" onclick="showProductoInfo('.$producto_tmp["id_producto"].')" data-action="open" data-side="left">
-                                    <i class=" sc_icon fa fa-shopping-cart fa-2x"></i> 
+                                <h1 id="title-shirt" class="title-shirt scrollflow -slide-left">'.$producto_tmp["titulo_esp"].'</h1>
+                                <a href="#" class="sidebar" onclick="showProductoInfo('.$producto_tmp["id_producto"].')">
+                                    <i class="sc_icon fa fa-shopping-cart fa-2x scrollflow -slide-top "  data-scrollflow-start="0" data-scrollflow-distance="15" data-scrollflow-amount="30"></i> 
                                 </a>                          
-                                <i class="wl_icon fa fa-heart-o fa-2x sb-open-left"></i>
+                                <i class="wl_icon fa fa-heart-o fa-2x sb-open-left scrollflow -slide-bottom"  data-scrollflow-start="-50" data-scrollflow-distance="5" data-scrollflow-amount="30"></i>
                             </div>
                         </div>
                     </div>';
@@ -59,27 +59,23 @@
         
 
     /*Slidebar*/
-    (function($) {
-        $(document).ready(function() {
+    jQuery(document).ready(function($) {
+
+       $(fullscreenParallax);
+      //effects
+
+      var controller = $.superscrollorama();
+      // individual element tween examples
+      controller.addTween('#title', TweenMax.fromTo( $('#title'), .50, {css:{opacity:0, 'letter-spacing':'30px'}, immediateRender:true, ease:Quad.easeInOut}, {css:{opacity:1, 'letter-spacing':'-10px'}, ease:Quad.easeInOut}), 0, 10); // 100 px offset for better timing
+      controller.addTween('#title-shirt', TweenMax.from( $('#fly-it'), .25, {css:{right:'1000px'}, ease:Quad.easeInOut}));
+     // controller.addTween('#menu', TweenMax.fromTo( $('#scale-it'), .25, {css:{opacity:0, fontSize:'20px'}, immediateRender:true, ease:Quad.easeInOut}, {css:{opacity:1, fontSize:'240px'}, ease:Quad.easeInOut}),10,0);
+
+
             $.slidebars();
-            var deleteLog = false;
-            /*$('#pagepiling').pagepiling({
-                menu: false,
-                anchors: ['camisa-sport-ajustada', 'camisa-elegante-ajustada', 'camisa-oficina-ajustada', 'camisa-casual-ajustada'],
-                navigation: {
-                    'textColor': '#f2f2f2',
-                    'bulletsColor': '#ccc',
-                    'position': 'right',
-                    'tooltips': ['SPORT AJUSTADA', 'ELEGANTE AJUSTADA', 'OFICINA AJUSTADA', 'CASUAL AJUSTADA']
-                }
 
-            });*/
+      
 
-             $(fullscreenParallax);
-           
-
-        });
-    }) (jQuery);
+    });
 
 /*Password placeholder , so the placeholder actually shows, and not just dots*/
     $(function() {
@@ -88,26 +84,6 @@
     // That’s it, really.
     });
     
-    /*2nd slidebar*/
 
-    // All sides
-    var sides = ["left", "top", "right", "bottom"];
-
-    // Initialize sidebars
-    for (var i = 0; i < sides.length; ++i) {
-        var cSide = sides[i];
-        $(".sidebar." + cSide).sidebar({side: cSide}).hide().trigger("sidebar:close").on("sidebar:closed", function () {
-            $(this).show();
-        });
-    }
-
-    // Click handlers
-    $(".sidebar").on("click", function () {
-        var $this = $(this);
-        var action = $this.attr("data-action");
-        var side = $this.attr("data-side");
-        $(".sidebar." + side).trigger("sidebar:" + action);
-        return false;
-    });
                 
 </script>

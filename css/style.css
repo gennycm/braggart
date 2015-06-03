@@ -135,6 +135,8 @@ div.pay{
 	border-bottom: 0px solid transparent;
 	bottom:0;
 	opacity: 0.4;
+    right: 0;
+
 }
 
 .segmentTriangle {
@@ -398,6 +400,12 @@ h1{
 	padding: 6% 0 0 0;
 	position: relative;
 }
+/*History*/
+#history{
+	background-image: url(../img/shirtt.jpg);
+	padding: 6% 0 0 0;
+	position: relative;
+}
 
 div.shirt{
 	background-size: cover;
@@ -447,19 +455,27 @@ div.shirt{
 	color: #fff;
 }
 
+#history h1{
+	z-index: 2;
+	text-align: center;
+	position:relative;
+
+}
+
+.history{
+	color:white;
+	text-align: center;
+	font-size: 22px;
+}
+
+.align-center{
+	text-align: center;
+}
+
 /*Tables*/
 
   table.contact {
-  	position: relative;
-    margin-left:auto; 
-    margin-right:auto;
-    text-align: left;
-    font-size: 20px;
-    color: white;
-    line-height: 30px;
-    opacity: 0.80;
-    margin-top: 200px;
-    z-index: 999;
+ 
   }
 
 table.contact td{
@@ -482,6 +498,7 @@ table.contact td.decoration{
 	font-family:'Conv_FoglihtenDeH02',Sans-Serif;
 	font-size: 45pt;
 }
+
 
 .pp-easing {
     -webkit-transition: all 3000ms cubic-bezier(0.550, 0.085, 0.000, 0.990);
@@ -699,18 +716,20 @@ div.delivery{
 	text-align: center;
 }
 
-.sidebar.left {
+.sidebar.left, .product_info {
   position: fixed;
   top: 0;
   left: 0;
   bottom: 0;
   width: 512px;
+  margin-left: -512px;
   background: white;
   color: black;
  /** padding: 30px;
   box-shadow: 0 0 5px black;**/
   font-size: 16px;
   text-align: center;
+  z-index: 999;
 }
 
 .nombre-camisa{
@@ -841,6 +860,34 @@ button.boton-producto-agregar:hover{
 	bottom:50px;
 }
 
+.shopping-cart{
+	bottom:50px;
+	  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 70%;
+  background: white;
+  color: black;
+ /* padding: 30px;*/
+ /* box-shadow: 0 0 5px black;*/
+  font-size: 18px;
+  text-align: center;
+  z-index: 1031;
+  overflow-x: hidden;
+  margin-right: -70%;
+}
+
+
+
+p.decoration{
+	text-align: center;
+	font-family:'Conv_FoglihtenDeH02',Sans-Serif;
+	margin-top: -155px;
+	color: white;
+	font-size: 3.5em;
+	z-index: 888;
+}
 
 .decoration{
 	text-align: center;
@@ -855,6 +902,24 @@ button.boton-producto-agregar:hover{
 }
 /*END sLIDER 2*/
 
+
+span#s-t, span#s-t .csstransforms3d .cl-effect-2 a:hover span::before,
+.csstransforms3d .cl-effect-2 a:focus span::before {
+	background: #660000;
+}
+
+span#m-t{
+	background: #006600;
+}
+
+
+span#l-t{
+	background: #003D99;
+}
+
+span#xl-t{
+	background: #B20047;
+}
 /*SHOPPING CART*/
 .square {
     background: blue;
@@ -1192,3 +1257,6 @@ label.select:before {
 .sb-style-overlay{
 	z-index: 1032;
 }
+
+
+

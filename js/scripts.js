@@ -16,10 +16,11 @@ var size = "";
 
 function setSize(id, shirt_size){
     $(".img-size").css({borderColor:"white"});
-    $("#img-"+id).css({borderColor:"red"});
+    $("#img-"+id).css({borderColor:"gray"});
     size = shirt_size;
 }
 
+//Show -  Hide Menu
 function display_menu(){
 	$("nav").animate({top:"0px"});
 	$(".menu-toggle").fadeOut();
@@ -34,6 +35,32 @@ function hide_menu(){
 	$(".right-floating-menu").animate({right:"-175px"});
 
 }
+
+
+//Show - hide cart
+
+function display_cart(){
+    $(".shopping-cart").animate({marginRight:"0px"});
+     console.log("Display cart");
+}
+
+function hide_cart(){
+    var width = $(".shopping-cart").width();
+    $(".shopping-cart").animate({marginRight:"-"+width+"px"});
+
+}
+
+
+// hide product_info
+
+function hide_info(){
+    var width = $(".product_info").width();
+    $(".product_info").animate({marginLeft:"-"+width+"px"});
+    console.log("close");
+
+}
+
+
 
 function search_click(){
 	if($(".search-icon input").val() != ""){
@@ -237,6 +264,7 @@ function logOut(){
 }
 
 function showProductoInfo(id_product){
+
 	var producto_existente = false;
 	var data = new FormData;
         data.append('operaciones',"op");
@@ -305,6 +333,10 @@ function showProductoInfo(id_product){
 
     	},100);
     }
+
+            $(".product_info").animate({marginLeft:"0px"});
+            console.log("Open");
+
 }
 
 function addProductToCart(id_product){

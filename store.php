@@ -12,6 +12,18 @@
             <h5>MENÚ</h5>
         </div>
     </a>       
+    <div class="parallax" data-background-speed-y="0" data-parallax-align="top" id="history">
+        <div class="background_black"></div>
+            <h1 id = "fly-it">HISTORIA</h1>
+        <div class="col-lg-12 col-md-12 col-sm-12 align-center" style="position:relative;z-index:999;">
+            <img src="img/logo-slide.png" width="30%">
+            <p class="history  scrollflow -slide-left" style="filter: opacity(1); transform: translate3d(0px, 50px, 0px) scale(0.8); transition: all 800ms ease-out 0s;">
+                BRAGGART es una marca orgullosamente yucateca con sede en la ciudad de Mérida. 
+                <br/>Nace en 2015 con el objetivo de crear camisas para caballero de alta calidad.
+            </p>
+        </div>
+    </div>
+
     <div class="parallax" data-background-speed-y="0" data-parallax-align="top" id="us">
         <div class="background_black"></div>
         <div class="col-lg-12 col-md-12 col-sm-12" style="margin-top:10%;position:relative;z-index:999; ">
@@ -43,7 +55,8 @@
                 </div>
             </div>
         </div>
-</div><!-- /.container-fluid -->
+</div>
+<!-- /.container-fluid -->
 
 
 <!--Login Slidebar-->
@@ -65,6 +78,10 @@
 
             $(fullscreenParallax);
            
+    var controller = $.superscrollorama();
+      // individual element tween examples
+      controller.addTween('#title', TweenMax.fromTo( $('#title'), .50, {css:{opacity:0, 'letter-spacing':'30px'}, immediateRender:true, ease:Quad.easeInOut}, {css:{opacity:1, 'letter-spacing':'-10px'}, ease:Quad.easeInOut}), 0, 10); // 100 px offset for better timing
+      controller.addTween('#fly-it', TweenMax.from( $('#fly-it'), .50, {css:{right:'1000px'}, ease:Quad.easeInOut}));
 
         });
     }) (jQuery);
