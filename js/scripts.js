@@ -404,7 +404,6 @@ function updateCart(){
         cache:false,
         async:false,
         success:function(data){
-            console.log(data);
             if(data.indexOf("empty") != -1){
 
             }
@@ -555,4 +554,122 @@ function resetCart(){
 function search_product(){
 	var search_string = $(".search-icon input").val();
 	window.location.href = "shirts.php?s="+search_string;
+}
+
+function addWishlist(id_product){
+    var producto_existente = false;
+    var data = new FormData;
+        data.append('operaciones',"aw");
+        data.append("idp", id_product);
+    var resultado;
+
+    $.ajax({ 
+        url: mypath+"controller.php",
+        type:'POST',
+        contentType:false,
+        data:data,
+        processData:false,
+        cache:false,
+        async:false,
+        success:function(data){
+            if(data.indexOf("false") != -1){
+                mensaje = "No se pudo agregar el producto al wishlist. Inténtalo de nuevo.";
+            }
+            if(data.indexOf("true") != -1){
+                mensaje = "Se agrego el producto a tu wishlist.";
+                updateWishlist();
+            }
+            if(data.indexOf("login") != -1){
+                mensaje = "Inicia sesión para agregar productos a tu wishlist.";
+                updateWishlist();
+            }
+
+            $("#header-modal").html("Agregar Wishlist");
+            $("#content-modal").html(mensaje);
+            $('#myModal').modal('toggle');
+        }
+    });
+
+}
+
+updateWishlist();
+function updateWishlist(){
+    var data = new FormData;
+        data.append('operaciones',"gw");
+    var resultado;
+    var wishlist_vacio = true;
+
+    $.ajax({ 
+        url: mypath+"controller.php",
+        type:'POST',
+        contentType:false,
+        data:data,
+        processData:false,
+        cache:false,
+        async:false,
+        success:function(data){
+            if(data.indexOf("empty") != -1){
+
+            }
+            else{
+                wishlist_vacio = false;
+                resultado = JSON.parse(data);
+            }
+        }
+    });
+
+    if(!wishlist_vacio){
+        var total_wishlist = 0;
+        var html_wishlist = "";
+        for (var i = 0; i < $(resultado).size(); i++){
+            console.log(resultado);
+            var id_producto = resultado[i].id_producto;
+            var nombre = resultado[i].titulo_esp;
+            var precio = resultado[i].precio_mxn;
+            var img_principal = resultado[i].img_principal;
+            var html_producto = "";
+
+            html_producto = '<tr>'+
+                                //'<td><div class="color-square-shirt-cart" style="background-color:#000;"></div></td>'+
+                                '<td class="shirt-name"><img src="imgProductos/'+img_principal+'" class="cart_shirt">+ '+nombre+'</td>'+
+                                '<td class="shirt-price">$'+parseInt(precio)+' MXN</td>'+
+                                '<td class="shop-icon center" onclick="showProductoInfo(\''+id_producto+'\'), hide_wishlist()" style="cursor:pointer;"><i class="fa fa-shopping-cart fa-lg"></td>'+
+                                '<td class="delete-icon" onclick="deleteProductFromWishlist(\''+id_producto+'\')" style="cursor:pointer;"><i class="fa fa-times"></i></td>'+
+                            '</tr>';
+            html_wishlist+= html_producto;
+        }
+        $("#wishlist_body").html(html_wishlist);
+    }
+}
+
+function deleteProductFromWishlist(id_producto){
+    var data = new FormData;
+        data.append('operaciones',"ew");
+        data.append('idp', id_producto);
+
+    $.ajax({ 
+        url: mypath+"controller.php",
+        type:'POST',
+        contentType:false,
+        data:data,
+        processData:false,
+        cache:false,
+        async:false,
+        success:function(data){
+            if(data.indexOf("false") != -1){
+                mensaje = "No se pudo eliminar el producto del wishlist. Inténtalo de nuevo.";
+            }
+            if(data.indexOf("true") != -1){
+                mensaje = "Se eliminó el producto de tu wishlist.";
+                updateWishlist();
+            }
+            if(data.indexOf("notfound") != -1){
+                 mensaje = "No se encontró el producto en tu wishlist.";
+            }
+
+            $("#header-modal").html("Eliminar Wishlist");
+            $("#content-modal").html(mensaje);
+            $('#myModal').modal('toggle');
+        }
+    });
 }

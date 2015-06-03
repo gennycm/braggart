@@ -92,6 +92,59 @@ switch ($operaciones) {
 		unset($_SESSION["braggart_pay_token"]);
 		echo "true";
 	break;
+	case "aw":
+		$id_producto = $_REQUEST["idp"];
+		$id_userend = (isset($_SESSION["braggart_id_user"]) && $_SESSION["braggart_id_user"] != 0)? $_SESSION["braggart_id_user"]: 0;
+		$wishlist = new wishlist(0, $id_producto , $id_userend, 1);
+		if($id_userend != 0){
+			$wishlist -> insertar_wishlist();
+			if($wishlist -> id_wishlist != 0){
+				echo "true";
+			}
+			else{
+				echo "false";
+			}
+		}
+		else{
+			echo "login";
+		}
+	break;
+	case "ew":
+		$id_producto = $_REQUEST["idp"];
+		$id_userend = (isset($_SESSION["braggart_id_user"]) && $_SESSION["braggart_id_user"] != 0)? $_SESSION["braggart_id_user"]: 0;
+		if($id_userend != 0){
+			$wishlist = new wishlist(0, $id_producto , $id_userend, 1);
+			if($wishlist -> eliminar_wishlist()){
+				echo "true";
+			}
+			else{
+				echo "false";
+			}
+		}
+		else{
+			echo "login";
+		}
+	break;
+	case "gw":
+		$id_userend = (isset($_SESSION["braggart_id_user"]) && $_SESSION["braggart_id_user"] != 0)? $_SESSION["braggart_id_user"]: 0;
+		if($id_userend != 0){
+			$wishlist = new wishlist();
+			$wishlist -> id_userend = $id_userend;
+			$wishlists = $wishlist -> listar_wishlist();
+			$productos = array();
+			foreach ($wishlists as $wishlist) {
+				$id_producto = $wishlist["id_producto"];
+				$producto = new producto($id_producto);
+				$producto -> obtener_producto();
+				array_push($productos,$producto);
+			}
+			echo json_encode($productos);
+		}
+		else{
+			echo "empty";
+		}
+		
+	break;
 	case "ac":
 		$id_producto = $_REQUEST["idp"];
 		$size = $_REQUEST["size"];

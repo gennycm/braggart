@@ -31,7 +31,7 @@
                                 <a href="#" class="sidebar" onclick="showProductoInfo('.$producto_tmp["id_producto"].')">
                                     <i class="sc_icon fa fa-shopping-cart fa-2x scrollflow -slide-top "  data-scrollflow-start="0" data-scrollflow-distance="15" data-scrollflow-amount="30"></i> 
                                 </a>                          
-                                <i class="wl_icon fa fa-heart-o fa-2x sb-open-left scrollflow -slide-bottom"  data-scrollflow-start="-50" data-scrollflow-distance="5" data-scrollflow-amount="30"></i>
+                                <i onclick="addWishlist('.$producto_tmp["id_producto"].')" class="wl_icon fa fa-heart-o fa-2x sb-open-left scrollflow -slide-bottom"  data-scrollflow-start="-50" data-scrollflow-distance="5" data-scrollflow-amount="30"></i>
                             </div>
                         </div>
                     </div>';
