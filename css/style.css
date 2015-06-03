@@ -363,7 +363,7 @@ div.search-icon:-ms-input-placeholder { /* Internet Explorer 10+ */
 	color: #000;
 	font-size: 16px;
 	text-align: center;
-	z-index: 999;
+	z-index: 1031;
 }
 
 /* Style for our header texts
@@ -742,7 +742,7 @@ div.delivery{
   box-shadow: 0 0 5px black;**/
   font-size: 16px;
   text-align: center;
-  z-index: 999;
+  z-index: 1031;
 }
 
 .nombre-camisa{
