@@ -420,6 +420,13 @@ h1{
 	position: relative;
 }
 
+.historia > p{
+	color:white;
+	text-align: center;
+	font-size: 22px;
+	filter: opacity(1); transform: translate3d(0px, 50px, 0px) scale(0.8); transition: all 800ms ease-out 0s;
+}
+
 div.shirt{
 	background-size: cover;
 	background-repeat: no-repeat;
@@ -475,11 +482,7 @@ div.shirt{
 
 }
 
-.history{
-	color:white;
-	text-align: center;
-	font-size: 22px;
-}
+
 
 .align-center{
 	text-align: center;

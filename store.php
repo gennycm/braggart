@@ -5,7 +5,6 @@
     $latienda = new latienda(1);
     $latienda ->  obtener_latienda();
 ?>
-
     <a href="#" style="display:block; position:fixed;z-index:1000;" onclick="display_menu()">
         <div class="menu-toggle"></div>
         <div class="text_toggle">
@@ -14,12 +13,11 @@
     </a>       
     <div class="parallax" data-background-speed-y="0" data-parallax-align="bottom" id="history">
         <div class="background_black"></div>
-        <div class="col-lg-12 col-md-12 col-sm-12 align-center" style="position:relative;z-index:800;">
+        <div class="historia-container col-lg-12 col-md-12 col-sm-12 align-center" style="position:relative;z-index:800;">
             <img src="img/logo-slide.png" width="30%">
-            <p class="history  scrollflow -slide-left" style="filter: opacity(1); transform: translate3d(0px, 50px, 0px) scale(0.8); transition: all 800ms ease-out 0s;">
-                BRAGGART es una marca orgullosamente yucateca con sede en la ciudad de Mérida. 
-                <br/>Nace en 2015 con el objetivo de crear camisas para caballero de alta calidad.
-            </p>
+            <div class="historia scrollflow -slide-left">
+                <?=$latienda -> historia;?>
+            </div>
         </div>
     </div>
 

@@ -37,7 +37,7 @@ include'menu.php';//Contiene a todo el menu.
                     	<input type="hidden" name="id_producto" value="<?=$latienda->id_latienda?>"/>
                     
                         <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
-                        		<button type="submit" <?php if($seguridad->valida_permiso_usuario($_SESSION['idusuario'],$clave)==0) echo ' disabled ';?> name="operaciones" value="<?=$operacion?>" class="buttonguardar">Guardar y Publicar</button>
+                        		<button type="submit" name="operaciones" value="<?=$operacion?>" class="buttonguardar">Guardar y Publicar</button>
                         </div>
                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                     	<hr class="hrmenu">
@@ -61,6 +61,10 @@ include'menu.php';//Contiene a todo el menu.
                             <!-- Tab panes -->
                             <div class="tab-content">
                                 <div class="tab-pane active" id="esp">
+                                    <span class="textHelper">Ingrese la historia *:</span>
+                                    <textarea name="historia" id="summernoteh"><?=$latienda->historia;?></textarea>
+                                    <br>
+                                    <br>
                                     <span class="textHelper">Ingrese la descripción #1 *:</span>
                                     <textarea name="descripcion1" id="summernote1"><?=$latienda->descripcion1;?></textarea>
                                     <br>
@@ -137,6 +141,32 @@ include 'javascripts.html';
  
 	<script>
         jQuery(document).ready(function() {
+            jQuery('#summernoteh').summernote({
+                height: 200,
+                toolbar: [
+                            //[groupname, [button list]]
+                            ['style', ['bold', 'italic', 'underline', 'clear']],
+                            ['Misc', ['fullscreen']],
+                        ],
+                onpaste: function(e) {
+                    //alert('entre');
+                    var thisNote = $(this);
+                    //alert(thisNote);
+                    var updatePastedText = function(someNote){
+                        var original = someNote.code();
+                        //alert(original);
+                        var cleaned = CleanPastedHTML(original); //this is where to call whatever clean function you want. I have mine in a different file, called CleanPastedHTML.
+                        someNote.code('').html(cleaned); //this sets the displayed content editor to the cleaned pasted code.
+                    };
+                    setTimeout(function () {
+                        //this kinda sucks, but if you don't do a setTimeout, 
+                        //the function is called before the text is really pasted.
+                        updatePastedText(thisNote);
+                    }, 10);
+        
+        
+                }
+            });
             jQuery('#summernote1').summernote({
                 height: 200,
                 toolbar: [
