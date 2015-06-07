@@ -4,10 +4,16 @@
 /*@import url(http://fonts.googleapis.com/css?family=Raleway:400,500,300,200);*/
 /*font-family: 'Raleway', sans-serif;*/
 
-body{
-	overflow: auto;
-	overflow-x:hidden;
+
+/*Fix para el parallax en Chrome*/
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+    .parallax{ 
+        background-size:auto;
+        background-position: center 0%;
+    }
 }
+
 
 @font-face {
 	font-family: 'Conv_FoglihtenDeH02';
@@ -412,12 +418,15 @@ h1{
 	background-image: url(../img/contact.jpg);
 	padding: 6% 0 0 0;
 	position: relative;
+	z-index: -1;
 }
+
 /*History*/
 #history{
 	background-image: url(../img/shirtt.jpg);
 	padding: 6% 0 0 0;
 	position: relative;
+
 }
 
 .historia > p{
@@ -491,7 +500,11 @@ div.shirt{
 /*Tables*/
 
   table.contact {
- 
+	color:white;
+	position: absolute;
+	z-index: 3;
+	  margin-left: auto ;
+  margin-right: auto ;
   }
 
 table.contact td{

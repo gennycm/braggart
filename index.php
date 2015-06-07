@@ -33,12 +33,7 @@
             </div>
         </div>
         
-        <!--<div id="us" class="parallax" data-background-speed-y="0" data-parallax-align="top">
-                <a style="display:block;" href="store.php">
-                    <div class="background_black"></div>
-                    <h1>LA TIENDA</h1>
-                </a>
-        </div>-->
+
         <?php echo ''; ?>
         <div id="us" class="parallax" data-background-speed-y="0" data-parallax-align="top">
             <div class="background_black"></div>
@@ -56,14 +51,7 @@
                 <h1 id = "fly-it">CAMISAS</h1>
             </a>
         </div>
-        
-        <!--<div id="shirts" class="parallax" data-background-speed-y="0" data-parallax-align="top">
-             <a style="display:block;" href="shirts.php">
-                <div class="background_black"></div>
-                <h1>CAMISAS</h1>
-            </a>
-        </div>-->
-        
+
         <div id="contact" class="parallax" data-background-speed-y="0" data-parallax-align="top">
             <div class="background_black"></div>
             <div class="col-xs-12">
@@ -112,6 +100,36 @@
 <!--BODY-->
 <?php include_once("footer.html");?>
 <script>
+    /*Fix para el parallax en Chrome*/
+
+    var isChrome = navigator.userAgent.toLowerCase().indexOf('chrome') > -1;
+    if (isChrome)
+    {
+
+        var itemArr = $('.parallax');
+
+        $(window).scroll(function()
+        {
+            var pos = $(window).scrollTop();
+            var wh = window.innerHeight;
+
+            $(itemArr).each(function(i, item){
+
+                var p = $(item).position();
+                var h = $(item).height();
+                if (p.top + h > pos && p.top < pos+wh)
+                {
+                    // items ir redzams
+                    var prc = (p.top - pos +h)/wh ;
+                    //console.log(prc);
+                    $(item).css({'background-position':'center '+prc+'%'});
+                }
+
+            });
+        });
+
+    }
+
     /*Parallax scrolling*/
     var deleteLog = false;
 
