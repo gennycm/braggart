@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Servidor: localhost:8889
--- Tiempo de generación: 16-05-2015 a las 05:43:47
+-- Tiempo de generación: 10-06-2015 a las 02:55:25
 -- Versión del servidor: 5.5.38
 -- Versión de PHP: 5.6.2
 
@@ -427,6 +427,7 @@ INSERT INTO `impuestos` (`id_impuesto`, `nombre`, `porcentaje`) VALUES
 
 CREATE TABLE `latienda` (
 `id_latienda` int(11) NOT NULL,
+  `historia` longtext COLLATE utf8_unicode_ci NOT NULL,
   `descripcion1` text COLLATE utf8_unicode_ci NOT NULL,
   `descripcion2` text COLLATE utf8_unicode_ci NOT NULL,
   `descripcion3` text COLLATE utf8_unicode_ci NOT NULL
@@ -436,8 +437,8 @@ CREATE TABLE `latienda` (
 -- Volcado de datos para la tabla `latienda`
 --
 
-INSERT INTO `latienda` (`id_latienda`, `descripcion1`, `descripcion2`, `descripcion3`) VALUES
-(1, '&lt;p&gt;BRAGGART es una marca orgullosamente mexicana, elegante y hecha para ti.&amp;nbsp;&lt;br&gt;&lt;/p&gt;', '&lt;p&gt;Tenemos envÃ­o a toda la repÃºblica.&lt;br&gt;&lt;/p&gt;', '&lt;p&gt;Aceptamos pagos con tarjeta de crÃ©dito y de dÃ©bito.&lt;br&gt;&lt;/p&gt;');
+INSERT INTO `latienda` (`id_latienda`, `historia`, `descripcion1`, `descripcion2`, `descripcion3`) VALUES
+(1, '&lt;p&gt;BRAGGART es una marca orgullosamente yucateca con sede en la ciudad de MÃ©rida.&lt;/p&gt;&lt;p&gt;Nace en 2015 con el objetivo de crear camisas para caballero de alta calidad.&lt;/p&gt;', '&lt;p&gt;BRAGGART es una marca orgullosamente mexicana, elegante y hecha para ti.&amp;nbsp;&lt;br&gt;&lt;/p&gt;', '&lt;p&gt;Tenemos envÃ­o a toda la repÃºblica.&lt;br&gt;&lt;/p&gt;', '&lt;p&gt;Aceptamos pagos con tarjeta de crÃ©dito y de dÃ©bito.&lt;br&gt;&lt;/p&gt;');
 
 -- --------------------------------------------------------
 
@@ -897,13 +898,14 @@ CREATE TABLE `userend` (
   `password` varchar(250) COLLATE utf8_unicode_ci NOT NULL,
   `status` int(2) NOT NULL,
   `token` varchar(250) COLLATE utf8_unicode_ci NOT NULL
-) ENGINE=MyISAM AUTO_INCREMENT=22 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=23 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
 -- Volcado de datos para la tabla `userend`
 --
 
 INSERT INTO `userend` (`iduserend`, `correo`, `password`, `status`, `token`) VALUES
+(22, 'bebelin@gmail.com', '202cb962ac59075b964b07152d234b70', 0, '1128f6323d60efeaf8c6a11aa407b5dd'),
 (21, 'brent@gmail.com', '202cb962ac59075b964b07152d234b70', 0, '1871691f21c022b364af4be6e0a5c279'),
 (20, 'bheftye92@gmail.com', '202cb962ac59075b964b07152d234b70', 0, 'd9d5fcd0bc01d355dcf53ad7b90be4ea');
 
@@ -927,6 +929,19 @@ CREATE TABLE `usuario` (
 
 INSERT INTO `usuario` (`idusuario`, `nomusuario`, `password`, `status`, `idtipousuario`) VALUES
 (17, 'admin', '202cb962ac59075b964b07152d234b70', 1, 9);
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `wishlist`
+--
+
+CREATE TABLE `wishlist` (
+`id_wishlist` int(11) NOT NULL,
+  `id_producto` int(11) NOT NULL,
+  `id_userend` int(11) NOT NULL,
+  `status` int(1) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
 -- Índices para tablas volcadas
@@ -1119,6 +1134,12 @@ ALTER TABLE `usuario`
  ADD PRIMARY KEY (`idusuario`);
 
 --
+-- Indices de la tabla `wishlist`
+--
+ALTER TABLE `wishlist`
+ ADD PRIMARY KEY (`id_wishlist`);
+
+--
 -- AUTO_INCREMENT de las tablas volcadas
 --
 
@@ -1241,9 +1262,14 @@ MODIFY `id_transporte` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=7;
 -- AUTO_INCREMENT de la tabla `userend`
 --
 ALTER TABLE `userend`
-MODIFY `iduserend` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=22;
+MODIFY `iduserend` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=23;
 --
 -- AUTO_INCREMENT de la tabla `usuario`
 --
 ALTER TABLE `usuario`
 MODIFY `idusuario` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=18;
+--
+-- AUTO_INCREMENT de la tabla `wishlist`
+--
+ALTER TABLE `wishlist`
+MODIFY `id_wishlist` int(11) NOT NULL AUTO_INCREMENT;
