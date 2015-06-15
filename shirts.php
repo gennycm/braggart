@@ -2,8 +2,15 @@
 <!--BODY-->
     <?php
         include_once("./cp/clases/producto.php");
-        $producto = new producto();
-        $productos = $producto -> listar_productos_activos();
+        if(isset($_REQUEST["s"]) && $_REQUEST["s"] != ""){
+          $producto = new producto();
+          $productos = $producto -> listar_productos_activos_por_busqueda($_REQUEST["s"]);
+        }
+        else{
+           $producto = new producto();
+           $productos = $producto -> listar_productos_activos();
+        }
+       
     ?>
 <!--<div id="pagepiling">-->
 <style>
