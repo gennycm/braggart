@@ -280,9 +280,22 @@ div.menu-toggle{
 	left:40px;
 	height:65px;
 	width:100px;
-	background-image:url(../img/braggart_diamond_2.png);
-	background-size:100% 100%;
-	background-repeat: no-repeat;
+
+}
+
+div#diamond_little{
+padding-left: 13px;
+padding-top: 5px;
+}
+
+
+div#deco{
+	margin-top: -460px;
+	z-index: 3;
+	margin-left: auto;
+	margin-right: auto;
+		z-index: 888;
+
 }
 
 div.text_toggle{
@@ -501,10 +514,11 @@ div.shirt{
 
   table.contact {
 	color:white;
-	position: absolute;
+	position: relative;
 	z-index: 3;
-	  margin-left: auto ;
-  margin-right: auto ;
+	margin-left: auto;
+    margin-right: auto;
+    font-size: 2em;
   }
 
 table.contact td{
@@ -525,7 +539,7 @@ table.contact td.text{
 table.contact td.decoration{
 	text-align: center;
 	font-family:'Conv_FoglihtenDeH02',Sans-Serif;
-	font-size: 45pt;
+	font-size: 2.5em;
 }
 
 
@@ -572,6 +586,8 @@ h1.cart-header{
 .cart-window table  thead  th{
 	text-align: center;
 }
+
+
 
 div.color-square{
 	border:solid 1px #000;
@@ -798,7 +814,7 @@ div.delivery{
 .img-size{
 	height:100%;
 	width:100%;
-	background-image:url(../img/braggart_diamond_2.png);
+	/**background-image:url(../img/braggart_diamond_2.png);*/
 	background-size:35px auto;
 	background-position:center;
 	background-repeat:no-repeat;
@@ -907,8 +923,23 @@ button.boton-producto-agregar:hover{
   margin-right: -70%;
 }
 
-
-
+.login_sidebar{
+	bottom:50px;
+	  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 40%;
+  background: white;
+  color: black;
+ /* padding: 30px;*/
+ /* box-shadow: 0 0 5px black;*/
+  font-size: 18px;
+  text-align: center;
+  z-index: 1031;
+  overflow-x: hidden;
+  margin-right: -70%;
+}
 
 p.decoration{
 	text-align: center;
@@ -932,23 +963,29 @@ p.decoration{
 }
 /*END sLIDER 2*/
 
-
+/*Chica: roja*/
 span#s-t, span#s-t .csstransforms3d .cl-effect-2 a:hover span::before,
 .csstransforms3d .cl-effect-2 a:focus span::before {
-	background: #660000;
+	/*background: #660000;*/
+	/*Fondo negro con diamante de color*/
 }
 
+/*mediana verde*/
 span#m-t{
-	background: #006600;
+	/*background: #006600;*/
+		background:#ffffff;
+
 }
 
 
 span#l-t{
-	background: #003D99;
+	/*background: #003D99;*/
+			background:#ffffff;
+
 }
 
 span#xl-t{
-	background: #B20047;
+	background: #FFBF00;
 }
 /*SHOPPING CART*/
 .square {

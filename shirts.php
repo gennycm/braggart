@@ -56,7 +56,68 @@
 <?php include_once("footer.html");?>
 <script>
     /*Parallax scrolling*/
-        
+    var diamondSvg = {
+    "diamond_little": {
+        "strokepath": [
+            {
+                "path": "M 37.521 18.512 L 37.521 49.847",
+                "duration": 300
+            },
+            {
+                "path": "M 37.576 18.621 L 53.416 41.372",
+                "duration": 300
+            },
+            {
+                "path": "M 37.521 18.512 L 21.854 42.012",
+                "duration": 300
+            },
+            {
+                "path": "M 21.854 42.012 L 37.521 49.847",
+                "duration": 300
+            },
+            {
+                "path": "M 37.521 49.847 L 53.588 41.725",
+                "duration": 300
+            },
+            {
+                "path": "M 21.854 42.012 L 21.854 26.805",
+                "duration": 300
+            },
+            {
+                "path": "M 21.854 26.805 L 37.521 32.164",
+                "duration": 300
+            },
+            {
+                "path": "M 37.521 32.164 L 53.416 26.519",
+                "duration": 300
+            },
+            {
+                "path": "M 37.521 32.164 L 21.854 42.012",
+                "duration": 300
+            },
+            {
+                "path": "M 21.854 26.805 L 37.521 49.847",
+                "duration": 300
+            },
+            {
+                "path": "M 37.521 49.847 L 53.416 26.805",
+                "duration": 300
+            },
+            {
+                "path": "M 37.521 32.164 L 53.016 41.372",
+                "duration": 300
+            },
+            {
+                "path": "M 53.588 26.519 L 53.588 41.372",
+                "duration": 300
+            }
+        ],
+        "dimensions": {
+            "width": 75,
+            "height": 90
+        }
+    }
+}; 
 
     /*Slidebar*/
     jQuery(document).ready(function($) {
@@ -70,10 +131,15 @@
       controller.addTween('#title-shirt', TweenMax.from( $('#fly-it'), .25, {css:{right:'1000px'}, ease:Quad.easeInOut}));
      // controller.addTween('#menu', TweenMax.fromTo( $('#scale-it'), .25, {css:{opacity:0, fontSize:'20px'}, immediateRender:true, ease:Quad.easeInOut}, {css:{opacity:1, fontSize:'240px'}, ease:Quad.easeInOut}),10,0);
 
+/*Svg Painter*/
 
-  //   $.slidebars()
-
-      
+     $('#diamond_little').lazylinepainter( 
+     {
+        "svgData": diamondSvg,
+        "strokeWidth": 2,
+        "strokeColor": "#FFFFFF",
+        "responsive": "true"
+    }).lazylinepainter('paint');
 
     });
 

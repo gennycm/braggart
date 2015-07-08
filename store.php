@@ -4,13 +4,7 @@
     include_once("./cp/clases/latienda.php");
     $latienda = new latienda(1);
     $latienda ->  obtener_latienda();
-?>
-    <a href="#" style="display:block; position:fixed;z-index:1000;" onclick="display_menu()">
-        <div class="menu-toggle"></div>
-        <div class="text_toggle">
-            <h5>MENÚ</h5>
-        </div>
-    </a>       
+?>   
     <div class="parallax" data-background-speed-y="0" data-parallax-align="bottom" id="history">
         <div class="background_black"></div>
         <div class="historia-container col-lg-12 col-md-12 col-sm-12 align-center" style="position:relative;z-index:800;">
@@ -67,6 +61,68 @@
 <script>
     /*Parallax scrolling*/
         
+    var diamondSvg = {
+    "diamond_little": {
+        "strokepath": [
+            {
+                "path": "M 37.521 18.512 L 37.521 49.847",
+                "duration": 300
+            },
+            {
+                "path": "M 37.576 18.621 L 53.416 41.372",
+                "duration": 300
+            },
+            {
+                "path": "M 37.521 18.512 L 21.854 42.012",
+                "duration": 300
+            },
+            {
+                "path": "M 21.854 42.012 L 37.521 49.847",
+                "duration": 300
+            },
+            {
+                "path": "M 37.521 49.847 L 53.588 41.725",
+                "duration": 300
+            },
+            {
+                "path": "M 21.854 42.012 L 21.854 26.805",
+                "duration": 300
+            },
+            {
+                "path": "M 21.854 26.805 L 37.521 32.164",
+                "duration": 300
+            },
+            {
+                "path": "M 37.521 32.164 L 53.416 26.519",
+                "duration": 300
+            },
+            {
+                "path": "M 37.521 32.164 L 21.854 42.012",
+                "duration": 300
+            },
+            {
+                "path": "M 21.854 26.805 L 37.521 49.847",
+                "duration": 300
+            },
+            {
+                "path": "M 37.521 49.847 L 53.416 26.805",
+                "duration": 300
+            },
+            {
+                "path": "M 37.521 32.164 L 53.016 41.372",
+                "duration": 300
+            },
+            {
+                "path": "M 53.588 26.519 L 53.588 41.372",
+                "duration": 300
+            }
+        ],
+        "dimensions": {
+            "width": 75,
+            "height": 90
+        }
+    }
+};
 
     /*Slidebar*/
     (function($) {
@@ -79,6 +135,19 @@
       // individual element tween examples
       controller.addTween('#title', TweenMax.fromTo( $('#title'), .50, {css:{opacity:0, 'letter-spacing':'30px'}, immediateRender:true, ease:Quad.easeInOut}, {css:{opacity:1, 'letter-spacing':'-10px'}, ease:Quad.easeInOut}), 0, 10); // 100 px offset for better timing
       controller.addTween('#fly-it', TweenMax.from( $('#fly-it'), .50, {css:{right:'1000px'}, ease:Quad.easeInOut}));
+
+
+
+
+/*Svg Painter*/
+
+     $('#diamond_little').lazylinepainter( 
+     {
+        "svgData": diamondSvg,
+        "strokeWidth": 2,
+        "strokeColor": "#FFFFFF",
+        "responsive": "true"
+    }).lazylinepainter('paint');
 
         });
     }) (jQuery);

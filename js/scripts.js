@@ -49,6 +49,21 @@ function hide_cart(){
 
 }
 
+//Show - hide cart
+
+function display_login(){
+    $(".login_sidebar").animate({marginRight:"0px"});
+    console.log("hey");
+}
+
+function hide_login(){
+    var width = $(".login_sidebar").width();
+    $(".login_sidebar").animate({marginRight:"-"+width+"px"});
+
+}
+
+
+
 
 // hide product_info
 
@@ -131,6 +146,8 @@ function validateUserRegister(){
     }
 }
 
+    var mensaje = "";
+
 function registerUser(){
     var email = $("input[name='email']").val();
     var password = $("input[name='regPassword']").val();
@@ -140,7 +157,6 @@ function registerUser(){
         data.append("em", email);
         data.append("pass", password);
     var resultado;
-    var mensaje = "";
 
     $.ajax({ 
         url: mypath+"controller.php",
@@ -230,7 +246,7 @@ function logIn(){
                               '<li><a href="#" onclick="logOut()"> Cerrar Sesión</a></li>'+
                               '<li><a href="#" onclick="hide_menu()"><i class="fa fa-chevron-up"></i></a></li>';
                 $(".navbar-right").html(newHtml);
-                $(".sb-close").click();
+                hide_login();
             }
             if(data.indexOf("false") != -1){
                 mensaje = "Usuario o contraseña incorrectos, intentalo de nuevo.";

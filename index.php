@@ -10,12 +10,7 @@
 <!--BODY-->
 
 <!--<div id="pagepiling">-->
-        <a href="#" id="menu_a" style="display:block; position:fixed;z-index:1000;" onclick="display_menu()">
-            <div class="menu-toggle"></div>
-            <div class="text_toggle">
-                <h5 id = "menu">MENÚ</h5>
-            </div>
-        </a>       
+     
        
         <div id="home" class="parallax" data-background-speed-y="0" data-parallax-align="bottom">
             <div class="background_black"></div>
@@ -38,9 +33,49 @@
         <div id="us" class="parallax" data-background-speed-y="0" data-parallax-align="top">
             <div class="background_black"></div>
             <a style="display:block;" href="store.php">
-                <h1><div id="title">LA TIENDA</div></h1>
+            <div class="demo-drawing">
+            <div id="main" class="main">
+            <figure>
+                    <div class="drawings mac">
+                        <img class="illustration" src="img/latienda.png" alt="La Tienda" />
+                        <svg class="line-drawing" id="mac" width="100%" height="600" preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg" viewBox="2 -218 600 600">
+                            <g transform="translate(0.000000,169.000000) scale(0.100000,-0.100000)"
+                            fill="none" stroke="#000000">
+                            <path d="M1840 1395 l0 -75 110 0 110 0 0 -455 0 -455 70 0 70 0 0 455 0 455
+                            110 0 110 0 0 75 0 75 -290 0 -290 0 0 -75z"/>
+                            <path d="M2960 940 l0 -530 270 0 270 0 0 70 0 70 -200 0 -200 0 0 140 0 140
+                            170 0 170 0 0 70 0 70 -170 0 -170 0 0 175 0 175 200 0 200 0 0 75 0 75 -270
+                            0 -270 0 0 -530z"/>
+                            <path d="M4600 940 l0 -530 170 0 c146 0 177 3 224 21 153 57 236 234 236 504
+                            0 255 -74 427 -214 494 -53 26 -158 40 -303 41 l-113 0 0 -530z m337 359 c81
+                            -39 129 -132 142 -278 15 -166 -11 -309 -69 -390 -44 -60 -93 -81 -190 -81
+                            l-80 0 0 385 0 385 77 0 c57 0 88 -5 120 -21z"/>
+                            <path d="M120 935 l0 -525 250 0 250 0 0 70 0 70 -180 0 -180 0 0 455 0 455
+                            -70 0 -70 0 0 -525z"/>
+                            <path d="M945 1448 c-10 -28 -265 -1014 -265 -1026 0 -10 19 -12 77 -10 l78 3
+                            23 103 24 102 144 0 143 0 10 -37 c6 -21 17 -68 27 -105 l16 -68 79 0 c44 0
+                            79 1 79 3 0 1 -61 235 -135 521 -74 285 -135 520 -135 522 0 2 -36 4 -80 4
+                            -55 0 -82 -4 -85 -12z m140 -467 c30 -122 55 -224 55 -226 0 -3 -51 -5 -114
+                            -5 l-113 0 56 229 c31 126 57 228 58 227 2 -1 28 -102 58 -225z"/>
+                            <path d="M2570 930 l0 -530 70 0 70 0 0 530 0 530 -70 0 -70 0 0 -530z"/>
+                            <path d="M3720 930 l0 -530 65 0 65 0 1 378 0 377 190 -377 189 -378 65 0 65
+                            0 0 530 0 530 -65 0 -65 0 0 -366 0 -365 -184 363 -185 363 -70 3 -71 3 0
+                            -531z"/>
+                            <path d="M5595 1448 c-10 -28 -265 -1014 -265 -1026 0 -10 19 -12 77 -10 l78
+                            3 23 103 24 102 144 0 143 0 10 -37 c6 -21 17 -68 27 -105 l16 -68 79 0 c44 0
+                            79 1 79 3 0 1 -61 235 -135 521 -74 285 -135 520 -135 522 0 2 -36 4 -80 4
+                            -55 0 -82 -4 -85 -12z m140 -467 c30 -122 55 -224 55 -226 0 -3 -51 -5 -114
+                            -5 l-113 0 56 229 c31 126 57 228 58 227 2 -1 28 -102 58 -225z"/>
+                            </g>
+                        </svg>
+                    </div>
+                </figure>   
+            </div>
+        </div>
             </a>
-            <p class="decoration scrollflow -slide-top" data-scrollflow-start="0" data-scrollflow-distance="15" data-scrollflow-amount="30">U------------q(Q-----------u</p>
+            <div id="deco"></div>
+        
+
 
 
         </div>
@@ -48,7 +83,7 @@
         <div id="shirts" class="parallax" data-background-speed-y="0" data-parallax-align="top">
             <div class="background_black"></div>
             <a style="display:block;" href="shirts.php">
-                <h1 id = "fly-it">CAMISAS</h1>
+                <h1 id = "title">CAMISAS</h1>
             </a>
         </div>
 
@@ -129,6 +164,95 @@
         });
 
     }
+    /*Diamantito*/
+
+/* 
+ * Lazy Line Painter - Path Object 
+ * Generated using 'SVG to Lazy Line Converter'
+ * 
+ * http://lazylinepainter.info 
+ * Copyright 2013, Cam O'Connell  
+ *  
+ */ 
+ 
+var diamondSvg = {
+    "diamond_little": {
+        "strokepath": [
+            {
+                "path": "M 37.521 18.512 L 37.521 49.847",
+                "duration": 300
+            },
+            {
+                "path": "M 37.576 18.621 L 53.416 41.372",
+                "duration": 300
+            },
+            {
+                "path": "M 37.521 18.512 L 21.854 42.012",
+                "duration": 300
+            },
+            {
+                "path": "M 21.854 42.012 L 37.521 49.847",
+                "duration": 300
+            },
+            {
+                "path": "M 37.521 49.847 L 53.588 41.725",
+                "duration": 300
+            },
+            {
+                "path": "M 21.854 42.012 L 21.854 26.805",
+                "duration": 300
+            },
+            {
+                "path": "M 21.854 26.805 L 37.521 32.164",
+                "duration": 300
+            },
+            {
+                "path": "M 37.521 32.164 L 53.416 26.519",
+                "duration": 300
+            },
+            {
+                "path": "M 37.521 32.164 L 21.854 42.012",
+                "duration": 300
+            },
+            {
+                "path": "M 21.854 26.805 L 37.521 49.847",
+                "duration": 300
+            },
+            {
+                "path": "M 37.521 49.847 L 53.416 26.805",
+                "duration": 300
+            },
+            {
+                "path": "M 37.521 32.164 L 53.016 41.372",
+                "duration": 300
+            },
+            {
+                "path": "M 53.588 26.519 L 53.588 41.372",
+                "duration": 300
+            }
+        ],
+        "dimensions": {
+            "width": 75,
+            "height": 90
+        }
+    }
+}; 
+ 
+var decoSvg = {
+    "deco": {
+        "strokepath": [
+            {
+                "path": "M367.25,265.75L361,336v-35H78 M364,301h120.945  L488,258.5V302h122v-34l4.233,71.625L618.972,300H884 M586,320h-86l-5,40.875l-6-43.125l-90,5.75",
+                "duration": 800
+            }
+        ],
+        "dimensions": {
+            "width": 960,
+            "height": 560
+        }
+    }
+}; 
+ 
 
     /*Parallax scrolling*/
     var deleteLog = false;
@@ -146,12 +270,15 @@
 
 
       $(fullscreenParallax);
+      
 
 
       setInterval(function(){
         var slider = $(".royalSlider").data('royalSlider');
         slider.next();  // next slide
     }, 4500);
+
+
 
       var width = $(window).width();
       var height = $(window).height();
@@ -165,6 +292,19 @@
       controller.addTween('#title', TweenMax.fromTo( $('#title'), .50, {css:{opacity:0, 'letter-spacing':'30px'}, immediateRender:true, ease:Quad.easeInOut}, {css:{opacity:1, 'letter-spacing':'-10px'}, ease:Quad.easeInOut}), 0, 10); // 100 px offset for better timing
       controller.addTween('#fly-it', TweenMax.from( $('#fly-it'), .25, {css:{right:'1000px'}, ease:Quad.easeInOut}));
      
+      /*Svg Painter*/
+
+
+
+     $('#diamond_little').lazylinepainter( 
+     {
+        "svgData": diamondSvg,
+        "strokeWidth": 2,
+        "strokeColor": "#FFFFFF",
+        "responsive": "true"
+    }).lazylinepainter('paint');
+
+
 
 
     });
@@ -176,6 +316,51 @@
     $('input, textarea').placeholder({customClass:'my-placeholder'});
     // That’s it, really.
     });
-        
+
+
+    /*Scrolling firing event*/
+
+    $(window).scroll(function() {
+    var y_scroll_pos = window.pageYOffset;
+    var scroll_pos_test = 150;             
+    // set to whatever you want it to be
+
+    if (y_scroll_pos == 900) {
+        console.log("firing la tienda");
+            $('#deco').lazylinepainter( 
+             {
+                "svgData": decoSvg,
+                "strokeWidth": 2,
+                "strokeColor": "#FFFFFF",
+                "responsive": "true"
+            }).lazylinepainter('paint');
+            var scroll_pos_menu = $("nav").offsetBottom;
+    console.log("scroll_pos_menu: "+ scroll_pos_menu);  
+        if (y_scroll_pos > scroll_pos_menu+100) {
+            console.log("Esconder menu.");
+        }; 
+    }else{
+        if (y_scroll_pos == 1800 || y_scroll_pos < 400 ) {
+            $('#deco').lazylinepainter('erase');
+        }
+    }
+
+    if(y_scroll_pos > scroll_pos_test) {
+     //  console.log("offset:" + y_scroll_pos);
+    }
+    else
+    {
+      //  console.log("goodbye");
+    }
+    var scroll_pos_menu = $("nav").offset().top;
+    console.log("scroll_pos_menu: "+ scroll_pos_menu);            
+
+
+    //Menu
+
+
+
+});
+ 
    
     </script>

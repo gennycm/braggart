@@ -87,7 +87,7 @@
 
 	SVGEl.prototype.showImage = function() {
 		classie.add( this.image, 'show' );
-		classie.add( this.el, 'hide' );
+		//classie.add( this.el, 'hide' );
 	};
 
 	function getViewportH() {

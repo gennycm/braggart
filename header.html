@@ -10,7 +10,7 @@
 
 ?>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" >
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -67,13 +67,13 @@
             <ul class="nav navbar-nav navbar-right">
               <?php 
                 if($email != ""){
-                  echo '<li><a href="#" class="sb-open-right" id="login-button">'.$email.'</a></li>'.
+                  echo '<li><a href="#" id="login-button">'.$email.'</a></li>'.
                        '<li><a href="#" onclick="logOut()">Cerrar Sesión</a></li>'.
                        '<li><a href="#" id="menu_chevron" onclick="hide_menu()"><i class="fa fa-chevron-up"></i></a></li>';
                 }
                 else{
                   echo '<li>
-                          <a href="#" class="sb-open-right" id="login-button">INICIAR SESI&Oacute;N | REGISTRO</a>
+                          <a href="#" onclick="display_login()" id="login-button">INICIAR SESI&Oacute;N | REGISTRO</a>
                         </li>
                         <li>
                           <a href="#" id="menu_chevron" onclick="hide_menu()"><i class="fa fa-chevron-up"></i></a>
@@ -100,3 +100,11 @@
           </a>
         </div>
       </div>
+        <a href="#" id="menu_a" style="display:block; position:fixed;z-index:1000;" onclick="display_menu()">
+            <div class="menu-toggle">
+                <div id="diamond_little"></div>
+            </div>
+            <div class="text_toggle">
+                <h5 id = "menu">MENÚ</h5>
+            </div>
+        </a>  
