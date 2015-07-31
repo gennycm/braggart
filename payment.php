@@ -1,6 +1,30 @@
 <?php include_once("header.html");?>
 <!--BODY-->
-
+<?php
+  if(isset($_SESSION["braggar_payment_data"])){
+    $payment_data = $_SESSION["braggar_payment_data"];
+    $nombre = $payment_data["nombre"];
+    $calle = $payment_data["calle"];
+    $numExt = $payment_data["numExt"];
+    $numInt = $payment_data["numInt"];
+    $codP = $payment_data["codP"];
+    $colFracc = $payment_data["colFracc"];
+    $municipio = $payment_data["municipio"];
+    $ciudad = $payment_data["ciudad"];
+    $estado = $payment_data["estado"];
+  }
+  else{    
+    $nombre = "";
+    $calle = "";
+    $numExt = "";
+    $numInt = "";
+    $codP = "";
+    $colFracc = "";
+    $municipio = "";
+    $ciudad = "";
+    $estado = "";
+  }
+?>
 <div>
         <a href="#" id="menu_a" style="display:block; position:fixed;z-index:1000;" onclick="display_menu()">
             <div class="menu-toggle"></div>
@@ -23,15 +47,15 @@
                             </thead>
                             <tr>
                                 <td>
-                                      <p class="form"><label><i class="fa fa-user fa-lg"></i></label><input name="nombre" type="text" class="text" placeholder=" NOMBRE COMPLETO" ></p>
-                                      <p class="form"><label><i class="fa fa-map-marker fa-lg"></i></label><input name="numCalle" type="text" class="text" placeholder=" N&Uacute;MERO DE CALLE" ></p>
-                                      <p class="form"><label></label><input name="numExt" type="text" class="text" placeholder=" N&Uacute;MERO EXTERIOR" ></p>
-                                      <p class="form"><label></label><input name="numInt" type="text" class="text" placeholder=" N&Uacute;MERO INTERIOR" ></p>
-                                      <p class="form"><label></label><input name="codP" type="text" class="text" placeholder=" C&Oacute;DIGO POSTAL" ></p>
-                                      <p class="form"><label></label><input name="colFracc" type="text" class="text" placeholder=" COLONIA O FRACCIONAMIENTO" ></p>
-                                      <p class="form"><label></label><input name="municipio" type="text" class="text" placeholder=" MUNICIPIO" ></p>
-                                      <p class="form"><label></label><input name="ciudad" type="text" class="text" placeholder=" CIUDAD" ></p>
-                                      <p class="form"><label></label><input name="estado" type="text" class="text" placeholder=" ESTADO" ></p>
+                                      <p class="form"><label><i class="fa fa-user fa-lg"></i></label><input name="nombre" value="<?=$nombre?>" type="text" class="text" placeholder=" NOMBRE COMPLETO"  ></p>
+                                      <p class="form"><label><i class="fa fa-map-marker fa-lg"></i></label><input name="numCalle" value="<?=$calle?>" type="text" class="text" placeholder=" N&Uacute;MERO DE CALLE" ></p>
+                                      <p class="form"><label></label><input name="numExt" value="<?=$numExt?>" type="text" class="text" placeholder=" N&Uacute;MERO EXTERIOR" ></p>
+                                      <p class="form"><label></label><input name="numInt" value="<?=$numInt?>" type="text" class="text" placeholder=" N&Uacute;MERO INTERIOR" ></p>
+                                      <p class="form"><label></label><input name="codP" value="<?=$codP?>" type="text" class="text" placeholder=" C&Oacute;DIGO POSTAL" ></p>
+                                      <p class="form"><label></label><input name="colFracc" value="<?=$colFracc?>" type="text" class="text" placeholder=" COLONIA O FRACCIONAMIENTO" ></p>
+                                      <p class="form"><label></label><input name="municipio" value="<?=$municipio?>" type="text" class="text" placeholder=" MUNICIPIO" ></p>
+                                      <p class="form"><label></label><input name="ciudad" value="<?=$ciudad?>" type="text" class="text" placeholder=" CIUDAD" ></p>
+                                      <p class="form"><label></label><input name="estado" value="<?=$estado?>" type="text" class="text" placeholder=" ESTADO" ></p>
                                 </td>
                             </tr>                          
                             <tfoot></tfoot>
@@ -74,7 +98,7 @@
                                           <span class="card-errors"></span>
                                           <p class="form"><label><i class="fa fa-user fa-lg"></i></label><input size="20" data-conekta="card[name]" type="text" class="text" placeholder="NOMBRE DEL TARJETAHABIENTE" ></p>
                                           <p class="form"><label><i class="fa fa-credit-card fa-md"></i></label><input size="20" type="text" data-conekta="card[number]" class="text" placeholder=" # DE TARJETA" ></p>
-                                          <p class="form"><label><i class="fa fa-key fa-lg"></i></label><input size="4" data-conekta="card[cvc]" type="text" class="text" placeholder=" C&Oacute;DIGO DE SEGURIDAD" ></p>
+                                          <p class="form"><label><i class="fa fa-key fa-lg"></i></label><input size="4" data-conekta="card[cvc]" type="password" class="text" placeholder=" C&Oacute;DIGO DE SEGURIDAD" ></p>
                                           <p class="form"><label><i class="fa fa-calendar fa-lg"></i></label><input size="2" data-conekta="card[exp_month]" type="text" class="text" placeholder=" MES DE EXPIRACI&Oacute;N 01, 02, 10" ></p>
                                           <p class="form"><label><i class="fa fa-calendar fa-lg"></i></label><input size="4" data-conekta="card[exp_year]" type="text" class="text" placeholder=" AÑO DE EXPIRACI&Oacute;N 2016, 2017, 2020" ></p>
                                           <p class="form" style="border:none"><button type="submit">LISTO</button></p>
@@ -135,28 +159,6 @@
     });
 </script>
 <script>
-    /*Parallax scrolling*/
-        
-
-    /*Slidebar*/
-    (function($) {
-        $(document).ready(function() {
-            $.slidebars();
-            var deleteLog = false;
-            /*$('#pagepiling').pagepiling({
-                menu: false,
-                anchors: ['camisa-sport-ajustada', 'camisa-elegante-ajustada', 'camisa-oficina-ajustada', 'camisa-casual-ajustada'],
-                navigation: {
-                    'textColor': '#f2f2f2',
-                    'bulletsColor': '#ccc',
-                    'position': 'right',
-                    'tooltips': ['SPORT AJUSTADA', 'ELEGANTE AJUSTADA', 'OFICINA AJUSTADA', 'CASUAL AJUSTADA']
-                }
-
-            });*/
-
-        });
-    }) (jQuery);
 
 /*Password placeholder , so the placeholder actually shows, and not just dots*/
     $(function() {

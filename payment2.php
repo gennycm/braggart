@@ -79,28 +79,6 @@
 <?php include_once("footer.html");?>
 
 <script>
-    /*Parallax scrolling*/
-        
-
-    /*Slidebar*/
-    (function($) {
-        $(document).ready(function() {
-            $.slidebars();
-            var deleteLog = false;
-            /*$('#pagepiling').pagepiling({
-                menu: false,
-                anchors: ['camisa-sport-ajustada', 'camisa-elegante-ajustada', 'camisa-oficina-ajustada', 'camisa-casual-ajustada'],
-                navigation: {
-                    'textColor': '#f2f2f2',
-                    'bulletsColor': '#ccc',
-                    'position': 'right',
-                    'tooltips': ['SPORT AJUSTADA', 'ELEGANTE AJUSTADA', 'OFICINA AJUSTADA', 'CASUAL AJUSTADA']
-                }
-
-            });*/
-
-        });
-    }) (jQuery);
 
 /*Password placeholder , so the placeholder actually shows, and not just dots*/
     $(function() {

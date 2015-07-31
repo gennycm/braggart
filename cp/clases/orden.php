@@ -1,12 +1,5 @@
 <?php
 include_once('conexion.php');
-include_once('datosorden.php');
-include_once('userend.php');
-include_once('producto.php');
-include_once('productoxuserend.php');
-include_once('herramientas.php');
-include_once('rango_transporte.php');
-
 
 class orden
 {
@@ -16,38 +9,39 @@ class orden
 	var $num_productos;
 	var $total_productos;
 	var $estatus;	
-	var $orden;
-	var $iddireccion;
+	var $direccion;
 	var $id_transporte;
 	var $id_rango_transporte;
 	var $peso;
-	var $herramientas;
-	var $transportes;
-	var $precioTransporte;
+	var $order_cart;
 	
-	function orden($id=0,$fech='',$user='',$canti='',$import='',$esta='',$iddireccion=''){
+	function orden($id=0,$fecha='',$iduserend='',$num_productos='',$total_productos='',$estatus='',$direccion='', $id_transporte = "", $id_rango_transporte = "", $peso = 0, $order_cart = array()){
 		$this->idorden=$id;
-		$this->fecha=$fech;
-		$this->iduserend=$user;
-		$this->num_productos=$canti;
-		$this->total_productos=$import;
-		$this->estatus=$esta;
-		$this->iddireccion = $iddireccion;		
-		$this->orden=array();
-		$this->datosOrden = new datosorden($this->idorden,0,0,0);
-		$this->herramientas = new herramientas();
+		$this->fecha=$fecha;
+		$this->iduserend=$iduserend;
+		$this->num_productos=$num_productos;
+		$this->total_productos=$total_productos;
+		$this->estatus=$estatus;
+		$this->direccion = $direccion;
+		$this ->id_transporte = $id_transporte;
+		$this -> id_rango_transporte = $id_rango_transporte;
+		$this -> peso = $peso;	
+		$this -> order_cart = $order_cart;
 	}
+
 	function insertar_orden(){
 		$con= new conexion();
 		$sql="insert into orden (fecha,iduserend,num_productos,total_productos,estatus,iddireccion) values (now(),'".$this->iduserend."','".$this->num_productos."','".$this->total_productos."','".$this->estatus."', 0)";
 		$this->idorden=$con->ejecutar_sentencia($sql);
 	
 	}
+
 	function modificar_orden(){
 		$con= new conexion();
 		$sql="update orden set fecha='".$this->fecha."',iduserend='".$this->iduserend."',num_productos='".$this->num_productos."',total_productos='".$this->total_productos."',estatus='".$this->estatus."', iddireccion = ".$this->iddireccion." where idorden=".$this->idorden;
 		$con->ejecutar_sentencia($sql);
 	}
+	
 	function modificarOrdenTotales(){
 		$con = new conexion();
 		$sql = "UPDATE orden SET num_productos='".$this->num_productos."', total_productos = '".$this->total_productos."' where idorden = ".$this->idorden;

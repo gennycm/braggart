@@ -314,7 +314,7 @@ include'menu.php';//Contiene a todo el menu.
                                                             $class = 'ver';
                                                         }
                                                         echo '<td class="text-center visible-lg visible-md"><img class="manita '.$class.'" onclick="'.$funcion.'" id="temp'.$una_combinacion["id_combinacion"].'" src="'.$img.'"></td>
-                                                              <td class="text-center visible-lg visible-md" style="color:#000;cursor:pointer;"><i class="fa fa-trash fa-2x " onclick="eliminarCombinacion('.$una_combinacion["id_combinacion"].')"></i></td>
+                                                              <td class="text-center visible-lg visible-md" style="color:#000;"><!--<i class="fa fa-trash fa-2x " onclick="eliminarCombinacion('.$una_combinacion["id_combinacion"].')"></i>--></td>
                                                             <tr>';
                                                     }
                                                 }

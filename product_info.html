@@ -24,28 +24,28 @@
           <div class="col-lg-6">
              <h5 class="nombre-camisa">+ Tallas</h5>
              <div class="size-s cl-effect-2">
-                <a href="#" id="s" onclick="setSize('s', 'S')" style="line-height:35px;">
+                <a href="#" id="s" onclick="setSize('s', 'S'), getStock('S')" style="line-height:35px;">
                   <span data-hover="S" id="s-t" style="width:35px;height:35px;font-size:14px;padding:0;">
                     <div id="img-s" class="img-size" style="background-image:url(img/red_dmnd.png)"></div>
                   </span>
                 </a>
             </div>
             <div class="size-s cl-effect-2">
-                <a href="#" id="m" onclick="setSize('m', 'M')" style="line-height:35px;">
+                <a href="#" id="m" onclick="setSize('m', 'M'), getStock('M')" style="line-height:35px;">
                   <span data-hover="M" id="m-t" style="width:35px;height:35px;font-size:14px;padding:0;">
                     <div id="img-m" class="img-size" style="background-image:url(img/green_dmnd.png)"></div>
                   </span>
                 </a>
             </div>
             <div class="size-s cl-effect-2">
-                <a href="#" id="l" onclick="setSize('l', 'L')" style="line-height:35px;">
+                <a href="#" id="l" onclick="setSize('l', 'L'), getStock('L')" style="line-height:35px;">
                   <span data-hover="L" id="l-t" style="width:35px;height:35px;font-size:14px;padding:0;">
                     <div id="img-l" class="img-size" style="background-image:url(img/blue_dmnd.png)"></div>
                   </span>
                 </a>
             </div>
             <div class="size-s cl-effect-2">
-                <a href="#" id="xl" onclick="setSize('xl', 'XL')" style="line-height:35px;">
+                <a href="#" id="xl" onclick="setSize('xl', 'XL'), getStock('XL')" style="line-height:35px;">
                   <span data-hover="XL" id="xl-t" style="width:35px;height:35px;font-size:14px;padding:0;">
                     <div id="img-xl" class="img-size" style="background-image:url(img/yellow_dmnd.png)"></div>
                   </span>
@@ -58,14 +58,19 @@
            <label class="select" style="margin-left:-330px;">
              <select id="qty2" class="qty2" title="Cantidad">
                
-           </select>
+             </select>
            </label>
            <br>
             <div class="paybutton cl-effect-2">
                 <a href="#" id="add_to_cart_button" onclick="addProductToCart()"><span data-hover="Agregar al carrito" id="precio" style="width:150px;font-size:14px;"></span></a>
             </div>
+            <br>
+           
             <!--<button class="boton-producto-agregar pull-right">Agregar Al Carrito</button>-->
          </div>
+         <div class="col-xs-12">
+            <p class="pull-right" style="padding-right:25px;">*Precio con IVA</p>
+         </div>
       </div>
-      <p>*Precio sin IVA</p>
+     
 </div>
