@@ -768,6 +768,9 @@
     }); //End jquery
 
     
+    $(window).load(function() {      //Do the code in the {}s when the window has loaded 
+  $("#containerSvg").fadeOut("fast");  //Fade out the #loader div
+});
 
 /*Password placeholder , so the placeholder actually shows, and not just dots*/
     $(function() {

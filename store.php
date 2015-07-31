@@ -188,7 +188,7 @@
                     <path fill="none" stroke="#ffffff" stroke-width="6" stroke-linejoin="bevel" stroke-miterlimit="10" d="M477,347.75l-179-58.5"/>
                     <path fill="none" stroke="#ffffff" stroke-width="6" stroke-linejoin="bevel" stroke-miterlimit="10" d="M475,165l180.833,57.171"/>
                     <path fill="none" stroke="#ffffff" stroke-width="6" stroke-miterlimit="50" d="M654,219v73"/>
-                        <!--Diamantito -->
+ <!--Diamantito -->
                        <path fill="none" stroke="#ffffff" stroke-width="6" stroke-miterlimit="10" d="M477,347.5L300,290v-69l176.5-56L654,221.5V290
                     L477,347.5z"/>
                     <path fill="none" stroke="#ffffff" stroke-width="3" stroke-miterlimit="10" d="M376,291.5h204"/>
@@ -270,110 +270,140 @@
 <!--BODY-->
 <?php include_once("footer.html");?>
 <script>
-    /*Parallax scrolling*/
-    var paths;
-        jQuery(document).ready(function($) {
 
-            // Store a reference to our paths, excluding our clip path
+    var isChrome = navigator.userAgent.toLowerCase().indexOf('chrome') > -1;
+    if (isChrome)
+    {
+
+        var itemArr = $('.parallax');
+
+        $(window).scroll(function()
+        {
+            var pos = $(window).scrollTop();
+            var wh = window.innerHeight;
+
+            $(itemArr).each(function(i, item){
+
+                var p = $(item).position();
+                var h = $(item).height();
+                if (p.top + h > pos && p.top < pos+wh)
+                {
+                    // items ir redzams
+                    var prc = (p.top - pos +h)/wh ;
+                    //console.log(prc);
+                    $(item).css({'background-position':'center '+prc+'%'});
+                }
+
+            });
+        });
+
+    }
+    
+
+        var diamondSvg = {
+        "diamond_little": {
+            "strokepath": [
+                {
+                    "path": "M 37.521 18.512 L 37.521 49.847",
+                    "duration": 300
+                },
+                {
+                    "path": "M 37.576 18.621 L 53.416 41.372",
+                    "duration": 300
+                },
+                {
+                    "path": "M 37.521 18.512 L 21.854 42.012",
+                    "duration": 300
+                },
+                {
+                    "path": "M 21.854 42.012 L 37.521 49.847",
+                    "duration": 300
+                },
+                {
+                    "path": "M 37.521 49.847 L 53.588 41.725",
+                    "duration": 300
+                },
+                {
+                    "path": "M 21.854 42.012 L 21.854 26.805",
+                    "duration": 300
+                },
+                {
+                    "path": "M 21.854 26.805 L 37.521 32.164",
+                    "duration": 300
+                },
+                {
+                    "path": "M 37.521 32.164 L 53.416 26.519",
+                    "duration": 300
+                },
+                {
+                    "path": "M 37.521 32.164 L 21.854 42.012",
+                    "duration": 300
+                },
+                {
+                    "path": "M 21.854 26.805 L 37.521 49.847",
+                    "duration": 300
+                },
+                {
+                    "path": "M 37.521 49.847 L 53.416 26.805",
+                    "duration": 300
+                },
+                {
+                    "path": "M 37.521 32.164 L 53.016 41.372",
+                    "duration": 300
+                },
+                {
+                    "path": "M 53.588 26.519 L 53.588 41.372",
+                    "duration": 300
+                }
+            ],
+            "dimensions": {
+                "width": 75,
+                "height": 90
+            }
+        }
+    }; 
+ 
+ 
+
+    /*Parallax scrolling*/
+    var deleteLog = false;
+    var paths;
+
+    jQuery(document).ready(function($) {
+      $(fullscreenParallax);
+
+      //effects
+
+      var controller = $.superscrollorama();
+      // individual element tween examples
+      controller.addTween('#title', TweenMax.fromTo( $('#title'), .50, {css:{opacity:0, 'letter-spacing':'30px'}, immediateRender:true, ease:Quad.easeInOut}, {css:{opacity:1, 'letter-spacing':'-10px'}, ease:Quad.easeInOut}), 0, 10); // 100 px offset for better timing
+      controller.addTween('#fly-it', TweenMax.from( $('#fly-it'), .25, {css:{right:'1000px'}, ease:Quad.easeInOut}));
+     
+
+              /*HANDWRITING STUFF*/
+        
+        // Store a reference to our paths, excluding our clip path
         paths = $('path:not(defs path)');
 
         // For each path, set the stroke-dasharray and stroke-dashoffset
         // equal to the path's total length, hence rendering it invisible
         paths.each(function(i, e) {
             e.style.strokeDasharray = e.style.strokeDashoffset = e.getTotalLength();
-        });
-        });
-        
-    var diamondSvg = {
-    "diamond_little": {
-        "strokepath": [
-            {
-                "path": "M 37.521 18.512 L 37.521 49.847",
-                "duration": 300
-            },
-            {
-                "path": "M 37.576 18.621 L 53.416 41.372",
-                "duration": 300
-            },
-            {
-                "path": "M 37.521 18.512 L 21.854 42.012",
-                "duration": 300
-            },
-            {
-                "path": "M 21.854 42.012 L 37.521 49.847",
-                "duration": 300
-            },
-            {
-                "path": "M 37.521 49.847 L 53.588 41.725",
-                "duration": 300
-            },
-            {
-                "path": "M 21.854 42.012 L 21.854 26.805",
-                "duration": 300
-            },
-            {
-                "path": "M 21.854 26.805 L 37.521 32.164",
-                "duration": 300
-            },
-            {
-                "path": "M 37.521 32.164 L 53.416 26.519",
-                "duration": 300
-            },
-            {
-                "path": "M 37.521 32.164 L 21.854 42.012",
-                "duration": 300
-            },
-            {
-                "path": "M 21.854 26.805 L 37.521 49.847",
-                "duration": 300
-            },
-            {
-                "path": "M 37.521 49.847 L 53.416 26.805",
-                "duration": 300
-            },
-            {
-                "path": "M 37.521 32.164 L 53.016 41.372",
-                "duration": 300
-            },
-            {
-                "path": "M 53.588 26.519 L 53.588 41.372",
-                "duration": 300
-            }
-        ],
-        "dimensions": {
-            "width": 75,
-            "height": 90
-        }
-    }
-};
+        });  
 
-    /*Slidebar*/
-    (function($) {
-        $(document).ready(function() {
-            var deleteLog = false;
-
-            $(fullscreenParallax);
-           
-    var controller = $.superscrollorama();
-      // individual element tween examples
-      controller.addTween('#title', TweenMax.fromTo( $('#title'), .50, {css:{opacity:0, 'letter-spacing':'30px'}, immediateRender:true, ease:Quad.easeInOut}, {css:{opacity:1, 'letter-spacing':'-10px'}, ease:Quad.easeInOut}), 0, 10); // 100 px offset for better timing
-      controller.addTween('#fly-it', TweenMax.from( $('#fly-it'), .50, {css:{right:'1000px'}, ease:Quad.easeInOut}));
-
-
-
-
-/*Svg Painter*/
-
+      /*Svg Painter*/
      $('#diamond_little').lazylinepainter( 
-     {
-        "svgData": diamondSvg,
-        "strokeWidth": 2,
-        "strokeColor": "#FFFFFF",
-        "responsive": "true"
-    }).lazylinepainter('paint');
+         {
+            "svgData": diamondSvg,
+            "strokeWidth": 2,
+            "strokeColor": "#FFFFFF",
+            "responsive": "true"
+        }).lazylinepainter('paint');
 
-        });
-    }) (jQuery);
+
+
+ 
+    }); //End jquery
 
 /*Password placeholder , so the placeholder actually shows, and not just dots*/
     $(function() {
@@ -464,6 +494,7 @@
             TweenLite.to(paths.eq(65), 1, {strokeDashoffset: 0, delay: 0.0}),
             TweenLite.to(paths.eq(66), 1, {strokeDashoffset: 0, delay: 0.0}),
             TweenLite.to(paths.eq(67), 1, {strokeDashoffset: 0, delay: 0.0}),         
+            TweenLite.to(paths.eq(68), 1, {strokeDashoffset: 0, delay: 0.0}),         
 
 
             ]);
