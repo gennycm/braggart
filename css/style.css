@@ -650,6 +650,7 @@ div.color-square{
 	margin-top: 5%;*/
 	height:450px;
 	overflow: auto;
+	overflow-y:hidden;
 }
 
 .register-form > p,.login-form > p, .payment-form p.form{
@@ -1278,11 +1279,12 @@ div.white_block{
 	background-color: white;
 	opacity: 0.7;
 	width: 70%;
-	height: 80%;
+	height: 450px;
 	z-index: 9999;
 	padding: 20px;
 	margin-left: auto;
     margin-right: auto;
+    overflow: auto;
 }
 
 select {

@@ -25,7 +25,7 @@ $('#menu_chevron').click(function(event){
 
 
 
-var size = "";
+var size = "none";
 
 function setSize(id, shirt_size){
     $(".img-size").css({borderColor:"white"});
@@ -305,9 +305,11 @@ function logOut(){
     });
 }
 
+var last_id_searched = 0;
 function showProductoInfo(id_product){
 
 	var producto_existente = false;
+
 	var data = new FormData;
         data.append('operaciones',"op");
         data.append("idp", id_product);
@@ -325,17 +327,24 @@ function showProductoInfo(id_product){
             if(data != ""){
             	producto_existente = true;
             	resultado = JSON.parse(data);
+                console.log(resultado);
             }
         }
     });
 
     if(producto_existente){
         var id_producto = resultado[0].id_producto;
+        last_id_searched = id_producto;
     	var nombre_producto = resultado[0].titulo_esp;
     	var descripcion_producto = resultado[0].descripcion_esp;
     	var precio_producto = resultado[0].precio_mxn;
+        var impuesto = resultado[0].impuesto;
     	var stock = resultado[0].stock_general;
     	var imagenes_secundarias = resultado[0].imagenes_secundarias;
+        var stock_s = resultado[0].S;
+        var stock_m = resultado[0].M;
+        var stock_l = resultado[0].L;
+        var stock_xl = resultado[0].XL;
     	var html_imagenes = "";
         var html_qty = "";
     	var html_colores = "";
@@ -354,9 +363,34 @@ function showProductoInfo(id_product){
     	$("#nombre_camisa").html("+ "+nombre_producto);
     	$("#full-width-slider_shirt").html(html_imagenes);
     	$("#descripcion").html(descripcion_producto);
-    	$("#precio").html("$ "+precio_producto+" MXN");
+    	$("#precio").html("$ "+(precio_producto * (1 + impuesto / 100))+" MXN");
     	$('#full-width-slider_shirt').royalSlider('destroy');
         $("#qty2").html(html_qty);
+
+        if(stock_s > 0){
+            $("#s").show();
+        }
+        else{
+            $("#s").hide();
+        }
+        if(stock_m > 0){
+            $("#m").show();
+        }
+        else{
+            $("#m").hide();
+        }
+        if(stock_l > 0){
+             $("#l").show();
+        }
+        else{
+            $("#l").hide();
+        }
+        if(stock_xl > 0){
+             $("#xl").show();
+        }
+        else{
+            $("#xl").hide();
+        }
 
         $("#add_to_cart_button").attr("onclick", "addProductToCart("+id_producto+")");
 
@@ -381,6 +415,44 @@ function showProductoInfo(id_product){
 
 }
 
+function getStock(size){
+    var producto_existente = false;
+    var data = new FormData;
+        data.append('operaciones',"gs");
+        data.append("idp", last_id_searched);
+        data.append("size", size);
+    var resultado;
+
+    $.ajax({ 
+        url: mypath+"controller.php",
+        type:'POST',
+        contentType:false,
+        data:data,
+        processData:false,
+        cache:false,
+        async:false,
+        success:function(data){
+            if(data != ""){
+                producto_existente = true;
+                resultado = JSON.parse(data);
+                console.log(resultado);
+            }
+        }
+    });
+
+    if(resultado > 0){
+        var i = 0;
+        var html_options = "";
+        while(i < resultado){
+            html_options += "<option value="+( i + 1)+"> "+( i + 1)+" </option>" 
+            i++;
+        }
+
+        $("#qty2").html(html_options);
+    }
+}
+
+
 function addProductToCart(id_product){
     var producto_existente = false;
     var amount = $("#qty2").val();
@@ -390,6 +462,14 @@ function addProductToCart(id_product){
         data.append("size", size);
         data.append("amount", amount);
     var resultado;
+
+    if(size == "none"){
+        mensaje = "Selecciona una talla para continuar.";
+        $("#header-modal").html("Agregar Producto");
+        $("#content-modal").html(mensaje);
+        $('#myModal').modal('toggle');
+        return;
+    }
 
     $.ajax({ 
         url: mypath+"controller.php",
@@ -405,7 +485,7 @@ function addProductToCart(id_product){
             }
             if(data.indexOf("true") != -1){
                 mensaje = "Se agrego el producto a tu carrito.";
-                size = "";
+                size = "none";
                 updateCart();
             }
 
@@ -459,7 +539,7 @@ function updateCart(){
             var html_size = "";
             var html_producto = "";
             total_carrito = parseInt(total_carrito) + parseInt(precio) * parseInt(cantidad);
-            switch(size){
+            /*switch(size){
                 case "S":
                     html_size = '<select class="size">'+
                                     '<option selected>S</option>'+
@@ -492,9 +572,9 @@ function updateCart(){
                                     '<option selected>XL</option>'+
                                 '</select>';
                 break;
-            }
+            }*/
 
-            var html_stock = "";
+            /*var html_stock = "";
             for(var j = 0; j < stock; j++){
                 if(j + 1 == cantidad){
                    html_stock += "<option selected value='"+(j + 1)+"'>"+(j + 1)+"</option>";
@@ -503,22 +583,23 @@ function updateCart(){
                    html_stock += "<option value='"+(j + 1)+"'>"+(j + 1)+"</option>";
 
                 }
-            }
+            }*/
 
             html_producto = '<tr>'+
                                 //'<td><div class="color-square-shirt-cart" style="background-color:#000;"></div></td>'+
                                 '<td class="shirt-name"><img src="imgProductos/'+img_principal+'" class="cart_shirt">+ '+nombre+'</td>'+
                                 '<td class="shirt-num">'+
-                                '<label class="select">'+
+                                /*'<label class="select">'+
                                     '<select class="qty">'+
                                         html_stock +
-                                    '</select>'+
-                                '</label>'+                 
+                                    '</select>'+*/
+                                    cantidad +
+                                /*'</label>'+*/                 
                                 '</td>'+
                                 '<td class="shirt-size">'+
-                                '<label class="select">'+
-                                html_size +
-                                '</label>'+
+                                /*'<label class="select">'+
+                                html_size*/ size +
+                                /*'</label>'+*/
                                 '</td>'+
                                 '<td class="shirt-price">$'+parseInt(precio)+' MXN</td>'+
                                 '<td class="delete-icon" onclick="deleteProductFromCart(\''+unique_id+'\')" style="cursor:pointer;"><i class="fa fa-times"></i></td>'+
@@ -702,3 +783,74 @@ function deleteProductFromWishlist(id_producto){
         }
     });
 }
+
+var diamondSvg = {
+    "diamond_little": {
+        "strokepath": [
+            {
+                "path": "M 37.521 18.512 L 37.521 49.847",
+                "duration": 300
+            },
+            {
+                "path": "M 37.576 18.621 L 53.416 41.372",
+                "duration": 300
+            },
+            {
+                "path": "M 37.521 18.512 L 21.854 42.012",
+                "duration": 300
+            },
+            {
+                "path": "M 21.854 42.012 L 37.521 49.847",
+                "duration": 300
+            },
+            {
+                "path": "M 37.521 49.847 L 53.588 41.725",
+                "duration": 300
+            },
+            {
+                "path": "M 21.854 42.012 L 21.854 26.805",
+                "duration": 300
+            },
+            {
+                "path": "M 21.854 26.805 L 37.521 32.164",
+                "duration": 300
+            },
+            {
+                "path": "M 37.521 32.164 L 53.416 26.519",
+                "duration": 300
+            },
+            {
+                "path": "M 37.521 32.164 L 21.854 42.012",
+                "duration": 300
+            },
+            {
+                "path": "M 21.854 26.805 L 37.521 49.847",
+                "duration": 300
+            },
+            {
+                "path": "M 37.521 49.847 L 53.416 26.805",
+                "duration": 300
+            },
+            {
+                "path": "M 37.521 32.164 L 53.016 41.372",
+                "duration": 300
+            },
+            {
+                "path": "M 53.588 26.519 L 53.588 41.372",
+                "duration": 300
+            }
+        ],
+        "dimensions": {
+            "width": 75,
+            "height": 90
+        }
+    }
+}; 
+
+$('#diamond_little').lazylinepainter( 
+ {
+    "svgData": diamondSvg,
+    "strokeWidth": 2,
+    "strokeColor": "#FFFFFF",
+    "responsive": "true"
+}).lazylinepainter('paint');
