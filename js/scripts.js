@@ -23,6 +23,26 @@ $('#menu_chevron').click(function(event){
     event.preventDefault();
 });
 
+$('.sidebar').click(function(event){
+    event.preventDefault();
+});
+
+$('#s,#m,#l,#xl').click(function(event){
+    event.preventDefault();
+});
+
+$('#add_to_cart_button').click(function(event){
+    event.preventDefault();
+});
+
+
+
+
+
+
+
+
+
 
 
 var size = "none";
@@ -363,7 +383,9 @@ function showProductoInfo(id_product){
     	$("#nombre_camisa").html("+ "+nombre_producto);
     	$("#full-width-slider_shirt").html(html_imagenes);
     	$("#descripcion").html(descripcion_producto);
-    	$("#precio").html("$ "+(precio_producto * (1 + impuesto / 100))+" MXN");
+        precio_producto = precio_producto * (1 + impuesto / 100);
+        precio_producto = precio_producto.toFixed(2);
+    	$("#precio").html("$ "+precio_producto+" MXN");
     	$('#full-width-slider_shirt').royalSlider('destroy');
         $("#qty2").html(html_qty);
 
@@ -527,7 +549,6 @@ function updateCart(){
         var total_carrito = 0;
         var html_carrito = "";
         for (var i = 0; i < $(resultado).size(); i++){
-            console.log(resultado);
             var unique_id = resultado[i].unique_id;
             var id_producto = resultado[i].id;
             var nombre = resultado[i].name;
@@ -608,7 +629,13 @@ function updateCart(){
         }
         $("#cart-body").html(html_carrito);
         $("#button_pay").html("$"+total_carrito+" MXN");
+        $("#button_pay").show();
+
     }
+    else{
+        $("#button_pay").hide();
+    }
+        
 }
 
 function deleteProductFromCart(unique_id){

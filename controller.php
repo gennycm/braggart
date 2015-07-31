@@ -274,7 +274,7 @@ switch ($operaciones) {
 
 	break;
 	case "gc":
-		if(isset($_SESSION["braggart_cart"])){
+		if(isset($_SESSION["braggart_cart"]) && count($_SESSION["braggart_cart"]) > 0){
 			$cart = $_SESSION["braggart_cart"];
 			$cart2 = array();
 			foreach ($cart as $key => $product) {
