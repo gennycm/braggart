@@ -542,12 +542,24 @@
             <div class="col-xs-12">
                 <div class="col-lg-6 col-md-6 col-sm-6"></div>
                 <div class="col-lg-6 col-md-6 col-sm-6"><div>
+                   
                 <table class="contact" >
                     <tr>
-                        <td colspan="2" class="decoration">
-                            <p class="scrollflow -slide-top" data-scrollflow-start="0" data-scrollflow-distance="15" data-scrollflow-amount="30"></p>
+                        <td colspan="2">
+                            <svg class="decoration_svg deco_top" version="1.1"  xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                 width="118px" height="30px" viewBox="0 0 118 30">
+                            <path fill="none" stroke="#ffffff" stroke-width="1" stroke-miterlimit="10" d="M22.795,22.535h74.333"/>
+                            <path fill="none" stroke="#ffffff" stroke-width="1" stroke-miterlimit="10" d="M3.312,25.535h113.301"/>
+
+                                <path fill="none" stroke="#ffffff" stroke-width="1" stroke-miterlimit="10" d="M52.192,8.518l10.216,9.811"/>
+                                <path fill="none" stroke="#ffffff" stroke-width="1" stroke-miterlimit="10" d="M62.424,8.534l-10.249,9.778"/>
+
+                                <path fill="none" stroke="#ffffff" stroke-width="1" stroke-miterlimit="10" d="M59.83,8.518l10.217,9.811"/>
+                                <path fill="none" stroke="#ffffff" stroke-width="1" stroke-miterlimit="10" d="M70.063,8.534l-10.248,9.778"/>
+
+                            </svg>
                         </td>
-                    </tr>
+                    </tr> 
                     <tr>
                         <td class="icon"><p class="scrollflow -slide-left" data-scrollflow-start="-50" data-scrollflow-distance="5" data-scrollflow-amount="30"><i class="fa fa-phone fa-lg"></i></p></td>
                         <td class="text"><p class="scrollflow -slide-right" data-scrollflow-start="-50" data-scrollflow-distance="5" data-scrollflow-amount="30">(999) 9 48 30 46</p> </td>
@@ -558,15 +570,22 @@
                     </tr>
                     <tr>
                         <td class="icon"><p class="scrollflow -slide-left" data-scrollflow-start="-50" data-scrollflow-distance="5" data-scrollflow-amount="30"><i class="fa fa-facebook-official fa-lg"></i></p></td>
-                        <td class="text"><p class="scrollflow -slide-right" data-scrollflow-start="-50" data-scrollflow-distance="5" data-scrollflow-amount="30">Tienda Braggart</p></td>
+                        <td class="text"><p class="scrollflow -slide-right" data-scrollflow-start="-50" data-scrollflow-distance="5" data-scrollflow-amount="30">Tienda <span class="braggart_txt">BRAGGART</span></p></td>
                     </tr>
                     <tr>
                         <td class="icon"><p class="scrollflow -slide-left" data-scrollflow-start="-50" data-scrollflow-distance="5" data-scrollflow-amount="30"><i class="fa fa-insta-official fa-lg"></i></p></td>
                         <td class="text"><p class="scrollflow -slide-right" data-scrollflow-start="-50" data-scrollflow-distance="5" data-scrollflow-amount="30"> @BraggartMX </p></td>
                     </tr>
                     <tr>
-                        <td colspan="2" class="decoration">
-                            <p class="scrollflow -slide-bottom" data-scrollflow-start="-50" data-scrollflow-distance="5" data-scrollflow-amount="30"></p>
+                        <td colspan="2">
+                           <svg class="decoration_svg deco_bottom" version="1.1"  xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="118px" height="30px" viewBox="0 0 118 30">
+                                <path fill="none" stroke="#ffffff" stroke-miterlimit="10" d="M97.128,11.518H22.795"/>
+                                <path fill="none" stroke="#ffffff" stroke-miterlimit="10" d="M116.613,8.518H3.312"/>
+                                <path fill="none" stroke="#ffffff" stroke-miterlimit="10" d="M62.408,15.724l-10.216,9.812"/>
+                                <path fill="none" stroke="#ffffff" stroke-miterlimit="10" d="M52.175,15.74l10.249,9.778"/>
+                                <path fill="none" stroke="#ffffff" stroke-miterlimit="10" d="M70.047,15.724L59.83,25.535"/>
+                                <path fill="none" stroke="#ffffff" stroke-miterlimit="10" d="M59.814,15.74l10.248,9.778"/>
+                            </svg>
                         </td>
                     </tr>   
                 </table>
@@ -585,7 +604,7 @@
 <!--BODY-->
 <?php include_once("footer.html");?>
 
-    <script src="http://imakewebthings.github.com/jquery-waypoints/waypoints.min.js" type="text/javascript"></script>
+    
   <script>
     /*Fix para el parallax en Chrome*/
 
@@ -618,68 +637,68 @@
     }
     /*Diamantito*/ 
  
-var diamondSvg = {
-    "diamond_little": {
-        "strokepath": [
-            {
-                "path": "M 37.521 18.512 L 37.521 49.847",
-                "duration": 300
-            },
-            {
-                "path": "M 37.576 18.621 L 53.416 41.372",
-                "duration": 300
-            },
-            {
-                "path": "M 37.521 18.512 L 21.854 42.012",
-                "duration": 300
-            },
-            {
-                "path": "M 21.854 42.012 L 37.521 49.847",
-                "duration": 300
-            },
-            {
-                "path": "M 37.521 49.847 L 53.588 41.725",
-                "duration": 300
-            },
-            {
-                "path": "M 21.854 42.012 L 21.854 26.805",
-                "duration": 300
-            },
-            {
-                "path": "M 21.854 26.805 L 37.521 32.164",
-                "duration": 300
-            },
-            {
-                "path": "M 37.521 32.164 L 53.416 26.519",
-                "duration": 300
-            },
-            {
-                "path": "M 37.521 32.164 L 21.854 42.012",
-                "duration": 300
-            },
-            {
-                "path": "M 21.854 26.805 L 37.521 49.847",
-                "duration": 300
-            },
-            {
-                "path": "M 37.521 49.847 L 53.416 26.805",
-                "duration": 300
-            },
-            {
-                "path": "M 37.521 32.164 L 53.016 41.372",
-                "duration": 300
-            },
-            {
-                "path": "M 53.588 26.519 L 53.588 41.372",
-                "duration": 300
+    var diamondSvg = {
+        "diamond_little": {
+            "strokepath": [
+                {
+                    "path": "M 37.521 18.512 L 37.521 49.847",
+                    "duration": 300
+                },
+                {
+                    "path": "M 37.576 18.621 L 53.416 41.372",
+                    "duration": 300
+                },
+                {
+                    "path": "M 37.521 18.512 L 21.854 42.012",
+                    "duration": 300
+                },
+                {
+                    "path": "M 21.854 42.012 L 37.521 49.847",
+                    "duration": 300
+                },
+                {
+                    "path": "M 37.521 49.847 L 53.588 41.725",
+                    "duration": 300
+                },
+                {
+                    "path": "M 21.854 42.012 L 21.854 26.805",
+                    "duration": 300
+                },
+                {
+                    "path": "M 21.854 26.805 L 37.521 32.164",
+                    "duration": 300
+                },
+                {
+                    "path": "M 37.521 32.164 L 53.416 26.519",
+                    "duration": 300
+                },
+                {
+                    "path": "M 37.521 32.164 L 21.854 42.012",
+                    "duration": 300
+                },
+                {
+                    "path": "M 21.854 26.805 L 37.521 49.847",
+                    "duration": 300
+                },
+                {
+                    "path": "M 37.521 49.847 L 53.416 26.805",
+                    "duration": 300
+                },
+                {
+                    "path": "M 37.521 32.164 L 53.016 41.372",
+                    "duration": 300
+                },
+                {
+                    "path": "M 53.588 26.519 L 53.588 41.372",
+                    "duration": 300
+                }
+            ],
+            "dimensions": {
+                "width": 75,
+                "height": 90
             }
-        ],
-        "dimensions": {
-            "width": 75,
-            "height": 90
         }
-    }
-}; 
+    }; 
  
  
 
@@ -724,6 +743,7 @@ var diamondSvg = {
      
 
               /*HANDWRITING STUFF*/
+        
         // Store a reference to our paths, excluding our clip path
         paths = $('path:not(defs path)');
 
@@ -731,13 +751,7 @@ var diamondSvg = {
         // equal to the path's total length, hence rendering it invisible
         paths.each(function(i, e) {
             e.style.strokeDasharray = e.style.strokeDashoffset = e.getTotalLength();
-        });
-
-
-        
-
-
-
+        });  
 
       /*Svg Painter*/
      $('#diamond_little').lazylinepainter( 
@@ -767,6 +781,7 @@ var diamondSvg = {
      var tlTienda  = new TimelineLite();
      var tlCamisas = new TimelineLite();
      var tlHome = new TimelineLite();
+     var tlContact = new TimelineLite();
 
      var homeCounter = 0;
      var usCounter= 0;
@@ -1005,8 +1020,33 @@ var diamondSvg = {
            offset: '50%'
          });
 
+
+        var contactCounter = 0;
        $('#contact').waypoint(function() {
          console.log("contact");
+         contactCounter++;
+             if (contactCounter == 1) {
+                tlContact.add([
+                            TweenLite.to(paths.eq(150), 1, {strokeDashoffset: 0, delay: 0.0}),
+                            TweenLite.to(paths.eq(151), 1, {strokeDashoffset: 0, delay: 0.0}),
+                            TweenLite.to(paths.eq(152), 1, {strokeDashoffset: 0, delay: 0.0}),
+                            TweenLite.to(paths.eq(153), 1, {strokeDashoffset: 0, delay: 0.0}),
+                            TweenLite.to(paths.eq(154), 1, {strokeDashoffset: 0, delay: 0.0}),
+                            TweenLite.to(paths.eq(155), 1, {strokeDashoffset: 0, delay: 0.0}),
+
+                            TweenLite.to(paths.eq(156), 1, {strokeDashoffset: 0, delay: 0.0}),
+                            TweenLite.to(paths.eq(157), 1, {strokeDashoffset: 0, delay: 0.0}),
+                            TweenLite.to(paths.eq(158), 1, {strokeDashoffset: 0, delay: 0.0}),
+                            TweenLite.to(paths.eq(159), 1, {strokeDashoffset: 0, delay: 0.0}),
+                            TweenLite.to(paths.eq(160), 1, {strokeDashoffset: 0, delay: 0.0}),
+                            TweenLite.to(paths.eq(161), 1, {strokeDashoffset: 0, delay: 0.0}),                            
+                ]);
+                tlContact.restart();
+             }else{
+                tlContact.restart();
+             }
+         }, {
+           offset: '50%'
          });
     });
    

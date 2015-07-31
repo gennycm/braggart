@@ -450,6 +450,11 @@ h1{
 	text-align: center;
 	font-size: 22px;
 	filter: opacity(1); transform: translate3d(0px, 50px, 0px) scale(0.8); transition: all 800ms ease-out 0s;
+	position:relative;
+}
+
+.historia{
+	margin-top: 23%;
 }
 
 div.shirt{
@@ -532,6 +537,7 @@ div.shirt{
 	margin-left: auto;
     margin-right: auto;
     font-size: 2em;
+
   }
 
 table.contact td{
@@ -547,9 +553,15 @@ table.contact td.icon{
 
 table.contact td.text{
 	padding-right: 40px;
-	font-family:'Conv_Thin Design',Sans-Serif;
-	font-size: 25pt;
+	font-family:'Conv_MissionGothicRegular',Sans-Serif;
+	font-size: 20pt;
+	/*letter-spacing: 0.090em;*/
+}
+.braggart_txt{
 	letter-spacing: 0.090em;
+	font-family:'Conv_Thin Design',Sans-Serif;
+		font-size: 25pt;
+
 }
 
 table.contact td.decoration{
@@ -1397,4 +1409,32 @@ svg {
   height: auto;
 }
 
+
+.decoration_svg{
+  height: 100%; 
+  	position:relative;
+  	left: 50%;
+	-webkit-transform: translateX(-50%);
+	-ms-transform: translateX(-50%);
+	transform: translateX(-50%);
+
+}
+
+.deco_bottom{
+	margin-top: -30px;
+}
+
+.deco_top{
+	margin-bottom: -30px;
+}
+
+
+.historia_svg{
+  	   position: absolute;
+  max-width: 100%;
+  max-height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 888;
+}
 
