@@ -1,3 +1,16 @@
+
+/*Scrolling control*/
+
+ var $window= $(window),
+                win_height_padded = $window.height() * 1.1,
+                isTouch= Modernizr.touch;
+
+
+
+
+/**-------------------------------------------------------------------**/
+
+
 $('.navbar-default .navbar-nav> a').click(function(event){
     event.preventDefault();
 });
