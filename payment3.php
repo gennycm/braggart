@@ -17,9 +17,7 @@
       $cart = $_SESSION["braggart_cart"];
       $precio_total = 0;
       foreach ($cart as $producto) {
-        $product = new producto($producto["id"]);
-        $product -> obtener_producto();
-        $precio_total += $product -> precio_mxn * $producto["amount"];
+        $precio_total += $producto["price"] * $producto["amount"];
       }
 
       $total = $precio_total + $rango_transporte -> cargo_por_envio;

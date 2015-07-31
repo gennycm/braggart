@@ -8,6 +8,7 @@ include_once ('conexion.php');
 require_once ('archivo.php');
 include_once ('imgproducto.php');
 include_once('herramientas.php');
+include_once('combinacion.php');
 
 class producto extends Archivo {
 	var $id_producto;
@@ -539,6 +540,30 @@ class producto extends Archivo {
 			$registro['mostrar'] = $fila['mostrar'];
 			$this -> listar_img_secundarias_producto();
 			$registro["imagenes_secundarias"] = $this -> lista_imagenes_secundarias;
+
+			$combinacion = new combinacion(0,$fila['id_producto']);
+			$combinaciones = $combinacion -> listar_combinaciones_por_producto();
+			foreach ($combinaciones as $combinacion_tmp){
+				$size = "none";
+				switch ($combinacion_tmp["nombre"]) {
+					case 'Chica':
+						$size = "S";
+						break;
+					case 'Mediana':
+						$size = "M";
+						break;
+					case 'Grande':
+						$size = "L";
+						break;
+					case 'X Grande':
+						$size = "XL";
+						break;	
+					default:
+						continue;
+						break;
+				}
+				$registro[$size] = $combinacion_tmp["stock"];
+			}
 			array_push($resultados, $registro);
 		}
 

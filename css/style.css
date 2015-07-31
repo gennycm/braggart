@@ -662,6 +662,7 @@ div.color-square{
 	margin-top: 5%;*/
 	height:450px;
 	overflow: auto;
+	overflow-y:hidden;
 }
 
 .register-form > p,.login-form > p, .payment-form p.form{
@@ -959,38 +960,38 @@ button.boton-producto-agregar:hover{
 
 .shopping-cart{
 	bottom:50px;
-	  position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  width: 70%;
-  background: white;
-  color: black;
- /* padding: 30px;*/
- /* box-shadow: 0 0 5px black;*/
-  font-size: 18px;
-  text-align: center;
-  z-index: 1031;
-  overflow-x: hidden;
-  margin-right: -70%;
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	width: 70%;
+	background: white;
+	color: black;
+	/* padding: 30px;*/
+	/* box-shadow: 0 0 5px black;*/
+	font-size: 18px;
+	text-align: center;
+	z-index: 1031;
+	overflow-x: hidden;
+	margin-right: -70%;
 }
 
 .login_sidebar{
 	bottom:50px;
-	  position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  width: 40%;
-  background: white;
-  color: black;
- /* padding: 30px;*/
- /* box-shadow: 0 0 5px black;*/
-  font-size: 18px;
-  text-align: center;
-  z-index: 1031;
-  overflow-x: hidden;
-  margin-right: -70%;
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	width: 40%;
+	background: white;
+	color: black;
+	/* padding: 30px;*/
+	/* box-shadow: 0 0 5px black;*/
+	font-size: 18px;
+	text-align: center;
+	z-index: 1031;
+	overflow-x: hidden;
+	margin-right: -70%;
 }
 
 p.decoration{
@@ -1052,7 +1053,7 @@ span#xl-t{
  }
 
  table.shopping{
-
+ 	width:100%;
  }
 
  table.shopping td{
@@ -1290,11 +1291,12 @@ div.white_block{
 	background-color: white;
 	opacity: 0.7;
 	width: 70%;
-	height: 80%;
+	height: 450px;
 	z-index: 9999;
 	padding: 20px;
 	margin-left: auto;
     margin-right: auto;
+    overflow: auto;
 }
 
 select {

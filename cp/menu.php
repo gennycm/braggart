@@ -13,9 +13,9 @@
                 <!--<hr class="hrmenu">
                 <li <?php if ($page =="listmarca.php"  or $page == "formmarca.php"){ echo "class='active'";} ?>><a href="listmarca.php">Marcas</a>
                 </li>-->
-                 <hr class="hrmenu">
+                 <!--<hr class="hrmenu">
                 <li <?php if ($page =="listatributo.php"  or $page == "formatributo.php"){ echo "class='active'";} ?>><a href="listatributo.php">Atributos y Valores</a>
-                </li>
+                </li>-->
                 <hr class="hrmenu">
                 <li <?php if ($page == "listimpuesto.php" or $page == "formimpuesto.php"){ echo "class='active'";} ?>><a href="listimpuesto.php">Impuestos</a>
                 </li>

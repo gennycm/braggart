@@ -14,6 +14,16 @@ class userend
 	var $direcciones;
 	var $userendDireccion;
 
+	var $nombre;
+    var $calle;
+    var $numExt;
+    var $numInt;
+    var $codP;
+    var $colFracc;
+    var $municipio;
+    var $ciudad;
+    var $estado;
+
 	function userend($a = 0, $b = '', $c = '', $stat = 0)
 	{
 		$this -> iduserend = $a;
@@ -43,6 +53,38 @@ class userend
 		$sql="update userend set ".$pedazo2." ".$pedazo."  where iduserend=".$this->iduserend;
 		$conexion->ejecutar_sentencia($sql);
 	}
+
+	function modificar_direccion($payment_data){
+		$nombre = $payment_data["nombre"];
+	    $calle = $payment_data["calle"];
+	    $numExt = $payment_data["numExt"];
+	    $numInt = $payment_data["numInt"];
+	    $codP = $payment_data["codP"];
+	    $colFracc = $payment_data["colFracc"];
+	    $municipio = $payment_data["municipio"];
+	    $ciudad = $payment_data["ciudad"];
+	    $estado = $payment_data["estado"];
+		$conexion= new conexion();
+		$sql = "UPDATE userend SET nom_completo = '".$nombre."', num_calle = '".$calle."',num_ext = '".$numExt."',num_int = '".$numInt."',cp = '".$codP."', colonia = '".$colFracc."', municipio = '".$municipio."',ciudad = '".$ciudad."', estado = '".$estado."' WHERE iduserend=".$this->iduserend;
+		$conexion->ejecutar_sentencia($sql);
+	}
+
+	function obtener_direccion(){
+		$conexion=new conexion();
+		$sql = "SELECT * FROM userend WHERE iduserend=".$this->iduserend;
+		$result=$conexion->ejecutar_sentencia($sql);
+		while($row=mysqli_fetch_array($result))
+		{
+			$this->iduserend=$row['iduserend'];
+			$this->correo=$row['correo'];
+			$this->password=$row['password'];
+			$this->status=$row['status'];
+			$this->token=$row['token'];
+		}
+		mysqli_free_result($result);
+	}
+
+
 	function modifica_userend_pass()
 	{
 		$conexion= new conexion();

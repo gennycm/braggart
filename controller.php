@@ -5,7 +5,7 @@ function __autoload($nombre_clase) {
     include 'cp/clases/'.$nombre_clase .'.php';
 }
 
-$operaciones = $_REQUEST['operaciones'];
+$operaciones = $_POST['operaciones'];
 session_start();
 
 switch ($operaciones) {
@@ -27,12 +27,39 @@ switch ($operaciones) {
 							  "ciudad" => $_POST["ciudad"],
 							  "estado" => $_POST["estado"]
 							  );
+		$user = new userend($_SESSION["braggart_id_user"]);
+		$user -> modificar_direccion($payment_data);
+
 
 		$_SESSION["braggar_payment_data"] = $payment_data;                        
 		header("Location: payment2.php");
 
 	break;
 	case 'ccc':
+		$orden = new orden(0);
+		$fecha = date("yy-mm-dd");
+		$iduserend = $_SESSION["braggart_id_user"];
+		$cart = $_SESSION["braggart_cart"];
+		$num_productos = 0;
+		$peso_productos = 0;
+		foreach ($cart as $product) {
+			$num_productos+= $product["amount"];
+			$peso_productos+= $product["amount"] * $product["weight"];
+			$precio_total_productos += $product["amount"] * $product["price"];
+		}
+
+		$transporte_token = explode("/", $_SESSION["braggart_transport_token"]);
+		$id_transporte = $transporte_token[1];
+		$id_rango_transporte = $transporte_token[0];
+
+		$payment_data = $_SESSION["braggar_payment_data"];
+		$direccion =  $payment_data["calle"]." ".$payment_data["numExt"]." ". $payment_data["numInt"].",\n".$payment_data["colFracc"]." ".$payment_data["ciudad"]." \n ".$payment_data["municipio"]." ".$payment_data["estado"]." ".$payment_data["codP"];
+		
+		$total_productos = $precio_total_productos;
+		$estatus = "Por cobrar";
+
+		$peso = $peso_productos;
+
 		Conekta::setApiKey("key_nxPDYXpi5rbSSLQvLLN58Q");
 		try{
 		  $charge = Conekta_Charge::create(array(
@@ -40,10 +67,9 @@ switch ($operaciones) {
 		    "currency"=> "MXN",
 		    "description"=> "Compra de Camisas",
 		    "reference_id"=> "orden_de_id_interno",
-		    "card"=> "tok_test_visa_4242",
-		 //"tok_a4Ff0dD2xYZZq82d9",
+		    "card"=> $_SESSION["braggart_pay_token"],
 		    "details"=> array(
-		      "email"=>"bheftye92@gmail.com"
+		      "email"=> $_SESSION["braggart_email_user"]
 		      )
 		  ));
 		}catch (Conekta_Error $e){
@@ -145,6 +171,36 @@ switch ($operaciones) {
 		}
 		
 	break;
+	case "gs":
+		$id_producto = $_POST["idp"];
+		$size = $_POST["size"];
+		$nombre_combinacion = "";
+		switch ($size) {
+				case 'S':
+					$size = "Chica";
+					break;
+				case 'M':
+					$size = "Mediana";
+					break;
+				case 'L':
+					$size = "Grande";
+					break;
+				case 'XL':
+					$size = "X Grande";
+					break;	
+				default:
+					break;
+		}
+
+		$combinacion = new combinacion( 0, $id_producto);
+		$combinaciones = $combinacion -> listar_combinaciones_por_producto();
+		foreach ($combinaciones as $combinacion_tmp){
+			if($combinacion_tmp["nombre"] == $size){
+				echo json_encode($combinacion_tmp["stock"]);
+				break;
+			}
+		}
+	break;
 	case "ac":
 		$id_producto = $_REQUEST["idp"];
 		$size = $_REQUEST["size"];
@@ -155,7 +211,8 @@ switch ($operaciones) {
 			$cart = $_SESSION["braggart_cart"];
 			if($id_producto != 0){
 				$unique_id = uniqid();
-				$array_producto = array("unique_id" => $unique_id, "id" => $producto -> id_producto, "amount" => $amount, "price" => $producto -> precio_mxn, "name" => $producto -> titulo_esp, "img" => $producto -> img_principal, "size" => $size, "stock" => $producto -> stock_general);
+				$precio_real = $producto -> precio_mxn * (1 + ($producto -> impuesto / 100));
+				$array_producto = array("unique_id" => $unique_id, "id" => $producto -> id_producto, "amount" => $amount, "price" => $precio_real , "name" => $producto -> titulo_esp, "img" => $producto -> img_principal, "size" => $size, "stock" => $producto -> stock_general, "weight" => $producto -> peso);
 				array_push($cart, $array_producto);
 				$_SESSION["braggart_cart"] = $cart;
 				echo json_encode("true");
@@ -168,7 +225,8 @@ switch ($operaciones) {
 			$cart = array();
 			if($id_producto != 0){
 				$unique_id = uniqid();
-				$array_producto = array("unique_id" => $unique_id, "id" => $producto -> id_producto, "amount" => $amount, "price" => $producto -> precio_mxn, "name" => $producto -> titulo_esp, "img" => $producto -> img_principal, "size" => $size, "stock" => $producto -> stock_general);
+				$precio_real = $producto -> precio_mxn * (1 + ($producto -> impuesto / 100));
+				$array_producto = array("unique_id" => $unique_id, "id" => $producto -> id_producto, "amount" => $amount, "price" => $precio_real, "name" => $producto -> titulo_esp, "img" => $producto -> img_principal, "size" => $size, "stock" => $producto -> stock_general, "weight" => $producto -> peso);
 				array_push($cart, $array_producto);
 				$_SESSION["braggart_cart"] = $cart;
 				echo json_encode("true");
@@ -216,7 +274,7 @@ switch ($operaciones) {
 
 	break;
 	case "gc":
-		if(isset($_SESSION["braggart_cart"])){
+		if(isset($_SESSION["braggart_cart"]) && count($_SESSION["braggart_cart"]) > 0){
 			$cart = $_SESSION["braggart_cart"];
 			$cart2 = array();
 			foreach ($cart as $key => $product) {
