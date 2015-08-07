@@ -16,7 +16,7 @@ class orden
 	var $peso;
 	var $order_cart;
 	
-	function orden($id=0,$fecha='',$iduserend='',$num_productos='',$total_productos='',$estatus='',$direccion='', $id_transporte = "", $id_rango_transporte = "", $peso = 0, $order_cart = array()){
+	function orden($id = 0,$fecha='',$iduserend='',$num_productos='',$total_productos='',$estatus='',$direccion='', $id_transporte = "", $id_rango_transporte = "", $peso = 0, $order_cart = array()){
 		$this -> idorden=$id;
 		$this -> fecha=$fecha;
 		$this -> iduserend=$iduserend;

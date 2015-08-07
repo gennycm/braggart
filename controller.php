@@ -139,13 +139,19 @@ switch ($operaciones) {
 		$id_userend = (isset($_SESSION["braggart_id_user"]) && $_SESSION["braggart_id_user"] != 0)? $_SESSION["braggart_id_user"]: 0;
 		$wishlist = new wishlist(0, $id_producto , $id_userend, 1);
 		if($id_userend != 0){
-			$wishlist -> insertar_wishlist();
-			if($wishlist -> id_wishlist != 0){
-				echo "true";
+			if(!$wishlist -> producto_en_wishlist($id_producto, $id_userend)){
+				$wishlist -> insertar_wishlist();
+				if($wishlist -> id_wishlist != 0){
+					echo "true";
+				}
+				else{
+					echo "false";
+				}
 			}
 			else{
-				echo "false";
+				echo "already";
 			}
+			
 		}
 		else{
 			echo "login";
