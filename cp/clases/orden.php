@@ -32,7 +32,7 @@ class orden
 
 	function insertar_orden(){
 		$con= new conexion();
-		$sql="INSERT INTO ordenes (fecha,iduserend,num_productos,total_productos,estatus,direccion, id_transporte, id_rango_transporte) values (now(),'".$this->iduserend."','".$this->num_productos."','".$this->total_productos."','".$this->estatus."', '".$this->direccion."', '".$this->id_transporte."', '".$this->id_rango_transporte."')";
+		$sql="INSERT INTO ordenes (fecha,iduserend,num_productos,total_productos,estatus,direccion, id_transporte, id_rango_transporte, peso) values (now(),'".$this->iduserend."','".$this->num_productos."','".$this->total_productos."','".$this->estatus."', '".$this->direccion."', '".$this->id_transporte."', '".$this->id_rango_transporte."','".$this->peso."' )";
 		$this -> idorden = $con -> ejecutar_sentencia($sql);
 		if(is_numeric($this -> idorden) && $this -> idorden != 0){
 			return $this -> insertar_carrito();

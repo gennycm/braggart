@@ -35,7 +35,7 @@
                                       Total: $ <?=$_SESSION["braggart_total_shop"]?>  MXN
 
                                   </p>
-                                  <p class="form" style="border:none"><a href="index.php"><button type="submit">REGRESAR</button></a></p>
+                                  <p class="form" style="border:none"><a href="mis_pedidos.php"><button type="submit">REGRESAR</button></a></p>
                                 </td>
                             </tr>                          
                             <tfoot></tfoot>

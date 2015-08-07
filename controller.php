@@ -43,8 +43,10 @@ switch ($operaciones) {
 		$num_productos = 0;
 		$peso_productos = 0;
 		foreach ($cart as $product) {
+			$producto = new producto($product["id"]);
+        	$producto -> obtener_producto();
 			$num_productos+= $product["amount"];
-			$peso_productos+= ($product["amount"] * $product["weight"]);
+			$peso_productos+= $product["amount"] * $producto -> peso;
 		}
 
 		$transporte_token = explode("/", $_SESSION["braggart_transport_token"]);
@@ -87,6 +89,7 @@ switch ($operaciones) {
 			  header("Location: payment.php?msg=".$e->getMessage()."orden=".$orden -> idorden);			  
 			}
 			$orden -> modificar_estatus("Pagado");
+			$_SESSION["braggart_cart"] = array();
 			header("Location: finished_order.php");
 		}
 
