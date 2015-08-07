@@ -5,6 +5,12 @@
     }
     $temporal = new slide();
     $listaTemporal = $temporal -> listarslideActivas();
+
+    $notify_login = false;
+
+    if(isset($_GET["ac"]) && $_GET["ac"] == "login"){
+        $notify_login = true;
+    }
 ?>
 
 <!--BODY-->
@@ -694,9 +700,9 @@
 <?php include_once("wishlist.html");?>
 <!--BODY-->
 <?php include_once("footer.html");?>
-
     
-  <script>
+<script src="http://imakewebthings.github.com/jquery-waypoints/waypoints.min.js" type="text/javascript"></script>
+<script>
     /*Fix para el parallax en Chrome*/
 
     var isChrome = navigator.userAgent.toLowerCase().indexOf('chrome') > -1;
@@ -1165,4 +1171,4 @@
          });
     });
    
-    </script>
+</script>
