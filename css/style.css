@@ -1281,6 +1281,12 @@ span#xl-t{
 	width: 150px;
 	margin: 20px;
 	margin-left:0;
+	float:left;
+}
+
+.cart_name{
+	clear: none;
+    margin-top: 65px;
 }
 
 .center{

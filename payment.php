@@ -1,6 +1,10 @@
 <?php include_once("header.html");?>
 <!--BODY-->
 <?php
+  if(!isset($_SESSION["braggart_id_user"]) && !$_SESSION["braggart_id_user"] != 0){
+    header("index.php?ac=login");
+  }
+
   if(isset($_SESSION["braggar_payment_data"])){
     $payment_data = $_SESSION["braggar_payment_data"];
     $nombre = $payment_data["nombre"];
