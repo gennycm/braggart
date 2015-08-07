@@ -1,5 +1,6 @@
 <?php
 include_once('conexion.php');
+include_once('detalle_orden.php');
 
 class orden
 {
@@ -16,14 +17,14 @@ class orden
 	var $order_cart;
 	
 	function orden($id=0,$fecha='',$iduserend='',$num_productos='',$total_productos='',$estatus='',$direccion='', $id_transporte = "", $id_rango_transporte = "", $peso = 0, $order_cart = array()){
-		$this->idorden=$id;
-		$this->fecha=$fecha;
-		$this->iduserend=$iduserend;
-		$this->num_productos=$num_productos;
-		$this->total_productos=$total_productos;
-		$this->estatus=$estatus;
-		$this->direccion = $direccion;
-		$this ->id_transporte = $id_transporte;
+		$this -> idorden=$id;
+		$this -> fecha=$fecha;
+		$this -> iduserend=$iduserend;
+		$this -> num_productos=$num_productos;
+		$this -> total_productos=$total_productos;
+		$this -> estatus=$estatus;
+		$this -> direccion = $direccion;
+		$this -> id_transporte = $id_transporte;
 		$this -> id_rango_transporte = $id_rango_transporte;
 		$this -> peso = $peso;	
 		$this -> order_cart = $order_cart;
@@ -31,9 +32,20 @@ class orden
 
 	function insertar_orden(){
 		$con= new conexion();
-		$sql="insert into orden (fecha,iduserend,num_productos,total_productos,estatus,iddireccion) values (now(),'".$this->iduserend."','".$this->num_productos."','".$this->total_productos."','".$this->estatus."', 0)";
-		$this->idorden=$con->ejecutar_sentencia($sql);
-	
+		$sql="INSERT INTO ordenes (fecha,iduserend,num_productos,total_productos,estatus,direccion, id_transporte, id_rango_transporte) values (now(),'".$this->iduserend."','".$this->num_productos."','".$this->total_productos."','".$this->estatus."', '".$this->direccion."', '".$this->id_transporte."', '".$this->id_rango_transporte."')";
+		$this -> idorden = $con -> ejecutar_sentencia($sql);
+		if(is_numeric($this -> idorden) && $this -> idorden != 0){
+			return $this -> insertar_carrito();
+		}
+		return false;
+	}
+
+	function insertar_carrito(){
+		foreach ($this -> order_cart as $product) {
+			$detalle = new detalle_orden($this -> idorden, $product["id"], $product["price"]=0, $product["amount"], $product["id_combinacion"]);
+			$detalle -> asigna_productos_orden();
+		}
+		return true;
 	}
 
 	function modificar_orden(){
