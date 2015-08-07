@@ -283,6 +283,9 @@
         tlTitle2.play("stagger");
 
                 var paths2 = $('#paso2_deco path');
+                 paths2.each(function(i, e) {
+            e.style.strokeDasharray = e.style.strokeDashoffset = e.getTotalLength();
+        }); 
                 console.log(paths2);
       var tlCart2  = new TimelineLite();
         tlCart2.add([
