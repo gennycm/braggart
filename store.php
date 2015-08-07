@@ -425,19 +425,6 @@
          if (histCounter == 1) {
             tlHist.add([
                 //La tienda front letters
-            TweenLite.to(paths.eq(0), 1, {strokeDashoffset: 0, delay: 0.0}),
-            TweenLite.to(paths.eq(1), 1, {strokeDashoffset: 0, delay: 0.0}),
-            TweenLite.to(paths.eq(2), 1, {strokeDashoffset: 0, delay: 0.0}),
-            TweenLite.to(paths.eq(3), 1, {strokeDashoffset: 0, delay: 0.0}),
-            TweenLite.to(paths.eq(4), 1, {strokeDashoffset: 0, delay: 0.0}),
-            TweenLite.to(paths.eq(5), 1, {strokeDashoffset: 0, delay: 0.0}),
-            TweenLite.to(paths.eq(6), 1, {strokeDashoffset: 0, delay: 0.0}),
-            TweenLite.to(paths.eq(7), 1, {strokeDashoffset: 0, delay: 0.0}),
-            TweenLite.to(paths.eq(8), 1, {strokeDashoffset: 0, delay: 0.0}),
-            TweenLite.to(paths.eq(9), 1, {strokeDashoffset: 0, delay: 0.0}),
-            TweenLite.to(paths.eq(10), 1, {strokeDashoffset: 0, delay: 0.0}),
-            TweenLite.to(paths.eq(11), 1, {strokeDashoffset: 0, delay: 0.0}),
-            TweenLite.to(paths.eq(12), 1, {strokeDashoffset: 0, delay: 0.0}),
             TweenLite.to(paths.eq(13), 1, {strokeDashoffset: 0, delay: 0.0}),
             TweenLite.to(paths.eq(14), 1, {strokeDashoffset: 0, delay: 0.0}),
             TweenLite.to(paths.eq(15), 1, {strokeDashoffset: 0, delay: 0.0}),
@@ -495,7 +482,18 @@
             TweenLite.to(paths.eq(66), 1, {strokeDashoffset: 0, delay: 0.0}),
             TweenLite.to(paths.eq(67), 1, {strokeDashoffset: 0, delay: 0.0}),         
             TweenLite.to(paths.eq(68), 1, {strokeDashoffset: 0, delay: 0.0}),         
-
+            TweenLite.to(paths.eq(69), 1, {strokeDashoffset: 0, delay: 0.0}),
+            TweenLite.to(paths.eq(70), 1, {strokeDashoffset: 0, delay: 0.0}),
+            TweenLite.to(paths.eq(71), 1, {strokeDashoffset: 0, delay: 0.0}),
+            TweenLite.to(paths.eq(72), 1, {strokeDashoffset: 0, delay: 0.0}),
+            TweenLite.to(paths.eq(73), 1, {strokeDashoffset: 0, delay: 0.0}),
+            TweenLite.to(paths.eq(74), 1, {strokeDashoffset: 0, delay: 0.0}),
+            TweenLite.to(paths.eq(75), 1, {strokeDashoffset: 0, delay: 0.0}),
+            TweenLite.to(paths.eq(76), 1, {strokeDashoffset: 0, delay: 0.0}),
+            TweenLite.to(paths.eq(77), 1, {strokeDashoffset: 0, delay: 0.0}),
+            TweenLite.to(paths.eq(78), 1, {strokeDashoffset: 0, delay: 0.0}),
+            TweenLite.to(paths.eq(79), 1, {strokeDashoffset: 0, delay: 0.0}),
+            TweenLite.to(paths.eq(80), 1, {strokeDashoffset: 0, delay: 0.0}), 
 
             ]);
 

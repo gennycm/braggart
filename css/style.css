@@ -1411,7 +1411,16 @@ svg {
   height: auto;
 }
 
-
+.hexagons, .tienda_hex{
+  height: 100%; 
+  	position:relative;
+  	left: 50%;
+	-webkit-transform: translateX(-50%);
+	-ms-transform: translateX(-50%);
+	transform: translateX(-50%);
+	z-index: 0;
+	visibility: hidden;
+}
 .decoration_svg{
   height: 100%; 
   	position:relative;
@@ -1432,25 +1441,31 @@ svg {
 
 
 .historia_svg{
-  	   position: absolute;
-  max-width: 100%;
-  max-height: 100%;
-  top: 0;
-  left: 0;
-  z-index: 888;
+	position: absolute;
+	max-width: 100%;
+	max-height: 100%;
+	top: 0;
+	left: 0;
+	z-index: 888;
 }
 
-#containerSvg{
-	z-index: 9999;
-	position: fixed;
-top:0;
-}
-
-
-.loader{
-    left: 50%;
+.loader_dmnd {
+	height: 100%; 
+	position:relative;
+	left: 50%;
 	-webkit-transform: translateX(-50%);
 	-ms-transform: translateX(-50%);
 	transform: translateX(-50%);
-	 height: 100%;	
 }
+
+.loader {
+	position: fixed;
+	left: 0px;
+	top: 0px;
+	width: 100%;
+	height: 100%;
+	z-index: 9999;
+	background: 50% 50% no-repeat black;
+}
+
+

@@ -36,14 +36,30 @@ $('#add_to_cart_button').click(function(event){
 });
 
 
+/*LOADING STUFF
+ $(function() {
+    var paths = $('path:not(defs path)');
+    var tlLoad  = new TimelineLite();
+        tlLoad.add([
+        //La tienda front letters
+            TweenLite.to(paths.eq(0), 0.7, {strokeDashoffset: 0, delay: 0.0}),
+            TweenLite.to(paths.eq(1), 0.7, {strokeDashoffset: 0, delay: 0.0}),
+            TweenLite.to(paths.eq(2), 0.7, {strokeDashoffset: 0, delay: 0.0}),
+            TweenLite.to(paths.eq(3), 0.7, {strokeDashoffset: 0, delay: 0.0}),
+            TweenLite.to(paths.eq(4), 0.7, {strokeDashoffset: 0, delay: 0.0}),
+            TweenLite.to(paths.eq(5), 0.7, {strokeDashoffset: 0, delay: 0.0}),
+            TweenLite.to(paths.eq(6), 0.7, {strokeDashoffset: 0, delay: 0.0}),
+            TweenLite.to(paths.eq(7), 0.7, {strokeDashoffset: 0, delay: 0.0}),
+            TweenLite.to(paths.eq(8), 0.7, {strokeDashoffset: 0, delay: 0.0}),
+            TweenLite.to(paths.eq(9), 0.7, {strokeDashoffset: 0, delay: 0.0}),
+            TweenLite.to(paths.eq(10), 0.7, {strokeDashoffset: 0, delay: 0.0}),
+            TweenLite.to(paths.eq(11), 0.7, {strokeDashoffset: 0, delay: 0.0}),
+            TweenLite.to(paths.eq(12), 0.7, {strokeDashoffset: 0, delay: 0.0}),    
+        ]);
+    });
 
 
-
-
-
-
-
-
+/**---------------------------------------------------------------------------**/
 
 var size = "none";
 
@@ -811,73 +827,3 @@ function deleteProductFromWishlist(id_producto){
     });
 }
 
-var diamondSvg = {
-    "diamond_little": {
-        "strokepath": [
-            {
-                "path": "M 37.521 18.512 L 37.521 49.847",
-                "duration": 300
-            },
-            {
-                "path": "M 37.576 18.621 L 53.416 41.372",
-                "duration": 300
-            },
-            {
-                "path": "M 37.521 18.512 L 21.854 42.012",
-                "duration": 300
-            },
-            {
-                "path": "M 21.854 42.012 L 37.521 49.847",
-                "duration": 300
-            },
-            {
-                "path": "M 37.521 49.847 L 53.588 41.725",
-                "duration": 300
-            },
-            {
-                "path": "M 21.854 42.012 L 21.854 26.805",
-                "duration": 300
-            },
-            {
-                "path": "M 21.854 26.805 L 37.521 32.164",
-                "duration": 300
-            },
-            {
-                "path": "M 37.521 32.164 L 53.416 26.519",
-                "duration": 300
-            },
-            {
-                "path": "M 37.521 32.164 L 21.854 42.012",
-                "duration": 300
-            },
-            {
-                "path": "M 21.854 26.805 L 37.521 49.847",
-                "duration": 300
-            },
-            {
-                "path": "M 37.521 49.847 L 53.416 26.805",
-                "duration": 300
-            },
-            {
-                "path": "M 37.521 32.164 L 53.016 41.372",
-                "duration": 300
-            },
-            {
-                "path": "M 53.588 26.519 L 53.588 41.372",
-                "duration": 300
-            }
-        ],
-        "dimensions": {
-            "width": 75,
-            "height": 90
-        }
-    }
-}; 
-
-$('#diamond_little').lazylinepainter( 
- {
-    "svgData": diamondSvg,
-    "strokeWidth": 2,
-    "strokeColor": "#FFFFFF",
-    "responsive": "true"
-}).lazylinepainter('paint');

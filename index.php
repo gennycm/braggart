@@ -374,6 +374,64 @@
                         <path clip-path="url(#myClip)" fill="none" stroke="#000000" stroke-width="7" d="M511.957,341
                         c4.935,0,11.513,0,16.447,0"/>                       
                 </svg>
+                <svg  class="tienda_hex" xmlns="http://www.w3.org/2000/svg" width="800px" height="600px" viewBox="0 0 800 600">
+                    <polygon opacity="0.3" fill="#ffffff" points="249,216.188 223,207.563 223,197.213 248.926,188.813 275,197.287 275,207.563 "/>
+                    <polygon opacity="0.3" fill="#ffffff" points="258,256.688 232,248.063 232,237.713 257.926,229.313 284,237.787 284,248.063 "/>
+                    <polygon opacity="0.3" fill="#ffffff" points="289.5,243.188 263,234.563 263,224.213 289.426,215.813 316,224.287 316,234.563 "/>
+                    <polygon opacity="0.3" fill="#ffffff" points="222,243.188 196,234.563 196,224.213 221.926,215.813 248,224.287 248,234.563 "/>
+                    <polygon opacity="0.3" fill="#ffffff" points="301.5,223.688 275,215.063 275,204.713 301.426,196.313 328,204.787 328,215.063 "/>
+                    <polygon opacity="0.3" fill="#ffffff" points="316.5,277.688 290,269.063 290,258.712 316.426,250.313 343,258.788 343,269.063 "/>
+                    <polygon opacity="0.3" fill="#ffffff" points="349.5,250.688 323,242.063 323,231.713 349.426,223.313 376,231.787 376,242.063 "/>
+                    <polygon opacity="0.3" fill="#ffffff" points="262.5,277.688 236,269.063 236,258.713 262.426,250.313 289,258.787 289,269.063 "/>
+                    <polygon opacity="0.3" fill="#ffffff" points="231,309.188 205,300.563 205,290.213 230.926,281.813 257,290.287 257,300.563 "/>
+                    <polygon opacity="0.3" fill="#ffffff" points="288,372.188 262,363.563 262,353.212 287.926,344.813 314,353.288 314,363.563 "/>
+                    <polygon opacity="0.3" fill="#ffffff" points="210,336.188 184,327.563 184,317.212 209.926,308.813 236,317.288 236,327.563 "/>
+                    <polygon opacity="0.3" fill="#ffffff" points="279,304.688 253,296.063 253,285.713 278.926,277.313 305,285.787 305,296.063 "/>
+                    <polygon opacity="0.3" fill="#ffffff" points="262.5,358.688 236,350.063 236,339.712 262.426,331.313 289,339.788 289,350.063 "/>
+                    <polygon opacity="0.3" fill="#ffffff" points="301.5,331.688 275,323.063 275,312.712 301.426,304.313 328,312.788 328,323.063 "/>
+                    <polygon opacity="0.3" fill="#ffffff" points="222,283.688 196,275.063 196,264.713 221.926,256.313 248,264.787 248,275.063 "/>
+                    <polygon opacity="0.3" fill="#ffffff" points="252,339.188 226,330.563 226,320.212 251.926,311.813 278,320.288 278,330.563 "/>
+                    <polygon opacity="0.3" fill="#ffffff" points="237,388.688 211,380.063 211,369.712 236.926,361.313 263,369.788 263,380.063 "/>
+                    <polygon opacity="0.3" fill="#ffffff" points="322.5,297.188 296,288.563 296,278.213 322.426,269.813 349,278.287 349,288.563 "/>
+                    <polygon opacity="0.3" fill="#ffffff" points="411,291.188 385,282.563 385,272.213 410.926,263.813 437,272.287 437,282.563 "/>
+                    <polygon opacity="0.3" fill="#ffffff" points="375,277.688 349,269.063 349,258.713 374.926,250.313 401,258.787 401,269.063 "/>
+                    <polygon opacity="0.3" fill="#ffffff" points="384,343.688 358,335.063 358,324.712 383.926,316.313 410,324.788 410,335.063 "/>
+                    <polygon opacity="0.3" fill="#ffffff" points="375,318.188 349,309.563 349,299.212 374.926,290.813 401,299.288 401,309.563 "/>
+                    <polygon opacity="0.3" fill="#ffffff" points="342,322.688 316,314.063 316,303.712 341.926,295.313 368,303.788 368,314.063 "/>
+                    <polygon opacity="0.3" fill="#ffffff" points="343.5,352.688 317,344.063 317,333.712 343.426,325.313 370,333.788 370,344.063 "/>
+                    <polygon opacity="0.3" fill="#ffffff" points="358.5,413.688 332,405.063 332,394.712 358.426,386.313 385,394.788 385,405.063 "/>
+                    <polygon opacity="0.3" fill="#ffffff" points="343.5,386.188 317,377.563 317,367.212 343.426,358.813 370,367.288 370,377.563 "/>
+                    <polygon opacity="0.3" fill="#ffffff" points="310.5,397.688 284,389.063 284,378.712 310.426,370.313 337,378.788 337,389.063 "/>
+                    <polygon opacity="0.3" fill="#ffffff" points="394.5,216.188 368,207.563 368,197.213 394.426,188.813 421,197.287 421,207.563 "/>
+                    <polygon opacity="0.3" fill="#ffffff" points="384,255.188 358,246.563 358,236.212 383.926,227.813 410,236.288 410,246.563 "/>
+                    <polygon opacity="0.3" fill="#ffffff" points="432,250.688 406,242.063 406,231.712 431.926,223.313 458,231.788 458,242.063 "/>
+                    <line opacity="0.3" fill="#ffffff" x1="428.5" y1="258.712" x2="454.676" y2="250.313"/>
+                    <polygon opacity="0.3" fill="#ffffff" points="475.5,243.188 449,234.563 449,224.212 475.426,215.813 502,224.288 502,234.563 "/>
+                    <polygon opacity="0.3" fill="#ffffff" points="532.5,301.688 506,293.063 506,282.712 532.426,274.313 559,282.788 559,293.063 "/>
+                    <polygon opacity="0.3" fill="#ffffff" points="475.5,280.688 449,272.063 449,261.713 475.426,253.313 502,261.787 502,272.063 "/>
+                    <polygon opacity="0.3" fill="#ffffff" points="550,326.438 524,317.813 524,307.462 549.926,299.063 576,307.538 576,317.813 "/>
+                    <polygon opacity="0.3" fill="#ffffff" points="566,273.438 540,264.813 540,254.462 565.926,246.063 592,254.538 592,264.813 "/>
+                    <polygon opacity="0.3" fill="#ffffff" points="429,319.688 403,311.063 403,300.712 428.926,292.313 455,300.788 455,311.063 "/>
+                    <polygon opacity="0.3" fill="#ffffff" points="487.5,360.188 461,351.563 461,341.212 487.426,332.813 514,341.288 514,351.563 "/>
+                    <polygon opacity="0.3" fill="#ffffff" points="456,394.688 430,386.063 430,375.712 455.926,367.313 482,375.788 482,386.063 "/>
+                    <polygon opacity="0.3" fill="#ffffff" points="450,298.688 424,290.063 424,279.712 449.926,271.313 476,279.788 476,290.063 "/>
+                    <polygon opacity="0.3" fill="#ffffff" points="494,325.688 468,317.063 468,306.712 493.926,298.313 520,306.788 520,317.063 "/>
+                    <polygon opacity="0.3" fill="#ffffff" points="555,249.188 529,240.563 529,230.212 554.926,221.813 581,230.288 581,240.563 "/>
+                    <polygon opacity="0.3" fill="#ffffff" points="399,369.188 373,360.563 373,350.212 398.926,341.813 425,350.288 425,360.563 "/>
+                    <polygon opacity="0.3" fill="#ffffff" points="409.5,388.688 383,380.063 383,369.712 409.426,361.313 436,369.788 436,380.063 "/>
+                    <polygon opacity="0.3" fill="#ffffff" points="436.5,345.188 410,336.563 410,326.212 436.426,317.813 463,326.288 463,336.563 "/>
+                    <polygon opacity="0.3" fill="#ffffff" points="581,306.188 555,297.563 555,287.212 580.926,278.813 607,287.288 607,297.563 "/>
+                    <polygon opacity="0.3" fill="#ffffff" points="487.5,379.688 461,371.063 461,360.712 487.426,352.313 514,360.788 514,371.063 "/>
+                    <polygon opacity="0.3" fill="#ffffff" points="502.5,246.188 476,237.563 476,227.213 502.426,218.813 529,227.287 529,237.563 "/>
+                    <polygon opacity="0.3" fill="#ffffff" points="519,273.188 493,264.563 493,254.213 518.926,245.813 545,254.287 545,264.563 "/>
+                    <polygon opacity="0.3" fill="#ffffff" points="544.5,366.188 518,357.563 518,347.212 544.426,338.813 571,347.288 571,357.563 "/>
+                    <polygon opacity="0.3" fill="#ffffff" points="468,223.688 442,215.063 442,204.712 467.926,196.313 494,204.788 494,215.063 "/>
+                    <polygon opacity="0.3" fill="#ffffff" points="540,216.188 514,207.563 514,197.212 539.926,188.813 566,197.288 566,207.563 "/>
+                    <polygon opacity="0.3" fill="#ffffff" points="504,412.688 478,404.063 478,393.712 503.926,385.313 530,393.788 530,404.063 "/>
+                    <polygon opacity="0.3" fill="#ffffff" points="540.5,402.688 514,394.063 514,383.712 540.426,375.313 567,383.788 567,394.063 "/>
+                    <polygon opacity="0.3" fill="#ffffff" points="576.5,355.188 550,346.563 550,336.212 576.426,327.813 603,336.288 603,346.563 "/>
+                    <polygon opacity="0.3" fill="#ffffff" points="592.5,386.688 566,378.063 566,367.712 592.426,359.313 619,367.788 619,378.063 "/>
+                </svg>
             </a>   
         </div>
 
@@ -533,6 +591,39 @@
                         <path clip-path="url(#camisas)" fill="none" stroke="#000000" stroke-width="11" d="M494.228,292.61
                             c0,13.666,2,27.666,0.667,41.333c-0.333,4.332-1.333,6.332-5.667,8c-3,1.332-9.666,2.666-12.666,0.666
                             c-6.667-4.666-6-18.666-6-25.666c0-2.668,0-5.334,0-7.668"/>
+                </svg>
+                <svg class="hexagons" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="800px" height="600px" viewBox="0 0 800 600">
+                    <polygon opacity="0.2" fill="#ffffff" points="376.5,265.656 337,252.719 337,237.194 376.389,224.594 416,237.306 416,252.719 "/>
+                    <polygon opacity="0.2" fill="#ffffff" points="304.5,265.656 265,252.719 265,237.193 304.389,224.594 344,237.307 344,252.719 "/>
+                    <polygon opacity="0.2" fill="#ffffff" points="338,243.156 299,230.219 299,214.694 337.889,202.094 377,214.806 377,230.219 "/>
+                    <polygon opacity="0.2" fill="#ffffff" points="266,243.156 227,230.219 227,214.694 265.889,202.094 305,214.806 305,230.219 "/>
+                    <polygon opacity="0.2" fill="#ffffff" points="379,308.406 340,295.469 340,279.943 378.889,267.344 418,280.057 418,295.469 "/>
+                    <polygon opacity="0.2" fill="#ffffff" points="412.5,285.906 373,272.969 373,257.444 412.389,244.844 452,257.556 452,272.969 "/>
+                    <polygon opacity="0.2" fill="#ffffff" points="340.5,285.906 301,272.969 301,257.444 340.389,244.844 380,257.556 380,272.969 "/>
+                    <polygon opacity="0.2" fill="#ffffff" points="237,265.656 197,252.719 197,237.194 236.889,224.594 277,237.306 277,252.719 "/>
+                    <polygon opacity="0.2" fill="#ffffff" points="275,288.156 236,275.219 236,259.694 274.889,247.094 314,259.806 314,275.219 "/>
+                    <polygon opacity="0.2" fill="#ffffff" points="277.5,330.906 238,317.969 238,302.443 277.389,289.844 317,302.557 317,317.969 "/>
+                    <polygon opacity="0.2" fill="#ffffff" points="311,308.406 272,295.469 272,279.944 310.889,267.344 350,280.056 350,295.469 "/>
+                    <polygon opacity="0.2" fill="#ffffff" points="239,308.406 200,295.469 200,279.944 238.889,267.344 278,280.056 278,295.469 "/>
+                    <polygon opacity="0.2" fill="#ffffff" points="237,351.156 197,338.219 197,322.693 236.889,310.094 277,322.807 277,338.219 "/>
+                    <polygon opacity="0.2" fill="#ffffff" points="309,351.156 269,338.219 269,322.693 308.889,310.094 349,322.807 349,338.219 "/>
+                    <polygon opacity="0.2" fill="#ffffff" points="345,371.406 305,358.469 305,342.943 344.889,330.344 385,343.057 385,358.469 "/>
+                    <polygon opacity="0.2" fill="#ffffff" points="273,371.406 233,358.469 233,342.943 272.889,330.344 313,343.057 313,358.469 "/>
+                    <polygon opacity="0.2" fill="#ffffff" points="478,243.156 439,230.219 439,214.693 477.889,202.094 517,214.807 517,230.219 "/>
+                    <polygon opacity="0.2" fill="#ffffff" points="514,263.406 475,250.469 475,234.944 513.889,222.344 553,235.056 553,250.469 "/>
+                    <polygon opacity="0.2" fill="#ffffff" points="410,243.156 371,230.219 371,214.694 409.889,202.094 449,214.806 449,230.219 "/>
+                    <polygon opacity="0.2" fill="#ffffff" points="448.5,265.656 409,252.719 409,237.194 448.389,224.594 488,237.306 488,252.719 "/>
+                    <polygon opacity="0.2" fill="#ffffff" points="451,308.406 412,295.469 412,279.943 450.889,267.344 490,280.057 490,295.469 "/>
+                    <polygon opacity="0.2" fill="#ffffff" points="484.5,285.906 445,272.969 445,257.444 484.389,244.844 524,257.556 524,272.969 "/>
+                    <polygon opacity="0.2" fill="#ffffff" points="376.5,351.156 337,338.219 337,322.693 376.389,310.094 416,322.807 416,338.219 "/>
+                    <polygon opacity="0.2" fill="#ffffff" points="410,328.656 371,315.719 371,300.193 409.889,287.594 449,300.307 449,315.719 "/>
+                    <polygon opacity="0.2" fill="#ffffff" points="338,328.656 299,315.719 299,300.193 337.889,287.594 377,300.307 377,315.719 "/>
+                    <polygon opacity="0.2" fill="#ffffff" points="482,328.656 443,315.719 443,300.193 481.889,287.594 521,300.307 521,315.719 "/>
+                    <polygon opacity="0.2" fill="#ffffff" points="484.5,371.406 445,358.469 445,342.943 484.389,330.344 524,343.057 524,358.469 "/>
+                    <polygon opacity="0.2" fill="#ffffff" points="518,348.906 479,335.969 479,320.443 517.889,307.844 557,320.557 557,335.969 "/>
+                    <polygon opacity="0.2" fill="#ffffff" points="446,348.906 407,335.969 407,320.443 445.889,307.844 485,320.557 485,335.969 "/>
+                    <polygon opacity="0.2" fill="#ffffff" points="415,371.406 376,358.469 376,342.943 414.889,330.344 454,343.057 454,358.469 "/>
+                    <polygon opacity="0.2" fill="#ffffff" points="518,306.156 479,293.219 479,277.693 517.889,265.094 557,277.807 557,293.219 "/>
                 </svg>
             </a>
         </div>
@@ -704,7 +795,7 @@
 
     /*Parallax scrolling*/
     var deleteLog = false;
-    var paths;
+    var paths, hexagons, tienda_hex;
 
     jQuery(document).ready(function($) {
       $('#full-width-slider').royalSlider({
@@ -746,6 +837,9 @@
         
         // Store a reference to our paths, excluding our clip path
         paths = $('path:not(defs path)');
+        hexagons= $(".hexagons polygon");
+        tienda_hex =$(".tienda_hex polygon");
+
 
         // For each path, set the stroke-dasharray and stroke-dashoffset
         // equal to the path's total length, hence rendering it invisible
@@ -782,9 +876,11 @@
   
  $(function() {
      var tlTienda  = new TimelineLite();
+     var tlCamisasHex  = new TimelineLite();
      var tlCamisas = new TimelineLite();
      var tlHome = new TimelineLite();
      var tlContact = new TimelineLite();
+     var tlTiendaHex = new TimelineLite();
 
      var homeCounter = 0;
      var usCounter= 0;
@@ -795,19 +891,6 @@
          if (homeCounter == 1) {
             tlHome.add([
                 //La tienda front letters
-            TweenLite.to(paths.eq(0), 1, {strokeDashoffset: 0, delay: 0.0}),
-            TweenLite.to(paths.eq(1), 1, {strokeDashoffset: 0, delay: 0.0}),
-            TweenLite.to(paths.eq(2), 1, {strokeDashoffset: 0, delay: 0.0}),
-            TweenLite.to(paths.eq(3), 1, {strokeDashoffset: 0, delay: 0.0}),
-            TweenLite.to(paths.eq(4), 1, {strokeDashoffset: 0, delay: 0.0}),
-            TweenLite.to(paths.eq(5), 1, {strokeDashoffset: 0, delay: 0.0}),
-            TweenLite.to(paths.eq(6), 1, {strokeDashoffset: 0, delay: 0.0}),
-            TweenLite.to(paths.eq(7), 1, {strokeDashoffset: 0, delay: 0.0}),
-            TweenLite.to(paths.eq(8), 1, {strokeDashoffset: 0, delay: 0.0}),
-            TweenLite.to(paths.eq(9), 1, {strokeDashoffset: 0, delay: 0.0}),
-            TweenLite.to(paths.eq(10), 1, {strokeDashoffset: 0, delay: 0.0}),
-            TweenLite.to(paths.eq(11), 1, {strokeDashoffset: 0, delay: 0.0}),
-            TweenLite.to(paths.eq(12), 1, {strokeDashoffset: 0, delay: 0.0}),
             TweenLite.to(paths.eq(13), 1, {strokeDashoffset: 0, delay: 0.0}),
             TweenLite.to(paths.eq(14), 1, {strokeDashoffset: 0, delay: 0.0}),
             TweenLite.to(paths.eq(15), 1, {strokeDashoffset: 0, delay: 0.0}),
@@ -835,7 +918,6 @@
             TweenLite.to(paths.eq(37), 1, {strokeDashoffset: 0, delay: 0.0}),
             TweenLite.to(paths.eq(38), 1, {strokeDashoffset: 0, delay: 0.0}),
             TweenLite.to(paths.eq(39), 1, {strokeDashoffset: 0, delay: 0.0}),
-
             TweenLite.to(paths.eq(40), 1, {strokeDashoffset: 0, delay: 0.0}),
             TweenLite.to(paths.eq(41), 1, {strokeDashoffset: 0, delay: 0.0}),
             TweenLite.to(paths.eq(42), 1, {strokeDashoffset: 0, delay: 0.0}),
@@ -849,6 +931,7 @@
             TweenLite.to(paths.eq(50), 1, {strokeDashoffset: 0, delay: 0.0}),
             TweenLite.to(paths.eq(51), 1, {strokeDashoffset: 0, delay: 0.0}),
             TweenLite.to(paths.eq(52), 1, {strokeDashoffset: 0, delay: 0.0}),
+
             TweenLite.to(paths.eq(53), 1, {strokeDashoffset: 0, delay: 0.0}),
             TweenLite.to(paths.eq(54), 1, {strokeDashoffset: 0, delay: 0.0}),
             TweenLite.to(paths.eq(55), 1, {strokeDashoffset: 0, delay: 0.0}),
@@ -863,7 +946,20 @@
             TweenLite.to(paths.eq(64), 1, {strokeDashoffset: 0, delay: 0.0}),
             TweenLite.to(paths.eq(65), 1, {strokeDashoffset: 0, delay: 0.0}),
             TweenLite.to(paths.eq(66), 1, {strokeDashoffset: 0, delay: 0.0}),
-            TweenLite.to(paths.eq(67), 1, {strokeDashoffset: 0, delay: 0.0}),         
+            TweenLite.to(paths.eq(67), 1, {strokeDashoffset: 0, delay: 0.0}),
+            TweenLite.to(paths.eq(68), 1, {strokeDashoffset: 0, delay: 0.0}),
+            TweenLite.to(paths.eq(69), 1, {strokeDashoffset: 0, delay: 0.0}),
+            TweenLite.to(paths.eq(70), 1, {strokeDashoffset: 0, delay: 0.0}),
+            TweenLite.to(paths.eq(71), 1, {strokeDashoffset: 0, delay: 0.0}),
+            TweenLite.to(paths.eq(72), 1, {strokeDashoffset: 0, delay: 0.0}),
+            TweenLite.to(paths.eq(73), 1, {strokeDashoffset: 0, delay: 0.0}),
+            TweenLite.to(paths.eq(74), 1, {strokeDashoffset: 0, delay: 0.0}),
+            TweenLite.to(paths.eq(75), 1, {strokeDashoffset: 0, delay: 0.0}),
+            TweenLite.to(paths.eq(76), 1, {strokeDashoffset: 0, delay: 0.0}),
+            TweenLite.to(paths.eq(77), 1, {strokeDashoffset: 0, delay: 0.0}),
+            TweenLite.to(paths.eq(78), 1, {strokeDashoffset: 0, delay: 0.0}),
+            TweenLite.to(paths.eq(79), 1, {strokeDashoffset: 0, delay: 0.0}),
+            TweenLite.to(paths.eq(80), 1, {strokeDashoffset: 0, delay: 0.0}),         
 
 
             ]);
@@ -875,59 +971,65 @@
         usCounter++;
          console.log("us" + usCounter);
          if (usCounter == 1) {
+            tlTiendaHex.add("stagger", "+=0.5");
+            tlTiendaHex.staggerFrom(tienda_hex, 0.2, {scale:0, autoAlpha:0}, 0.1, "stagger");
+            tlTiendaHex.play("stagger");
+
             tlTienda.add([
                 //La tienda front letters
-               TweenLite.to(paths.eq(68), 0.3, {strokeDashoffset: 0, delay: 0.0}), //L
-                TweenLite.to(paths.eq(69), 0.3, {strokeDashoffset: 0, delay: 0.3}), //A
-                TweenLite.to(paths.eq(70), 0.3, {strokeDashoffset: 0, delay: 0.6}), //-
-                TweenLite.to(paths.eq(71), 0.3, {strokeDashoffset: 0, delay: 0.9}),
-                TweenLite.to(paths.eq(72), 0.3, {strokeDashoffset: 0, delay: 1.2}),
-                TweenLite.to(paths.eq(73), 0.3, {strokeDashoffset: 0, delay: 1.5}),
-                TweenLite.to(paths.eq(74), 0.3, {strokeDashoffset: 0, delay: 1.8}),
-                TweenLite.to(paths.eq(75), 0.3, {strokeDashoffset: 0, delay: 2.1}),
-                TweenLite.to(paths.eq(76), 0.3, {strokeDashoffset: 0, delay: 2.4}),
-                TweenLite.to(paths.eq(77), 0.3, {strokeDashoffset: 0, delay: 2.7}),
-                TweenLite.to(paths.eq(78), 0.3, {strokeDashoffset: 0, delay: 3.0}),
-                TweenLite.to(paths.eq(79), 0.3, {strokeDashoffset: 0, delay: 3.3}),
-                TweenLite.to(paths.eq(80), 0.3, {strokeDashoffset: 0, delay: 3.6}),
-                TweenLite.to(paths.eq(81), 0.3, {strokeDashoffset: 0, delay: 3.9}),
-                TweenLite.to(paths.eq(82), 0.3, {strokeDashoffset: 0, delay: 4.1}),
-                TweenLite.to(paths.eq(83), 0.3, {strokeDashoffset: 0, delay: 4.4}),
-                TweenLite.to(paths.eq(84), 0.3, {strokeDashoffset: 0, delay: 4.7}),
-                TweenLite.to(paths.eq(85), 0.3, {strokeDashoffset: 0, delay: 5.0}),
-                TweenLite.to(paths.eq(86), 0.3, {strokeDashoffset: 0, delay: 5.3}),
-                TweenLite.to(paths.eq(87), 0.3, {strokeDashoffset: 0, delay: 5.6}),
-                TweenLite.to(paths.eq(88), 0.3, {strokeDashoffset: 0, delay: 5.9}),
+                TweenLite.to(paths.eq(81), 0.3, {strokeDashoffset: 0, delay: 0.0}), //L
+                TweenLite.to(paths.eq(82), 0.3, {strokeDashoffset: 0, delay: 0.3}), //A
+                TweenLite.to(paths.eq(83), 0.3, {strokeDashoffset: 0, delay: 0.6}), //-
+                TweenLite.to(paths.eq(84), 0.3, {strokeDashoffset: 0, delay: 0.9}),
+                TweenLite.to(paths.eq(85), 0.3, {strokeDashoffset: 0, delay: 1.2}),
+                TweenLite.to(paths.eq(86), 0.3, {strokeDashoffset: 0, delay: 1.5}),
+                TweenLite.to(paths.eq(87), 0.3, {strokeDashoffset: 0, delay: 1.8}),
+                TweenLite.to(paths.eq(88), 0.3, {strokeDashoffset: 0, delay: 2.1}),
+                TweenLite.to(paths.eq(89), 0.3, {strokeDashoffset: 0, delay: 2.4}),
+                TweenLite.to(paths.eq(90), 0.3, {strokeDashoffset: 0, delay: 2.7}),
+                TweenLite.to(paths.eq(91), 0.3, {strokeDashoffset: 0, delay: 3.0}),
+                TweenLite.to(paths.eq(92), 0.3, {strokeDashoffset: 0, delay: 3.3}),
+                TweenLite.to(paths.eq(93), 0.3, {strokeDashoffset: 0, delay: 3.6}),
+                TweenLite.to(paths.eq(94), 0.3, {strokeDashoffset: 0, delay: 3.9}),
+                TweenLite.to(paths.eq(95), 0.3, {strokeDashoffset: 0, delay: 4.1}),
+                TweenLite.to(paths.eq(96), 0.3, {strokeDashoffset: 0, delay: 4.4}),
+                TweenLite.to(paths.eq(97), 0.3, {strokeDashoffset: 0, delay: 4.7}),
+                TweenLite.to(paths.eq(98), 0.3, {strokeDashoffset: 0, delay: 5.0}),
+                TweenLite.to(paths.eq(99), 0.3, {strokeDashoffset: 0, delay: 5.3}),
+                TweenLite.to(paths.eq(100), 0.3, {strokeDashoffset: 0, delay: 5.6}),
+                TweenLite.to(paths.eq(101), 0.3, {strokeDashoffset: 0, delay: 5.9}),
 
                 //La tienda shadow
-                TweenLite.to(paths.eq(89), 0.3, {strokeDashoffset: 0, delay: 0.0}),
-                TweenLite.to(paths.eq(90), 0.3, {strokeDashoffset: 0, delay: 0.3}), //A
-                TweenLite.to(paths.eq(91), 0.3, {strokeDashoffset: 0, delay: 0.6}), //-
-                TweenLite.to(paths.eq(92), 0.3, {strokeDashoffset: 0, delay: 0.9}),
-                TweenLite.to(paths.eq(93), 0.3, {strokeDashoffset: 0, delay: 1.2}),
-                TweenLite.to(paths.eq(94), 0.3, {strokeDashoffset: 0, delay: 1.5}),
-                TweenLite.to(paths.eq(95), 0.3, {strokeDashoffset: 0, delay: 1.8}),
-                TweenLite.to(paths.eq(96), 0.3, {strokeDashoffset: 0, delay: 2.1}),
-                TweenLite.to(paths.eq(97), 0.3, {strokeDashoffset: 0, delay: 2.4}),
-                TweenLite.to(paths.eq(98), 0.3, {strokeDashoffset: 0, delay: 2.7}),
-                TweenLite.to(paths.eq(99), 0.3, {strokeDashoffset: 0, delay: 3.0}),
-                TweenLite.to(paths.eq(100), 0.3, {strokeDashoffset: 0, delay: 3.3}),
-                TweenLite.to(paths.eq(101), 0.3, {strokeDashoffset: 0, delay: 3.6}),
-                TweenLite.to(paths.eq(102), 0.3, {strokeDashoffset: 0, delay: 3.9}),
-                TweenLite.to(paths.eq(103), 0.3, {strokeDashoffset: 0, delay: 4.1}),
-                TweenLite.to(paths.eq(104), 0.3, {strokeDashoffset: 0, delay: 4.4}),
-                TweenLite.to(paths.eq(105), 0.3, {strokeDashoffset: 0, delay: 4.7}),
-                TweenLite.to(paths.eq(106), 0.3, {strokeDashoffset: 0, delay: 5.0}),
-                TweenLite.to(paths.eq(107), 0.3, {strokeDashoffset: 0, delay: 5.3}),
-                TweenLite.to(paths.eq(108), 0.3, {strokeDashoffset: 0, delay: 5.6}),
-                TweenLite.to(paths.eq(109), 0.3, {strokeDashoffset: 0, delay: 5.9}),          
+                TweenLite.to(paths.eq(102), 0.3, {strokeDashoffset: 0, delay: 0.0}),
+                TweenLite.to(paths.eq(103), 0.3, {strokeDashoffset: 0, delay: 0.3}), //A
+                TweenLite.to(paths.eq(104), 0.3, {strokeDashoffset: 0, delay: 0.6}), //-
+                TweenLite.to(paths.eq(105), 0.3, {strokeDashoffset: 0, delay: 0.9}),
+                TweenLite.to(paths.eq(106), 0.3, {strokeDashoffset: 0, delay: 1.2}),
+                TweenLite.to(paths.eq(107), 0.3, {strokeDashoffset: 0, delay: 1.5}),
+                TweenLite.to(paths.eq(108), 0.3, {strokeDashoffset: 0, delay: 1.8}),
+                TweenLite.to(paths.eq(109), 0.3, {strokeDashoffset: 0, delay: 2.1}),
+                TweenLite.to(paths.eq(110), 0.3, {strokeDashoffset: 0, delay: 2.4}),
+                TweenLite.to(paths.eq(111), 0.3, {strokeDashoffset: 0, delay: 2.7}),
+                TweenLite.to(paths.eq(112), 0.3, {strokeDashoffset: 0, delay: 3.0}),
+                TweenLite.to(paths.eq(113), 0.3, {strokeDashoffset: 0, delay: 3.3}),
+                TweenLite.to(paths.eq(114), 0.3, {strokeDashoffset: 0, delay: 3.6}),
+                TweenLite.to(paths.eq(115), 0.3, {strokeDashoffset: 0, delay: 3.9}),
+                TweenLite.to(paths.eq(116), 0.3, {strokeDashoffset: 0, delay: 4.1}),
+                TweenLite.to(paths.eq(117), 0.3, {strokeDashoffset: 0, delay: 4.4}),
+                TweenLite.to(paths.eq(118), 0.3, {strokeDashoffset: 0, delay: 4.7}),
+                TweenLite.to(paths.eq(119), 0.3, {strokeDashoffset: 0, delay: 5.0}),
+                TweenLite.to(paths.eq(120), 0.3, {strokeDashoffset: 0, delay: 5.3}),
+                TweenLite.to(paths.eq(121), 0.3, {strokeDashoffset: 0, delay: 5.6}),
+                TweenLite.to(paths.eq(122), 0.3, {strokeDashoffset: 0, delay: 5.9}),          
 
 
             ]);
+
                 tlTienda.restart();
 
             }else{
                 tlTienda.restart();
+                tlTiendaHex.restart();
             }
          }, {
            offset: '60%'
@@ -955,69 +1057,76 @@
         shirtsCounter++;
          console.log("shirts" + shirtsCounter);
          if (shirtsCounter == 1) {
+            tlCamisasHex.add("stagger", "+=0.5");
+            tlCamisasHex.staggerFrom(hexagons, 0.2, {scale:0, autoAlpha:0}, 0.15, "stagger");
+            tlCamisasHex.play("stagger");
             tlCamisas.add([
                         //C
-                    TweenLite.to(paths.eq(110), 0.3, {strokeDashoffset: 0, delay: 0.0}),
+                    TweenLite.to(paths.eq(123), 0.3, {strokeDashoffset: 0, delay: 0.0}),
                         //A
-                    TweenLite.to(paths.eq(111), 0.3, {strokeDashoffset: 0, delay: 0.2}),
-                    TweenLite.to(paths.eq(112), 0.3, {strokeDashoffset: 0, delay: 0.4}),
-                    TweenLite.to(paths.eq(113), 0.3, {strokeDashoffset: 0, delay: 0.5}),
-                    TweenLite.to(paths.eq(114), 0.3, {strokeDashoffset: 0, delay: 0.8}),
+                    TweenLite.to(paths.eq(124), 0.3, {strokeDashoffset: 0, delay: 0.2}),
+                    TweenLite.to(paths.eq(125), 0.3, {strokeDashoffset: 0, delay: 0.4}),
+                    TweenLite.to(paths.eq(126), 0.3, {strokeDashoffset: 0, delay: 0.5}),
+                    TweenLite.to(paths.eq(127), 0.3, {strokeDashoffset: 0, delay: 0.8}),
                         //M
-                    TweenLite.to(paths.eq(115), 0.3, {strokeDashoffset: 0, delay: 1.2}),
-                    TweenLite.to(paths.eq(116), 0.3, {strokeDashoffset: 0, delay: 1.5}),
-                    TweenLite.to(paths.eq(117), 0.3, {strokeDashoffset: 0, delay: 1.8}),
-                    TweenLite.to(paths.eq(118), 0.3, {strokeDashoffset: 0, delay: 2.1}),
+                    TweenLite.to(paths.eq(128), 0.3, {strokeDashoffset: 0, delay: 1.2}),
+                    TweenLite.to(paths.eq(129), 0.3, {strokeDashoffset: 0, delay: 1.5}),
+                    TweenLite.to(paths.eq(130), 0.3, {strokeDashoffset: 0, delay: 1.8}),
+                    TweenLite.to(paths.eq(131), 0.3, {strokeDashoffset: 0, delay: 2.1}),
                     //I
-                    TweenLite.to(paths.eq(119), 0.3, {strokeDashoffset: 0, delay: 2.4}),
+                    TweenLite.to(paths.eq(132), 0.3, {strokeDashoffset: 0, delay: 2.4}),
                     //S
-                    TweenLite.to(paths.eq(120), 0.3, {strokeDashoffset: 0, delay: 2.7}),
-                    TweenLite.to(paths.eq(121), 0.3, {strokeDashoffset: 0, delay: 2.9}),
-                    TweenLite.to(paths.eq(122), 0.3, {strokeDashoffset: 0, delay: 3.2}),
+                    TweenLite.to(paths.eq(133), 0.3, {strokeDashoffset: 0, delay: 2.7}),
+                    TweenLite.to(paths.eq(134), 0.3, {strokeDashoffset: 0, delay: 2.9}),
+                    TweenLite.to(paths.eq(135), 0.3, {strokeDashoffset: 0, delay: 3.2}),
                     //A
-                    TweenLite.to(paths.eq(123), 0.3, {strokeDashoffset: 0, delay: 3.5}),
-                    TweenLite.to(paths.eq(124), 0.3, {strokeDashoffset: 0, delay: 3.7}),
-                    TweenLite.to(paths.eq(125), 0.3, {strokeDashoffset: 0, delay: 4.0}),
-                    TweenLite.to(paths.eq(126), 0.3, {strokeDashoffset: 0, delay: 4.3}),
+                    TweenLite.to(paths.eq(136), 0.3, {strokeDashoffset: 0, delay: 3.5}),
+                    TweenLite.to(paths.eq(137), 0.3, {strokeDashoffset: 0, delay: 3.7}),
+                    TweenLite.to(paths.eq(138), 0.3, {strokeDashoffset: 0, delay: 4.0}),
+                    TweenLite.to(paths.eq(139), 0.3, {strokeDashoffset: 0, delay: 4.3}),
                     //S
-                    TweenLite.to(paths.eq(127), 0.3, {strokeDashoffset: 0, delay: 4.6}),
-                    TweenLite.to(paths.eq(128), 0.3, {strokeDashoffset: 0, delay: 4.9}),
-                    TweenLite.to(paths.eq(129), 0.3, {strokeDashoffset: 0, delay: 5.1}),
+                    TweenLite.to(paths.eq(140), 0.3, {strokeDashoffset: 0, delay: 4.6}),
+                    TweenLite.to(paths.eq(141), 0.3, {strokeDashoffset: 0, delay: 4.9}),
+                    TweenLite.to(paths.eq(142), 0.3, {strokeDashoffset: 0, delay: 5.1}),
 
 
                     //camisas shadow
                         //C
-                    TweenLite.to(paths.eq(130), 0.3, {strokeDashoffset: 0, delay: 0.0}),
+                    TweenLite.to(paths.eq(143), 0.3, {strokeDashoffset: 0, delay: 0.0}),
                         //A
-                    TweenLite.to(paths.eq(131), 0.3, {strokeDashoffset: 0, delay: 0.2}),
-                    TweenLite.to(paths.eq(132), 0.3, {strokeDashoffset: 0, delay: 0.4}),
-                    TweenLite.to(paths.eq(133), 0.3, {strokeDashoffset: 0, delay: 0.5}),
-                    TweenLite.to(paths.eq(134), 0.3, {strokeDashoffset: 0, delay: 0.8}),
+                    TweenLite.to(paths.eq(144), 0.3, {strokeDashoffset: 0, delay: 0.2}),
+                    TweenLite.to(paths.eq(145), 0.3, {strokeDashoffset: 0, delay: 0.4}),
+                    TweenLite.to(paths.eq(146), 0.3, {strokeDashoffset: 0, delay: 0.5}),
+                    TweenLite.to(paths.eq(147), 0.3, {strokeDashoffset: 0, delay: 0.8}),
                         //M
-                    TweenLite.to(paths.eq(135), 0.3, {strokeDashoffset: 0, delay: 1.2}),
-                    TweenLite.to(paths.eq(136), 0.3, {strokeDashoffset: 0, delay: 1.5}),
-                    TweenLite.to(paths.eq(137), 0.3, {strokeDashoffset: 0, delay: 1.8}),
-                    TweenLite.to(paths.eq(138), 0.3, {strokeDashoffset: 0, delay: 2.1}),
+                    TweenLite.to(paths.eq(148), 0.3, {strokeDashoffset: 0, delay: 1.2}),
+                    TweenLite.to(paths.eq(149), 0.3, {strokeDashoffset: 0, delay: 1.5}),
+                    TweenLite.to(paths.eq(150), 0.3, {strokeDashoffset: 0, delay: 1.8}),
+                    TweenLite.to(paths.eq(151), 0.3, {strokeDashoffset: 0, delay: 2.1}),
                     //I
-                    TweenLite.to(paths.eq(139), 0.3, {strokeDashoffset: 0, delay: 2.4}),
+                    TweenLite.to(paths.eq(152), 0.3, {strokeDashoffset: 0, delay: 2.4}),
                     //S
-                    TweenLite.to(paths.eq(140), 0.3, {strokeDashoffset: 0, delay: 2.7}),
-                    TweenLite.to(paths.eq(141), 0.3, {strokeDashoffset: 0, delay: 2.9}),
-                    TweenLite.to(paths.eq(142), 0.3, {strokeDashoffset: 0, delay: 3.2}),
+                    TweenLite.to(paths.eq(153), 0.3, {strokeDashoffset: 0, delay: 2.7}),
+                    TweenLite.to(paths.eq(154), 0.3, {strokeDashoffset: 0, delay: 2.9}),
+                    TweenLite.to(paths.eq(155), 0.3, {strokeDashoffset: 0, delay: 3.2}),
                     //A
-                    TweenLite.to(paths.eq(143), 0.3, {strokeDashoffset: 0, delay: 3.5}),
-                    TweenLite.to(paths.eq(144), 0.3, {strokeDashoffset: 0, delay: 3.7}),
-                    TweenLite.to(paths.eq(145), 0.3, {strokeDashoffset: 0, delay: 4.0}),
-                    TweenLite.to(paths.eq(146), 0.3, {strokeDashoffset: 0, delay: 4.3}),
+                    TweenLite.to(paths.eq(156), 0.3, {strokeDashoffset: 0, delay: 3.5}),
+                    TweenLite.to(paths.eq(157), 0.3, {strokeDashoffset: 0, delay: 3.7}),
+                    TweenLite.to(paths.eq(158), 0.3, {strokeDashoffset: 0, delay: 4.0}),
+                    TweenLite.to(paths.eq(159), 0.3, {strokeDashoffset: 0, delay: 4.3}),
                     //S
-                    TweenLite.to(paths.eq(147), 0.3, {strokeDashoffset: 0, delay: 4.6}),
-                    TweenLite.to(paths.eq(148), 0.3, {strokeDashoffset: 0, delay: 4.9}),
-                    TweenLite.to(paths.eq(149), 0.3, {strokeDashoffset: 0, delay: 5.1}),     
+                    TweenLite.to(paths.eq(160), 0.3, {strokeDashoffset: 0, delay: 4.6}),
+                    TweenLite.to(paths.eq(161), 0.3, {strokeDashoffset: 0, delay: 4.9}),
+                    TweenLite.to(paths.eq(162), 0.3, {strokeDashoffset: 0, delay: 5.1}),     
 
             ]);
+                
+
+
                 tlCamisas.restart();
             }else{
                 tlCamisas.restart();
+                tlCamisasHex.restart();
             }
          }, {
            offset: '50%'
@@ -1030,19 +1139,20 @@
          contactCounter++;
              if (contactCounter == 1) {
                 tlContact.add([
-                            TweenLite.to(paths.eq(150), 1, {strokeDashoffset: 0, delay: 0.0}),
-                            TweenLite.to(paths.eq(151), 1, {strokeDashoffset: 0, delay: 0.0}),
-                            TweenLite.to(paths.eq(152), 1, {strokeDashoffset: 0, delay: 0.0}),
-                            TweenLite.to(paths.eq(153), 1, {strokeDashoffset: 0, delay: 0.0}),
-                            TweenLite.to(paths.eq(154), 1, {strokeDashoffset: 0, delay: 0.0}),
-                            TweenLite.to(paths.eq(155), 1, {strokeDashoffset: 0, delay: 0.0}),
+                            TweenLite.to(paths.eq(163), 1, {strokeDashoffset: 0, delay: 0.0}),
+                            TweenLite.to(paths.eq(164), 1, {strokeDashoffset: 0, delay: 0.0}),
+                            TweenLite.to(paths.eq(165), 1, {strokeDashoffset: 0, delay: 0.0}),
+                            TweenLite.to(paths.eq(166), 1, {strokeDashoffset: 0, delay: 0.0}),
+                            TweenLite.to(paths.eq(167), 1, {strokeDashoffset: 0, delay: 0.0}),
+                            TweenLite.to(paths.eq(168), 1, {strokeDashoffset: 0, delay: 0.0}),
+                            TweenLite.to(paths.eq(169), 1, {strokeDashoffset: 0, delay: 0.0}),
 
-                            TweenLite.to(paths.eq(156), 1, {strokeDashoffset: 0, delay: 0.0}),
-                            TweenLite.to(paths.eq(157), 1, {strokeDashoffset: 0, delay: 0.0}),
-                            TweenLite.to(paths.eq(158), 1, {strokeDashoffset: 0, delay: 0.0}),
-                            TweenLite.to(paths.eq(159), 1, {strokeDashoffset: 0, delay: 0.0}),
-                            TweenLite.to(paths.eq(160), 1, {strokeDashoffset: 0, delay: 0.0}),
-                            TweenLite.to(paths.eq(161), 1, {strokeDashoffset: 0, delay: 0.0}),                            
+                            TweenLite.to(paths.eq(170), 1, {strokeDashoffset: 0, delay: 0.0}),
+                            TweenLite.to(paths.eq(171), 1, {strokeDashoffset: 0, delay: 0.0}),
+                            TweenLite.to(paths.eq(172), 1, {strokeDashoffset: 0, delay: 0.0}),
+                            TweenLite.to(paths.eq(173), 1, {strokeDashoffset: 0, delay: 0.0}),
+                            TweenLite.to(paths.eq(174), 1, {strokeDashoffset: 0, delay: 0.0}),
+                           
                 ]);
                 tlContact.restart();
              }else{
