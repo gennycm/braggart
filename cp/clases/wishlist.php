@@ -73,6 +73,24 @@ class wishlist
 		mysqli_free_result($result);
 		return $resultados;
 	}
+
+	function producto_en_wishlist($id_producto, $id_userend){
+		$conexion=new conexion();
+		$sql="SELECT * FROM wishlist WHERE id_userend = ".$id_userend. " AND id_producto =".$id_producto;
+		$result=$conexion->ejecutar_sentencia($sql);
+		$resultados=array();
+		while ($row=mysqli_fetch_array($result))
+		{
+			$registro=array();
+			$registro['id_userend']=$row['id_userend'];
+			$registro['id_producto']=$row['id_producto'];
+			$registro['id_wishlist']=$row['id_wishlist'];
+			$registro['status']=$row['status'];
+			array_push($resultados,$registro);
+		}
+		mysqli_free_result($result);
+		return (count($resultados) > 0)? true:false;
+	}
 	
 	function obtener_wishlist()
 	{

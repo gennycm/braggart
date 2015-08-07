@@ -28,7 +28,7 @@ $this->id_combinacion = $id_combinacion;
 function asigna_productos_orden()
 {
 $con=new conexion();
-$sql='insert into detalle_orden (idorden,id_producto,precio,cantidad,id_combinacion) values('.$this->idorden.','.$this->id_producto.','.$this->cantidad.','.$this->precio.','.$this->id_combinacion.')';
+$sql='insert into detalle_orden (idorden,id_producto,precio,cantidad,id_combinacion) values('.$this->idorden.','.$this->id_producto.','.$this->precio.','.$this->cantidad.','.$this->id_combinacion.')';
 $con->ejecutar_sentencia($sql);
 
 }

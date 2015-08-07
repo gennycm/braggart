@@ -776,6 +776,7 @@ function addWishlist(id_product){
         cache:false,
         async:false,
         success:function(data){
+            console.log(data);
             if(data.indexOf("false") != -1){
                 mensaje = "No se pudo agregar el producto al wishlist. Inténtalo de nuevo.";
             }
@@ -786,6 +787,9 @@ function addWishlist(id_product){
             if(data.indexOf("login") != -1){
                 mensaje = "Inicia sesión para agregar productos a tu wishlist.";
                 updateWishlist();
+            }
+            if(data.indexOf("already") != -1){
+                mensaje = "El producto ya se encuentra en tu wishlist";
             }
 
             $("#header-modal").html("Agregar Wishlist");
@@ -830,13 +834,16 @@ function updateWishlist(){
             var id_producto = resultado[i].id_producto;
             var nombre = resultado[i].titulo_esp;
             var precio = resultado[i].precio_mxn;
+            var impuesto = resultado[i].impuesto;
             var img_principal = resultado[i].img_principal;
             var html_producto = "";
+            var precio_producto = precio * (1 + impuesto / 100);
+            precio_producto = precio_producto.toFixed(2);
 
             html_producto = '<tr>'+
                                 //'<td><div class="color-square-shirt-cart" style="background-color:#000;"></div></td>'+
-                                '<td class="shirt-name"><img src="imgProductos/'+img_principal+'" class="cart_shirt">+ '+nombre+'</td>'+
-                                '<td class="shirt-price">$'+parseInt(precio)+' MXN</td>'+
+                                '<td class="shirt-name"><img class="cart_shirt" src="imgProductos/'+img_principal+'" class="cart_shirt"><p class="cart_name" >+ '+nombre+'</p></td>'+
+                                '<td class="shirt-price">$'+precio_producto+' MXN</td>'+
                                 '<td class="shop-icon center" onclick="showProductoInfo(\''+id_producto+'\'), hide_wishlist()" style="cursor:pointer;"><i class="fa fa-shopping-cart fa-lg"></td>'+
                                 '<td class="delete-icon" onclick="deleteProductFromWishlist(\''+id_producto+'\')" style="cursor:pointer;"><i class="fa fa-times"></i></td>'+
                             '</tr>';

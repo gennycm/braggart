@@ -16,7 +16,7 @@ class orden
 	var $peso;
 	var $order_cart;
 	
-	function orden($id=0,$fecha='',$iduserend='',$num_productos='',$total_productos='',$estatus='',$direccion='', $id_transporte = "", $id_rango_transporte = "", $peso = 0, $order_cart = array()){
+	function orden($id = 0,$fecha='',$iduserend='',$num_productos='',$total_productos='',$estatus='',$direccion='', $id_transporte = "", $id_rango_transporte = "", $peso = 0, $order_cart = array()){
 		$this -> idorden=$id;
 		$this -> fecha=$fecha;
 		$this -> iduserend=$iduserend;
@@ -74,9 +74,9 @@ class orden
 		$sql = "update orden set total_productos=".$this->total_productos." where idorden = ".$this->idorden;
 		$con->ejecutar_sentencia($sql);
 	}
-	function updateStatus(){
+	function modificar_estatus($estatus){
 		$con= new conexion();
-		$sql="update orden set estatus='".$this->estatus."' where idorden=".$this->idorden;
+		$sql="UPDATE ordenes SET estatus ='".$estatus."' where idorden=".$this->idorden;
 		$con->ejecutar_sentencia($sql);
 	}
 	function cancelarOrden(){
@@ -86,7 +86,9 @@ class orden
 	}
 	function eliminar_orden(){
 		$con= new conexion();
-		$sql="delete from orden where idorden=".$this->idorden;
+		$sql="DELETE FROM ordenes WHERE idorden=".$this->idorden;
+		$con->ejecutar_sentencia($sql);
+		$sql = "DELETE FROM detalle_orden WHERE idorden=".$this -> idorden;
 		$con->ejecutar_sentencia($sql);
 	}
 	function listar_orden(){
