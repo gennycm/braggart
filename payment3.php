@@ -143,23 +143,16 @@
     }; 
         
 
-    /*Slidebar*/
-    (function($) {
-        $(document).ready(function() {
-            $.slidebars();
-            var deleteLog = false;
-            
-              /*Svg Painter*/
-     $('#diamond_little').lazylinepainter( 
-         {
-            "svgData": diamondSvg,
-            "strokeWidth": 2,
-            "strokeColor": "#FFFFFF",
-            "responsive": "true"
-        }).lazylinepainter('paint');
-
-        });
-    }) (jQuery);
+      jQuery(document).ready(function($) {
+            /*Svg Painter*/
+       $('#diamond_little').lazylinepainter( 
+           {
+              "svgData": diamondSvg,
+              "strokeWidth": 2,
+              "strokeColor": "#FFFFFF",
+              "responsive": "true"
+          }).lazylinepainter('paint');
+    });
 
 /*Password placeholder , so the placeholder actually shows, and not just dots*/
     $(function() {

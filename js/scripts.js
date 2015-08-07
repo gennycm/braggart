@@ -44,30 +44,6 @@ $('#add_to_cart_button').click(function(event){
 });
 
 
-/*LOADING STUFF
- $(function() {
-    var paths = $('path:not(defs path)');
-    var tlLoad  = new TimelineLite();
-        tlLoad.add([
-        //La tienda front letters
-            TweenLite.to(paths.eq(0), 0.7, {strokeDashoffset: 0, delay: 0.0}),
-            TweenLite.to(paths.eq(1), 0.7, {strokeDashoffset: 0, delay: 0.0}),
-            TweenLite.to(paths.eq(2), 0.7, {strokeDashoffset: 0, delay: 0.0}),
-            TweenLite.to(paths.eq(3), 0.7, {strokeDashoffset: 0, delay: 0.0}),
-            TweenLite.to(paths.eq(4), 0.7, {strokeDashoffset: 0, delay: 0.0}),
-            TweenLite.to(paths.eq(5), 0.7, {strokeDashoffset: 0, delay: 0.0}),
-            TweenLite.to(paths.eq(6), 0.7, {strokeDashoffset: 0, delay: 0.0}),
-            TweenLite.to(paths.eq(7), 0.7, {strokeDashoffset: 0, delay: 0.0}),
-            TweenLite.to(paths.eq(8), 0.7, {strokeDashoffset: 0, delay: 0.0}),
-            TweenLite.to(paths.eq(9), 0.7, {strokeDashoffset: 0, delay: 0.0}),
-            TweenLite.to(paths.eq(10), 0.7, {strokeDashoffset: 0, delay: 0.0}),
-            TweenLite.to(paths.eq(11), 0.7, {strokeDashoffset: 0, delay: 0.0}),
-            TweenLite.to(paths.eq(12), 0.7, {strokeDashoffset: 0, delay: 0.0}),    
-        ]);
-    });
-
-
-/**---------------------------------------------------------------------------**/
 
 var size = "none";
 
@@ -98,6 +74,26 @@ function hide_menu(){
 
 function display_cart(){
     $(".shopping-cart").animate({marginRight:"0px"});
+    var paths = $('#deco path');
+    var title = $('#cart_title');
+      
+
+        // For each path, set the stroke-dasharray and stroke-dashoffset
+        // equal to the path's total length, hence rendering it invisible
+        paths.each(function(i, e) {
+            e.style.strokeDasharray = e.style.strokeDashoffset = e.getTotalLength();
+        }); 
+        var tlTitle = new TimelineLite(); 
+        tlTitle.add("stagger", "+=0.5");
+        tlTitle.staggerFrom(title, 1, {scale:0, autoAlpha:0}, 0.6, "stagger");
+        tlTitle.play("stagger");
+        var tlCart  = new TimelineLite();
+        tlCart.add([
+            TweenLite.to(paths.eq(0), 1, {strokeDashoffset: 0, delay: 0.6}),
+            TweenLite.to(paths.eq(1), 1, {strokeDashoffset: 0, delay: 0.6}),
+            TweenLite.to(paths.eq(2), 1, {strokeDashoffset: 0, delay: 0.6}),  
+        ]);
+        tlCart.restart();
 }
 
 function hide_cart(){
@@ -135,6 +131,26 @@ function hide_info(){
 function display_wishlist(){
     $(".wishlist").animate({marginLeft:"0px"});
     console.log("in wishlist");
+    var paths = $('#wish_deco path');
+    var title = $('#wish_title');
+      
+
+        // For each path, set the stroke-dasharray and stroke-dashoffset
+        // equal to the path's total length, hence rendering it invisible
+        paths.each(function(i, e) {
+            e.style.strokeDasharray = e.style.strokeDashoffset = e.getTotalLength();
+        }); 
+        var tlTitle = new TimelineLite(); 
+        tlTitle.add("stagger", "+=0.5");
+        tlTitle.staggerFrom(title, 1, {scale:0, autoAlpha:0}, 0.6, "stagger");
+        tlTitle.play("stagger");
+        var tlCart  = new TimelineLite();
+        tlCart.add([
+            TweenLite.to(paths.eq(0), 1, {strokeDashoffset: 0, delay: 0.6}),
+            TweenLite.to(paths.eq(1), 1, {strokeDashoffset: 0, delay: 0.6}),
+            TweenLite.to(paths.eq(2), 1, {strokeDashoffset: 0, delay: 0.6}),  
+        ]);
+        tlCart.restart();
 }
 
 function hide_wishlist(){
@@ -464,6 +480,27 @@ function showProductoInfo(id_product){
 
             $(".product_info").animate({marginLeft:"0px"});
             console.log("Open");
+
+            var paths = $('#info_deco path');
+            var title = $('#info_title');
+      
+
+        // For each path, set the stroke-dasharray and stroke-dashoffset
+        // equal to the path's total length, hence rendering it invisible
+        paths.each(function(i, e) {
+            e.style.strokeDasharray = e.style.strokeDashoffset = e.getTotalLength();
+        }); 
+        var tlTitle = new TimelineLite(); 
+        tlTitle.add("stagger", "+=0.5");
+        tlTitle.staggerFrom(title, 1, {scale:0, autoAlpha:0}, 0.6, "stagger");
+        tlTitle.play("stagger");
+        var tlCart  = new TimelineLite();
+        tlCart.add([
+            TweenLite.to(paths.eq(0), 1, {strokeDashoffset: 0, delay: 0.6}),
+            TweenLite.to(paths.eq(1), 1, {strokeDashoffset: 0, delay: 0.6}),
+            TweenLite.to(paths.eq(2), 1, {strokeDashoffset: 0, delay: 0.6}),  
+        ]);
+        tlCart.restart();
 
 }
 

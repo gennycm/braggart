@@ -367,7 +367,7 @@
 
     /*Parallax scrolling*/
     var deleteLog = false;
-    var paths;
+    var paths, icons, descriptions;
 
     jQuery(document).ready(function($) {
       $(fullscreenParallax);
@@ -384,6 +384,8 @@
         
         // Store a reference to our paths, excluding our clip path
         paths = $('path:not(defs path)');
+        icons= $(".icon-container");
+        descriptions = $(".icon-p");
 
         // For each path, set the stroke-dasharray and stroke-dashoffset
         // equal to the path's total length, hence rendering it invisible
@@ -515,6 +517,20 @@
            offset: '99%'
          });
 
+       $('#us').waypoint(function() {
+        usCounter++;
+         console.log("us" + usCounter);
+         if (usCounter == 1) {
+            tlServ.add("stagger", "+=0.5");
+            tlServ.staggerFrom(icons, 0.5, {scale:0, autoAlpha:0}, 0.1, "stagger");
+            tlServ.play("stagger");
+            tlServ.from(descriptions, 0.5, {left:100, autoAlpha:0}, "-=0.25");
+            }else{
+                tlServ.restart();
+            }
+         }, {
+           offset: '60%'
+         });
 
        
     });
