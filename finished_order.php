@@ -64,27 +64,80 @@
 <script>
     /*Parallax scrolling*/
         
-
-    /*Slidebar*/
-    (function($) {
-        $(document).ready(function() {
-            $.slidebars();
-            var deleteLog = false;
-            /*$('#pagepiling').pagepiling({
-                menu: false,
-                anchors: ['camisa-sport-ajustada', 'camisa-elegante-ajustada', 'camisa-oficina-ajustada', 'camisa-casual-ajustada'],
-                navigation: {
-                    'textColor': '#f2f2f2',
-                    'bulletsColor': '#ccc',
-                    'position': 'right',
-                    'tooltips': ['SPORT AJUSTADA', 'ELEGANTE AJUSTADA', 'OFICINA AJUSTADA', 'CASUAL AJUSTADA']
+   var diamondSvg = {
+        "diamond_little": {
+            "strokepath": [
+                {
+                    "path": "M 37.521 18.512 L 37.521 49.847",
+                    "duration": 300
+                },
+                {
+                    "path": "M 37.576 18.621 L 53.416 41.372",
+                    "duration": 300
+                },
+                {
+                    "path": "M 37.521 18.512 L 21.854 42.012",
+                    "duration": 300
+                },
+                {
+                    "path": "M 21.854 42.012 L 37.521 49.847",
+                    "duration": 300
+                },
+                {
+                    "path": "M 37.521 49.847 L 53.588 41.725",
+                    "duration": 300
+                },
+                {
+                    "path": "M 21.854 42.012 L 21.854 26.805",
+                    "duration": 300
+                },
+                {
+                    "path": "M 21.854 26.805 L 37.521 32.164",
+                    "duration": 300
+                },
+                {
+                    "path": "M 37.521 32.164 L 53.416 26.519",
+                    "duration": 300
+                },
+                {
+                    "path": "M 37.521 32.164 L 21.854 42.012",
+                    "duration": 300
+                },
+                {
+                    "path": "M 21.854 26.805 L 37.521 49.847",
+                    "duration": 300
+                },
+                {
+                    "path": "M 37.521 49.847 L 53.416 26.805",
+                    "duration": 300
+                },
+                {
+                    "path": "M 37.521 32.164 L 53.016 41.372",
+                    "duration": 300
+                },
+                {
+                    "path": "M 53.588 26.519 L 53.588 41.372",
+                    "duration": 300
                 }
+            ],
+            "dimensions": {
+                "width": 75,
+                "height": 90
+            }
+        }
+    }; 
+        
 
-            });*/
-
-        });
-    }) (jQuery);
-
+      jQuery(document).ready(function($) {
+            /*Svg Painter*/
+       $('#diamond_little').lazylinepainter( 
+           {
+              "svgData": diamondSvg,
+              "strokeWidth": 2,
+              "strokeColor": "#FFFFFF",
+              "responsive": "true"
+          }).lazylinepainter('paint');
+    });
 /*Password placeholder , so the placeholder actually shows, and not just dots*/
     $(function() {
     // Invoke the plugin
