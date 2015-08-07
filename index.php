@@ -701,7 +701,6 @@
 <!--BODY-->
 <?php include_once("footer.html");?>
     
-<script src="http://imakewebthings.github.com/jquery-waypoints/waypoints.min.js" type="text/javascript"></script>
 <script>
     /*Fix para el parallax en Chrome*/
 
