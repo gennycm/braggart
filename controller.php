@@ -44,7 +44,7 @@ switch ($operaciones) {
 		$peso_productos = 0;
 		foreach ($cart as $product) {
 			$num_productos+= $product["amount"];
-			$peso_productos+= $product["amount"] * $product["weight"];
+			$peso_productos+= ($product["amount"] * $product["weight"]);
 		}
 
 		$transporte_token = explode("/", $_SESSION["braggart_transport_token"]);
@@ -69,7 +69,7 @@ switch ($operaciones) {
 		$orden -> id_rango_transporte = $id_rango_transporte;
 		$orden -> peso = $peso;	
 		$orden -> order_cart = $cart;
-		if($orden -> idorden != 0 || $orden -> insertar_orden()){
+		if($orden -> insertar_orden()){
 			Conekta::setApiKey("key_nxPDYXpi5rbSSLQvLLN58Q");
 			try{
 			  $charge = Conekta_Charge::create(array(
@@ -83,8 +83,10 @@ switch ($operaciones) {
 			      )
 			  ));
 			}catch (Conekta_Error $e){
+			  $orden -> eliminar_orden();
 			  header("Location: payment.php?msg=".$e->getMessage()."orden=".$orden -> idorden);			  
 			}
+			$orden -> modificar_estatus("Pagado");
 			header("Location: finished_order.php");
 		}
 
