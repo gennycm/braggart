@@ -700,6 +700,14 @@ div.color-square{
 	float: right;
 }
 
+.button{
+	border-radius: 0;
+	background-color: black;
+	color: white;
+	border: none;
+	font-size: 16pt;
+}
+
 .payment-form input[type="text"], .payment-form input[type="password"],.login-form input[type="text"], .login-form input[type="password"],.register-form input[type="text"], .register-form input[type="password"] {
 	text-align: left;
 	position: relative;
