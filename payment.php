@@ -1,9 +1,13 @@
+<?php 
+  session_start();
+  if(!isset($_SESSION["braggart_id_user"])){
+    header("Location: index.php?ac=login");
+  }
+?>
 <?php include_once("header.html");?>
 <!--BODY-->
 <?php
-  if(!isset($_SESSION["braggart_id_user"]) && !$_SESSION["braggart_id_user"] != 0){
-    header("index.php?ac=login");
-  }
+  include_once("cp/clases/userend.php");
 
   if(isset($_SESSION["braggar_payment_data"])){
     $payment_data = $_SESSION["braggar_payment_data"];
@@ -17,16 +21,18 @@
     $ciudad = $payment_data["ciudad"];
     $estado = $payment_data["estado"];
   }
-  else{    
-    $nombre = "";
-    $calle = "";
-    $numExt = "";
-    $numInt = "";
-    $codP = "";
-    $colFracc = "";
-    $municipio = "";
-    $ciudad = "";
-    $estado = "";
+  else{
+    $user = new userend($_SESSION["braggart_id_user"]);
+    $user -> obten_userend();    
+    $nombre = $user -> nombre;
+    $calle = $user -> calle;
+    $numExt = $user -> numExt;
+    $numInt = $user -> numInt;
+    $codP = $user -> codP;
+    $colFracc = $user -> colFracc;
+    $municipio = $user -> municipio;
+    $ciudad = $user -> ciudad;
+    $estado = $user -> estado;
   }
 ?>
 <div>

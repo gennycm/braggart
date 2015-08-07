@@ -14,7 +14,7 @@ var $precio;
 var $cantidad;
 var $id_combinacion;
 
-function detalle_orden($                                                                                                                                                                                                                                                                                                                                                                                                                                       9=0, $id_producto=0, $precio=0, $cantidad=0, $id_combinacion=0)
+function detalle_orden($idorden=0, $id_producto=0, $precio=0, $cantidad=0, $id_combinacion=0)
 {
 $this->ordenes=array();
 $this->productos=array();

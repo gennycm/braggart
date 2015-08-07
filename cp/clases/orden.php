@@ -42,7 +42,7 @@ class orden
 
 	function insertar_carrito(){
 		foreach ($this -> order_cart as $product) {
-			$detalle = new detalle_orden($this -> idorden, $product["id"], $product["price"]=0, $product["amount"], $product["id_combinacion"]);
+			$detalle = new detalle_orden($this -> idorden, $product["id"], $product["price"], $product["amount"], $product["id_combinacion"]);
 			$detalle -> asigna_productos_orden();
 		}
 		return true;
