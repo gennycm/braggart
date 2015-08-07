@@ -10,6 +10,9 @@
 
     if(isset($_GET["ac"]) && $_GET["ac"] == "login"){
         $notify_login = true;
+        if(isset($_SESSION["braggart_id_user"])){
+            $notify_login = false;            
+        }
     }
 ?>
 
@@ -699,8 +702,14 @@
 <!--Product Slidebar-->
 <?php include_once("wishlist.html");?>
 <!--BODY-->
+
 <?php include_once("footer.html");?>
-    
+<script type="text/javascript">
+    var notify_login = <?php echo json_encode($notify_login); ?>;
+    if(notify_login){
+        showMessage("Debes iniciar sesión", "Iniciar Sesión");
+    }
+</script>
 <script src="http://imakewebthings.github.com/jquery-waypoints/waypoints.min.js" type="text/javascript"></script>
 <script>
     /*Fix para el parallax en Chrome*/

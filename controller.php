@@ -45,7 +45,6 @@ switch ($operaciones) {
 		foreach ($cart as $product) {
 			$num_productos+= $product["amount"];
 			$peso_productos+= $product["amount"] * $product["weight"];
-			$precio_total_productos += $product["amount"] * $product["price"];
 		}
 
 		$transporte_token = explode("/", $_SESSION["braggart_transport_token"]);
@@ -55,7 +54,7 @@ switch ($operaciones) {
 		$payment_data = $_SESSION["braggar_payment_data"];
 		$direccion =  $payment_data["calle"]." ".$payment_data["numExt"]." ". $payment_data["numInt"].",\n".$payment_data["colFracc"]." ".$payment_data["ciudad"]." \n ".$payment_data["municipio"]." ".$payment_data["estado"]." ".$payment_data["codP"];
 		
-		$total_productos = $precio_total_productos;
+		$total_productos = $_SESSION["braggart_total_shop"];
 		$estatus = "Por cobrar";
 
 		$peso = $peso_productos;
@@ -70,26 +69,27 @@ switch ($operaciones) {
 		$orden -> id_rango_transporte = $id_rango_transporte;
 		$orden -> peso = $peso;	
 		$orden -> order_cart = $cart;
-		if($orden -> insertar_orden()){
+		if($orden -> idorden != 0 || $orden -> insertar_orden()){
 			Conekta::setApiKey("key_nxPDYXpi5rbSSLQvLLN58Q");
 			try{
 			  $charge = Conekta_Charge::create(array(
 			    "amount"=> intval($_SESSION["braggart_total_shop"])*100,
 			    "currency"=> "MXN",
 			    "description"=> "Compra de Camisas",
-			    "reference_id"=> "orden_de_id_interno",
+			    "reference_id"=> $orden -> idorden,
 			    "card"=> $_SESSION["braggart_pay_token"],
 			    "details"=> array(
 			      "email"=> $_SESSION["braggart_email_user"]
 			      )
 			  ));
 			}catch (Conekta_Error $e){
-			  header("Location: payment.php?msg=".echo $e->getMessage());			  
+			  header("Location: payment.php?msg=".$e->getMessage()."orden=".$orden -> idorden);			  
 			}
 			header("Location: finished_order.php");
 		}
+
 		else{
-			header("Location payment3.php?msg=2")
+			header("Location payment3.php?msg=2");
 		}
 		
 		//echo $charge->status;

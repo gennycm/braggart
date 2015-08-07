@@ -15,6 +15,14 @@ $('.navbar-default .navbar-nav> a').click(function(event){
     event.preventDefault();
 });
 
+$(".cart-icon a").click(function(event){
+    event.preventDefault();
+});
+
+$(".times-icon").click(function(event){
+    event.preventDefault();
+});
+
 $('#menu_a').click(function(event){
     event.preventDefault();
 });
@@ -264,6 +272,12 @@ function validateUserLogin(){
         $("#content-modal").html("Llena todos los campos para continuar.");
         $('#myModal').modal('toggle');
     }
+}
+
+function showMessage(message, header){
+            $("#header-modal").html(header);
+            $("#content-modal").html(message);
+            $('#myModal').modal('toggle');
 }
 
 function logIn(){

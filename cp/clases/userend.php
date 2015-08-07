@@ -242,6 +242,15 @@ class userend
 			$this->password=$row['password'];
 			$this->status=$row['status'];
 			$this->token=$row['token'];
+			$this -> nombre = $row["nom_completo"];
+		    $this -> calle = $row["num_calle"];
+		    $this -> numExt = $row["num_ext"];
+		    $this -> numInt = $row["num_int"];
+		    $this -> codP = $row["cp"];
+		    $this -> colFracc = $row["colonia"];
+		    $this -> municipio = $row["municipio"];
+		    $this -> ciudad = $row["ciudad"];
+		    $this -> estado = $row["estado"];
 		}
 		mysqli_free_result($result);
 	}
