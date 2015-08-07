@@ -113,13 +113,3 @@
 	}
 }
 
-/* Media for smaller devices */
-@media screen and (min-width: 360px) {
-	.sc_icon{
-		margin-left: 5%;
-	}
-
-	.wl_icon{
-		margin-left: 25%;
-	}
-}
