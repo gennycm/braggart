@@ -704,17 +704,12 @@
 <!--BODY-->
 
 <?php include_once("footer.html");?>
-<<<<<<< HEAD
-    
-=======
 <script type="text/javascript">
     var notify_login = <?php echo json_encode($notify_login); ?>;
     if(notify_login){
         showMessage("Debes iniciar sesión", "Iniciar Sesión");
     }
 </script>
-<script src="http://imakewebthings.github.com/jquery-waypoints/waypoints.min.js" type="text/javascript"></script>
->>>>>>> 1e4b6cd1fc280035d8fc9181f73ed346599c7606
 <script>
     /*Fix para el parallax en Chrome*/
 
