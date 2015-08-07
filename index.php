@@ -374,7 +374,7 @@
                         <path clip-path="url(#myClip)" fill="none" stroke="#000000" stroke-width="7" d="M511.957,341
                         c4.935,0,11.513,0,16.447,0"/>                       
                 </svg>
-                <svg  class="tienda_hex" xmlns="http://www.w3.org/2000/svg" width="800px" height="600px" viewBox="0 0 800 600">
+                <svg  id="tienda_hex" class="tienda_hex" xmlns="http://www.w3.org/2000/svg" width="800px" height="600px" viewBox="0 0 800 600">
                     <polygon opacity="0.3" fill="#ffffff" points="249,216.188 223,207.563 223,197.213 248.926,188.813 275,197.287 275,207.563 "/>
                     <polygon opacity="0.3" fill="#ffffff" points="258,256.688 232,248.063 232,237.713 257.926,229.313 284,237.787 284,248.063 "/>
                     <polygon opacity="0.3" fill="#ffffff" points="289.5,243.188 263,234.563 263,224.213 289.426,215.813 316,224.287 316,234.563 "/>
@@ -592,7 +592,7 @@
                             c0,13.666,2,27.666,0.667,41.333c-0.333,4.332-1.333,6.332-5.667,8c-3,1.332-9.666,2.666-12.666,0.666
                             c-6.667-4.666-6-18.666-6-25.666c0-2.668,0-5.334,0-7.668"/>
                 </svg>
-                <svg class="hexagons" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="800px" height="600px" viewBox="0 0 800 600">
+                <svg id="hexagons" class="hexagons" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="800px" height="600px" viewBox="0 0 800 600">
                     <polygon opacity="0.2" fill="#ffffff" points="376.5,265.656 337,252.719 337,237.194 376.389,224.594 416,237.306 416,252.719 "/>
                     <polygon opacity="0.2" fill="#ffffff" points="304.5,265.656 265,252.719 265,237.193 304.389,224.594 344,237.307 344,252.719 "/>
                     <polygon opacity="0.2" fill="#ffffff" points="338,243.156 299,230.219 299,214.694 337.889,202.094 377,214.806 377,230.219 "/>
@@ -630,9 +630,9 @@
 
         <div id="contact" class="parallax" data-background-speed-y="0" data-parallax-align="top">
             <div class="background_black"></div>
-            <div class="col-xs-12">
+            <div class="col-xs-12 centered_div">
                 <div class="col-lg-6 col-md-6 col-sm-6"></div>
-                <div class="col-lg-6 col-md-6 col-sm-6"><div>
+                <div class="col-lg-6 col-md-6 col-sm-6 "><div>
                    
                 <table class="contact" >
                     <tr>
@@ -971,6 +971,7 @@
         usCounter++;
          console.log("us" + usCounter);
          if (usCounter == 1) {
+             document.getElementById("tienda_hex").style.visibility = "visible";
             tlTiendaHex.add("stagger", "+=0.5");
             tlTiendaHex.staggerFrom(tienda_hex, 0.2, {scale:0, autoAlpha:0}, 0.1, "stagger");
             tlTiendaHex.play("stagger");
@@ -1057,6 +1058,7 @@
         shirtsCounter++;
          console.log("shirts" + shirtsCounter);
          if (shirtsCounter == 1) {
+            document.getElementById("hexagons").style.visibility = "visible";
             tlCamisasHex.add("stagger", "+=0.5");
             tlCamisasHex.staggerFrom(hexagons, 0.2, {scale:0, autoAlpha:0}, 0.15, "stagger");
             tlCamisasHex.play("stagger");
