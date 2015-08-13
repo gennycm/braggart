@@ -56,7 +56,7 @@
 
 
     $(window).load(function() {
-      var paths = $('path:not(defs path)');
+      var paths = $('#loader_dmnd path');
     var tlLoad  = new TimelineLite();
     paths.each(function(i, e) {
             e.style.strokeDasharray = e.style.strokeDashoffset = e.getTotalLength();
