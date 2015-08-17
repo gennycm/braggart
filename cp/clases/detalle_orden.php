@@ -59,7 +59,7 @@ $con= new conexion();
 $sql='select productos.id_producto,detalle_orden.precio,detalle_orden.cantidad,idorden,titulo_esp,id_combinacion 
 	  from detalle_orden,productos 
 	  where idorden='.$this->idorden.' 
-	  and productos.id_producto=detalle_orden.id_producto';
+	  and productos.id_producto = detalle_orden.id_producto';
 
 $resultado=$con->ejecutar_sentencia($sql); 
 

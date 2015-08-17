@@ -12,11 +12,21 @@
   include_once("cp/clases/detalle_orden.php");
   include_once("cp/clases/transporte.php");
   include_once("cp/clases/rango_transporte.php");
+  include_once("cp/clases/combinacion.php");
 
-  $ordenes = new orden();
-  $ordenes -> iduserend = $_SESSION["braggart_id_user"];
+  $id = $_GET["id"];
+  $pedido = new orden($id);
+  $pedido -> obtener_orden();
 
-  $pedidos = $ordenes -> listar_ordenes_por_usuario();
+  $detalle_orden = new detalle_orden();
+  $detalle_orden -> idorden = $id;
+  $detalle_orden -> obtener_productos_orden();
+  $productos = $detalle_orden -> productos;
+
+  if($pedido -> iduserend != $_SESSION["braggart_id_user"]){
+    header("Location: index.php");
+  }
+
 ?>
         <div class="full_background deliver">
             <div class="background_black"></div>
@@ -35,25 +45,24 @@
           <table class="pedidos">
             <thead>
                 <tr>
-                    <td># Pedido</td>
-                    <td>Total Productos</td>
-                    <td>Transporte</td>
-                    <td>Estado</td>
+                    <td>ID Producto / Nombre</td>
+                    <td>Precio</td>
+                    <td>Cantidad</td>
+                    <td>Talla</td>
                 </tr>
             </thead>
             <tbody>
                 <?php
-                    foreach ($pedidos as $pedido) {
-                        $transporte = new transporte($pedido["id_transporte"]);
-                        $transporte -> obtener_transporte();
-                        $rango_transporte = new rango_transporte($pedido["id_rango_transporte"]);
-                        $rango_transporte -> obtener_rango_transporte();
+                    foreach ($productos as $producto) {
+                        $id_combinacion = $producto -> id_combinacion;
+                        $combinacion = new combinacion($id_combinacion);
+                        $combinacion -> obtener_combinacion();
                  ?>
                 <tr>
-                    <td><a href="pedido.php?id=<?=$pedido["idorden"];?>"><?=$pedido["idorden"];?></a></td>
-                    <td><?=$pedido["total_productos"];?></td>
-                    <td><?=$rango_transporte -> cargo_por_envio?></td>
-                    <td><?=$pedido["estatus"];?></td>
+                    <td><a href="<?"shirts.php?s=".urlencode($producto -> titulo_esp);?>"><?=$producto -> id_producto;?> / <?=$producto -> titulo_esp;?> </a></td>
+                    <td><?=$producto -> precio_mxn;?></td>
+                    <td><?=$producto -> stock_general;?></td>
+                    <td><?=$combinacion -> nombre;?></td>
                 </tr>
                  <?php                            
                     }

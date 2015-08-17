@@ -124,6 +124,10 @@ div.pay{
 
 }
 
+div.deliver{
+	background-image: url(../img/img_deliver.jpg);
+}
+
 .stretch {
     margin: auto;
     height:100%;
@@ -662,6 +666,48 @@ div.color-square{
 }
 
 /*Cart*/
+
+/*MIS PEDIDOS*/
+table.pedidos{
+	width: 100%;
+	height:auto;
+	color:#000;
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
+table.pedidos > thead  tr  td{
+	font-size: 22px;
+}
+
+table.pedidos > thead{
+	border-bottom:solid 2px #000; 
+}
+
+table.pedidos tbody  tr  td{
+	font-size:16px;
+	padding-top:15px;
+	padding-bottom:15px;
+	padding-left: 15px;
+	padding-right: 15px;
+}
+
+div.pedidos-container{
+	height:auto;
+	max-height: 500px;
+	overflow: auto;
+	position: relative;
+}
+
+div.pedidos-background{
+	position:absolute;
+	height:100%;
+	width:100%;
+	background-color: #fff;
+	opacity: 0.7;
+	top:0;
+}
+/*MIS PEDIDOS*/
 
 /*Login form, Register form and Payment*/
 .login-form, .register-form{

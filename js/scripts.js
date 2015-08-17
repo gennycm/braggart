@@ -321,7 +321,7 @@ function logIn(){
                 mensaje = "¡Bienvenido "+ email+"!";
                 $("input[name='email-login']").val("");
                 $("input[name='pass-login']").val("");
-                var newHtml = '<li><a href="#" class="sb-open-right" id="login-button">'+email+'</a></li>'+
+                var newHtml = '<li><a href="mis_pedidos.php" class="sb-open-right" id="login-button">'+email+'</a></li>'+
                               '<li><a href="#" onclick="logOut()"> Cerrar Sesión</a></li>'+
                               '<li><a href="#" onclick="hide_menu()"><i class="fa fa-chevron-up"></i></a></li>';
                 $(".navbar-right").html(newHtml);

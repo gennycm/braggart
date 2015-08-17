@@ -8,6 +8,15 @@
   header('Access-Control-Allow-Origin: *');
   header('Access-Control-Allow-Methods: GET, POST');  
 
+  if(isset($page_title) && $page_title == ""){
+    $page_title = " Braggart | MADE FOR ME";
+  }
+  else{
+    if(!isset($page_title)){
+      $page_title = " Braggart | MADE FOR ME";
+    }
+  }
+
 ?>
 <!DOCTYPE html>
 <html lang="en" >
@@ -16,7 +25,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     
-    <title>Inicio | Braggart</title>
+    <title><?=$page_title;?></title>
     <link rel="icon" type="image/png" href="img/favico.png">
     <script type="text/javascript" src="js/greensock/TweenMax.min.js"></script>
 
@@ -103,7 +112,7 @@
             <ul class="nav navbar-nav navbar-right">
               <?php 
                 if($email != ""){
-                  echo '<li><a href="#" id="login-button">'.$email.'</a></li>'.
+                  echo '<li><a href="mis_pedidos.php" id="login-button">'.$email.'</a></li>'.
                        '<li><a href="#" onclick="logOut()">Cerrar Sesión</a></li>'.
                        '<li><a href="#" id="menu_chevron" onclick="hide_menu()"><i class="fa fa-chevron-up"></i></a></li>';
                 }
