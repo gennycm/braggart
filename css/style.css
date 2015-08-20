@@ -678,6 +678,7 @@ table.pedidos{
 
 table.pedidos > thead  tr  td{
 	font-size: 22px;
+	text-align: center;
 }
 
 table.pedidos > thead{
@@ -690,12 +691,14 @@ table.pedidos tbody  tr  td{
 	padding-bottom:15px;
 	padding-left: 15px;
 	padding-right: 15px;
+	text-align: center;
 }
 
 div.pedidos-container{
 	height:auto;
-	max-height: 500px;
+	max-height: 500px;f
 	overflow: auto;
+	overflow-x:hidden;
 	position: relative;
 }
 

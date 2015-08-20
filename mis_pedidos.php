@@ -39,6 +39,7 @@
                     <td>Total Productos</td>
                     <td>Transporte</td>
                     <td>Estado</td>
+                    <td>Fecha</td>
                 </tr>
             </thead>
             <tbody>
@@ -54,13 +55,12 @@
                     <td><?=$pedido["total_productos"];?></td>
                     <td><?=$rango_transporte -> cargo_por_envio?></td>
                     <td><?=$pedido["estatus"];?></td>
+                    <td><?=$pedido["fecha"];?></td>
                 </tr>
                  <?php                            
                     }
                  ?>
             </tbody>
-            <tfooter>
-            </tfooter>
           </table>
         </div>
     </div>
