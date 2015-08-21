@@ -1485,8 +1485,8 @@ switch($operaciones){
 			$correoEnvioProductos = new correoEnvioProductos($_POST['idorden']);
 			$send = $correoEnvioProductos->enviar();
 			$orden = new orden($_POST['idorden']);
-			$orden->estatus = 4;
-			$orden->updateStatus();
+			$estatus = "Pedido Confirmado";
+			$orden->modificar_estatus($estatus);
 			if($send){
 				echo 1;
 			}else{

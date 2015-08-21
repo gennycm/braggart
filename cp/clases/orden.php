@@ -102,14 +102,13 @@ class orden
 			$registro['idorden']=$fila['idorden'];
 			$registro['fecha']=date("m/d/Y", strtotime($fila['fecha']));
 			$registro['iduserend']=$fila['iduserend'];
-			$clientes = new userend($registro['iduserend']);
-			$clientes->obteneDatosUserend();
-			$registro['nombre'] = $clientes->datosuserend->nombre;
-			$registro['apellido'] = $clientes->datosuserend->apellido;		
+			$usuario = new userend($registro['iduserend']);
+			$usuario -> obten_userend();
+			$registro['nombre'] = $usuario -> nombre;
 			$registro['num_productos']=$fila['num_productos'];
 			$registro['total_productos']=$fila['total_productos'];
 			$registro['estatus']=$fila['estatus'];
-			$registro['iddireccion'] = $fila['iddireccion'];
+			$registro['direccion'] = $fila['direccion'];
 			$registro['peso'] = $fila['peso'];
 			array_push($resultados,$registro);
 		}
@@ -157,7 +156,7 @@ class orden
 			$this->transportes->obtener_rango_transporte();
 			$this->precioTransporte = $this->transportes->cargo_por_envio;
 			$this->peso=$fila['peso'];
-			$this->iddireccion = $fila['iddireccion'];
+			$this->direccion = $fila['direccion'];
 		}
 		mysqli_free_result($temporal);
 	}

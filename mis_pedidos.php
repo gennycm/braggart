@@ -28,14 +28,14 @@
             </div>
         </a>       
                 
-<div class="container" style="margin-top:150px;">
+<div class="container" style="margin-top:150px;margin-bottom:50px;">
     <div class="col-lg-12 pedidos-container">
         <div class="pedidos-background"></div>
          <div class="col-lg-12 col-md-12 col-sm-12" style="position:relative;z-index:999;overflow:auto; ">
           <table class="pedidos">
             <thead>
                 <tr>
-                    <td># Pedido</td>
+                    <td>No. de Pedido</td>
                     <td>Total Productos</td>
                     <td>Transporte</td>
                     <td>Estado</td>
@@ -51,9 +51,9 @@
                         $rango_transporte -> obtener_rango_transporte();
                  ?>
                 <tr>
-                    <td><a href="pedido.php?id=<?=$pedido["idorden"];?>"><?=$pedido["idorden"];?></a></td>
-                    <td><?=$pedido["total_productos"];?></td>
-                    <td><?=$rango_transporte -> cargo_por_envio?></td>
+                    <td><a href="pedido.php?id=<?=$pedido["idorden"];?>">Pedido No. <?=$pedido["idorden"];?></a></td>
+                    <td>$<?=$pedido["total_productos"];?> MXN</td>
+                    <td>$<?=$rango_transporte -> cargo_por_envio?> MXN</td>
                     <td><?=$pedido["estatus"];?></td>
                     <td><?=$pedido["fecha"];?></td>
                 </tr>

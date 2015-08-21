@@ -172,58 +172,35 @@ include('menu.php');
                             </thead>
                             <tbody class="styled-tbody" id="sortable">
                	<?php
-                 	foreach ($lista_orden as $elemento) {
-                 			if($seguridad->valida_permiso_usuario($_SESSION['idusuario'],$clave3)==0){
-								if($elemento['status']!=0){
-									$img='img/visible.png';
-									$funcion='';
-									$class = 'nover';
-								}
-								else{
-							  		$img='img/invisible.png';
-									$funcion='';
-									$class = 'ver';
-							   }	
-							}
-							else{
-								if($elemento['status']!=0){
-									$img='img/visible.png';
-									$funcion='Desactivar('.$elemento[''].')';
-									$class = 'nover';
-								}
-								else{
-							  		$img='img/invisible.png';
-									$funcion='Activar('.$elemento['idorden'].')';
-									$class = 'ver';
-							   }
-							}
+                 foreach ($lista_orden as $elemento) {
+                 			
 
-              if($elemento['estatus'] == 0){
-                $label = '<span class="label label-danger">Incompletas</span>';
-              }
-              if($elemento['estatus'] == 1){
-                $label = '<span class="label label-warning">Pendiente</span>';
-              }
-              if($elemento['estatus'] == 2){
-                $label = '<span class="label label-warning">Proceso</span>';
-              } 
-              if($elemento['estatus'] == 3){
-                $label = '<span class="label label-success">Pagado</span>';
-              }   
-              if($elemento['estatus'] == 4){
-                $label = '<span class="label label-info">Enviado</span>';
-              } 				
-						echo  '<tr>
-                              	                  
-                                <td class="text-center" width="50px"><a href="formOrden.php?idorden='.$elemento['idorden'].'">'.$elemento['idorden'].'</a></td>
-                                <td class="text-center"><a href="formOrden.php?idorden='.$elemento['idorden'].'">'.$elemento['nombre'].' '.$elemento['apellido'].'</a></td>                                
-                                <td class="text-center">'.$elemento['fecha'].'</td>
-                                <td class="text-center">'.$elemento['num_productos'].'</td>
-                                <td class="text-center">$'.$elemento['total_productos'].'</td>
-                                <td class="text-center">'.$label.'</td>
-                                
-                              </tr>';
-					}
+                    if($elemento['estatus'] == 0){
+                      $label = '<span class="label label-danger">Incompletas</span>';
+                    }
+                    if($elemento['estatus'] == 1){
+                      $label = '<span class="label label-warning">Pendiente</span>';
+                    }
+                    if($elemento['estatus'] == "Pedido Confirmado"){
+                      $label = '<span class="label label-warning">Pedido Confirmado</span>';
+                    } 
+                    if($elemento['estatus'] == "Pagado"){
+                      $label = '<span class="label label-success">Pagado</span>';
+                    }   
+                    if($elemento['estatus'] == 4){
+                      $label = '<span class="label label-info">Enviado</span>';
+                    } 				
+      						echo  '<tr>
+                                    	                  
+                                      <td class="text-center" width="50px"><a href="formOrden.php?idorden='.$elemento['idorden'].'">'.$elemento['idorden'].'</a></td>
+                                      <td class="text-center"><a href="formOrden.php?idorden='.$elemento['idorden'].'">'.$elemento['nombre'].'</a></td>                                
+                                      <td class="text-center">'.$elemento['fecha'].'</td>
+                                      <td class="text-center">'.$elemento['num_productos'].'</td>
+                                      <td class="text-center">$'.$elemento['total_productos'].'</td>
+                                      <td class="text-center">'.$label.'</td>
+                                      
+                                    </tr>';
+      					}
          		?>	       
          					</form>                
                             </tbody>

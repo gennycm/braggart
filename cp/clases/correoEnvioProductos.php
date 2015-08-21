@@ -9,7 +9,7 @@ class correoEnvioProductos extends correo
     var $userend;
     var $datosuserend;
     var $orden;
-    var $path  = "http://clientes.locker.com.mx/notmonday/";
+    var $path  = "http://brentheftye.mx/braggart/";
 
     function correoEnvioProductos($idorden)
     {    
@@ -23,7 +23,7 @@ class correoEnvioProductos extends correo
     
     function genera_asunto()
     {
-        $this->correo->Subject='NotMonday Orden En Proceso';
+        $this->correo->Subject='Braggart / Confirmación de Pedido';
     }
     
     function genera_destino()
@@ -40,7 +40,7 @@ $this->correo->Body = '<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http:/
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
-        <title>Message NotMonday</title> <!-- Nombre del sitio web -->
+        <title>Mensaje Braggart</title> <!-- Nombre del sitio web -->
         
 
         <style> 
@@ -99,15 +99,15 @@ $this->correo->Body = '<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http:/
                         <tr>
                             <td align="center" class="logo" style="border-bottom:4px solid #333333;padding:7px 0">
                                 <!-- Nombre del sitio web, url de la página, ruta del logo de la página y otra ves el nombre.-->
-                                <a title="NotMonday" href="'.$this->path.'" style="color:#337ff1">
-                                    <img src="'.$this->path.'img/logo.png" alt="NotMonday" />
+                                <a title="Braggart" href="'.$this->path.'" style="color:#337ff1">
+                                    <img src="'.$this->path.'img/logo.png" alt="Braggart" />
                                 </a>
                             </td>
                         </tr>
                         <tr>
                             <td align="center" class="titleblock" style="padding:7px 0">
                                 <font size="2" face="Open-sans, sans-serif" color="#555454">                                    
-                                    <span class="subtitle" style="font-weight:500;font-size:16px;text-transform:uppercase;line-height:25px">Pedido Enviado</span>
+                                    <span class="subtitle" style="font-weight:500;font-size:16px;line-height:25px">Pedido Confirmado</span>
                                 </font>
                             </td>
                         </tr>
@@ -124,24 +124,26 @@ $this->correo->Body = '<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http:/
                                                 <p data-html-only="1" style="border-bottom:1px solid #D6D4D4;margin:3px 0 7px;text-transform:uppercase;font-weight:500;font-size:15px;padding-bottom:10px">
                                                     Detalles del mensaje:</p>
                                                 <span style="color:#777">
-                                                    Hola '.$this->userend->datosuserend->nombre.' '.$this->userend->datosuserend->apellido.' </br>
-                                                    <span style="color:#333"><strong>Le agradecemos por realizar sus compras en NOTMONDAY.</strong></span><br />
+                                                    Hola '.$this->userend->nombre.' </br>
+                                                    <span style="color:#333"><strong>Le agradecemos por realizar su compra en BRAGGART.</strong></span><br />
                                                 </span>
-                                                <p data-html-only="1" style="border-bottom:1px solid #D6D4D4;margin:3px 0 7px;text-transform:uppercase;font-weight:500;font-size:18px;padding-bottom:10px">
-                                                    PEDIDO-ENVIADO:</p>
+                                                <p data-html-only="1" style="border-bottom:1px solid #D6D4D4;margin:3px 0 7px;font-weight:500;font-size:18px;padding-bottom:10px">
+                                                    Pedido Confirmado:</p>
                                                 <span style="color:#777">
                                                     <span style="color:#333">El pedido con el folio '.$this->orden->idorden.' ha sido enviado.</span><br />
                                                     <span style="color:#333"><strong>Fecha De Compra: </strong>'.$this->orden->fecha.'</span><br />
                                                     <span style="color:#333"><strong>Cantidad De Productos: </strong>'.$this->orden->num_productos.'</span><br />
                                                     <span style="color:#333"><strong>Precio del transporte: </strong>'.$this->orden->precioTransporte.'</span><br />
                                                     <span style="color:#333"><strong>Total Compra: </strong>'.$this->orden->total_productos.'</span><br />
-                                                    <span style="color:#333"><strong>Estado de la orden: </strong>Enviado</span><br />
+                                                    <span style="color:#333"><strong>Estado de la orden: </strong>Confirmado</span><br />
                                                 </span>
                                                 <p data-html-only="1" style="border-bottom:1px solid #D6D4D4;margin:3px 0 7px;text-transform:uppercase;font-weight:500;font-size:12px;padding-bottom:10px">
-                                                    ¡gracias por su compra!.</p>    
+                                                    ¡Gracias por su compra!.</p>    
                                             </font>
                                         </td>
-                                        <td width="10" style="padding:7px 0">&nbsp;</td>
+                                        <td width="10" style="padding:7px 0">
+                                            
+                                        </td>
                                     </tr>
                                 </table>
                             </td>
@@ -155,7 +157,7 @@ $this->correo->Body = '<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http:/
                         <tr>
                             <td class="footer" style="border-top:4px solid #333333;padding:7px 0">
                                         <!-- url y nombre de la página web -->
-                                <span><a href="'.$this->path.'" style="color:#337ff1">NotMonday</a></span>
+                                <span><a href="'.$this->path.'" style="color:#337ff1">Braggart</a></span>
                             </td>
                         </tr>
                     </table>

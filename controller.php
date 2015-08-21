@@ -42,6 +42,9 @@ switch ($operaciones) {
 		$cart = $_SESSION["braggart_cart"];
 		$num_productos = 0;
 		$peso_productos = 0;
+		$compra_realizable = true;
+		$id_cart_producto_agotado = 0;
+
 		foreach ($cart as $product) {
 			$producto = new producto($product["id"]);
         	$producto -> obtener_producto();
@@ -71,7 +74,24 @@ switch ($operaciones) {
 		$orden -> id_rango_transporte = $id_rango_transporte;
 		$orden -> peso = $peso;	
 		$orden -> order_cart = $cart;
-		if($orden -> insertar_orden()){
+
+		foreach ($cart as $product) {
+			$combinacion = new combinacion($product["id_combinacion"]);
+			$combinacion -> obtener_combinacion();
+			$amount = $product["amount"];
+			$nuevo_stock = $combinacion -> stock - $amount;
+			if($nuevo_stock < 0){
+				$compra_realizable = false;
+				$id_cart_producto_agotado = $product["unique_id"];
+				break;
+			}
+			else{
+				$combinacion -> stock = $nuevo_stock;
+				$combinacion -> modificar_combinacion();
+			}
+		}
+
+		if($compra_realizable && $orden -> insertar_orden()){
 			Conekta::setApiKey("key_nxPDYXpi5rbSSLQvLLN58Q");
 			try{
 			  $charge = Conekta_Charge::create(array(
@@ -88,13 +108,19 @@ switch ($operaciones) {
 			  $orden -> eliminar_orden();
 			  header("Location: payment.php?msg=".$e->getMessage()."orden=".$orden -> idorden);			  
 			}
+
 			$orden -> modificar_estatus("Pagado");
 			$_SESSION["braggart_cart"] = array();
 			header("Location: finished_order.php");
 		}
 
 		else{
-			header("Location payment3.php?msg=2");
+			if(!$compra_realizable && $id_cart_producto_agotado != 0){
+				header("Location payment3.php?msg=3&cpa=".$id_cart_producto_agotado);
+			}
+			else{
+				header("Location payment3.php?msg=2");
+			}
 		}
 		
 		//echo $charge->status;

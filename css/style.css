@@ -696,7 +696,7 @@ table.pedidos tbody  tr  td{
 
 div.pedidos-container{
 	height:auto;
-	max-height: 500px;f
+	/*max-height: 500px;*/
 	overflow: auto;
 	overflow-x:hidden;
 	position: relative;
