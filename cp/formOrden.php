@@ -21,11 +21,12 @@ if(isset($_REQUEST['idusuario'])){
 	$userend = new userend($orden->iduserend);
 	$userend->obten_userend();
 	$userend->obteneDatosUserend();
-	$userend->obtenerDireccion($orden->iddireccion);
 	$transporte = new transporte($orden->id_transporte);
 	$transporte->obtener_transporte();
 	$detalleOrden = new detalle_orden($id);
 	$detalleOrden->obtener_productos_orden();
+
+    $sort = "";
 ?>
 
 <?php
@@ -108,19 +109,15 @@ z-index: 10;
                        	<p class="subtitulo">Datos del usuario</p>
                        	<div id="msgnombre" class="input-group espacios">
                     		<span class="input-group-addon es"><i class="fa fa-user"></i></span>
-                        	<input id="nombre1" disabled  name="nombre1" type="text" class="form-control dis" placeholder="Ingresa tu primer nombre aquí" value="<?=$userend->datosuserend->nombre?> <?=$userend->datosuserend->apellido?>">
+                        	<input id="nombre1" disabled  name="nombre1" type="text" class="form-control dis" placeholder="Ingresa tu primer nombre aquí" value="<?=$userend->nombre?>">
                        	</div>
                        	<div class="input-group espacios">
                     		<span class="input-group-addon es"><i class="fa fa-envelope"></i></span>
                         	<input id="nombre2" disabled  name="nombre2" type="text" class="form-control dis" placeholder="Ingresa tu segundo nombre aquí" value="<?=$userend->correo?>">
                        	</div>
                        	<p class="subtitulo">Datos de la dirección</p>
-                       	  <span class="txt"><?=$userend->userendDireccion->nombre?> <?=$userend->userendDireccion->apellido?></span></br>
-		                  <span class="txt"><?=$userend->userendDireccion->telefono?></span></br>
-		                  <span class="txt"><?=$userend->userendDireccion->company?></span></br>
-		                  <span class="txt"><?=$userend->userendDireccion->direccion?></span></br>
-		                  <span class="txt"><?=$userend->userendDireccion->ciudad?></span></br>
-		                  <span class="txt">C.P: <?=$userend->userendDireccion->zip?></span></br>
+                       	  <span class="txt"><?=$userend -> nombre; ?>  </span></br>
+		                  <span class="txt"><?=$orden -> direccion;?></span></br>
 						
 						<p class="subtitulo">Datos Del Metodo De Envío</p>
 
@@ -168,8 +165,10 @@ z-index: 10;
 					                            $atributo -> obtener_atributo();
 					                            $valor = new valor($id_valor,$id_atributo_tpm);
 					                            $valor -> obtener_valor();
-					                            $texto_combinacion .= $atributo -> nombre_esp.": ".$valor -> nombre_esp." ";
+					                            $texto_combinacion = $atributo -> nombre_esp.": ".$valor -> nombre_esp." ";
 					                            $i++;
+                                                $precio_real = $producto -> precio_mxn * (1 + ($producto -> impuesto / 100));
+
 					                        }
 					                    }
 					            ?>
@@ -178,10 +177,10 @@ z-index: 10;
 						            <th class="text-center" width="100px">
 	                            		<img class="img-responsive" aling="center" style="width:100%;" src="../imgProductos/<?=$producto->img_principal?>">
 	                            	</th>
-									<th width="500px" class="text-center"><?=$producto->titulo_esp?><?=$texto_combinacion?></th>
-	                                <th class="text-center">$<?=$producto->precio_mxn?></th>                                
+									<th width="500px" class="text-center"><?=$producto->titulo_esp?> / <?=$texto_combinacion?></th>
+	                                <th class="text-center">$<?=$precio_real?></th>                                
 	                                <th class="text-center"><?=$keyProd->stock_general?></th>
-	                                <th class="text-center">$<?=$keyProd->stock_general*$producto->precio_mxn?></th>
+	                                <th class="text-center">$<?=$keyProd->stock_general * $precio_real?></th>
                             	</tr>
 					            <?php        
                             		}

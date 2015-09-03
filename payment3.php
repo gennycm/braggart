@@ -22,6 +22,23 @@
 
       $total = $precio_total + $rango_transporte -> cargo_por_envio;
       $_SESSION["braggart_total_shop"] = $total;
+
+      $id_cart_producto_agotado = 0;
+      if(isset($_GET["msg"])){
+        $msg = $_GET["msg"];
+        switch ($msg) {
+            case '3':
+                if(isset($_GET["cpa"])){
+                    $id_cart_producto_agotado = $_GET["cpa"];
+                    
+                }
+                break;
+            default:
+                # code...
+                break;
+        }
+      }
+
 ?>
 <div>
         <a href="#" id="menu_a" style="display:block; position:fixed;z-index:1000;" onclick="display_menu()">

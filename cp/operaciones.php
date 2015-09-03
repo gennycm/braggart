@@ -1484,13 +1484,14 @@ switch($operaciones){
 		case 'correoPedidoEnviado':
 			$correoEnvioProductos = new correoEnvioProductos($_POST['idorden']);
 			$send = $correoEnvioProductos->enviar();
+			echo $correoEnvioProductos->correo->Body;
 			$orden = new orden($_POST['idorden']);
-			$orden->estatus = 4;
-			$orden->updateStatus();
+			$estatus = "Pedido Confirmado";
+			$orden->modificar_estatus($estatus);
 			if($send){
-				echo 1;
+				echo $send;
 			}else{
-				echo 0;
+				echo $send;
 			}
 		break;
 }

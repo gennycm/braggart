@@ -10,6 +10,8 @@ class userend
 	var $password;
 	var $status;
 	var $token;
+	var $token_date;
+	var $token_expire;
 	var $datosuserend;
 	var $direcciones;
 	var $userendDireccion;
@@ -24,13 +26,13 @@ class userend
     var $ciudad;
     var $estado;
 
-	function userend($a = 0, $b = '', $c = '', $stat = 0)
+	function userend($iduserend = 0, $correo = '', $password = '', $status = 0)
 	{
-		$this -> iduserend = $a;
-		$this -> correo = $b;
-		$this -> password = $c;
-		$this -> status = $stat;
-		$this -> datosuserend = new datosuserend($a);
+		$this -> iduserend = $iduserend;
+		$this -> correo = $correo;
+		$this -> password = $password;
+		$this -> status = $status;
+		$this -> datosuserend = new datosuserend($iduserend);
 		$this -> direcciones = array();
 	}
 	
@@ -91,6 +93,13 @@ class userend
 		$sql="update userend set password=MD5('".$this->password."') where iduserend=".$this->iduserend;
 		$conexion->ejecutar_sentencia($sql);
 	}
+
+	function modificar_password_por_token(){
+		$conexion= new conexion();
+		$sql = "UPDATE userend SET password = MD5('".$this -> password."') WHERE token ='".$this -> token."'";
+		$conexion->ejecutar_sentencia($sql);
+	}
+
 	function elimina_userend()
 	{
 		$conexion=new conexion();
@@ -137,6 +146,32 @@ class userend
 		}
 		mysqli_free_result($result);
 		return $resultados;
+	}
+
+	function genera_token_y_expiracion(){
+		$token = uniqid($this -> userend);
+		$token_date = date("Y-m-d h:i:sa");
+		$token_expiration = date("Y/m/d h:i:sa", strtotime("+30 minutes"));
+		$conexion = new conexion();
+		$sql = "UPDATE userend SET token = '".$token."', token_date = '".$token_date."', token_expiration = '".$token_expiration."' WHERE iduserend = ".$this->iduserend;
+		$conexion->ejecutar_sentencia($sql);
+	}
+
+	function token_valido(){
+		$conexion=new conexion();
+		$sql="SELECT * FROM userend WHERE token = '".$this -> token."'";
+		$result=$conexion->ejecutar_sentencia($sql);
+		while($row=mysqli_fetch_array($result))
+		{
+			$this -> token_date = $row['token_date'];
+			$this -> token_expiration = $row['token_expiration'];
+		}
+		mysqli_free_result($result);
+
+		$date1 = new DateTime("now");
+		$date2 = new DateTime($this -> token_expiration);
+
+		return $date1 < $date2;
 	}
 	
 	function listauserendDesactivadas()
@@ -234,6 +269,30 @@ class userend
 	{
 		$conexion=new conexion();
 		$sql="select * from userend where iduserend='".$this->iduserend."'";
+		$result=$conexion->ejecutar_sentencia($sql);
+		while($row=mysqli_fetch_array($result))
+		{
+			$this->iduserend=$row['iduserend'];
+			$this->correo=$row['correo'];
+			$this->password=$row['password'];
+			$this->status=$row['status'];
+			$this->token=$row['token'];
+			$this -> nombre = $row["nom_completo"];
+		    $this -> calle = $row["num_calle"];
+		    $this -> numExt = $row["num_ext"];
+		    $this -> numInt = $row["num_int"];
+		    $this -> codP = $row["cp"];
+		    $this -> colFracc = $row["colonia"];
+		    $this -> municipio = $row["municipio"];
+		    $this -> ciudad = $row["ciudad"];
+		    $this -> estado = $row["estado"];
+		}
+		mysqli_free_result($result);
+	}
+
+	function obtener_userend_por_email(){
+		$conexion=new conexion();
+		$sql="select * from userend where correo='".$this->correo."'";
 		$result=$conexion->ejecutar_sentencia($sql);
 		while($row=mysqli_fetch_array($result))
 		{

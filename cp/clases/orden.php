@@ -15,6 +15,7 @@ class orden
 	var $id_rango_transporte;
 	var $peso;
 	var $order_cart;
+	var $detalles_ordenes;
 	
 	function orden($id = 0,$fecha='',$iduserend='',$num_productos='',$total_productos='',$estatus='',$direccion='', $id_transporte = "", $id_rango_transporte = "", $peso = 0, $order_cart = array()){
 		$this -> idorden=$id;
@@ -50,28 +51,28 @@ class orden
 
 	function modificar_orden(){
 		$con= new conexion();
-		$sql="update orden set fecha='".$this->fecha."',iduserend='".$this->iduserend."',num_productos='".$this->num_productos."',total_productos='".$this->total_productos."',estatus='".$this->estatus."', iddireccion = ".$this->iddireccion." where idorden=".$this->idorden;
+		$sql="update ordenes set fecha='".$this->fecha."',iduserend='".$this->iduserend."',num_productos='".$this->num_productos."',total_productos='".$this->total_productos."',estatus='".$this->estatus."', iddireccion = ".$this->iddireccion." where idorden=".$this->idorden;
 		$con->ejecutar_sentencia($sql);
 	}
 	
 	function modificarOrdenTotales(){
 		$con = new conexion();
-		$sql = "UPDATE orden SET num_productos='".$this->num_productos."', total_productos = '".$this->total_productos."' where idorden = ".$this->idorden;
+		$sql = "UPDATE ordenes SET num_productos='".$this->num_productos."', total_productos = '".$this->total_productos."' where idorden = ".$this->idorden;
 		$con->ejecutar_sentencia($sql);
 	}
 	function modificarDireccion(){
 		$con = new conexion();
-		$sql = "update orden set iddireccion=".$this->iddireccion." where idorden = ".$this->idorden;
+		$sql = "update ordenes set iddireccion=".$this->iddireccion." where idorden = ".$this->idorden;
 		$con->ejecutar_sentencia($sql);
 	}
 	function modificarTransporte(){
 		$con = new conexion();
-		$sql = "update orden set id_transporte=".$this->id_transporte.", id_rango_transporte = ".$this->id_rango_transporte." where idorden = ".$this->idorden;
+		$sql = "update ordenes set id_transporte=".$this->id_transporte.", id_rango_transporte = ".$this->id_rango_transporte." where idorden = ".$this->idorden;
 		$con->ejecutar_sentencia($sql);
 	}
 	function modificarPrecio(){
 		$con = new conexion();
-		$sql = "update orden set total_productos=".$this->total_productos." where idorden = ".$this->idorden;
+		$sql = "update ordenes set total_productos=".$this->total_productos." where idorden = ".$this->idorden;
 		$con->ejecutar_sentencia($sql);
 	}
 	function modificar_estatus($estatus){
@@ -81,7 +82,7 @@ class orden
 	}
 	function cancelarOrden(){
 		$con= new conexion();
-		$sql="update orden set estatus = 1 where idorden=".$this->idorden;	
+		$sql="update ordenes set estatus = 1 where idorden=".$this->idorden;	
 		$con->ejecutar_sentencia($sql);
 	}
 	function eliminar_orden(){
@@ -93,7 +94,7 @@ class orden
 	}
 	function listar_orden(){
 		$con= new conexion();
-		$sql="select * from orden";
+		$sql="select * from ordenes";
 		$temporal=$con->ejecutar_sentencia($sql);
 		$resultados=array();
 		while($fila = mysqli_fetch_array($temporal)){
@@ -101,15 +102,37 @@ class orden
 			$registro['idorden']=$fila['idorden'];
 			$registro['fecha']=date("m/d/Y", strtotime($fila['fecha']));
 			$registro['iduserend']=$fila['iduserend'];
-			$clientes = new userend($registro['iduserend']);
-			$clientes->obteneDatosUserend();
-			$registro['nombre'] = $clientes->datosuserend->nombre;
-			$registro['apellido'] = $clientes->datosuserend->apellido;		
+			$usuario = new userend($registro['iduserend']);
+			$usuario -> obten_userend();
+			$registro['nombre'] = $usuario -> nombre;
 			$registro['num_productos']=$fila['num_productos'];
 			$registro['total_productos']=$fila['total_productos'];
 			$registro['estatus']=$fila['estatus'];
-			$registro['iddireccion'] = $fila['iddireccion'];
+			$registro['direccion'] = $fila['direccion'];
 			$registro['peso'] = $fila['peso'];
+			array_push($resultados,$registro);
+		}
+		mysqli_free_result($temporal);
+		return $resultados;
+	}
+
+	function listar_ordenes_por_usuario(){
+		$con= new conexion();
+		$sql="SELECT * FROM ordenes WHERE iduserend =".$this -> iduserend. " ORDER BY fecha DESC;";
+		$temporal=$con->ejecutar_sentencia($sql);
+		$resultados=array();
+		while($fila = mysqli_fetch_array($temporal)){
+			$registro=array();
+			$registro['idorden']=$fila['idorden'];
+			$registro['fecha']=date("m/d/Y", strtotime($fila['fecha']));
+			$registro['iduserend']=$fila['iduserend'];
+			$registro['num_productos']=$fila['num_productos'];
+			$registro['total_productos']=$fila['total_productos'];
+			$registro['estatus']=$fila['estatus'];
+			$registro['direccion'] = $fila['direccion'];
+			$registro['peso'] = $fila['peso'];
+			$registro['id_transporte'] = $fila['id_transporte'];
+			$registro['id_rango_transporte'] = $fila['id_rango_transporte'];
 			array_push($resultados,$registro);
 		}
 		mysqli_free_result($temporal);
@@ -118,14 +141,14 @@ class orden
 	
 	function obtener_orden(){
 		$con= new conexion();
-		$sql="select * from orden where idorden=".$this->idorden;
+		$sql="select * from ordenes where idorden=".$this->idorden;
 		$temporal=$con->ejecutar_sentencia($sql);		
 		while ($fila = mysqli_fetch_array($temporal)){
 			$this->idorden=$fila['idorden'];
 			$this->fecha=date('d/m/Y', strtotime($fila['fecha']));
 			$this->iduserend=$fila['iduserend'];			
 			$this->num_productos= $fila['num_productos'];
-			$this->total_productos=$this->herramientas->numformat($fila['total_productos']);
+			$this->total_productos = $fila['total_productos'];//$this->herramientas->numformat($fila['total_productos']);
 			$this->estatus=$fila['estatus'];
 			$this->id_transporte=$fila['id_transporte'];
 			$this->id_rango_transporte=$fila['id_rango_transporte'];
@@ -133,7 +156,7 @@ class orden
 			$this->transportes->obtener_rango_transporte();
 			$this->precioTransporte = $this->transportes->cargo_por_envio;
 			$this->peso=$fila['peso'];
-			$this->iddireccion = $fila['iddireccion'];
+			$this->direccion = $fila['direccion'];
 		}
 		mysqli_free_result($temporal);
 	}
@@ -165,7 +188,7 @@ class orden
 	/** Metodos para Catalogo de Datos orden **/
 	function asocia_usuario_orden($iduserend,$orden){
 		$con= new conexion();
-		$sql="update orden set iduserend='".$iduserend."' where idorden=".$orden;
+		$sql="update ordenes set iduserend='".$iduserend."' where idorden=".$orden;
 		return $con->ejecutar_sentencia($sql);
 	}
 	function agregar_datos_orden($nombre,$email,$telefono,$direccion){
@@ -174,7 +197,7 @@ class orden
 	}
 	function obtener_datosorden($id){
 		 $con= new conexion();
-		 $sql="select orden.idorden, datosorden.nombre,email,telefono,direccion from orden, datosorden where orden.idorden=datosorden.idorden and orden.idorden=".$id;
+		 $sql="select ordenes.idorden, datosorden.nombre,email,telefono,direccion from ordenes, datosorden where ordenes.idorden=datosorden.idorden and ordenes.idorden=".$id;
 		 $resultados=$con->ejecutar_sentencia($sql);
 		 while($row=mysqli_fetch_array($resultados)){
 		  $this->idorden=$row['idorden'];
@@ -205,7 +228,7 @@ class orden
 	}
 	function update_status(){
 		$con=new conexion();
-		$sql="UPDATE orden SET estatus=".$this->estatus." WHERE idorden=".$this->idorden.";";
+		$sql="UPDATE ordenes SET estatus=".$this->estatus." WHERE idorden=".$this->idorden.";";
 		$result=$con->ejecutar_sentencia($sql);
 	}	
 		
@@ -215,7 +238,7 @@ class orden
 	 
 	 function listarclientesorden(){
 	 	$con= new conexion();
-		$sql="select idorden,iduserend from orden group by iduserend";
+		$sql="select idorden,iduserend from ordenes group by iduserend";
 		$temporal=$con->ejecutar_sentencia($sql);
 		$resultados=array();
 		while($fila = mysqli_fetch_array($temporal)){
@@ -238,8 +261,8 @@ class orden
 	 {
 		$con = new conexion();
 		$sql="SELECT * 
-			FROM orden, detalleorden
-			WHERE orden.idorden = detalleorden.idorden
+			FROM ordenes, detalleorden
+			WHERE ordenes.idorden = detalleorden.idorden
 			AND iduserend =".$idcliente."
 			AND estatus = 3";
 		$result=$con->ejecutar_sentencia($sql);	
@@ -264,8 +287,8 @@ class orden
 	{
 		$con = new conexion();
 		$sql="SELECT * 
-			FROM orden, detalleorden
-			WHERE orden.idorden = detalleorden.idorden
+			FROM ordenes, detalleorden
+			WHERE ordenes.idorden = detalleorden.idorden
 			group by idproducto";
 		$result=$con->ejecutar_sentencia($sql);	
 		$resultados= array();
@@ -292,8 +315,8 @@ class orden
 	function listarRecientes($idcliente){
 		$con = new conexion();
 		$sql="SELECT * 
-			FROM orden, detalleorden
-			WHERE orden.idorden = detalleorden.idorden
+			FROM ordenes, detalleorden
+			WHERE ordenes.idorden = detalleorden.idorden
 			AND iduserend=".$idcliente."
 			AND estatus = 3
 			ORDER BY iddetalleorden DESC 

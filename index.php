@@ -14,6 +14,12 @@
             $notify_login = false;            
         }
     }
+
+    $verify_token = false;
+
+    if(isset($_GET["rp"]) && $_GET["rp"] == "invalidtoken"){
+        $verify_token = true;
+    }
 ?>
 
 <!--BODY-->
@@ -687,6 +693,11 @@
     var notify_login = <?php echo json_encode($notify_login); ?>;
     if(notify_login){
         showMessage("Debes iniciar sesión", "Iniciar Sesión");
+    }
+
+    var verify_token = <?php echo json_encode($verify_token); ?>;
+    if(verify_token){
+        showMessage("Token invalido o expirado, realiza el proceso de renovación de contraseña de nuevo", "Reiniciar Contraseña");
     }
 </script>
 <script>
