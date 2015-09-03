@@ -1,50 +1,4 @@
-<?php
-include_once('userend.php');
-include_once('orden.php');
-include_once('correo.php');
-include_once("detalle_orden.php");
-include_once("transporte.php");
-include_once("rango_transporte.php");
-include_once("combinacion.php");
-
-
-class correoEnvioProductos extends correo
-{
-    var $userend;
-    var $datosuserend;
-    var $orden;
-    var $productos;
-    var $path  = "http://braggart.com.mx/";
-
-    function correoEnvioProductos($idorden)
-    {    
-        $this->correo();
-        $this->orden = new orden($idorden);
-        $this->orden->obtener_orden();
-        $this->userend = new userend($this->orden->iduserend);
-        $this->userend->obten_userend();
-        $this->userend->obteneDatosUserend();  
-        $detalle_orden = new detalle_orden();
-        $detalle_orden -> idorden = $idorden;
-        $detalle_orden -> obtener_productos_orden();
-        $this -> productos = $detalle_orden -> productos;   
-    }
-    
-    function genera_asunto()
-    {
-        $this->correo->Subject='Braggart / Confirmación de Pedido';
-    }
-    
-    function genera_destino()
-    {
-        $this->correo->AddAddress($this->userend->correo);
-    }
-    
-    function genera_mensaje()
-    {
-        
-
-$this->correo->Body = '<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/1999/REC-html401-19991224/strict.dtd">
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/1999/REC-html401-19991224/strict.dtd">
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
@@ -108,8 +62,8 @@ $this->correo->Body = '<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http:/
                         <tr>
                             <td align="center" class="logo" style="border-bottom:4px solid #333333;padding:7px 0">
                                 <!-- Nombre del sitio web, url de la página, ruta del logo de la página y otra ves el nombre.-->
-                                <a title="Braggart" href="'.$this->path.'" style="color:#337ff1">
-                                    <img src="'.$this->path.'img/logo-slide-black.png" alt="Braggart" width="250px" height="auto" />
+                                <a title="Braggart" href="http://brentheftye.mx/braggart/" style="color:#337ff1">
+                                    <img src="http://brentheftye.mx/braggart/img/logo.png" alt="Braggart" />
                                 </a>
                             </td>
                         </tr>
@@ -133,17 +87,17 @@ $this->correo->Body = '<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http:/
                                                 <p data-html-only="1" style="border-bottom:1px solid #D6D4D4;margin:3px 0 7px;text-transform:uppercase;font-weight:500;font-size:15px;padding-bottom:10px">
                                                     Detalles del mensaje:</p>
                                                 <span style="color:#777">
-                                                    Hola '.$this->userend->nombre.' </br>
+                                                    Hola Brent Heftye </br>
                                                     <span style="color:#333"><strong>Le agradecemos por realizar su compra en BRAGGART.</strong></span><br />
                                                 </span>
                                                 <p data-html-only="1" style="border-bottom:1px solid #D6D4D4;margin:3px 0 7px;font-weight:500;font-size:18px;padding-bottom:10px">
                                                     Pedido Confirmado:</p>
                                                 <span style="color:#777">
-                                                    <span style="color:#333">El pedido con el folio '.$this->orden->idorden.' ha sido confirmado.</span><br />
-                                                    <span style="color:#333"><strong>Fecha De Compra: </strong>'.$this->orden->fecha.'</span><br />
-                                                    <span style="color:#333"><strong>Cantidad De Productos: </strong>'.$this->orden->num_productos.'</span><br />
-                                                    <span style="color:#333"><strong>Precio del transporte: </strong>'.$this->orden->precioTransporte.'</span><br />
-                                                    <span style="color:#333"><strong>Total Compra: </strong>'.$this->orden->total_productos.'</span><br />
+                                                    <span style="color:#333">El pedido con el folio 6 ha sido enviado.</span><br />
+                                                    <span style="color:#333"><strong>Fecha De Compra: </strong>07/08/2015</span><br />
+                                                    <span style="color:#333"><strong>Cantidad De Productos: </strong>2</span><br />
+                                                    <span style="color:#333"><strong>Precio del transporte: </strong>25.00</span><br />
+                                                    <span style="color:#333"><strong>Total Compra: </strong>1359</span><br />
                                                     <span style="color:#333"><strong>Estado de la orden: </strong>Confirmado</span><br />
                                                 </span>
                                                 <p data-html-only="1" style="border-bottom:1px solid #D6D4D4;margin:3px 0 7px;text-transform:uppercase;font-weight:500;font-size:12px;padding-bottom:10px">
@@ -151,42 +105,30 @@ $this->correo->Body = '<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http:/
                                             </font>
                                         </td>
                                         <td width="10" style="padding:7px 0">
-                                            
+                                            <table class="pedidos">
+                                                <thead>
+                                                    <tr>
+                                                        <td>ID Producto / Nombre</td>
+                                                        <td>Precio</td>
+                                                        <td>Cantidad</td>
+                                                        <td>Talla</td>
+                                                    </tr>
+                                                </thead>
+                                                <tbody><tr>
+                                                        <td><a href="shirts.php?s=Navy+Scarlet">1 / Navy Scarlet</a></td>
+                                                        <td>696</td>
+                                                        <td>1</td>
+                                                        <td>Mediana</td>
+                                                    </tr><tr>
+                                                        <td><a href="shirts.php?s=Retro+Seafarer">2 / Retro Seafarer</a></td>
+                                                        <td>638</td>
+                                                        <td>1</td>
+                                                        <td>Mediana</td>
+                                                    </tr></tbody>
+                                                <tfooter>
+                                                </tfooter>
+                                              </table>
                                         </td>
-                                    </tr>
-                                    <tr>
-                                        <td width="10" style="padding:7px 0">&nbsp;</td>
-                                        <td style="padding:7px 0" colspan="2">
-                                            <font size="2" face="Open-sans, sans-serif" color="#555454">
-                                                <table class="pedidos" style="width:100%">
-                                                    <thead>
-                                                        <tr>
-                                                            <td>ID Producto / Nombre</td>
-                                                            <td>Precio</td>
-                                                            <td>Cantidad</td>
-                                                            <td>Talla</td>
-                                                        </tr>
-                                                    </thead>
-                                                    <tbody>';
-                                                            foreach ($this -> productos as $producto) {
-                                                                $id_combinacion = $producto -> id_combinacion;
-                                                                $combinacion = new combinacion($id_combinacion);
-                                                                $combinacion -> obtener_combinacion();
-                                $this->correo->Body .= '<tr>
-                                                            <td><a href="braggart.com.mx/shirts.php?s='.urlencode($producto -> titulo_esp).'">'.$producto -> id_producto.' / '.$producto -> titulo_esp.'</a></td>
-                                                            <td>'.$producto -> precio_mxn.'</td>
-                                                            <td>'.$producto -> stock_general.'</td>
-                                                            <td>'.$combinacion -> nombre.'</td>
-                                                        </tr>';
-                                                                                    
-                                                            }
-                                $this->correo->Body .= '</tbody>
-                                                    <tfooter>
-                                                    </tfooter>
-                                                </table>
-                                           </font>
-                                        </td>
-                                        
                                     </tr>
                                 </table>
                             </td>
@@ -200,7 +142,7 @@ $this->correo->Body = '<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http:/
                         <tr>
                             <td class="footer" style="border-top:4px solid #333333;padding:7px 0">
                                         <!-- url y nombre de la página web -->
-                                <span><a href="'.$this->path.'" style="color:#337ff1">Braggart</a></span>
+                                <span><a href="http://brentheftye.mx/braggart/" style="color:#337ff1">Braggart</a></span>
                             </td>
                         </tr>
                     </table>
@@ -209,8 +151,4 @@ $this->correo->Body = '<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http:/
             </tr>
         </table>
     </body>
-</html>';
-        
-    }
-}
-?>
+</html>

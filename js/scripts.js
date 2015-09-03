@@ -43,6 +43,9 @@ $('#add_to_cart_button').click(function(event){
     event.preventDefault();
 });
 
+$('#a_reset_password').click(function(event){
+    event.preventDefault();
+});
 
 
 var size = "none";
@@ -106,7 +109,7 @@ function hide_cart(){
 
 function display_login(){
     $(".login_sidebar").animate({marginRight:"0px"});
-    console.log("hey");
+    //console.log("hey");
 }
 
 function hide_login(){
@@ -130,7 +133,7 @@ function hide_info(){
 
 function display_wishlist(){
     $(".wishlist").animate({marginLeft:"0px"});
-    console.log("in wishlist");
+    //console.log("in wishlist");
     var paths = $('#wish_deco path');
     var title = $('#wish_title');
       
@@ -157,9 +160,6 @@ function hide_wishlist(){
      var width = $(".wishlist").width();
     $(".wishlist").animate({marginLeft:"-"+width+"px"});
 }
-
-
-
 
 
 function search_click(){
@@ -291,9 +291,57 @@ function validateUserLogin(){
 }
 
 function showMessage(message, header){
-            $("#header-modal").html(header);
-            $("#content-modal").html(message);
-            $('#myModal').modal('toggle');
+    $("#header-modal").html(header);
+    $("#content-modal").html(message);
+    $("#modal_button").show();
+    $('#myModal').modal('show');
+}
+
+function showResetMessage(){
+    $("#header-modal").html("Cambiar Contraseña");
+    var html = "<form method='post' action='#' style='padding:30px;'>";
+        html+= "<input type='email' id='email_reset' placeholder='Correo electronico' class='input_reset_email'>";
+        html+= "<br>";
+        html+= '<a href="#" type="submit" onclick="sendResetPassword()" class="btn submit_reset_email hvr-sweep-to-right">Enviar</a>';
+        html+= "</form>";
+    $("#modal_body").html(html);
+    $("#modal_button").hide();
+    $('#myModal').modal('show');
+}
+
+function sendResetPassword(){
+    var email = $("#email_reset").val();
+    if(email != ""){
+        var data = new FormData;
+        data.append('operaciones',"srp");
+        data.append("em", email);
+        var resultado;
+        var mensaje = "";
+
+        $.ajax({ 
+            url: mypath+"controller.php",
+            type:'POST',
+            contentType:false,
+            data:data,
+            processData:false,
+            cache:false,
+            async:false,
+            success:function(data){
+                console.log(data);
+                if(data.indexOf("true") != -1){
+                    mensaje = "Se te ha enviado un correo para recuperar tu contraseña.";
+                }
+                if(data.indexOf("false") != -1){
+                    mensaje = "El correo electrónico no existe.";
+                }
+                $("#modal_body").html('<p id="content-modal" style="color:#000;font-size:14px;"></p>');
+                showMessage(mensaje, "Cambiar Contraseña");
+            }
+        });
+    }
+    else{
+        showMessage("El correo introducido es incorrecto o no esta registrado.", "Cambiar Contraseña");
+    }
 }
 
 function logIn(){
@@ -316,7 +364,7 @@ function logIn(){
         cache:false,
         async:false,
         success:function(data){
-            console.log(data);
+            //console.log(data);
             if(data.indexOf("true") != -1){
                 mensaje = "¡Bienvenido "+ email+"!";
                 $("input[name='email-login']").val("");
@@ -393,7 +441,7 @@ function showProductoInfo(id_product){
             if(data != ""){
             	producto_existente = true;
             	resultado = JSON.parse(data);
-                console.log(resultado);
+                //console.log(resultado);
             }
         }
     });
@@ -479,7 +527,7 @@ function showProductoInfo(id_product){
     }
 
             $(".product_info").animate({marginLeft:"0px"});
-            console.log("Open");
+            //console.log("Open");
 
             var paths = $('#info_deco path');
             var title = $('#info_title');
@@ -524,7 +572,7 @@ function getStock(size){
             if(data != ""){
                 producto_existente = true;
                 resultado = JSON.parse(data);
-                console.log(resultado);
+                //console.log(resultado);
             }
         }
     });
@@ -776,7 +824,7 @@ function addWishlist(id_product){
         cache:false,
         async:false,
         success:function(data){
-            console.log(data);
+            //console.log(data);
             if(data.indexOf("false") != -1){
                 mensaje = "No se pudo agregar el producto al wishlist. Inténtalo de nuevo.";
             }
@@ -830,7 +878,7 @@ function updateWishlist(){
         var total_wishlist = 0;
         var html_wishlist = "";
         for (var i = 0; i < $(resultado).size(); i++){
-            console.log(resultado);
+            //console.log(resultado);
             var id_producto = resultado[i].id_producto;
             var nombre = resultado[i].titulo_esp;
             var precio = resultado[i].precio_mxn;
