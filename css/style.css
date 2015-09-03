@@ -1599,13 +1599,11 @@ svg {
 	background: 50% 50% no-repeat black;
 }
 
-<<<<<<< HEAD
 .ie_fix{
 	-webkit-mask: url(#bLogo); 
 	mask: url(#bLogo);
 	clip-path: url(#bLogo);
 }
-=======
 /*RESET PASSWORD*/
 div.reset-bg{
 	background-color:#000;
@@ -1656,4 +1654,3 @@ div.reset-form-container > form > input[type="submit"]{
 	font-size: 16px;
 }
 /*RESET PASSWORD*/
->>>>>>> 0661150d8810bdd31da73d01ae864b7a42cf7c09
