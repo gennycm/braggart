@@ -1495,4 +1495,8 @@ svg {
 	background: 50% 50% no-repeat black;
 }
 
-
+.ie_fix{
+	-webkit-mask: url(#bLogo); 
+	mask: url(#bLogo);
+	clip-path: url(#bLogo);
+}
