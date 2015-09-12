@@ -30,7 +30,7 @@
         <div id="home" class="parallax " data-background-speed-y="0" data-parallax-align="bottom">
             <div class="background_black"></div>
             <div >
-                <svg class="logo-slide" version="1.1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="960px" height="560px" viewBox="0 0 960 560">
+                <svg id="logo_svg" class="logo-slide" version="1.1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="960px" height="560px" viewBox="0 0 960 560">
                     <defs>
                         <clipPath id="bLogo" >
                             <path d="M391.659,258.727c1.545-1.407,2.318-2.532,2.318-3.374v-7.688c-0.291-1.897-0.995-3.167-2.111-3.81
@@ -259,7 +259,7 @@
         <div id="us" class="parallax " data-background-speed-y="0" data-parallax-align="top">
             <div class="background_black"></div>
             <a style="display:block;" href="store.php">
-                <svg  class="frontLetters" version="1.1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="792px" height="612px" viewBox="0 0 792 612">
+                <svg id="us_svg" class="frontLetters" version="1.1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="792px" height="612px" viewBox="0 0 792 612">
                     <defs>
                         <clipPath id="myClip">
                             <polygon points="349.369,261.176 359.52,261.176 359.52,361.107 365.255,361.107 365.255,261.176 375.406,261.176 
@@ -324,7 +324,7 @@
                         <path clip-path="url(#myClip)" fill="none" stroke="#ffffff" stroke-width="7" d="M511.957,341
                         c4.935,0,11.513,0,16.447,0"/>                       
                 </svg>
-                <svg  class="shadow" version="1.1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="792px" height="612px" viewBox="0 0 792 612">
+                <svg id="usShadow_svg" class="shadow" version="1.1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="792px" height="612px" viewBox="0 0 792 612">
                     <defs>
                         <clipPath id="myClip">
                             <polygon points="349.369,261.176 359.52,261.176 359.52,361.107 365.255,361.107 365.255,261.176 375.406,261.176 
@@ -432,7 +432,7 @@
         <div id="shirts" class="parallax" data-background-speed-y="0" data-parallax-align="top">
             <div class="background_black"></div>
             <a style="display:block;" href="shirts.php">
-                <svg class="frontLetters" version="1.1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="792px" height="612px" viewBox="0 0 792 612" enable-background="new 0 0 792 612" xml:space="preserve">
+                <svg id="shirts_svg" class="frontLetters" version="1.1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="792px" height="612px" viewBox="0 0 792 612" enable-background="new 0 0 792 612" xml:space="preserve">
                     <defs>
                         <clipPath id="camisas">
                             <path d="M303.598,239.919l-9.432,107.299h5.619l1.539-17.326h17.326l1.539,17.326h5.619l-9.432-107.299H303.598z
@@ -509,7 +509,7 @@
                             c0,13.666,2,27.666,0.667,41.333c-0.333,4.332-1.333,6.332-5.667,8c-3,1.332-9.666,2.666-12.666,0.666
                             c-6.667-4.666-6-18.666-6-25.666c0-2.668,0-5.334,0-7.668"/>
                 </svg>
-                <svg  class="shadow" version="1.1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="792px" height="612px" viewBox="0 0 792 612">
+                <svg id="shirtsShadow_svg" class="shadow" version="1.1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="792px" height="612px" viewBox="0 0 792 612">
                     <defs>
                         <clipPath id="camisas">
                             <path d="M303.598,239.919l-9.432,107.299h5.619l1.539-17.326h17.326l1.539,17.326h5.619l-9.432-107.299H303.598z
@@ -631,7 +631,7 @@
                 <table class="contact" >
                     <tr>
                         <td colspan="2">
-                            <svg class="decoration_svg deco_top" version="1.1"  xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                            <svg id="ctUp" class="decoration_svg deco_top" version="1.1"  xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                                  width="118px" height="30px" viewBox="0 0 118 30">
                             <path fill="none" stroke="#ffffff" stroke-width="1" stroke-miterlimit="10" d="M22.795,22.535h74.333"/>
                             <path fill="none" stroke="#ffffff" stroke-width="1" stroke-miterlimit="10" d="M3.312,25.535h113.301"/>
@@ -663,7 +663,7 @@
                     </tr>
                     <tr>
                         <td colspan="2">
-                           <svg class="decoration_svg deco_bottom" version="1.1"  xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="118px" height="30px" viewBox="0 0 118 30">
+                           <svg id="ctDown" class="decoration_svg deco_bottom" version="1.1"  xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="118px" height="30px" viewBox="0 0 118 30">
                                 <path fill="none" stroke="#ffffff" stroke-miterlimit="10" d="M97.128,11.518H22.795"/>
                                 <path fill="none" stroke="#ffffff" stroke-miterlimit="10" d="M116.613,8.518H3.312"/>
                                 <path fill="none" stroke="#ffffff" stroke-miterlimit="10" d="M62.408,15.724l-10.216,9.812"/>
@@ -732,74 +732,12 @@
     }
     /*Diamantito*/ 
  
-    var diamondSvg = {
-        "diamond_little": {
-            "strokepath": [
-                {
-                    "path": "M 37.521 18.512 L 37.521 49.847",
-                    "duration": 300
-                },
-                {
-                    "path": "M 37.576 18.621 L 53.416 41.372",
-                    "duration": 300
-                },
-                {
-                    "path": "M 37.521 18.512 L 21.854 42.012",
-                    "duration": 300
-                },
-                {
-                    "path": "M 21.854 42.012 L 37.521 49.847",
-                    "duration": 300
-                },
-                {
-                    "path": "M 37.521 49.847 L 53.588 41.725",
-                    "duration": 300
-                },
-                {
-                    "path": "M 21.854 42.012 L 21.854 26.805",
-                    "duration": 300
-                },
-                {
-                    "path": "M 21.854 26.805 L 37.521 32.164",
-                    "duration": 300
-                },
-                {
-                    "path": "M 37.521 32.164 L 53.416 26.519",
-                    "duration": 300
-                },
-                {
-                    "path": "M 37.521 32.164 L 21.854 42.012",
-                    "duration": 300
-                },
-                {
-                    "path": "M 21.854 26.805 L 37.521 49.847",
-                    "duration": 300
-                },
-                {
-                    "path": "M 37.521 49.847 L 53.416 26.805",
-                    "duration": 300
-                },
-                {
-                    "path": "M 37.521 32.164 L 53.016 41.372",
-                    "duration": 300
-                },
-                {
-                    "path": "M 53.588 26.519 L 53.588 41.372",
-                    "duration": 300
-                }
-            ],
-            "dimensions": {
-                "width": 75,
-                "height": 90
-            }
-        }
-    }; 
- 
+
  
 
     /*Parallax scrolling*/
     var deleteLog = false;
-    var paths, hexagons, tienda_hex;
+    var homePath, usPath, usShadowPath, shirtsPath, shirtsShadowPath, hexagons, tienda_hex, ctUpPath,ctDownPath, pathsDmnd;
 
     jQuery(document).ready(function($) {
       $('#full-width-slider').royalSlider({
@@ -839,27 +777,61 @@
               /*HANDWRITING STUFF*/
         
         // Store a reference to our paths, excluding our clip path
-        paths = $('path:not(defs path)');
+        homePath = $('#logo_svg path:not(defs path)');
+        usPath = $('#us_svg path:not(defs path)');
+        usShadowPath = $('#usShadow_svg path:not(defs path)');
+        shirtsPath = $('#shirts_svg path:not(defs path)');
+        shirtsShadowPath = $('#shirtsShadow_svg path:not(defs path)');
+        ctUpPath = $('#ctUp path:not(defs path)');
+        ctDownPath = $('#ctDown path:not(defs path)');
         hexagons= $(".hexagons polygon");
         tienda_hex =$(".tienda_hex polygon");
+        pathsDmnd = $('#diamond_little path');
+
+
 
 
         // For each path, set the stroke-dasharray and stroke-dashoffset
         // equal to the path's total length, hence rendering it invisible
-        paths.each(function(i, e) {
+        homePath.each(function(i, e) {
             e.setAttribute('stroke-dashoffset', e.getTotalLength());
             e.setAttribute('stroke-dasharray', e.getTotalLength());
-        });  
+        });    
+        usPath.each(function(i, e) {
+            e.setAttribute('stroke-dashoffset', e.getTotalLength());
+            e.setAttribute('stroke-dasharray', e.getTotalLength());
+        }); 
+
+        usShadowPath.each(function(i, e) {
+            e.setAttribute('stroke-dashoffset', e.getTotalLength());
+            e.setAttribute('stroke-dasharray', e.getTotalLength());
+        });
+
+        shirtsPath.each(function(i, e) {
+            e.setAttribute('stroke-dashoffset', e.getTotalLength());
+            e.setAttribute('stroke-dasharray', e.getTotalLength());
+        });
+
+        shirtsShadowPath.each(function(i, e) {
+            e.setAttribute('stroke-dashoffset', e.getTotalLength());
+            e.setAttribute('stroke-dasharray', e.getTotalLength());
+        });
+
+        ctUpPath.each(function(i, e) {
+            e.setAttribute('stroke-dashoffset', e.getTotalLength());
+            e.setAttribute('stroke-dasharray', e.getTotalLength());
+        });
+
+        ctDownPath.each(function(i, e) {
+            e.setAttribute('stroke-dashoffset', e.getTotalLength());
+            e.setAttribute('stroke-dasharray', e.getTotalLength());
+        });
+
+        pathsDmnd.each(function(i, e) {
+            e.style.strokeDasharray = e.style.strokeDashoffset = e.getTotalLength();
+        });
 
 
-      /*Svg Painter*/
-     $('#diamond_little').lazylinepainter( 
-         {
-            "svgData": diamondSvg,
-            "strokeWidth": 2,
-            "strokeColor": "#FFFFFF",
-            "responsive": "true"
-        }).lazylinepainter('paint');
 
 
 
@@ -886,6 +858,8 @@
      var tlHome = new TimelineMax();
      var tlContact = new TimelineMax();
      var tlTiendaHex = new TimelineMax();
+    var tlLoadDmnd  = new TimelineMax();
+       
 
      var homeCounter = 0;
      var usCounter= 0;
@@ -895,79 +869,93 @@
          console.log("home " + homeCounter);
          if (homeCounter == 1) {
             tlHome.add([
-                //La tienda front letters
-            TweenMax.to(paths.eq(13), 5, {strokeDashoffset: 0, delay: 0.0}),
-            TweenMax.to(paths.eq(14), 5, {strokeDashoffset: 0, delay: 0.0}),
-            TweenMax.to(paths.eq(15), 5, {strokeDashoffset: 0, delay: 0.0}),
-            TweenMax.to(paths.eq(16), 5, {strokeDashoffset: 0, delay: 0.0}),
-            TweenMax.to(paths.eq(17), 5, {strokeDashoffset: 0, delay: 0.0}),
-            TweenMax.to(paths.eq(18), 5, {strokeDashoffset: 0, delay: 0.0}),
-            TweenMax.to(paths.eq(19), 5, {strokeDashoffset: 0, delay: 0.0}),
-            TweenMax.to(paths.eq(20), 5, {strokeDashoffset: 0, delay: 0.0}),
-            TweenMax.to(paths.eq(21), 5, {strokeDashoffset: 0, delay: 0.0}),
-            TweenMax.to(paths.eq(22), 5, {strokeDashoffset: 0, delay: 0.0}),
-            TweenMax.to(paths.eq(23), 5, {strokeDashoffset: 0, delay: 0.0}),
-            TweenMax.to(paths.eq(24), 5, {strokeDashoffset: 0, delay: 0.0}),
-            TweenMax.to(paths.eq(25), 5, {strokeDashoffset: 0, delay: 0.0}),
-            TweenMax.to(paths.eq(26), 5, {strokeDashoffset: 0, delay: 0.0}),
-            TweenMax.to(paths.eq(27), 5, {strokeDashoffset: 0, delay: 0.0}),
-            TweenMax.to(paths.eq(28), 5, {strokeDashoffset: 0, delay: 0.0}),
-            TweenMax.to(paths.eq(29), 5, {strokeDashoffset: 0, delay: 0.0}),
-            TweenMax.to(paths.eq(30), 5, {strokeDashoffset: 0, delay: 0.0}),
-            TweenMax.to(paths.eq(31), 5, {strokeDashoffset: 0, delay: 0.0}),
-            TweenMax.to(paths.eq(32), 5, {strokeDashoffset: 0, delay: 0.0}),
-            TweenMax.to(paths.eq(33), 5, {strokeDashoffset: 0, delay: 0.0}),
-            TweenMax.to(paths.eq(34), 5, {strokeDashoffset: 0, delay: 0.0}),
-            TweenMax.to(paths.eq(35), 5, {strokeDashoffset: 0, delay: 0.0}),
-            TweenMax.to(paths.eq(36), 5, {strokeDashoffset: 0, delay: 0.0}),
-            TweenMax.to(paths.eq(37), 5, {strokeDashoffset: 0, delay: 0.0}),
-            TweenMax.to(paths.eq(38), 5, {strokeDashoffset: 0, delay: 0.0}),
-            TweenMax.to(paths.eq(39), 5, {strokeDashoffset: 0, delay: 0.0}),
-            TweenMax.to(paths.eq(40), 5, {strokeDashoffset: 0, delay: 0.0}),
-            TweenMax.to(paths.eq(41), 5, {strokeDashoffset: 0, delay: 0.0}),
-            TweenMax.to(paths.eq(42), 5, {strokeDashoffset: 0, delay: 0.0}),
-            TweenMax.to(paths.eq(43), 5, {strokeDashoffset: 0, delay: 0.0}),
-            TweenMax.to(paths.eq(44), 5, {strokeDashoffset: 0, delay: 0.0}),
-            TweenMax.to(paths.eq(45), 5, {strokeDashoffset: 0, delay: 0.0}),
-            TweenMax.to(paths.eq(46), 5, {strokeDashoffset: 0, delay: 0.0}),
-            TweenMax.to(paths.eq(47), 5, {strokeDashoffset: 0, delay: 0.0}),
-            TweenMax.to(paths.eq(48), 5, {strokeDashoffset: 0, delay: 0.0}),
-            TweenMax.to(paths.eq(49), 5, {strokeDashoffset: 0, delay: 0.0}),
-            TweenMax.to(paths.eq(50), 5, {strokeDashoffset: 0, delay: 0.0}),
-            TweenMax.to(paths.eq(51), 5, {strokeDashoffset: 0, delay: 0.0}),
-            TweenMax.to(paths.eq(52), 5, {strokeDashoffset: 0, delay: 0.0}),
+            TweenMax.to(homePath.eq(0), 5, {strokeDashoffset: 0, delay: 0.0}),
+            TweenMax.to(homePath.eq(1), 5, {strokeDashoffset: 0, delay: 0.0}),
+            TweenMax.to(homePath.eq(2), 5, {strokeDashoffset: 0, delay: 0.0}),
+            TweenMax.to(homePath.eq(3), 5, {strokeDashoffset: 0, delay: 0.0}),
+            TweenMax.to(homePath.eq(4), 5, {strokeDashoffset: 0, delay: 0.0}),
+            TweenMax.to(homePath.eq(5), 5, {strokeDashoffset: 0, delay: 0.0}),
+            TweenMax.to(homePath.eq(6), 5, {strokeDashoffset: 0, delay: 0.0}),
+            TweenMax.to(homePath.eq(7), 5, {strokeDashoffset: 0, delay: 0.0}),
+            TweenMax.to(homePath.eq(8), 5, {strokeDashoffset: 0, delay: 0.0}),
+            TweenMax.to(homePath.eq(9), 5, {strokeDashoffset: 0, delay: 0.0}),
+            TweenMax.to(homePath.eq(10), 5, {strokeDashoffset: 0, delay: 0.0}),
+            TweenMax.to(homePath.eq(11), 5, {strokeDashoffset: 0, delay: 0.0}),
+            TweenMax.to(homePath.eq(12), 5, {strokeDashoffset: 0, delay: 0.0}),
+            TweenMax.to(homePath.eq(13), 5, {strokeDashoffset: 0, delay: 0.0}),
+            TweenMax.to(homePath.eq(14), 5, {strokeDashoffset: 0, delay: 0.0}),
+            TweenMax.to(homePath.eq(15), 5, {strokeDashoffset: 0, delay: 0.0}),
+            TweenMax.to(homePath.eq(16), 5, {strokeDashoffset: 0, delay: 0.0}),
+            TweenMax.to(homePath.eq(17), 5, {strokeDashoffset: 0, delay: 0.0}),
+            TweenMax.to(homePath.eq(18), 5, {strokeDashoffset: 0, delay: 0.0}),
+            TweenMax.to(homePath.eq(19), 5, {strokeDashoffset: 0, delay: 0.0}),
+            TweenMax.to(homePath.eq(20), 5, {strokeDashoffset: 0, delay: 0.0}),
+            TweenMax.to(homePath.eq(21), 5, {strokeDashoffset: 0, delay: 0.0}),
+            TweenMax.to(homePath.eq(22), 5, {strokeDashoffset: 0, delay: 0.0}),
+            TweenMax.to(homePath.eq(23), 5, {strokeDashoffset: 0, delay: 0.0}),
+            TweenMax.to(homePath.eq(24), 5, {strokeDashoffset: 0, delay: 0.0}),
+            TweenMax.to(homePath.eq(25), 5, {strokeDashoffset: 0, delay: 0.0}),
+            TweenMax.to(homePath.eq(26), 5, {strokeDashoffset: 0, delay: 0.0}),
+            TweenMax.to(homePath.eq(27), 5, {strokeDashoffset: 0, delay: 0.0}),
+            TweenMax.to(homePath.eq(28), 5, {strokeDashoffset: 0, delay: 0.0}),
+            TweenMax.to(homePath.eq(29), 5, {strokeDashoffset: 0, delay: 0.0}),
+            TweenMax.to(homePath.eq(30), 5, {strokeDashoffset: 0, delay: 0.0}),
+            TweenMax.to(homePath.eq(31), 5, {strokeDashoffset: 0, delay: 0.0}),
+            TweenMax.to(homePath.eq(32), 5, {strokeDashoffset: 0, delay: 0.0}),
+            TweenMax.to(homePath.eq(33), 5, {strokeDashoffset: 0, delay: 0.0}),
+            TweenMax.to(homePath.eq(34), 5, {strokeDashoffset: 0, delay: 0.0}),
+            TweenMax.to(homePath.eq(35), 5, {strokeDashoffset: 0, delay: 0.0}),
+            TweenMax.to(homePath.eq(36), 5, {strokeDashoffset: 0, delay: 0.0}),
+            TweenMax.to(homePath.eq(37), 5, {strokeDashoffset: 0, delay: 0.0}),
+            TweenMax.to(homePath.eq(38), 5, {strokeDashoffset: 0, delay: 0.0}),
+            TweenMax.to(homePath.eq(39), 5, {strokeDashoffset: 0, delay: 0.0}),
 
-            TweenMax.to(paths.eq(53), 5, {strokeDashoffset: 0, delay: 0.0}),
-            TweenMax.to(paths.eq(54), 5, {strokeDashoffset: 0, delay: 0.0}),
-            TweenMax.to(paths.eq(55), 5, {strokeDashoffset: 0, delay: 0.0}),
-            TweenMax.to(paths.eq(56), 5, {strokeDashoffset: 0, delay: 0.0}),
-            TweenMax.to(paths.eq(57), 5, {strokeDashoffset: 0, delay: 0.0}),
-            TweenMax.to(paths.eq(58), 5, {strokeDashoffset: 0, delay: 0.0}),
-            TweenMax.to(paths.eq(59), 5, {strokeDashoffset: 0, delay: 0.0}),
-            TweenMax.to(paths.eq(60), 5, {strokeDashoffset: 0, delay: 0.0}),
-            TweenMax.to(paths.eq(61), 5, {strokeDashoffset: 0, delay: 0.0}),
-            TweenMax.to(paths.eq(62), 5, {strokeDashoffset: 0, delay: 0.0}),
-            TweenMax.to(paths.eq(63), 5, {strokeDashoffset: 0, delay: 0.0}),
-            TweenMax.to(paths.eq(64), 5, {strokeDashoffset: 0, delay: 0.0}),
-            TweenMax.to(paths.eq(65), 5, {strokeDashoffset: 0, delay: 0.0}),
-            TweenMax.to(paths.eq(66), 5, {strokeDashoffset: 0, delay: 0.0}),
-            TweenMax.to(paths.eq(67), 5, {strokeDashoffset: 0, delay: 0.0}),
-            TweenMax.to(paths.eq(68), 5, {strokeDashoffset: 0, delay: 0.0}),
-            TweenMax.to(paths.eq(69), 5, {strokeDashoffset: 0, delay: 0.0}),
-            TweenMax.to(paths.eq(70), 5, {strokeDashoffset: 0, delay: 0.0}),
-            TweenMax.to(paths.eq(71), 5, {strokeDashoffset: 0, delay: 0.0}),
-            TweenMax.to(paths.eq(72), 5, {strokeDashoffset: 0, delay: 0.0}),
-            TweenMax.to(paths.eq(73), 5, {strokeDashoffset: 0, delay: 0.0}),
-            TweenMax.to(paths.eq(74), 5, {strokeDashoffset: 0, delay: 0.0}),
-            TweenMax.to(paths.eq(75), 5, {strokeDashoffset: 0, delay: 0.0}),
-            TweenMax.to(paths.eq(76), 5, {strokeDashoffset: 0, delay: 0.0}),
-            TweenMax.to(paths.eq(77), 5, {strokeDashoffset: 0, delay: 0.0}),
-            TweenMax.to(paths.eq(78), 5, {strokeDashoffset: 0, delay: 0.0}),
-            TweenMax.to(paths.eq(79), 5, {strokeDashoffset: 0, delay: 0.0}),
-            TweenMax.to(paths.eq(80), 5, {strokeDashoffset: 0, delay: 0.0}),         
-
+            TweenMax.to(homePath.eq(40), 5, {strokeDashoffset: 0, delay: 0.0}),
+            TweenMax.to(homePath.eq(41), 5, {strokeDashoffset: 0, delay: 0.0}),
+            TweenMax.to(homePath.eq(42), 5, {strokeDashoffset: 0, delay: 0.0}),
+            TweenMax.to(homePath.eq(43), 5, {strokeDashoffset: 0, delay: 0.0}),
+            TweenMax.to(homePath.eq(44), 5, {strokeDashoffset: 0, delay: 0.0}),
+            TweenMax.to(homePath.eq(45), 5, {strokeDashoffset: 0, delay: 0.0}),
+            TweenMax.to(homePath.eq(46), 5, {strokeDashoffset: 0, delay: 0.0}),
+            TweenMax.to(homePath.eq(47), 5, {strokeDashoffset: 0, delay: 0.0}),
+            TweenMax.to(homePath.eq(48), 5, {strokeDashoffset: 0, delay: 0.0}),
+            TweenMax.to(homePath.eq(49), 5, {strokeDashoffset: 0, delay: 0.0}),
+            TweenMax.to(homePath.eq(50), 5, {strokeDashoffset: 0, delay: 0.0}),
+            TweenMax.to(homePath.eq(51), 5, {strokeDashoffset: 0, delay: 0.0}),
+            TweenMax.to(homePath.eq(52), 5, {strokeDashoffset: 0, delay: 0.0}),
+            TweenMax.to(homePath.eq(53), 5, {strokeDashoffset: 0, delay: 0.0}),
+            TweenMax.to(homePath.eq(54), 5, {strokeDashoffset: 0, delay: 0.0}),
+            TweenMax.to(homePath.eq(55), 5, {strokeDashoffset: 0, delay: 0.0}),
+            TweenMax.to(homePath.eq(56), 5, {strokeDashoffset: 0, delay: 0.0}),
+            TweenMax.to(homePath.eq(57), 5, {strokeDashoffset: 0, delay: 0.0}),
+            TweenMax.to(homePath.eq(58), 5, {strokeDashoffset: 0, delay: 0.0}),
+            TweenMax.to(homePath.eq(59), 5, {strokeDashoffset: 0, delay: 0.0}),
+            TweenMax.to(homePath.eq(60), 5, {strokeDashoffset: 0, delay: 0.0}),
+            TweenMax.to(homePath.eq(61), 5, {strokeDashoffset: 0, delay: 0.0}),
+            TweenMax.to(homePath.eq(62), 5, {strokeDashoffset: 0, delay: 0.0}),
+            TweenMax.to(homePath.eq(63), 5, {strokeDashoffset: 0, delay: 0.0}),
+            TweenMax.to(homePath.eq(64), 5, {strokeDashoffset: 0, delay: 0.0}),
+            TweenMax.to(homePath.eq(65), 5, {strokeDashoffset: 0, delay: 0.0}),
+            TweenMax.to(homePath.eq(66), 5, {strokeDashoffset: 0, delay: 0.0}),
+            TweenMax.to(homePath.eq(67), 5, {strokeDashoffset: 0, delay: 0.0}),         
 
             ]);
+ 
+        tlLoadDmnd.add([
+            TweenLite.to(pathsDmnd.eq(0), 5, {strokeDashoffset: 0, delay: 0.0}),
+            TweenLite.to(pathsDmnd.eq(1), 5, {strokeDashoffset: 0, delay: 0.0}),
+            TweenLite.to(pathsDmnd.eq(2), 5, {strokeDashoffset: 0, delay: 0.0}),
+            TweenLite.to(pathsDmnd.eq(3), 5, {strokeDashoffset: 0, delay: 0.0}),
+            TweenLite.to(pathsDmnd.eq(4), 5, {strokeDashoffset: 0, delay: 0.0}),
+            TweenLite.to(pathsDmnd.eq(5), 5, {strokeDashoffset: 0, delay: 0.0}),
+            TweenLite.to(pathsDmnd.eq(6), 5, {strokeDashoffset: 0, delay: 0.0}),
+            TweenLite.to(pathsDmnd.eq(7), 5, {strokeDashoffset: 0, delay: 0.0}),
+            TweenLite.to(pathsDmnd.eq(8), 5, {strokeDashoffset: 0, delay: 0.0}),
+            TweenLite.to(pathsDmnd.eq(9), 5, {strokeDashoffset: 0, delay: 0.0}),
+            TweenLite.to(pathsDmnd.eq(10), 5, {strokeDashoffset: 0, delay: 0.0}),
+            TweenLite.to(pathsDmnd.eq(11), 5, {strokeDashoffset: 0, delay: 0.0}),
+            TweenLite.to(pathsDmnd.eq(12), 5, {strokeDashoffset: 0, delay: 0.0}),    
+        ]);
 
             }
          });
@@ -983,50 +971,50 @@
 
             tlTienda.add([
                 //La tienda front letters
-                TweenMax.to(paths.eq(81), 0.3, {strokeDashoffset: 0, delay: 0.0}), //L
-                TweenMax.to(paths.eq(82), 0.3, {strokeDashoffset: 0, delay: 0.3}), //A
-                TweenMax.to(paths.eq(83), 0.3, {strokeDashoffset: 0, delay: 0.6}), //-
-                TweenMax.to(paths.eq(84), 0.3, {strokeDashoffset: 0, delay: 0.9}),
-                TweenMax.to(paths.eq(85), 0.3, {strokeDashoffset: 0, delay: 1.2}),
-                TweenMax.to(paths.eq(86), 0.3, {strokeDashoffset: 0, delay: 1.5}),
-                TweenMax.to(paths.eq(87), 0.3, {strokeDashoffset: 0, delay: 1.8}),
-                TweenMax.to(paths.eq(88), 0.3, {strokeDashoffset: 0, delay: 2.1}),
-                TweenMax.to(paths.eq(89), 0.3, {strokeDashoffset: 0, delay: 2.4}),
-                TweenMax.to(paths.eq(90), 0.3, {strokeDashoffset: 0, delay: 2.7}),
-                TweenMax.to(paths.eq(91), 0.3, {strokeDashoffset: 0, delay: 3.0}),
-                TweenMax.to(paths.eq(92), 0.3, {strokeDashoffset: 0, delay: 3.3}),
-                TweenMax.to(paths.eq(93), 0.3, {strokeDashoffset: 0, delay: 3.6}),
-                TweenMax.to(paths.eq(94), 0.3, {strokeDashoffset: 0, delay: 3.9}),
-                TweenMax.to(paths.eq(95), 0.3, {strokeDashoffset: 0, delay: 4.1}),
-                TweenMax.to(paths.eq(96), 0.3, {strokeDashoffset: 0, delay: 4.4}),
-                TweenMax.to(paths.eq(97), 0.3, {strokeDashoffset: 0, delay: 4.7}),
-                TweenMax.to(paths.eq(98), 0.3, {strokeDashoffset: 0, delay: 5.0}),
-                TweenMax.to(paths.eq(99), 0.3, {strokeDashoffset: 0, delay: 5.3}),
-                TweenMax.to(paths.eq(100), 0.3, {strokeDashoffset: 0, delay: 5.6}),
-                TweenMax.to(paths.eq(101), 0.3, {strokeDashoffset: 0, delay: 5.9}),
+                TweenMax.to(usPath.eq(0), 0.3, {strokeDashoffset: 0, delay: 0.0}), //L
+                TweenMax.to(usPath.eq(1), 0.3, {strokeDashoffset: 0, delay: 0.3}), //A
+                TweenMax.to(usPath.eq(2), 0.3, {strokeDashoffset: 0, delay: 0.6}), //-
+                TweenMax.to(usPath.eq(3), 0.3, {strokeDashoffset: 0, delay: 0.9}),
+                TweenMax.to(usPath.eq(4), 0.3, {strokeDashoffset: 0, delay: 1.2}),
+                TweenMax.to(usPath.eq(5), 0.3, {strokeDashoffset: 0, delay: 1.5}),
+                TweenMax.to(usPath.eq(6), 0.3, {strokeDashoffset: 0, delay: 1.8}),
+                TweenMax.to(usPath.eq(7), 0.3, {strokeDashoffset: 0, delay: 2.1}),
+                TweenMax.to(usPath.eq(8), 0.3, {strokeDashoffset: 0, delay: 2.4}),
+                TweenMax.to(usPath.eq(9), 0.3, {strokeDashoffset: 0, delay: 2.7}),
+                TweenMax.to(usPath.eq(10), 0.3, {strokeDashoffset: 0, delay: 3.0}),
+                TweenMax.to(usPath.eq(11), 0.3, {strokeDashoffset: 0, delay: 3.3}),
+                TweenMax.to(usPath.eq(12), 0.3, {strokeDashoffset: 0, delay: 3.6}),
+                TweenMax.to(usPath.eq(13), 0.3, {strokeDashoffset: 0, delay: 3.9}),
+                TweenMax.to(usPath.eq(14), 0.3, {strokeDashoffset: 0, delay: 4.1}),
+                TweenMax.to(usPath.eq(15), 0.3, {strokeDashoffset: 0, delay: 4.4}),
+                TweenMax.to(usPath.eq(16), 0.3, {strokeDashoffset: 0, delay: 4.7}),
+                TweenMax.to(usPath.eq(17), 0.3, {strokeDashoffset: 0, delay: 5.0}),
+                TweenMax.to(usPath.eq(18), 0.3, {strokeDashoffset: 0, delay: 5.3}),
+                TweenMax.to(usPath.eq(19), 0.3, {strokeDashoffset: 0, delay: 5.6}),
+                TweenMax.to(usPath.eq(20), 0.3, {strokeDashoffset: 0, delay: 5.9}),
 
                 //La tienda shadow
-                TweenMax.to(paths.eq(102), 0.3, {strokeDashoffset: 0, delay: 0.0}),
-                TweenMax.to(paths.eq(103), 0.3, {strokeDashoffset: 0, delay: 0.3}), //A
-                TweenMax.to(paths.eq(104), 0.3, {strokeDashoffset: 0, delay: 0.6}), //-
-                TweenMax.to(paths.eq(105), 0.3, {strokeDashoffset: 0, delay: 0.9}),
-                TweenMax.to(paths.eq(106), 0.3, {strokeDashoffset: 0, delay: 1.2}),
-                TweenMax.to(paths.eq(107), 0.3, {strokeDashoffset: 0, delay: 1.5}),
-                TweenMax.to(paths.eq(108), 0.3, {strokeDashoffset: 0, delay: 1.8}),
-                TweenMax.to(paths.eq(109), 0.3, {strokeDashoffset: 0, delay: 2.1}),
-                TweenMax.to(paths.eq(110), 0.3, {strokeDashoffset: 0, delay: 2.4}),
-                TweenMax.to(paths.eq(111), 0.3, {strokeDashoffset: 0, delay: 2.7}),
-                TweenMax.to(paths.eq(112), 0.3, {strokeDashoffset: 0, delay: 3.0}),
-                TweenMax.to(paths.eq(113), 0.3, {strokeDashoffset: 0, delay: 3.3}),
-                TweenMax.to(paths.eq(114), 0.3, {strokeDashoffset: 0, delay: 3.6}),
-                TweenMax.to(paths.eq(115), 0.3, {strokeDashoffset: 0, delay: 3.9}),
-                TweenMax.to(paths.eq(116), 0.3, {strokeDashoffset: 0, delay: 4.1}),
-                TweenMax.to(paths.eq(117), 0.3, {strokeDashoffset: 0, delay: 4.4}),
-                TweenMax.to(paths.eq(118), 0.3, {strokeDashoffset: 0, delay: 4.7}),
-                TweenMax.to(paths.eq(119), 0.3, {strokeDashoffset: 0, delay: 5.0}),
-                TweenMax.to(paths.eq(120), 0.3, {strokeDashoffset: 0, delay: 5.3}),
-                TweenMax.to(paths.eq(121), 0.3, {strokeDashoffset: 0, delay: 5.6}),
-                TweenMax.to(paths.eq(122), 0.3, {strokeDashoffset: 0, delay: 5.9}),          
+                TweenMax.to(usShadowPath.eq(0), 0.3, {strokeDashoffset: 0, delay: 0.0}),
+                TweenMax.to(usShadowPath.eq(1), 0.3, {strokeDashoffset: 0, delay: 0.3}), //A
+                TweenMax.to(usShadowPath.eq(2), 0.3, {strokeDashoffset: 0, delay: 0.6}), //-
+                TweenMax.to(usShadowPath.eq(3), 0.3, {strokeDashoffset: 0, delay: 0.9}),
+                TweenMax.to(usShadowPath.eq(4), 0.3, {strokeDashoffset: 0, delay: 1.2}),
+                TweenMax.to(usShadowPath.eq(5), 0.3, {strokeDashoffset: 0, delay: 1.5}),
+                TweenMax.to(usShadowPath.eq(6), 0.3, {strokeDashoffset: 0, delay: 1.8}),
+                TweenMax.to(usShadowPath.eq(7), 0.3, {strokeDashoffset: 0, delay: 2.1}),
+                TweenMax.to(usShadowPath.eq(8), 0.3, {strokeDashoffset: 0, delay: 2.4}),
+                TweenMax.to(usShadowPath.eq(9), 0.3, {strokeDashoffset: 0, delay: 2.7}),
+                TweenMax.to(usShadowPath.eq(10), 0.3, {strokeDashoffset: 0, delay: 3.0}),
+                TweenMax.to(usShadowPath.eq(11), 0.3, {strokeDashoffset: 0, delay: 3.3}),
+                TweenMax.to(usShadowPath.eq(12), 0.3, {strokeDashoffset: 0, delay: 3.6}),
+                TweenMax.to(usShadowPath.eq(13), 0.3, {strokeDashoffset: 0, delay: 3.9}),
+                TweenMax.to(usShadowPath.eq(14), 0.3, {strokeDashoffset: 0, delay: 4.1}),
+                TweenMax.to(usShadowPath.eq(15), 0.3, {strokeDashoffset: 0, delay: 4.4}),
+                TweenMax.to(usShadowPath.eq(16), 0.3, {strokeDashoffset: 0, delay: 4.7}),
+                TweenMax.to(usShadowPath.eq(17), 0.3, {strokeDashoffset: 0, delay: 5.0}),
+                TweenMax.to(usShadowPath.eq(18), 0.3, {strokeDashoffset: 0, delay: 5.3}),
+                TweenMax.to(usShadowPath.eq(19), 0.3, {strokeDashoffset: 0, delay: 5.6}),
+                TweenMax.to(usShadowPath.eq(20), 0.3, {strokeDashoffset: 0, delay: 5.9}),          
 
 
             ]);
@@ -1049,8 +1037,7 @@
             }else{
                 if (homeCounter%2!=0) {
                     tlHome.restart();
-                    $('#diamond_little').lazylinepainter('erase');
-                     $('#diamond_little').lazylinepainter('paint');
+                    tlLoadDmnd.restart();
                 }
             }
          }, {
@@ -1069,62 +1056,62 @@
             tlCamisasHex.play("stagger");
             tlCamisas.add([
                         //C
-                    TweenMax.to(paths.eq(123), 0.3, {strokeDashoffset: 0, delay: 0.0}),
+                    TweenMax.to(shirtsPath.eq(0), 0.3, {strokeDashoffset: 0, delay: 0.0}),
                         //A
-                    TweenMax.to(paths.eq(124), 0.3, {strokeDashoffset: 0, delay: 0.2}),
-                    TweenMax.to(paths.eq(125), 0.3, {strokeDashoffset: 0, delay: 0.4}),
-                    TweenMax.to(paths.eq(126), 0.3, {strokeDashoffset: 0, delay: 0.5}),
-                    TweenMax.to(paths.eq(127), 0.3, {strokeDashoffset: 0, delay: 0.8}),
+                    TweenMax.to(shirtsPath.eq(1), 0.3, {strokeDashoffset: 0, delay: 0.2}),
+                    TweenMax.to(shirtsPath.eq(2), 0.3, {strokeDashoffset: 0, delay: 0.4}),
+                    TweenMax.to(shirtsPath.eq(3), 0.3, {strokeDashoffset: 0, delay: 0.5}),
+                    TweenMax.to(shirtsPath.eq(4), 0.3, {strokeDashoffset: 0, delay: 0.8}),
                         //M
-                    TweenMax.to(paths.eq(128), 0.3, {strokeDashoffset: 0, delay: 1.2}),
-                    TweenMax.to(paths.eq(129), 0.3, {strokeDashoffset: 0, delay: 1.5}),
-                    TweenMax.to(paths.eq(130), 0.3, {strokeDashoffset: 0, delay: 1.8}),
-                    TweenMax.to(paths.eq(131), 0.3, {strokeDashoffset: 0, delay: 2.1}),
+                    TweenMax.to(shirtsPath.eq(5), 0.3, {strokeDashoffset: 0, delay: 1.2}),
+                    TweenMax.to(shirtsPath.eq(6), 0.3, {strokeDashoffset: 0, delay: 1.5}),
+                    TweenMax.to(shirtsPath.eq(7), 0.3, {strokeDashoffset: 0, delay: 1.8}),
+                    TweenMax.to(shirtsPath.eq(8), 0.3, {strokeDashoffset: 0, delay: 2.1}),
                     //I
-                    TweenMax.to(paths.eq(132), 0.3, {strokeDashoffset: 0, delay: 2.4}),
+                    TweenMax.to(shirtsPath.eq(9), 0.3, {strokeDashoffset: 0, delay: 2.4}),
                     //S
-                    TweenMax.to(paths.eq(133), 0.3, {strokeDashoffset: 0, delay: 2.7}),
-                    TweenMax.to(paths.eq(134), 0.3, {strokeDashoffset: 0, delay: 2.9}),
-                    TweenMax.to(paths.eq(135), 0.3, {strokeDashoffset: 0, delay: 3.2}),
+                    TweenMax.to(shirtsPath.eq(10), 0.3, {strokeDashoffset: 0, delay: 2.7}),
+                    TweenMax.to(shirtsPath.eq(11), 0.3, {strokeDashoffset: 0, delay: 2.9}),
+                    TweenMax.to(shirtsPath.eq(12), 0.3, {strokeDashoffset: 0, delay: 3.2}),
                     //A
-                    TweenMax.to(paths.eq(136), 0.3, {strokeDashoffset: 0, delay: 3.5}),
-                    TweenMax.to(paths.eq(137), 0.3, {strokeDashoffset: 0, delay: 3.7}),
-                    TweenMax.to(paths.eq(138), 0.3, {strokeDashoffset: 0, delay: 4.0}),
-                    TweenMax.to(paths.eq(139), 0.3, {strokeDashoffset: 0, delay: 4.3}),
+                    TweenMax.to(shirtsPath.eq(13), 0.3, {strokeDashoffset: 0, delay: 3.5}),
+                    TweenMax.to(shirtsPath.eq(14), 0.3, {strokeDashoffset: 0, delay: 3.7}),
+                    TweenMax.to(shirtsPath.eq(15), 0.3, {strokeDashoffset: 0, delay: 4.0}),
+                    TweenMax.to(shirtsPath.eq(16), 0.3, {strokeDashoffset: 0, delay: 4.3}),
                     //S
-                    TweenMax.to(paths.eq(140), 0.3, {strokeDashoffset: 0, delay: 4.6}),
-                    TweenMax.to(paths.eq(141), 0.3, {strokeDashoffset: 0, delay: 4.9}),
-                    TweenMax.to(paths.eq(142), 0.3, {strokeDashoffset: 0, delay: 5.1}),
+                    TweenMax.to(shirtsPath.eq(17), 0.3, {strokeDashoffset: 0, delay: 4.6}),
+                    TweenMax.to(shirtsPath.eq(18), 0.3, {strokeDashoffset: 0, delay: 4.9}),
+                    TweenMax.to(shirtsPath.eq(19), 0.3, {strokeDashoffset: 0, delay: 5.1}),
 
 
                     //camisas shadow
                         //C
-                    TweenMax.to(paths.eq(143), 0.3, {strokeDashoffset: 0, delay: 0.0}),
+                    TweenMax.to(shirtsShadowPath.eq(0), 0.3, {strokeDashoffset: 0, delay: 0.0}),
                         //A
-                    TweenMax.to(paths.eq(144), 0.3, {strokeDashoffset: 0, delay: 0.2}),
-                    TweenMax.to(paths.eq(145), 0.3, {strokeDashoffset: 0, delay: 0.4}),
-                    TweenMax.to(paths.eq(146), 0.3, {strokeDashoffset: 0, delay: 0.5}),
-                    TweenMax.to(paths.eq(147), 0.3, {strokeDashoffset: 0, delay: 0.8}),
+                    TweenMax.to(shirtsShadowPath.eq(1), 0.3, {strokeDashoffset: 0, delay: 0.2}),
+                    TweenMax.to(shirtsShadowPath.eq(2), 0.3, {strokeDashoffset: 0, delay: 0.4}),
+                    TweenMax.to(shirtsShadowPath.eq(3), 0.3, {strokeDashoffset: 0, delay: 0.5}),
+                    TweenMax.to(shirtsShadowPath.eq(4), 0.3, {strokeDashoffset: 0, delay: 0.8}),
                         //M
-                    TweenMax.to(paths.eq(148), 0.3, {strokeDashoffset: 0, delay: 1.2}),
-                    TweenMax.to(paths.eq(149), 0.3, {strokeDashoffset: 0, delay: 1.5}),
-                    TweenMax.to(paths.eq(150), 0.3, {strokeDashoffset: 0, delay: 1.8}),
-                    TweenMax.to(paths.eq(151), 0.3, {strokeDashoffset: 0, delay: 2.1}),
+                    TweenMax.to(shirtsShadowPath.eq(5), 0.3, {strokeDashoffset: 0, delay: 1.2}),
+                    TweenMax.to(shirtsShadowPath.eq(6), 0.3, {strokeDashoffset: 0, delay: 1.5}),
+                    TweenMax.to(shirtsShadowPath.eq(7), 0.3, {strokeDashoffset: 0, delay: 1.8}),
+                    TweenMax.to(shirtsShadowPath.eq(8), 0.3, {strokeDashoffset: 0, delay: 2.1}),
                     //I
-                    TweenMax.to(paths.eq(152), 0.3, {strokeDashoffset: 0, delay: 2.4}),
+                    TweenMax.to(shirtsShadowPath.eq(9), 0.3, {strokeDashoffset: 0, delay: 2.4}),
                     //S
-                    TweenMax.to(paths.eq(153), 0.3, {strokeDashoffset: 0, delay: 2.7}),
-                    TweenMax.to(paths.eq(154), 0.3, {strokeDashoffset: 0, delay: 2.9}),
-                    TweenMax.to(paths.eq(155), 0.3, {strokeDashoffset: 0, delay: 3.2}),
+                    TweenMax.to(shirtsShadowPath.eq(10), 0.3, {strokeDashoffset: 0, delay: 2.7}),
+                    TweenMax.to(shirtsShadowPath.eq(11), 0.3, {strokeDashoffset: 0, delay: 2.9}),
+                    TweenMax.to(shirtsShadowPath.eq(12), 0.3, {strokeDashoffset: 0, delay: 3.2}),
                     //A
-                    TweenMax.to(paths.eq(156), 0.3, {strokeDashoffset: 0, delay: 3.5}),
-                    TweenMax.to(paths.eq(157), 0.3, {strokeDashoffset: 0, delay: 3.7}),
-                    TweenMax.to(paths.eq(158), 0.3, {strokeDashoffset: 0, delay: 4.0}),
-                    TweenMax.to(paths.eq(159), 0.3, {strokeDashoffset: 0, delay: 4.3}),
+                    TweenMax.to(shirtsShadowPath.eq(13), 0.3, {strokeDashoffset: 0, delay: 3.5}),
+                    TweenMax.to(shirtsShadowPath.eq(14), 0.3, {strokeDashoffset: 0, delay: 3.7}),
+                    TweenMax.to(shirtsShadowPath.eq(15), 0.3, {strokeDashoffset: 0, delay: 4.0}),
+                    TweenMax.to(shirtsShadowPath.eq(16), 0.3, {strokeDashoffset: 0, delay: 4.3}),
                     //S
-                    TweenMax.to(paths.eq(160), 0.3, {strokeDashoffset: 0, delay: 4.6}),
-                    TweenMax.to(paths.eq(161), 0.3, {strokeDashoffset: 0, delay: 4.9}),
-                    TweenMax.to(paths.eq(162), 0.3, {strokeDashoffset: 0, delay: 5.1}),     
+                    TweenMax.to(shirtsShadowPath.eq(17), 0.3, {strokeDashoffset: 0, delay: 4.6}),
+                    TweenMax.to(shirtsShadowPath.eq(18), 0.3, {strokeDashoffset: 0, delay: 4.9}),
+                    TweenMax.to(shirtsShadowPath.eq(19), 0.3, {strokeDashoffset: 0, delay: 5.1}),     
 
             ]);
                 
@@ -1146,19 +1133,19 @@
          contactCounter++;
              if (contactCounter == 1) {
                 tlContact.add([
-                            TweenMax.to(paths.eq(163), 1, {strokeDashoffset: 0, delay: 0.0}),
-                            TweenMax.to(paths.eq(164), 1, {strokeDashoffset: 0, delay: 0.0}),
-                            TweenMax.to(paths.eq(165), 1, {strokeDashoffset: 0, delay: 0.0}),
-                            TweenMax.to(paths.eq(166), 1, {strokeDashoffset: 0, delay: 0.0}),
-                            TweenMax.to(paths.eq(167), 1, {strokeDashoffset: 0, delay: 0.0}),
-                            TweenMax.to(paths.eq(168), 1, {strokeDashoffset: 0, delay: 0.0}),
-                            TweenMax.to(paths.eq(169), 1, {strokeDashoffset: 0, delay: 0.0}),
+                            TweenMax.to(ctUpPath.eq(0), 1, {strokeDashoffset: 0, delay: 0.0}),
+                            TweenMax.to(ctUpPath.eq(1), 1, {strokeDashoffset: 0, delay: 0.0}),
+                            TweenMax.to(ctUpPath.eq(2), 1, {strokeDashoffset: 0, delay: 0.0}),
+                            TweenMax.to(ctUpPath.eq(3), 1, {strokeDashoffset: 0, delay: 0.0}),
+                            TweenMax.to(ctUpPath.eq(4), 1, {strokeDashoffset: 0, delay: 0.0}),
+                            TweenMax.to(ctUpPath.eq(5), 1, {strokeDashoffset: 0, delay: 0.0}),
 
-                            TweenMax.to(paths.eq(170), 1, {strokeDashoffset: 0, delay: 0.0}),
-                            TweenMax.to(paths.eq(171), 1, {strokeDashoffset: 0, delay: 0.0}),
-                            TweenMax.to(paths.eq(172), 1, {strokeDashoffset: 0, delay: 0.0}),
-                            TweenMax.to(paths.eq(173), 1, {strokeDashoffset: 0, delay: 0.0}),
-                            TweenMax.to(paths.eq(174), 1, {strokeDashoffset: 0, delay: 0.0}),
+                            TweenMax.to(ctDownPath.eq(0), 1, {strokeDashoffset: 0, delay: 0.0}),
+                            TweenMax.to(ctDownPath.eq(1), 1, {strokeDashoffset: 0, delay: 0.0}),
+                            TweenMax.to(ctDownPath.eq(2), 1, {strokeDashoffset: 0, delay: 0.0}),
+                            TweenMax.to(ctDownPath.eq(3), 1, {strokeDashoffset: 0, delay: 0.0}),
+                            TweenMax.to(ctDownPath.eq(4), 1, {strokeDashoffset: 0, delay: 0.0}),
+                            TweenMax.to(ctDownPath.eq(5), 1, {strokeDashoffset: 0, delay: 0.0}),
                            
                 ]);
                 tlContact.restart();
@@ -1169,7 +1156,6 @@
            offset: '50%'
          });
 
-            console.log("Paths #: " + paths.eq(13));
     });
    
 </script>

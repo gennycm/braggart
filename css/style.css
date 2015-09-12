@@ -290,9 +290,8 @@ div.menu-toggle{
 
 }
 
-div#diamond_little{
-padding-left: 13px;
-padding-top: 5px;
+.diamond_little{
+	height: 140%;
 }
 
 

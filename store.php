@@ -7,7 +7,7 @@
 ?>   
     <div class="parallax" data-background-speed-y="0" data-parallax-align="bottom" id="history">
         <div class="background_black"></div>
-        <svg class="historia_svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="960px" height="560px" viewBox="0 0 960 560">
+        <svg class="historia_svg" id="historia_svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="960px" height="560px" viewBox="0 0 960 560">
                     <defs>
                         <clipPath id="bLogo">
                             <path d="M391.659,258.727c1.545-1.407,2.318-2.532,2.318-3.374v-7.688c-0.291-1.897-0.995-3.167-2.111-3.81
@@ -300,74 +300,11 @@
     }
     
 
-        var diamondSvg = {
-        "diamond_little": {
-            "strokepath": [
-                {
-                    "path": "M 37.521 18.512 L 37.521 49.847",
-                    "duration": 300
-                },
-                {
-                    "path": "M 37.576 18.621 L 53.416 41.372",
-                    "duration": 300
-                },
-                {
-                    "path": "M 37.521 18.512 L 21.854 42.012",
-                    "duration": 300
-                },
-                {
-                    "path": "M 21.854 42.012 L 37.521 49.847",
-                    "duration": 300
-                },
-                {
-                    "path": "M 37.521 49.847 L 53.588 41.725",
-                    "duration": 300
-                },
-                {
-                    "path": "M 21.854 42.012 L 21.854 26.805",
-                    "duration": 300
-                },
-                {
-                    "path": "M 21.854 26.805 L 37.521 32.164",
-                    "duration": 300
-                },
-                {
-                    "path": "M 37.521 32.164 L 53.416 26.519",
-                    "duration": 300
-                },
-                {
-                    "path": "M 37.521 32.164 L 21.854 42.012",
-                    "duration": 300
-                },
-                {
-                    "path": "M 21.854 26.805 L 37.521 49.847",
-                    "duration": 300
-                },
-                {
-                    "path": "M 37.521 49.847 L 53.416 26.805",
-                    "duration": 300
-                },
-                {
-                    "path": "M 37.521 32.164 L 53.016 41.372",
-                    "duration": 300
-                },
-                {
-                    "path": "M 53.588 26.519 L 53.588 41.372",
-                    "duration": 300
-                }
-            ],
-            "dimensions": {
-                "width": 75,
-                "height": 90
-            }
-        }
-    }; 
- 
  
 
     /*Parallax scrolling*/
     var deleteLog = false;
-    var paths, icons, descriptions;
+    var paths, icons, descriptions, pathsDmnd;
 
     jQuery(document).ready(function($) {
       $(fullscreenParallax);
@@ -383,24 +320,20 @@
               /*HANDWRITING STUFF*/
         
         // Store a reference to our paths, excluding our clip path
-        paths = $('path:not(defs path)');
+        paths = $('#historia_svg path:not(defs path)');
         icons= $(".icon-container");
         descriptions = $(".icon-p");
+        pathsDmnd = $('#diamond_little path');
 
         // For each path, set the stroke-dasharray and stroke-dashoffset
         // equal to the path's total length, hence rendering it invisible
         paths.each(function(i, e) {
             e.style.strokeDasharray = e.style.strokeDashoffset = e.getTotalLength();
-        });  
+        });
 
-      /*Svg Painter*/
-     $('#diamond_little').lazylinepainter( 
-         {
-            "svgData": diamondSvg,
-            "strokeWidth": 2,
-            "strokeColor": "#FFFFFF",
-            "responsive": "true"
-        }).lazylinepainter('paint');
+        pathsDmnd.each(function(i, e) {
+            e.style.strokeDasharray = e.style.strokeDashoffset = e.getTotalLength();
+        });
 
 
 
@@ -417,6 +350,8 @@
          $(function() {
      var tlServ  = new TimelineLite();
      var tlHist = new TimelineLite();
+     var tlLoadDmnd  = new TimelineMax();
+
 
      var histCounter = 0;
      var usCounter= 0;
@@ -427,6 +362,19 @@
          if (histCounter == 1) {
             tlHist.add([
                 //La tienda front letters
+            TweenLite.to(paths.eq(0), 1, {strokeDashoffset: 0, delay: 0.3}),
+            TweenLite.to(paths.eq(1), 1, {strokeDashoffset: 0, delay: 0.3}),
+            TweenLite.to(paths.eq(2), 1, {strokeDashoffset: 0, delay: 0.3}),
+            TweenLite.to(paths.eq(3), 1, {strokeDashoffset: 0, delay: 0.3}),
+            TweenLite.to(paths.eq(4), 1, {strokeDashoffset: 0, delay: 0.3}),
+            TweenLite.to(paths.eq(5), 1, {strokeDashoffset: 0, delay: 0.3}),
+            TweenLite.to(paths.eq(6), 1, {strokeDashoffset: 0, delay: 0.3}),
+            TweenLite.to(paths.eq(7), 1, {strokeDashoffset: 0, delay: 0.3}),
+            TweenLite.to(paths.eq(8), 1, {strokeDashoffset: 0, delay: 0.3}),
+            TweenLite.to(paths.eq(9), 1, {strokeDashoffset: 0, delay: 0.3}),
+            TweenLite.to(paths.eq(10), 1, {strokeDashoffset: 0, delay: 0.3}),
+            TweenLite.to(paths.eq(11), 1, {strokeDashoffset: 0, delay: 0.3}),
+            TweenLite.to(paths.eq(12), 1, {strokeDashoffset: 0, delay: 0.3}),
             TweenLite.to(paths.eq(13), 1, {strokeDashoffset: 0, delay: 0.3}),
             TweenLite.to(paths.eq(14), 1, {strokeDashoffset: 0, delay: 0.3}),
             TweenLite.to(paths.eq(15), 1, {strokeDashoffset: 0, delay: 0.3}),
@@ -441,6 +389,7 @@
             TweenLite.to(paths.eq(24), 1, {strokeDashoffset: 0, delay: 0.3}),
             TweenLite.to(paths.eq(25), 1, {strokeDashoffset: 0, delay: 0.3}),
             TweenLite.to(paths.eq(26), 1, {strokeDashoffset: 0, delay: 0.3}),
+
             TweenLite.to(paths.eq(27), 1, {strokeDashoffset: 0, delay: 0.3}),
             TweenLite.to(paths.eq(28), 1, {strokeDashoffset: 0, delay: 0.3}),
             TweenLite.to(paths.eq(29), 1, {strokeDashoffset: 0, delay: 0.3}),
@@ -454,7 +403,6 @@
             TweenLite.to(paths.eq(37), 1, {strokeDashoffset: 0, delay: 0.3}),
             TweenLite.to(paths.eq(38), 1, {strokeDashoffset: 0, delay: 0.3}),
             TweenLite.to(paths.eq(39), 1, {strokeDashoffset: 0, delay: 0.3}),
-
             TweenLite.to(paths.eq(40), 1, {strokeDashoffset: 0, delay: 0.3}),
             TweenLite.to(paths.eq(41), 1, {strokeDashoffset: 0, delay: 0.3}),
             TweenLite.to(paths.eq(42), 1, {strokeDashoffset: 0, delay: 0.3}),
@@ -469,8 +417,8 @@
             TweenLite.to(paths.eq(51), 1, {strokeDashoffset: 0, delay: 0.3}),
             TweenLite.to(paths.eq(52), 1, {strokeDashoffset: 0, delay: 0.3}),
             TweenLite.to(paths.eq(53), 1, {strokeDashoffset: 0, delay: 0.3}),
-            TweenLite.to(paths.eq(54), 1, {strokeDashoffset: 0, delay: 0.3}),
-            TweenLite.to(paths.eq(55), 1, {strokeDashoffset: 0, delay: 0.3}),
+            TweenLite.to(paths.eq(54), 1, {strokeDashoffset: 0, delay: 0.3}),         
+            TweenLite.to(paths.eq(55), 1, {strokeDashoffset: 0, delay: 0.3}),         
             TweenLite.to(paths.eq(56), 1, {strokeDashoffset: 0, delay: 0.3}),
             TweenLite.to(paths.eq(57), 1, {strokeDashoffset: 0, delay: 0.3}),
             TweenLite.to(paths.eq(58), 1, {strokeDashoffset: 0, delay: 0.3}),
@@ -482,22 +430,25 @@
             TweenLite.to(paths.eq(64), 1, {strokeDashoffset: 0, delay: 0.3}),
             TweenLite.to(paths.eq(65), 1, {strokeDashoffset: 0, delay: 0.3}),
             TweenLite.to(paths.eq(66), 1, {strokeDashoffset: 0, delay: 0.3}),
-            TweenLite.to(paths.eq(67), 1, {strokeDashoffset: 0, delay: 0.3}),         
-            TweenLite.to(paths.eq(68), 1, {strokeDashoffset: 0, delay: 0.3}),         
-            TweenLite.to(paths.eq(69), 1, {strokeDashoffset: 0, delay: 0.3}),
-            TweenLite.to(paths.eq(70), 1, {strokeDashoffset: 0, delay: 0.3}),
-            TweenLite.to(paths.eq(71), 1, {strokeDashoffset: 0, delay: 0.3}),
-            TweenLite.to(paths.eq(72), 1, {strokeDashoffset: 0, delay: 0.3}),
-            TweenLite.to(paths.eq(73), 1, {strokeDashoffset: 0, delay: 0.3}),
-            TweenLite.to(paths.eq(74), 1, {strokeDashoffset: 0, delay: 0.3}),
-            TweenLite.to(paths.eq(75), 1, {strokeDashoffset: 0, delay: 0.3}),
-            TweenLite.to(paths.eq(76), 1, {strokeDashoffset: 0, delay: 0.3}),
-            TweenLite.to(paths.eq(77), 1, {strokeDashoffset: 0, delay: 0.3}),
-            TweenLite.to(paths.eq(78), 1, {strokeDashoffset: 0, delay: 0.3}),
-            TweenLite.to(paths.eq(79), 1, {strokeDashoffset: 0, delay: 0.3}),
-            TweenLite.to(paths.eq(80), 1, {strokeDashoffset: 0, delay: 0.3}), 
+            TweenLite.to(paths.eq(67), 1, {strokeDashoffset: 0, delay: 0.3}), 
 
             ]);
+
+            tlLoadDmnd.add([
+            TweenLite.to(pathsDmnd.eq(0), 2, {strokeDashoffset: 0, delay: 0.0}),
+            TweenLite.to(pathsDmnd.eq(1), 2, {strokeDashoffset: 0, delay: 0.0}),
+            TweenLite.to(pathsDmnd.eq(2), 2, {strokeDashoffset: 0, delay: 0.0}),
+            TweenLite.to(pathsDmnd.eq(3), 2, {strokeDashoffset: 0, delay: 0.0}),
+            TweenLite.to(pathsDmnd.eq(4), 2, {strokeDashoffset: 0, delay: 0.0}),
+            TweenLite.to(pathsDmnd.eq(5), 2, {strokeDashoffset: 0, delay: 0.0}),
+            TweenLite.to(pathsDmnd.eq(6), 2, {strokeDashoffset: 0, delay: 0.0}),
+            TweenLite.to(pathsDmnd.eq(7), 2, {strokeDashoffset: 0, delay: 0.0}),
+            TweenLite.to(pathsDmnd.eq(8), 2, {strokeDashoffset: 0, delay: 0.0}),
+            TweenLite.to(pathsDmnd.eq(9), 2, {strokeDashoffset: 0, delay: 0.0}),
+            TweenLite.to(pathsDmnd.eq(10), 2, {strokeDashoffset: 0, delay: 0.0}),
+            TweenLite.to(pathsDmnd.eq(11), 2, {strokeDashoffset: 0, delay: 0.0}),
+            TweenLite.to(pathsDmnd.eq(12), 2, {strokeDashoffset: 0, delay: 0.0}),    
+        ]);
 
             }
          });
@@ -509,8 +460,7 @@
             }else{
                 if (histCounter%2!=0) {
                     tlHist.restart();
-                    $('#diamond_little').lazylinepainter('erase');
-                     $('#diamond_little').lazylinepainter('paint');
+                    tlLoadDmnd.restart();
                 }
             }
          }, {
