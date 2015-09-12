@@ -942,19 +942,19 @@
             ]);
  
         tlLoadDmnd.add([
-            TweenLite.to(pathsDmnd.eq(0), 5, {strokeDashoffset: 0, delay: 0.0}),
-            TweenLite.to(pathsDmnd.eq(1), 5, {strokeDashoffset: 0, delay: 0.0}),
-            TweenLite.to(pathsDmnd.eq(2), 5, {strokeDashoffset: 0, delay: 0.0}),
-            TweenLite.to(pathsDmnd.eq(3), 5, {strokeDashoffset: 0, delay: 0.0}),
-            TweenLite.to(pathsDmnd.eq(4), 5, {strokeDashoffset: 0, delay: 0.0}),
-            TweenLite.to(pathsDmnd.eq(5), 5, {strokeDashoffset: 0, delay: 0.0}),
-            TweenLite.to(pathsDmnd.eq(6), 5, {strokeDashoffset: 0, delay: 0.0}),
-            TweenLite.to(pathsDmnd.eq(7), 5, {strokeDashoffset: 0, delay: 0.0}),
-            TweenLite.to(pathsDmnd.eq(8), 5, {strokeDashoffset: 0, delay: 0.0}),
-            TweenLite.to(pathsDmnd.eq(9), 5, {strokeDashoffset: 0, delay: 0.0}),
-            TweenLite.to(pathsDmnd.eq(10), 5, {strokeDashoffset: 0, delay: 0.0}),
-            TweenLite.to(pathsDmnd.eq(11), 5, {strokeDashoffset: 0, delay: 0.0}),
-            TweenLite.to(pathsDmnd.eq(12), 5, {strokeDashoffset: 0, delay: 0.0}),    
+            TweenLite.to(pathsDmnd.eq(0), 2, {strokeDashoffset: 0, delay: 0.0}),
+            TweenLite.to(pathsDmnd.eq(1), 2, {strokeDashoffset: 0, delay: 0.0}),
+            TweenLite.to(pathsDmnd.eq(2), 2, {strokeDashoffset: 0, delay: 0.0}),
+            TweenLite.to(pathsDmnd.eq(3), 2, {strokeDashoffset: 0, delay: 0.0}),
+            TweenLite.to(pathsDmnd.eq(4), 2, {strokeDashoffset: 0, delay: 0.0}),
+            TweenLite.to(pathsDmnd.eq(5), 2, {strokeDashoffset: 0, delay: 0.0}),
+            TweenLite.to(pathsDmnd.eq(6), 2, {strokeDashoffset: 0, delay: 0.0}),
+            TweenLite.to(pathsDmnd.eq(7), 2, {strokeDashoffset: 0, delay: 0.0}),
+            TweenLite.to(pathsDmnd.eq(8), 2, {strokeDashoffset: 0, delay: 0.0}),
+            TweenLite.to(pathsDmnd.eq(9), 2, {strokeDashoffset: 0, delay: 0.0}),
+            TweenLite.to(pathsDmnd.eq(10), 2, {strokeDashoffset: 0, delay: 0.0}),
+            TweenLite.to(pathsDmnd.eq(11), 2, {strokeDashoffset: 0, delay: 0.0}),
+            TweenLite.to(pathsDmnd.eq(12), 2, {strokeDashoffset: 0, delay: 0.0}),    
         ]);
 
             }
