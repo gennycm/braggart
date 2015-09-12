@@ -52,10 +52,6 @@
 
    <script type="text/javascript">
 
-
-
-
-
     $(window).load(function() {
     var paths = $('#loader_dmnd path');
     var tlLoad  = new TimelineLite();
@@ -80,7 +76,14 @@
         ]);
         $(".loader").fadeOut("slow");
     });
-        
+    
+    var myElement = document.querySelector("nav");
+    // construct an instance of Headroom, passing the element
+    console.log(myElement);
+    var headroom  = new Headroom(myElement);
+    // initialise
+    headroom.init(); 
+
 
   </script>
 </html>
