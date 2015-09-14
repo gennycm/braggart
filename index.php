@@ -25,11 +25,10 @@
 <!--BODY-->
 
 <!--<div id="pagepiling">-->
-     
-       
+            
         <div id="home" class="parallax " data-background-speed-y="0" data-parallax-align="bottom">
             <div class="background_black"></div>
-            <div >
+            <div style="position:absolute;bottom:0;width:100%;overflow:hidden;">
                 <svg id="logo_svg" class="logo-slide" version="1.1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="960px" height="560px" viewBox="0 0 960 560">
                     <defs>
                         <clipPath id="bLogo" >
@@ -255,7 +254,6 @@
             </div>
         </div>
         
-
         <div id="us" class="parallax " data-background-speed-y="0" data-parallax-align="top">
             <div class="background_black"></div>
             <a style="display:block;" href="store.php">
@@ -431,7 +429,7 @@
 
         <div id="shirts" class="parallax" data-background-speed-y="0" data-parallax-align="top">
             <div class="background_black"></div>
-            <a style="display:block;" href="shirts.php">
+            <a style="display:block" href="shirts.php">
                 <svg id="shirts_svg" class="frontLetters" version="1.1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="792px" height="612px" viewBox="0 0 792 612" enable-background="new 0 0 792 612" xml:space="preserve">
                     <defs>
                         <clipPath id="camisas">
@@ -626,59 +624,59 @@
             <div class="background_black"></div>
             <div class="col-xs-12 centered_div">
                 <div class="col-lg-6 col-md-6 col-sm-6"></div>
-                <div class="col-lg-6 col-md-6 col-sm-6 "><div>
-                   
-                <table class="contact" >
-                    <tr>
-                        <td colspan="2">
-                            <svg id="ctUp" class="decoration_svg deco_top" version="1.1"  xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                                 width="118px" height="30px" viewBox="0 0 118 30">
-                            <path fill="none" stroke="#ffffff" stroke-width="1" stroke-miterlimit="10" d="M22.795,22.535h74.333"/>
-                            <path fill="none" stroke="#ffffff" stroke-width="1" stroke-miterlimit="10" d="M3.312,25.535h113.301"/>
+                <div class="col-lg-6 col-md-6 col-sm-6 ">
+                    <table class="contact" >
+                        <tr>
+                            <td colspan="2">
+                                <svg id="ctUp" class="decoration_svg deco_top" version="1.1"  xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                     width="118px" height="30px" viewBox="0 0 118 30">
+                                <path fill="none" stroke="#ffffff" stroke-width="1" stroke-miterlimit="10" d="M22.795,22.535h74.333"/>
+                                <path fill="none" stroke="#ffffff" stroke-width="1" stroke-miterlimit="10" d="M3.312,25.535h113.301"/>
 
-                                <path fill="none" stroke="#ffffff" stroke-width="1" stroke-miterlimit="10" d="M52.192,8.518l10.216,9.811"/>
-                                <path fill="none" stroke="#ffffff" stroke-width="1" stroke-miterlimit="10" d="M62.424,8.534l-10.249,9.778"/>
+                                    <path fill="none" stroke="#ffffff" stroke-width="1" stroke-miterlimit="10" d="M52.192,8.518l10.216,9.811"/>
+                                    <path fill="none" stroke="#ffffff" stroke-width="1" stroke-miterlimit="10" d="M62.424,8.534l-10.249,9.778"/>
 
-                                <path fill="none" stroke="#ffffff" stroke-width="1" stroke-miterlimit="10" d="M59.83,8.518l10.217,9.811"/>
-                                <path fill="none" stroke="#ffffff" stroke-width="1" stroke-miterlimit="10" d="M70.063,8.534l-10.248,9.778"/>
+                                    <path fill="none" stroke="#ffffff" stroke-width="1" stroke-miterlimit="10" d="M59.83,8.518l10.217,9.811"/>
+                                    <path fill="none" stroke="#ffffff" stroke-width="1" stroke-miterlimit="10" d="M70.063,8.534l-10.248,9.778"/>
 
-                            </svg>
-                        </td>
-                    </tr> 
-                    <tr>
-                        <td class="icon"><p class="scrollflow -slide-left" data-scrollflow-start="-50" data-scrollflow-distance="5" data-scrollflow-amount="30"><i class="fa fa-phone fa-lg"></i></p></td>
-                        <td class="text"><p class="scrollflow -slide-right" data-scrollflow-start="-50" data-scrollflow-distance="5" data-scrollflow-amount="30">(999) 9 48 30 46</p> </td>
-                    </tr>
-                    <tr>
-                        <td class="icon"><p class="scrollflow -slide-left" data-scrollflow-start="-50" data-scrollflow-distance="5" data-scrollflow-amount="30"><i class="fa fa-envelope fa-lg"></i></p></td>
-                        <td class="text"><p class="scrollflow -slide-right" data-scrollflow-start="-50" data-scrollflow-distance="5" data-scrollflow-amount="30">contacto@braggart.com</p> </td>
-                    </tr>
-                    <tr>
-                        <td class="icon"><p class="scrollflow -slide-left" data-scrollflow-start="-50" data-scrollflow-distance="5" data-scrollflow-amount="30"><i class="fa fa-facebook-official fa-lg"></i></p></td>
-                        <td class="text"><p class="scrollflow -slide-right" data-scrollflow-start="-50" data-scrollflow-distance="5" data-scrollflow-amount="30">Tienda <span class="braggart_txt">BRAGGART</span></p></td>
-                    </tr>
-                    <tr>
-                        <td class="icon"><p class="scrollflow -slide-left" data-scrollflow-start="-50" data-scrollflow-distance="5" data-scrollflow-amount="30"><i class="fa fa-insta-official fa-lg"></i></p></td>
-                        <td class="text"><p class="scrollflow -slide-right" data-scrollflow-start="-50" data-scrollflow-distance="5" data-scrollflow-amount="30"> @BraggartMX </p></td>
-                    </tr>
-                    <tr>
-                        <td colspan="2">
-                           <svg id="ctDown" class="decoration_svg deco_bottom" version="1.1"  xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="118px" height="30px" viewBox="0 0 118 30">
-                                <path fill="none" stroke="#ffffff" stroke-miterlimit="10" d="M97.128,11.518H22.795"/>
-                                <path fill="none" stroke="#ffffff" stroke-miterlimit="10" d="M116.613,8.518H3.312"/>
-                                <path fill="none" stroke="#ffffff" stroke-miterlimit="10" d="M62.408,15.724l-10.216,9.812"/>
-                                <path fill="none" stroke="#ffffff" stroke-miterlimit="10" d="M52.175,15.74l10.249,9.778"/>
-                                <path fill="none" stroke="#ffffff" stroke-miterlimit="10" d="M70.047,15.724L59.83,25.535"/>
-                                <path fill="none" stroke="#ffffff" stroke-miterlimit="10" d="M59.814,15.74l10.248,9.778"/>
-                            </svg>
-                        </td>
-                    </tr>   
-                </table>
+                                </svg>
+                            </td>
+                        </tr> 
+                        <tr>
+                            <td class="icon"><p class="scrollflow -slide-left" data-scrollflow-start="-50" data-scrollflow-distance="5" data-scrollflow-amount="30"><i class="fa fa-phone fa-lg"></i></p></td>
+                            <td class="text"><p class="scrollflow -slide-right" data-scrollflow-start="-50" data-scrollflow-distance="5" data-scrollflow-amount="30">(999) 9 48 30 46</p> </td>
+                        </tr>
+                        <tr>
+                            <td class="icon"><p class="scrollflow -slide-left" data-scrollflow-start="-50" data-scrollflow-distance="5" data-scrollflow-amount="30"><i class="fa fa-envelope fa-lg"></i></p></td>
+                            <td class="text"><p class="scrollflow -slide-right" data-scrollflow-start="-50" data-scrollflow-distance="5" data-scrollflow-amount="30">contacto@braggart.com</p> </td>
+                        </tr>
+                        <tr>
+                            <td class="icon"><p class="scrollflow -slide-left" data-scrollflow-start="-50" data-scrollflow-distance="5" data-scrollflow-amount="30"><i class="fa fa-facebook-official fa-lg"></i></p></td>
+                            <td class="text"><p class="scrollflow -slide-right" data-scrollflow-start="-50" data-scrollflow-distance="5" data-scrollflow-amount="30">Tienda <span class="braggart_txt">BRAGGART</span></p></td>
+                        </tr>
+                        <tr>
+                            <td class="icon"><p class="scrollflow -slide-left" data-scrollflow-start="-50" data-scrollflow-distance="5" data-scrollflow-amount="30"><i class="fa fa-insta-official fa-lg"></i></p></td>
+                            <td class="text"><p class="scrollflow -slide-right" data-scrollflow-start="-50" data-scrollflow-distance="5" data-scrollflow-amount="30"> @BraggartMX </p></td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">
+                               <svg id="ctDown" class="decoration_svg deco_bottom" version="1.1"  xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="118px" height="30px" viewBox="0 0 118 30">
+                                    <path fill="none" stroke="#ffffff" stroke-miterlimit="10" d="M97.128,11.518H22.795"/>
+                                    <path fill="none" stroke="#ffffff" stroke-miterlimit="10" d="M116.613,8.518H3.312"/>
+                                    <path fill="none" stroke="#ffffff" stroke-miterlimit="10" d="M62.408,15.724l-10.216,9.812"/>
+                                    <path fill="none" stroke="#ffffff" stroke-miterlimit="10" d="M52.175,15.74l10.249,9.778"/>
+                                    <path fill="none" stroke="#ffffff" stroke-miterlimit="10" d="M70.047,15.724L59.83,25.535"/>
+                                    <path fill="none" stroke="#ffffff" stroke-miterlimit="10" d="M59.814,15.74l10.248,9.778"/>
+                                </svg>
+                            </td>
+                        </tr>   
+                    </table>
+                </div>
             </div>
         </div>
     <!--</div>-->
-</div>
 </div><!--Container-->
+<!--</div>-->
 
 <!--Login Slidebar-->
 <?php include_once("login_register.html");?>
