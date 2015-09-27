@@ -20,6 +20,14 @@
         }
     ?>
 </style>
+
+        <!--<a href="#" id="menu_a" style="display:block; position:fixed;z-index:1000;" onclick="display_menu()">
+            <div class="menu-toggle"></div>
+            <div class="text_toggle">
+                <h5>MENÚ</h5>
+            </div>
+        </a>-->
+
         <?php 
             foreach ($productos as $producto_tmp){
                echo '<div id="p'.$producto_tmp["id_producto"].'" class="parallax" data-background-speed-y="0" data-parallax-align="top">

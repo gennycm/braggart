@@ -467,7 +467,7 @@
            offset: '99%'
          });
 
-       $('#us').waypoint(function() {
+       $('.historia').waypoint(function() {
         usCounter++;
          console.log("us" + usCounter);
          if (usCounter == 1) {

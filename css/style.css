@@ -503,7 +503,7 @@ h1{
 }
 
 .historia{
-	margin-top: 23%;
+	margin-top: 29%;
 }
 
 div.shirt{
@@ -934,6 +934,7 @@ div.icon-container{
     width:150px;
     margin:0 auto;
     display: table;
+    opacity: 100;
 }
 
 div.icon-p p{
@@ -951,14 +952,17 @@ div.icon-p p{
 div.fabric{
 	background-image: url(../img/shirt-icon.png);
 	background-size: 100% auto;
+	visibility: hidden;
 }
 div.payment{
 	background-image: url(../img/credit-icon.png);
 	background-size: 75% auto;
+	visibility: hidden;
 }
 div.delivery{
 	background-image: url(../img/box-icon.png);
 	background-size: 70% auto;
+	visibility: hidden;
 }
 /*THE STORE*/
 
