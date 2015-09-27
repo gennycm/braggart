@@ -1688,3 +1688,64 @@ div.reset-form-container > form > input[type="submit"]{
 	font-size: 16px;
 }
 /*RESET PASSWORD*/
+
+
+.centered_abs_div{
+	position: absolute;
+    top: 50%; 
+    left: 50%;
+    transform: translate(-50%,-50%);
+	font-family:'Conv_Thin Design',Sans-Serif;
+	z-index: 1;
+}
+
+/*Efectos para IE*/
+#shadows, #shirts_shadow{
+  fill-opacity: 0;
+}
+
+#shirts_text, #us_text {
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+  -webkit-animation: draw 8s forwards;
+  fill-opacity: 0;
+}
+@-webkit-keyframes draw {
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+#shirts_text, #us_text {
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+  -webkit-animation: draw 8s forwards;
+  -moz-animation: draw 8s forwards;
+  -o-animation: draw 8s forwards;
+  -ms-animation: draw 8s forwards;
+  animation: draw 8s forwards;
+}
+@-webkit-keyframes draw {
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+@-moz-keyframes draw {
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+@-o-keyframes draw {
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+@-ms-keyframes draw {
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+@keyframes draw {
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
