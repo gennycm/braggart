@@ -228,10 +228,11 @@ h1.main_title{
 
 .logo-slide{
 	position: absolute;
-	right:-200px;
-	bottom:-120px;
+	right: 20px;
+	bottom: 20px;
 	z-index: 888;
-	height:450px;
+	width: auto;
+	height: 150px;
 }
 
 
