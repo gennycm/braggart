@@ -495,17 +495,25 @@ h1{
 
 }
 
+.historia{
+	z-index: 888;
+}
+
 .historia > p{
 	color:white;
 	text-align: center;
 	font-size: 22px;
-	filter: opacity(1); transform: translate3d(0px, 50px, 0px) scale(0.8); transition: all 800ms ease-out 0s;
+	filter: opacity(1); 
+	transform: translate3d(0px, 50px, 0px) scale(0.8); 
+	-ms-transform:
+	-webkit-transform:
+	transition: all 800ms ease-out 0s;
+	-webkit-transition: all 800ms ease-out 0s;
+    -moz-transition: all 800ms ease-out 0s;
+    -o-transition: all 800ms ease-out 0s;
 	position:relative;
 }
 
-.historia{
-	margin-top: 29%;
-}
 
 div.shirt{
 	background-size: cover;
@@ -1557,6 +1565,7 @@ label.select:before {
 	left: 50%;
 	-webkit-transform: translateX(-50%);
 	-ms-transform: translateX(-50%);
+	-moz-transform:translateX(-50%);
 	transform: translateX(-50%);
 	  height: 100%;
 
@@ -1569,6 +1578,7 @@ label.select:before {
     left: 50%;
 	-webkit-transform: translateX(-50%);
 	-ms-transform: translateX(-50%);
+	-moz-transform:translateX(-50%);
 	transform: translateX(-50%);
 	  height: 100%;
 
@@ -1611,12 +1621,13 @@ svg {
 
 
 .historia_svg{
-	position: absolute;
-	max-width: 100%;
+	position: relative;
+	z-index: 888;
+	height: 250px;
+/*	max-width: 100%;
 	max-height: 100%;
 	top: 0;
-	left: 0;
-	z-index: 888;
+	left: 0;*/
 }
 
 .loader_dmnd {
@@ -1700,8 +1711,23 @@ div.reset-form-container > form > input[type="submit"]{
     top: 50%; 
     left: 50%;
     transform: translate(-50%,-50%);
+    -webkit-transform: translate(-50%,-50%);
+	-ms-transform: translate(-50%,-50%);
+	-moz-transform: translate(-50%,-50%);
 	font-family:'Conv_Thin Design',Sans-Serif;
 	z-index: 1;
+}
+
+.centered_abs{
+	position: absolute;
+    top: 50%; 
+    left: 50%;
+    transform: translate(-50%,-50%);
+    -webkit-transform: translate(-50%,-50%);
+	-ms-transform: translate(-50%,-50%);
+	-moz-transform: translate(-50%,-50%);
+	z-index: 1;
+	width: 100%
 }
 
 /*Efectos para IE*/
@@ -1709,7 +1735,7 @@ div.reset-form-container > form > input[type="submit"]{
   fill-opacity: 0;
 }
 
-#shirts_text, #us_text {
+#shirts_text, #us_text, #braggart_txt, #made_for_me_txt{
   stroke-dasharray: 1000;
   stroke-dashoffset: 1000;
   -webkit-animation: draw 8s forwards;
@@ -1720,7 +1746,7 @@ div.reset-form-container > form > input[type="submit"]{
     stroke-dashoffset: 0;
   }
 }
-#shirts_text, #us_text {
+#shirts_text, #us_text, #braggart_txt, #made_for_me_txt {
   stroke-dasharray: 1000;
   stroke-dashoffset: 1000;
   -webkit-animation: draw 8s forwards;
@@ -1753,4 +1779,14 @@ div.reset-form-container > form > input[type="submit"]{
   100% {
     stroke-dashoffset: 0;
   }
+}
+
+
+#braggart_txt{
+	font-family:'Conv_Thin Design',Sans-Serif;
+}
+
+#made_for_me_txt{
+	font-family:'Conv_MissionGothicRegular',Sans-Serif;
+
 }
