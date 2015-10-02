@@ -586,36 +586,25 @@ div.shirt{
 	text-align: center;
 }
 
-/*Tables*/
+/*Contact*/
 
-  table.contact {
-	color:white;
-	position: relative;
-	z-index: 3;
-	margin-left: auto;
-    margin-right: auto;
-    font-size: 2em;
-    margin-top:0 auto;
-
-  }
-
-table.contact td{
-	display: table-cell;
-	padding: 0 5px 10px 10px;
-	z-index: 10;
+.contact_info{
+	z-index: 2;
+	color: white;
+	text-align: center;
 }
 
+.icon{
+	padding: 15px 10px;
+	font-size: 2em;
 
-table.contact td.icon{
-	padding-left: 40px;
 }
 
-table.contact td.text{
-	padding-right: 40px;
+.text{
 	font-family:'Conv_MissionGothicRegular',Sans-Serif;
-	font-size: 20pt;
-	/*letter-spacing: 0.090em;*/
+	font-size: 2em;
 }
+
 .braggart_txt{
 	letter-spacing: 0.090em;
 	font-family:'Conv_Thin Design',Sans-Serif;
@@ -623,11 +612,6 @@ table.contact td.text{
 
 }
 
-table.contact td.decoration{
-	text-align: center;
-	font-family:'Conv_FoglihtenDeH02',Sans-Serif;
-	font-size: 2.5em;
-}
 
 /* This parent can be any width and height */
 .block {
@@ -1606,7 +1590,6 @@ svg {
 	-webkit-transform: translateX(-50%);
 	-ms-transform: translateX(-50%);
 	transform: translateX(-50%);
-
 }
 
 

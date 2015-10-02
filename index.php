@@ -128,12 +128,11 @@
 
         <div id="contact" class="parallax" data-background-speed-y="0" data-parallax-align="top">
             <div class="background_black"></div>
-            <div class="col-xs-12 centered_div">
-                <div class="col-lg-6 col-md-6 col-sm-6"></div>
-                <div class="col-lg-6 col-md-6 col-sm-6 ">
-                    <table class="contact" >
-                        <tr>
-                            <td colspan="2">
+                <div class="col-xs-12 contact_info centered_abs">
+                    <div class="col-lg-6 col-md-6 col-sm-6"></div>
+                    <div class="col-lg-6 col-md-6 col-sm-6">
+                        <div class="row">
+                             <div class="col-lg-12">
                                 <svg id="ctUp" class="decoration_svg deco_top" version="1.1"  xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                                      width="118px" height="30px" viewBox="0 0 118 30">
                                 <path fill="none" stroke="#ffffff" stroke-width="1" stroke-miterlimit="10" d="M22.795,22.535h74.333"/>
@@ -144,39 +143,40 @@
 
                                     <path fill="none" stroke="#ffffff" stroke-width="1" stroke-miterlimit="10" d="M59.83,8.518l10.217,9.811"/>
                                     <path fill="none" stroke="#ffffff" stroke-width="1" stroke-miterlimit="10" d="M70.063,8.534l-10.248,9.778"/>
-
                                 </svg>
-                            </td>
-                        </tr> 
-                        <tr>
-                            <td class="icon"><p class="scrollflow -slide-left" data-scrollflow-start="-50" data-scrollflow-distance="5" data-scrollflow-amount="30"><i class="fa fa-phone fa-lg"></i></p></td>
-                            <td class="text"><p class="scrollflow -slide-right" data-scrollflow-start="-50" data-scrollflow-distance="5" data-scrollflow-amount="30">(999) 9 48 30 46</p> </td>
-                        </tr>
-                        <tr>
-                            <td class="icon"><p class="scrollflow -slide-left" data-scrollflow-start="-50" data-scrollflow-distance="5" data-scrollflow-amount="30"><i class="fa fa-envelope fa-lg"></i></p></td>
-                            <td class="text"><p class="scrollflow -slide-right" data-scrollflow-start="-50" data-scrollflow-distance="5" data-scrollflow-amount="30">contacto@braggart.com</p> </td>
-                        </tr>
-                        <tr>
-                            <td class="icon"><p class="scrollflow -slide-left" data-scrollflow-start="-50" data-scrollflow-distance="5" data-scrollflow-amount="30"><i class="fa fa-facebook-official fa-lg"></i></p></td>
-                            <td class="text"><p class="scrollflow -slide-right" data-scrollflow-start="-50" data-scrollflow-distance="5" data-scrollflow-amount="30">Tienda <span class="braggart_txt">BRAGGART</span></p></td>
-                        </tr>
-                        <tr>
-                            <td class="icon"><p class="scrollflow -slide-left" data-scrollflow-start="-50" data-scrollflow-distance="5" data-scrollflow-amount="30"><i class="fa fa-insta-official fa-lg"></i></p></td>
-                            <td class="text"><p class="scrollflow -slide-right" data-scrollflow-start="-50" data-scrollflow-distance="5" data-scrollflow-amount="30"> @BraggartMX </p></td>
-                        </tr>
-                        <tr>
-                            <td colspan="2">
-                               <svg id="ctDown" class="decoration_svg deco_bottom" version="1.1"  xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="118px" height="30px" viewBox="0 0 118 30">
-                                    <path fill="none" stroke="#ffffff" stroke-miterlimit="10" d="M97.128,11.518H22.795"/>
-                                    <path fill="none" stroke="#ffffff" stroke-miterlimit="10" d="M116.613,8.518H3.312"/>
-                                    <path fill="none" stroke="#ffffff" stroke-miterlimit="10" d="M62.408,15.724l-10.216,9.812"/>
-                                    <path fill="none" stroke="#ffffff" stroke-miterlimit="10" d="M52.175,15.74l10.249,9.778"/>
-                                    <path fill="none" stroke="#ffffff" stroke-miterlimit="10" d="M70.047,15.724L59.83,25.535"/>
-                                    <path fill="none" stroke="#ffffff" stroke-miterlimit="10" d="M59.814,15.74l10.248,9.778"/>
-                                </svg>
-                            </td>
-                        </tr>   
-                    </table>
+                             </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <div class="row" style="padding-top:20px;">
+                                    <i class="icon fa fa-phone scrollflow -slide-left" data-scrollflow-start="-50" data-scrollflow-distance="5" data-scrollflow-amount="30"></i>
+                                    <span class="text scrollflow -slide-right" data-scrollflow-start="-50" data-scrollflow-distance="5" data-scrollflow-amount="30">(999) 9 48 30 46</span> 
+                                </div>
+                                <div class="row">
+                                    <i class="icon fa fa-envelope scrollflow -slide-left" data-scrollflow-start="-50" data-scrollflow-distance="5" data-scrollflow-amount="30"></i>
+                                    <span class="text scrollflow -slide-right" data-scrollflow-start="-50" data-scrollflow-distance="5" data-scrollflow-amount="30">contacto@braggart.com</span> 
+                                </div>
+                                <div class="row">
+                                    <i class="icon fa fa-facebook-official scrollflow -slide-left" data-scrollflow-start="-50" data-scrollflow-distance="5" data-scrollflow-amount="30"></i>
+                                    <span class="text scrollflow -slide-right" data-scrollflow-start="-50" data-scrollflow-distance="5" data-scrollflow-amount="30">Tienda <span class="braggart_txt">BRAGGART</span></span> 
+                                </div>
+                                <div class="row">
+                                    <i class="icon fa fa-insta-official scrollflow -slide-left" data-scrollflow-start="-50" data-scrollflow-distance="5" data-scrollflow-amount="30"></i>
+                                    <span class="text scrollflow -slide-right" data-scrollflow-start="-50" data-scrollflow-distance="5" data-scrollflow-amount="30">@BraggartMX</span> 
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <svg id="ctDown" class="decoration_svg deco_bottom" version="1.1"  xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="118px" height="30px" viewBox="0 0 118 30">
+                                <path fill="none" stroke="#ffffff" stroke-miterlimit="10" d="M97.128,11.518H22.795"/>
+                                <path fill="none" stroke="#ffffff" stroke-miterlimit="10" d="M116.613,8.518H3.312"/>
+                                <path fill="none" stroke="#ffffff" stroke-miterlimit="10" d="M62.408,15.724l-10.216,9.812"/>
+                                <path fill="none" stroke="#ffffff" stroke-miterlimit="10" d="M52.175,15.74l10.249,9.778"/>
+                                <path fill="none" stroke="#ffffff" stroke-miterlimit="10" d="M70.047,15.724L59.83,25.535"/>
+                                <path fill="none" stroke="#ffffff" stroke-miterlimit="10" d="M59.814,15.74l10.248,9.778"/>
+                            </svg>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -255,7 +255,6 @@
         $("#us_animation").append(document.getElementById("us_svg_div").innerHTML);
         $("#shirts_animation").append(document.getElementById("shirts_svg_div").innerHTML);
         $("#logo_div").append(document.getElementById("main_logo_svg_div").innerHTML)
-
     }
 
     jQuery(document).ready(function($) {
