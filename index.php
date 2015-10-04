@@ -257,6 +257,11 @@
         $("#logo_div").append(document.getElementById("main_logo_svg_div").innerHTML)
     }
 
+    if (BrowserDetect.browser == "Safari"){
+        $("#ctUp").css('height','100%');
+        $("#ctDown").css('height','100%');
+    }
+
     jQuery(document).ready(function($) {
       $('#full-width-slider').royalSlider({
         loop:true,
