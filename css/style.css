@@ -254,8 +254,23 @@ div.background_white{
 }
 
 nav{
-	height:250px;
 	font-family: 'Conv_Mission Gothic Light', sans-serif;
+}
+
+@media (min-width: 769px){
+	nav{
+		height:250px;
+	}
+}
+
+@media (max-width: 768px){
+	nav{
+		height:50px;
+	}
+}
+
+img.nav-brand{
+	height:45px;margin-top:-15px;width:auto;
 }
 
 .navbar-default{
