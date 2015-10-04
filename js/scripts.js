@@ -108,13 +108,14 @@ function hide_cart(){
 //Show - hide cart
 
 function display_login(){
+    $(".login_sidebar").show('fast');
     $(".login_sidebar").animate({marginRight:"0px"});
     //console.log("hey");
 }
 
 function hide_login(){
     var width = $(".login_sidebar").width();
-    $(".login_sidebar").animate({marginRight:"-"+width+"px"});
+    $(".login_sidebar").animate({marginRight:"-"+width+"px"}, function(){$(".login_sidebar").hide();});
 
 }
 
@@ -370,8 +371,8 @@ function logIn(){
                 $("input[name='email-login']").val("");
                 $("input[name='pass-login']").val("");
                 var newHtml = '<li><a href="mis_pedidos.php" class="sb-open-right" id="login-button">'+email+'</a></li>'+
-                              '<li><a href="#" onclick="logOut()"> Cerrar Sesión</a></li>'+
-                              '<li><a href="#" onclick="hide_menu()"><i class="fa fa-chevron-up"></i></a></li>';
+                              '<li><a href="#" onclick="logOut()"> Cerrar Sesión</a></li>';
+                              /*'<li><a href="#" onclick="hide_menu()"><i class="fa fa-chevron-up"></i></a></li>';*/
                 $(".navbar-right").html(newHtml);
                 hide_login();
             }
@@ -403,8 +404,8 @@ function logOut(){
         success:function(data){
             if(data.indexOf("true") != -1){
                 mensaje = "Se ha cerrado tu sesión con éxito.";
-                var newHtml = '<li><a href="#" class="sb-open-right" id="login-button">INICIAR SESI&Oacute;N | REGISTRO</a></li>'+
-                              '<li><a href="#" id="menu_chevron" onclick="hide_menu()"><i class="fa fa-chevron-up"></i></a></li>';
+                var newHtml = '<li><a href="#" class="sb-open-right" id="login-button">INICIAR SESI&Oacute;N | REGISTRO</a></li>';
+                              /*'<li><a href="#" id="menu_chevron" onclick="hide_menu()"><i class="fa fa-chevron-up"></i></a></li>';*/
                 $(".navbar-right").html(newHtml);
                 $(".sb-close").click();
             }
@@ -805,6 +806,7 @@ function resetCart(){
 
 function search_product(){
 	var search_string = $(".search-icon input").val();
+    search_string = encodeURIComponent(search_string);
 	window.location.href = "shirts.php?s="+search_string;
 }
 

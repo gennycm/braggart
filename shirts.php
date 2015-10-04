@@ -2,9 +2,9 @@
 <!--BODY-->
     <?php
         include_once("./cp/clases/producto.php");
-        if(isset($_REQUEST["s"]) && $_REQUEST["s"] != ""){
+        if(isset($_GET["s"]) && $_GET["s"] != ""){
           $producto = new producto();
-          $productos = $producto -> listar_productos_activos_por_busqueda($_REQUEST["s"]);
+          $productos = $producto -> listar_productos_activos_por_busqueda($_GET["s"]);
         }
         else{
            $producto = new producto();
@@ -30,7 +30,7 @@
 
         <?php 
             foreach ($productos as $producto_tmp){
-               echo '<div id="p'.$producto_tmp["id_producto"].'" class="parallax" data-background-speed-y="0" data-parallax-align="top">
+               echo '<div id="p'.$producto_tmp["id_producto"].'" class="parallax" data-background-speed-y="0" data-parallax-align="center">
                        <div class="background_black"></div>
                        <div id="triangleWrapper">
                             <div class="triangle-img"></div>

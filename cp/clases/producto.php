@@ -366,8 +366,10 @@ class producto extends Archivo {
 
 	function listar_productos_activos_por_busqueda($search_string, $offset = 0) {
 		$resultados = array();
-		$sql = "SELECT * FROM productos WHERE status = 1 AND mostrar = 0 AND ((titulo_esp LIKE '%" . $search_string . "%') OR (titulo_eng LIKE '%" . $search_string . "%') OR (clave LIKE '%" . $search_string . "%') OR (tags_eng LIKE '%" . $search_string . "%') OR (tags_esp LIKE '%" . $search_string . "%')) ORDER BY fecha_creacion DESC LIMIT ".$offset.",12";
 		$con = new conexion();
+		$con -> conectar();
+		$search_string = mysqli_real_escape_string($con -> conexion, $search_string);
+		$sql = "SELECT * FROM productos WHERE status = 1 AND mostrar = 0 AND ((titulo_esp LIKE '%" . $search_string . "%') OR (titulo_eng LIKE '%" . $search_string . "%') OR (clave LIKE '%" . $search_string . "%') OR (tags_eng LIKE '%" . $search_string . "%') OR (tags_esp LIKE '%" . $search_string . "%')) ORDER BY fecha_creacion DESC LIMIT ".$offset.",12";
 		$temporal = $con -> ejecutar_sentencia($sql);
 		while ($fila = mysqli_fetch_array($temporal)) {
 			$registro = array();
@@ -400,7 +402,13 @@ class producto extends Archivo {
 			array_push($resultados, $registro);
 		}
 		mysqli_free_result($temporal);
-		return $resultados;
+		if(count($resultados) == 0){
+			return $this -> listar_productos_activos_por_busqueda("");
+		}
+		else{
+			return $resultados;
+		}
+		
 	}
 
 
