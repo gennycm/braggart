@@ -137,8 +137,10 @@ function display_wishlist(){
     //console.log("in wishlist");
     var paths = $('#wish_deco path');
     var title = $('#wish_title');
-      
 
+    if (BrowserDetect.browser == "Safari"){
+        $("#wish_deco").css('height','100%');
+    }
         // For each path, set the stroke-dasharray and stroke-dashoffset
         // equal to the path's total length, hence rendering it invisible
         paths.each(function(i, e) {
