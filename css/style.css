@@ -928,6 +928,7 @@ div.pedidos-background{
 	margin-right:8%;
 	margin-top: 5%;
 	color: black;
+	cursor:pointer;
 }
 
 .close_wl{
@@ -995,10 +996,17 @@ div.delivery{
 	text-align: center;
 }
 
+@media (max-width: 768px) and (min-width:480px){
+	.product_info{
+		width: 90%;
+		margin-left: -100%;
+	}
+}
+
 @media (max-width: 992px) and (min-width: 768px){
 	.product_info {
 		width: 70%;
-		margin-left: -70%;
+		margin-left: -100%;
 	}
 
 	.nombre-camisa{
@@ -1179,6 +1187,14 @@ button.boton-producto-agregar:hover{
 	overflow-x: hidden;
 	margin-right: -70%;
 }
+
+@media (max-width: 768px) and (min-width: 420px){
+	.login_sidebar{
+		width: 90%;
+		margin-right: -100%;
+	}
+}
+
 
 @media (max-width: 992px) and (min-width: 768px){
 	.login_sidebar{
