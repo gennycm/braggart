@@ -63,6 +63,10 @@
 <!--BODY-->
 <?php include_once("footer.html");?>
 <script>
+
+if (BrowserDetect.browser == "Safari"){
+    $("#info_deco").css('height','100%');
+}
     /*Parallax scrolling*/
     /*Slidebar*/
     jQuery(document).ready(function($) {

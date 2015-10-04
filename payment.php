@@ -182,6 +182,10 @@
 </script>
 <script>
 
+if (BrowserDetect.browser == "Safari"){
+    $("#paso1_deco").css('height','100%');
+    $("#paso2_deco").css('height','100%');
+}
 
   jQuery(document).ready(function($) {
           /*Svg Painter*/

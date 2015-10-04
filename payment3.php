@@ -100,6 +100,9 @@
 <?php include_once("footer.html");?>
 
 <script>      
+    if (BrowserDetect.browser == "Safari"){
+        $("#paso4_deco").css('height','100%');
+    }
 
     var pathsDmnd;
      pathsDmnd = $('#diamond_little path');
