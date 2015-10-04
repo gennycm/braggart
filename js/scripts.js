@@ -76,6 +76,7 @@ function hide_menu(){
 //Show - hide cart
 
 function display_cart(){
+    $(".shopping-cart").show('fast');
     $(".shopping-cart").animate({marginRight:"0px"});
     var paths = $('#deco path');
     var title = $('#cart_title');
@@ -101,7 +102,7 @@ function display_cart(){
 
 function hide_cart(){
     var width = $(".shopping-cart").width();
-    $(".shopping-cart").animate({marginRight:"-"+width+"px"});
+    $(".shopping-cart").animate({marginRight:"-"+width+"px"}).hide();
 
 }
 
@@ -133,6 +134,7 @@ function hide_info(){
 //Show -hide WISHLIST
 
 function display_wishlist(){
+    $(".wishlist").show('fast');
     $(".wishlist").animate({marginLeft:"0px"});
     //console.log("in wishlist");
     var paths = $('#wish_deco path');
@@ -159,7 +161,7 @@ function display_wishlist(){
 
 function hide_wishlist(){
      var width = $(".wishlist").width();
-    $(".wishlist").animate({marginLeft:"-"+width+"px"});
+    $(".wishlist").animate({marginLeft:"-"+width+"px"}).hide();
 }
 
 
