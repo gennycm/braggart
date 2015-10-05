@@ -8,7 +8,7 @@
 	}
 
 	#bs-example-navbar-collapse-1{
-		margin-top: 4.9%;
+		/*margin-top: 4.9%;*/
 	}
 	
 	.logo-slide{
@@ -31,7 +31,7 @@
 		margin-left: 25%;
 	}
 	#bs-example-navbar-collapse-1{
-		margin-top: 4.3%;
+		/*margin-top: 4.3%;*/
 	}
 }
 
@@ -52,7 +52,7 @@
 	}
 
 	div.background_white {
-		height: 90%;
+		height: 100%;
 	}
 
 	.navbar-default .navbar-collapse{
@@ -92,7 +92,7 @@
 
 @media (min-width: 361px) and (max-width: 767px) {
 	#bs-example-navbar-collapse-1{
-		margin-top: 3.8%;
+		/*margin-top: 3.8%;*/
 	}
 }
 
