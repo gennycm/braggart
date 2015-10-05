@@ -126,6 +126,7 @@ function hide_login(){
 // hide product_info
 
 function hide_info(){
+    $(".login_sidebar").hide();
     var width = $(".product_info").width();
     $(".product_info").animate({marginLeft:"-"+width+"px"});
 }
@@ -530,6 +531,7 @@ function showProductoInfo(id_product){
 
     	},100);
     }
+            $(".product_info").show('fast');
 
             $(".product_info").animate({marginLeft:"0px"});
             //console.log("Open");
