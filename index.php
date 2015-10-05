@@ -235,10 +235,13 @@
         });
 
     }
-    /*Diamantito*/ 
- 
-
- 
+    $('body').flowtype({
+         minimum   : 360,
+         maximum   : 450,
+         minFont   : 12,
+         maxFont   : 40,
+         fontRatio : 30
+    });
 
     /*Parallax scrolling*/
     var deleteLog = false;
@@ -351,7 +354,7 @@
 
 
 
-
+1
  
     }); //End jquery
 
@@ -606,8 +609,13 @@
          if (homeCounter == 1) {
             }else{
                 if (homeCounter%2!=0) {
-                    tlHome.restart();
-                    tlLoadDmnd.restart();
+                    if (BrowserDetect.browser == "Explorer") {
+                        resetAnimTxt( $('#braggart_txt'));
+                        resetShadow($('#made_for_me_txt'));
+                        tlHome.restart();
+                    }else{
+                        tlHome.restart();
+                    }
                 }
             }
          }, {
