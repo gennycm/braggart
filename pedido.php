@@ -30,14 +30,7 @@
 ?>
         <div class="full_background deliver">
             <div class="background_black"></div>
-        </div>    
-        <a href="#" id="menu_a" style="display:block; position:fixed;z-index:1000;" onclick="display_menu()">
-            <div class="menu-toggle"></div>
-            <div class="text_toggle">
-                <h5>MENÚ</h5>
-            </div>
-        </a>       
-                
+        </div>         
 <div class="container" style="margin-top:150px;">
     <div class="col-lg-12 pedidos-container">
         <div class="pedidos-background"></div>

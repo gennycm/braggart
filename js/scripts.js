@@ -423,6 +423,8 @@ function logOut(){
             $('#myModal').modal('toggle');
         }
     });
+
+    window.location.href = "index.php";
 }
 
 var last_id_searched = 0;
@@ -529,7 +531,7 @@ function showProductoInfo(id_product){
 		        sliderDrag: false
 		    });
 
-    	},100);
+    	},300);
     }
             $(".product_info").show('fast');
 

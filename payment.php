@@ -35,18 +35,12 @@
     $estado = $user -> estado;
   }
 ?>
-<div>
-        <a href="#" id="menu_a" style="display:block; position:fixed;z-index:1000;" onclick="display_menu()">
-            <div class="menu-toggle"></div>
-            <div class="text_toggle">
-                <h5>MENÚ</h5>
-            </div>
-        </a>       
+<div>    
         <div class="full_background pay">
             <div class="background_black"></div>
-            <div class="col-lg-12 col-md-12 col-sm-12" style="margin-top:10%;position:relative;z-index:999;overflow:auto; ">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="margin-top:10%;position:relative;z-index:999;overflow:auto; ">
                 <form class="payment-form"  method="post" id="card-form" action="controller.php">
-                 <div class="col-lg-6 col-md-6 col-sm-6 center">
+                 <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 center">
                     <div class="white_block">
                         <p id="paso1_title" class="center" style="width:100%; font-size:18pt; font-weight:bold;">PASO 1</p>
                         <svg id="paso1_deco" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="123px" height="15px" viewBox="0 0 123 15">
@@ -78,7 +72,7 @@
                         </table>
                     </div>
                 </div>
-                <div class="col-lg-6 col-md-6 col-sm-6 center">
+                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 center">
                     <div class="white_block">
                         <p id="paso2_title" class="center" style="width:100%; font-size:18pt; font-weight:bold;">PASO 2</p>
                         <svg id="paso2_deco" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="123px" height="15px" viewBox="0 0 123 15">
@@ -182,10 +176,10 @@
 </script>
 <script>
 
-if (BrowserDetect.browser == "Safari"){
+/*if (BrowserDetect.browser == "Safari"){
     $("#paso1_deco").css('height','100%');
     $("#paso2_deco").css('height','100%');
-}
+}*/
 
   jQuery(document).ready(function($) {
           /*Svg Painter*/

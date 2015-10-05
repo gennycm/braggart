@@ -358,6 +358,16 @@
  
     }); //End jquery
 
+    $(window).resize(function(){
+        var width = $(window).width();
+        var height = $(window).height();
+
+        $('#full-width-slider').css({width: width+"px", height:height+"px"});
+
+        var slider = $('#full-width-slider').data("royalSlider");
+        slider.updateSliderSize(true);
+    });
+
     
     $(window).load(function() {      //Do the code in the {}s when the window has loaded 
       $("#containerSvg").fadeOut("fast");  //Fade out the #loader div
