@@ -20,7 +20,8 @@
 
     <div class="parallax" data-background-speed-y="0" data-parallax-align="top" id="us">
         <div class="background_black"></div>
-        <div class="col-lg-12 col-md-12 col-sm-12" style="margin-top:10%;position:relative;z-index:999; ">
+        <div class="row">
+            <div class="col-lg-12 col-md-12 col-sm-12" style="margin-top:10%;position:relative;z-index:999; ">
             <div class="col-lg-4 col-md-4 col-sm-4 store-section">
                 <div class="col-lg-12">
                     <div class="icon-container fabric"></div>
@@ -48,6 +49,7 @@
                     </div>
                 </div>
             </div>
+        </div>
         </div>
 </div>
 <!-- /.container-fluid -->
