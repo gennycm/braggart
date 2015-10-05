@@ -1,22 +1,10 @@
 @media (max-width: 320px) and (max-device-width: 320px){
 	.sc_icon{
-		margin-left: 10%;
+		margin-left: 5%;
 	}
 
 	.wl_icon{
-		margin-left: 28%;
-	}
-
-	#bs-example-navbar-collapse-1{
-		/*margin-top: 4.9%;*/
-	}
-	
-	.logo-slide{
-		right:-228px;
-	}
-
-	table.contact {
-	    margin-left: -35px;
+		margin-left: 25%;
 	}
 }
 
