@@ -133,7 +133,7 @@
                     <div class="col-lg-6 col-md-6 col-sm-6">
                         <div class="row">
                              <div class="col-lg-12">
-                                <svg id="ctUp" class="decoration_svg deco_top" version="1.1"  xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                <div id="deco_up"><svg id="ctUp" class="decoration_svg deco_top" version="1.1"  xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                                      width="118px" height="30px" viewBox="0 0 118 30">
                                 <path fill="none" stroke="#ffffff" stroke-width="1" stroke-miterlimit="10" d="M22.795,22.535h74.333"/>
                                 <path fill="none" stroke="#ffffff" stroke-width="1" stroke-miterlimit="10" d="M3.312,25.535h113.301"/>
@@ -143,7 +143,7 @@
 
                                     <path fill="none" stroke="#ffffff" stroke-width="1" stroke-miterlimit="10" d="M59.83,8.518l10.217,9.811"/>
                                     <path fill="none" stroke="#ffffff" stroke-width="1" stroke-miterlimit="10" d="M70.063,8.534l-10.248,9.778"/>
-                                </svg>
+                                </svg></div>
                              </div>
                         </div>
                         <div class="row">
@@ -167,14 +167,14 @@
                             </div>
                         </div>
                         <div class="row">
-                            <svg id="ctDown" class="decoration_svg deco_bottom" version="1.1"  xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="118px" height="30px" viewBox="0 0 118 30">
+                            <div id="deco_down"><svg id="ctDown" class="decoration_svg deco_bottom" version="1.1"  xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="118px" height="30px" viewBox="0 0 118 30">
                                 <path fill="none" stroke="#ffffff" stroke-miterlimit="10" d="M97.128,11.518H22.795"/>
                                 <path fill="none" stroke="#ffffff" stroke-miterlimit="10" d="M116.613,8.518H3.312"/>
                                 <path fill="none" stroke="#ffffff" stroke-miterlimit="10" d="M62.408,15.724l-10.216,9.812"/>
                                 <path fill="none" stroke="#ffffff" stroke-miterlimit="10" d="M52.175,15.74l10.249,9.778"/>
                                 <path fill="none" stroke="#ffffff" stroke-miterlimit="10" d="M70.047,15.724L59.83,25.535"/>
                                 <path fill="none" stroke="#ffffff" stroke-miterlimit="10" d="M59.814,15.74l10.248,9.778"/>
-                            </svg>
+                            </svg></div>
                         </div>
                     </div>
                 </div>
@@ -235,13 +235,7 @@
         });
 
     }
-    $('body').flowtype({
-         minimum   : 360,
-         maximum   : 450,
-         minFont   : 12,
-         maxFont   : 40,
-         fontRatio : 30
-    });
+   
 
     /*Parallax scrolling*/
     var deleteLog = false;

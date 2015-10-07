@@ -712,10 +712,14 @@ div.shirt{
 .braggart_txt{
 	letter-spacing: 0.090em;
 	font-family:'Conv_Thin Design',Sans-Serif;
-		font-size: 25pt;
+	font-size: 23pt;
 
 }
 
+#deco_up, #deco_down{
+	margin: 0 auto;
+	width: 70%;
+}
 
 /* This parent can be any width and height */
 .block {
@@ -1799,7 +1803,7 @@ svg {
 
 
 .deco_bottom{
-	margin-top: -30px;
+	margin-top: -20px;
 }
 
 .deco_top{
