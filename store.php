@@ -18,10 +18,10 @@
         </div>
     </div>
 
-    <div class="parallax" data-background-speed-y="0" data-parallax-align="top" id="us">
+    <div id="us" class="parallax" data-background-speed-y="0" data-parallax-align="top" style="height:100%">
         <div class="background_black"></div>
         <div class="row">
-            <div class="col-lg-12 col-md-12 col-sm-12" style="margin-top:10%;position:relative;z-index:999; ">
+            <div class="col-lg-12 col-md-12 col-sm-12 us_desc">
             <div class="col-lg-4 col-md-4 col-sm-4 store-section">
                 <div class="col-lg-12">
                     <div class="icon-container fabric"></div>
@@ -96,7 +96,6 @@
     }
     
 
- 
 
     /*Parallax scrolling*/
     var deleteLog = false;
@@ -141,6 +140,7 @@
  
     }); //End jquery
 
+
 /*Password placeholder , so the placeholder actually shows, and not just dots*/
     $(function() {
     // Invoke the plugin
@@ -148,7 +148,8 @@
     // That’s it, really.
     });
 
-         $(function() {
+
+    $(function() {
      var tlServ  = new TimelineLite();
      var tlHist = new TimelineLite();
      var tlLoadDmnd  = new TimelineMax();
@@ -294,6 +295,19 @@
        $('#us').waypoint(function() {
         histCounter++;
          console.log("ushome" + histCounter);
+
+         var width = (window.innerWidth > 0) ? window.innerWidth : screen.width;
+         if (361 < width  && width <= 480) {
+            console.log("width" + width);
+            $("#us").css("height","420px");
+         }
+         if (600 < width  && width <= 640) {
+            console.log("width" + width);
+            $("#us").css("height","640px");
+         }
+
+
+
          if (histCounter == 1) {
             }else{
                 if (histCounter%2!=0) {

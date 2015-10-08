@@ -1896,7 +1896,11 @@ div.reset-form-container > form > input[type="submit"]{
 }
 /*RESET PASSWORD*/
 
-
+.us_desc{
+	margin-top:10%;
+	position:relative;
+	z-index:999; 
+}
 .centered_abs_div{
 	position: absolute;
     top: 50%; 
