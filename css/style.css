@@ -1,33 +1,4 @@
 
-
-/*Fix para el parallax en Chrome*/
-
-@media screen and (-webkit-min-device-pixel-ratio:0) {
-    .parallax{ 
-        background-size:auto;
-        background-position: center 0%;
-    }
-}
-
-html{
-	/*overflow:hidden;*/
-	overflow-x:hidden;
-	height:100%;
-	width: 100%;
-	position: relative;
-}
-
-div.wrap{
-	height:100%;
-	width: 100%;
-	overflow:auto;
-	overflow-x:hidden;
-    white-space: nowrap;
-    position:fixed;
-    bottom:0;
-    right:0;
-}
-
 /*FONTS*/
 @font-face {
 	font-family: 'Conv_FoglihtenDeH02';
@@ -97,11 +68,45 @@ div.wrap{
 /*END FONTS*/
 
 
+/*Fix para el parallax en Chrome*/
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+    .parallax{ 
+        background-size:auto;
+        background-position: center 0%;
+    }
+}
+
+html{
+	/*overflow:hidden;*/
+	overflow-x:hidden;
+	height:100%;
+	width: 100%;
+	position: relative;
+}
+
 body{
 	font-family: 'Conv_Mission Gothic Light', sans-serif;
 	overflow: auto;
 	overflow-x:hidden;
+	min-height: 100%;
+
 }
+
+div.wrap{
+	height:100%;
+	width: 100%;
+	overflow:auto;
+	overflow-x:hidden;
+    white-space: nowrap;
+    position:fixed;
+    bottom:0;
+    right:0;
+}
+
+
+
+
 
 
 .rsOverflow{
@@ -577,7 +582,10 @@ h1{
 	padding: 6% 0 0 0;
 	position: relative;
 	z-index: -1;
+	background-repeat: repeat;
+	overflow: hidden;
 }
+
 
 .centered_div{
 	margin: 0;
