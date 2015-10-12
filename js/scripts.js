@@ -167,6 +167,11 @@ function hide_wishlist(){
     $(".wishlist").animate({marginLeft:"-"+width+"px"}, function(){$(".wishlist").hide()});
 }
 
+$(".search-icon input").keyup(function(event){
+    if(event.keyCode == 13){
+        $("#search_btn").click();
+    }
+});
 
 function search_click(){
 	if($(".search-icon input").val() != ""){
@@ -732,7 +737,7 @@ function updateCart(){
 
             html_producto = '<tr>'+
                                 //'<td><div class="color-square-shirt-cart" style="background-color:#000;"></div></td>'+
-                                '<td class="shirt-name"><img src="imgProductos/'+img_principal+'" class="cart_shirt"><p class="cart_name">+ '+nombre+'</p></td>'+
+                                '<td class="shirt-name"><img src="imgProductos/'+img_principal+'" class="cart_shirt"><br><p class="cart_name">+ '+nombre+'</p></td>'+
                                 '<td class="shirt-num">'+
                                 /*'<label class="select">'+
                                     '<select class="qty">'+
@@ -747,7 +752,7 @@ function updateCart(){
                                 /*'</label>'+*/
                                 '</td>'+
                                 '<td class="shirt-price">$'+parseInt(precio)+' MXN</td>'+
-                                '<td class="delete-icon" onclick="deleteProductFromCart(\''+unique_id+'\')" style="cursor:pointer;"><i class="fa fa-times"></i></td>'+
+                                '<td class="delete-icon" onclick="deleteProductFromCart(\''+unique_id+'\')" style="cursor:pointer;"><i class="fa fa-times remove_prod"></i></td>'+
                             '</tr>';
             html_carrito+= html_producto;
         }

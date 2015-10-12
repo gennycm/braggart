@@ -43,6 +43,75 @@
 	.braggart_txt {
 	    font-size: 19pt;
 	}
+	/*Cart*/
+	.shopping-cart{
+		width: 100%
+	}
+	#cart_title{
+		font-size: 14pt;
+	}
+	.fa-times {
+		margin-right: 4%;
+		margin-top: -13%;
+	}
+	#deco{
+		width: 200px;
+	}
+
+	table.shopping tr th{
+		font-size: 10pt;
+		padding-right: 5px;
+	}
+	#deco_col{
+		margin-top: -15px;
+	}
+	table.shopping td {
+	    font-size: 14px;
+	    padding: 8px 0 0 0;
+	}
+	.cart_name {
+	    clear: none;
+	    margin-top: 0px;
+	}
+	.cart_shirt {
+	    width: 60px;
+	    margin: 0;
+	    float: none;
+	}
+	.paybutton{
+		margin-right: -35px;
+	}
+	.remove_prod{
+		font-size: 15pt;
+	}
+
+	/*Wishlist*/
+	.wishlist{
+		width: 100%;
+	}
+	#wish_deco{
+		width: 120px;
+	}
+	#wish_title{
+		font-size: 14pt;
+	}
+	#wishlist_body tr td{
+	    padding: 8px 15px 0px;
+	}
+	#wishlist_body tr td .cart_shirt{
+		width: 80px;
+	}
+
+	/*Product info*/
+	.product_info{
+		width: 100%;
+	}
+	.qty2 {
+	    width: 50px;
+	    font-weight: normal;
+	    margin-left: 150px;
+	}
+	
 }
 
 @media (min-width: 321px) and (min-device-width: 321px) and (max-width: 480px) and (max-device-width: 480px){
@@ -90,6 +159,74 @@
 	}
 	.historia_svg{
 		height: 200px;
+	}
+	/*Cart*/
+	.shopping-cart{
+		width: 100%
+	}
+	#cart_title{
+		font-size: 16pt;
+	}
+	.fa-times {
+		margin-right: 5%;
+		margin-top: -8%;
+	}
+	#deco{
+		width: 300px;
+	}
+
+	table.shopping tr th{
+		font-size: 10pt;
+		padding-right: 5px;
+	}
+	#deco_col{
+		margin-top: -15px;
+	}
+	table.shopping td {
+	    font-size: 16px;
+	    padding: 8px 0 0 0;
+	}
+	.cart_name {
+	    clear: none;
+	    margin-top: 0px;
+	}
+	.cart_shirt {
+	    width: 90px;
+	    margin: 0;
+	    float: none;
+	}
+	.paybutton{
+		margin-right: -35px;
+	}
+	.remove_prod{
+		font-size: 15pt;
+	}
+
+	/*Wishlist*/
+	.wishlist{
+		width: 100%;
+	}
+	#wish_deco{
+		width: 200px;
+	}
+	#wish_title{
+		font-size: 17pt;
+	}
+	#wishlist_body tr td{
+	    padding: 8px 35px 0px;
+	}
+	#wishlist_body tr td .cart_shirt{
+		width: 100px;
+	}
+
+	/*Product info*/
+	.product_info{
+		width: 100%;
+	}
+	.qty2 {
+	    width: 50px;
+	    font-weight: normal;
+	    margin-left: 150px;
 	}
 
 }
@@ -142,6 +279,74 @@
 	.us_desc{
 		margin-top:25%;
 	}
+	/*Cart*/
+	.shopping-cart{
+		width: 100%
+	}
+	#cart_title{
+		font-size: 16pt;
+	}
+	.fa-times {
+		margin-right: 5%;
+		margin-top: -8%;
+	}
+	#deco{
+		width: 300px;
+	}
+
+	table.shopping tr th{
+		font-size: 10pt;
+		padding-right: 5px;
+	}
+	#deco_col{
+		margin-top: -15px;
+	}
+	table.shopping td {
+	    font-size: 16px;
+	    padding: 8px 0 0 0;
+	}
+	.cart_name {
+	    clear: none;
+	    margin-top: 0px;
+	}
+	.cart_shirt {
+	    width: 90px;
+	    margin: 0;
+	    float: none;
+	}
+	.paybutton{
+		margin-right: -35px;
+	}
+	.remove_prod{
+		font-size: 15pt;
+	}
+
+	/*Wishlist*/
+	.wishlist{
+		width: 100%;
+	}
+	#wish_deco{
+		width: 200px;
+	}
+	#wish_title{
+		font-size: 17pt;
+	}
+	#wishlist_body tr td{
+	    padding: 8px 15px 0px;
+	}
+	#wishlist_body tr td .cart_shirt{
+		width: 90px;
+	}
+
+	/*Product info*/
+	.product_info{
+		width: 100%;
+	}
+	.qty2 {
+	    width: 50px;
+	    font-weight: normal;
+	    margin-left: 0px;
+	}
 }
 
 @media (min-width: 481px) and (min-device-width: 481px) and (max-width: 640px) and (max-device-width: 640px){
@@ -187,6 +392,77 @@
 		height: 350px;
 		width: 100%;
 		margin: 0 auto;
+	}
+	/*Cart*/
+	.shopping-cart{
+		width: 80%
+	}
+	#cart_title{
+		font-size: 16pt;
+	}
+	.fa-times {
+		margin-right: 5%;
+		margin-top: -8%;
+	}
+	#deco{
+		width: 300px;
+	}
+
+	table.shopping tr th{
+		font-size: 10pt;
+		padding-right: 5px;
+	}
+	#deco_col{
+		margin-top: -15px;
+	}
+	table.shopping td {
+	    font-size: 16px;
+	    padding: 8px 0 0 0;
+	}
+	.cart_name {
+	    clear: none;
+	    margin-top: 0px;
+	}
+	.cart_shirt {
+	    width: 95px;
+	    margin: 0;
+	    float: none;
+	}
+	.paybutton{
+		margin-right: -35px;
+	}
+	.remove_prod{
+		font-size: 15pt;
+	}
+
+	/*Wishlist*/
+	.wishlist{
+		width: 80%;
+	}
+	#wish_deco{
+		width: 200px;
+	}
+	#wish_title{
+		font-size: 17pt;
+	}
+	#wishlist_body tr td{
+	    padding: 8px 30px 0px;
+	}
+	#wishlist_body tr td .cart_shirt{
+		width: 100px;
+	}
+
+	/*Product info*/
+	.product_info{
+		width: 100%;
+	}
+	.qty2 {
+	    width: 50px;
+	    font-weight: normal;
+	    margin-left: -100px;
+	}
+	#info_deco{
+		width: 350px;
 	}
 }
 

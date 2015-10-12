@@ -1,15 +1,19 @@
 <div class="wishlist" style="display: none">
-    <a href="#" onclick="hide_wishlist()"><i class="fa fa-times fa-2x"></i></a>
      <div class="row">
         <div class="col-lg-4 col-md-4 col-sm-4"></div>
         <div class="col-lg-4 col-md-4 col-sm-4">
             <h3 id="wish_title" class="center">WISHLIST</h3>
         </div>
+        <div class="col-lg-4 col-md-4 col-sm-4">
+            <a href="#" class="times-icon" onclick="hide_wishlist()" style="position:relative;bottom:auto;">
+                <i class="fa fa-times fa-lg"></i>
+            </a>
+        </div>
       </div>
     <div class="row"></div>
     <div class="row">
         <div class="col-lg-4 col-md-4 col-sm-4"></div>
-        <div class=" col-lg-4 col-md-4 col-sm-4">
+        <div id="deco_col" class=" col-lg-4 col-md-4 col-sm-4">
             <svg id="wish_deco" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="123px" height="15px" viewBox="0 0 123 15">
                 <path fill="none" stroke="#231F20" stroke-width="0.6868" stroke-miterlimit="10" d="M0.5,1.335h122"/>
                 <path fill="none" stroke="#231F20" stroke-width="1.085" stroke-miterlimit="10" d="M63.615,8.319l-5.104,5.592L53.16,9.026

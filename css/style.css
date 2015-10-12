@@ -521,8 +521,12 @@ div.search-icon:-ms-input-placeholder { /* Internet Explorer 10+ */
    color:    #fff;
 }
 
+.navbar-right li{
+	text-transform: uppercase;
+}
+
 .wishlist{
-	width: 600px;
+	width: 70%;
 	margin-left: -600px;
 	position: fixed;
 	top: 0px;
@@ -533,6 +537,7 @@ div.search-icon:-ms-input-placeholder { /* Internet Explorer 10+ */
 	font-size: 16px;
 	text-align: center;
 	z-index: 1031;
+	overflow-x: hidden;
 }
 
 /* Style for our header texts
@@ -1076,7 +1081,10 @@ div.pedidos-background{
 .sb-left{
 	 overflow-x: hidden;
 }
-
+.remove_prod{
+	float: none;
+	margin:0;
+}
 
 /*THE STORE*/
 
