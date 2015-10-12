@@ -79,8 +79,11 @@
     
     var myElement = document.querySelector("nav");
     // construct an instance of Headroom, passing the element
-    console.log(myElement);
-    var headroom  = new Headroom(myElement);
+    var headroom  = new Headroom(myElement,{
+        onPin : function() {display_menu();},
+        // callback when unpinned, `this` is headroom object
+        onUnpin : function() {hide_menu();},
+    });
     // initialise
     headroom.init(); 
 

@@ -58,16 +58,16 @@ function setSize(id, shirt_size){
 
 //Show -  Hide Menu
 function display_menu(){
-	$("nav").animate({top:"0px"});
-	$(".menu-toggle").fadeOut();
-	$(".text_toggle").fadeOut();
+	//$("nav").animate({top:"0px"});
+	//$(".menu-toggle").fadeOut();
+	//$(".text_toggle").fadeOut();
 	$(".right-floating-menu").animate({right:"15px"});
 }
 
 function hide_menu(){
-	$("nav").animate({top:"-120px"});
-	$(".menu-toggle").fadeIn();
-	$(".text_toggle").fadeIn();
+	//$("nav").animate({top:"-120px"});
+	//$(".menu-toggle").fadeIn();
+	//$(".text_toggle").fadeIn();
 	$(".right-floating-menu").animate({right:"-175px"});
 
 }
@@ -385,6 +385,7 @@ function logIn(){
                               /*'<li><a href="#" onclick="hide_menu()"><i class="fa fa-chevron-up"></i></a></li>';*/
                 $(".navbar-right").html(newHtml);
                 hide_login();
+                updateWishlist();
             }
             if(data.indexOf("false") != -1){
                 mensaje = "Usuario o contraseña incorrectos, intentalo de nuevo.";
@@ -754,6 +755,8 @@ function updateCart(){
                                 '<td class="shirt-price">$'+parseInt(precio)+' MXN</td>'+
                                 '<td class="delete-icon" onclick="deleteProductFromCart(\''+unique_id+'\')" style="cursor:pointer;"><i class="fa fa-times remove_prod"></i></td>'+
                             '</tr>';
+            html_producto_mobile = '';
+            
             html_carrito+= html_producto;
         }
         $("#cart-body").html(html_carrito);
