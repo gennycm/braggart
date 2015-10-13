@@ -139,7 +139,7 @@ div.full_background{
     position: fixed;
     left: 0px; 
     top: 0px; 
-    z-index: -1;
+    /*z-index: -1;*/
     background-size: cover;
 	background-repeat: no-repeat;
 	background-position: center;

@@ -52,7 +52,7 @@
                         $combinacion -> obtener_combinacion();
                  ?>
                 <tr>
-                    <td><a href="<?"shirts.php?s=".urlencode($producto -> titulo_esp);?>"><?=$producto -> id_producto;?> / <?=$producto -> titulo_esp;?> </a></td>
+                    <td><a href="<?="shirts.php?s=".urlencode($producto -> titulo_esp);?>"><?=$producto -> id_producto;?> / <?=$producto -> titulo_esp;?> </a></td>
                     <td><?=$producto -> precio_mxn;?></td>
                     <td><?=$producto -> stock_general;?></td>
                     <td><?=$combinacion -> nombre;?></td>

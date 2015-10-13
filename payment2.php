@@ -80,7 +80,7 @@
 
 <script>
 if (BrowserDetect.browser == "Safari"){
-    $("#paso3_deco").css('height','100%');
+    //$("#paso3_deco").css('height','100%');
 }
   jQuery(document).ready(function($) {
 
