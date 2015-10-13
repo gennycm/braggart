@@ -49,13 +49,21 @@
 	}
 	#cart_title{
 		font-size: 14pt;
+		margin-top: -13px;
+	}
+	.cart_close{
+		margin-right: 5%;
+		margin-top: 5%;
+		z-index: 1033;
+		font-size: 14pt;
 	}
 	.fa-times {
 		margin-right: 4%;
 		margin-top: -13%;
 	}
+
 	#deco{
-		width: 200px;
+		width: 220px;
 	}
 
 	table.shopping tr th{
@@ -166,6 +174,13 @@
 	}
 	#cart_title{
 		font-size: 16pt;
+		margin-top: -5px;
+	}
+	.cart_close{
+		margin-right: 2%;
+		margin-top: 2%;
+		z-index: 1033;
+		font-size: 13pt;
 	}
 	.fa-times {
 		margin-right: 5%;
@@ -349,7 +364,7 @@
 	}
 }
 
-@media (min-width: 481px) and (min-device-width: 481px) and (max-width: 640px) and (max-device-width: 640px){
+@media (min-width: 481px) and (min-device-width: 481px) and (max-width: 600px) and (max-device-width: 640px){
 	.logo-slide {
     	height: 130px;
 	}
@@ -382,16 +397,11 @@
 		margin-bottom: 25px;
 	}
 	.historia > p {
-	    font-size: 2em;
+	    font-size: 1.4em;
 	}
 
 	.us_desc{
 		margin-top:5%;
-	}
-	#logo_anim{
-		height: 350px;
-		width: 100%;
-		margin: 0 auto;
 	}
 	/*Cart*/
 	.shopping-cart{
@@ -399,6 +409,13 @@
 	}
 	#cart_title{
 		font-size: 16pt;
+		margin-top: -5px;
+	}
+	.cart_close{
+		margin-right: 2%;
+		margin-top: 2%;
+		z-index: 1033;
+		font-size: 13pt;
 	}
 	.fa-times {
 		margin-right: 5%;
@@ -454,19 +471,19 @@
 
 	/*Product info*/
 	.product_info{
-		width: 100%;
+		width: 80%;
 	}
 	.qty2 {
 	    width: 50px;
 	    font-weight: normal;
-	    margin-left: -100px;
+	    margin-left: -210px;
 	}
 	#info_deco{
 		width: 350px;
 	}
 }
 
-@media (min-width: 600px) and (min-device-width: 600px) and (max-width: 639px) and (max-device-width: 639px){
+@media (min-width: 601px) and (min-device-width: 601px) and (max-width: 640px) and (max-device-width: 639px){
 	.us_desc{
 		margin-top:50%;
 	}
@@ -516,12 +533,12 @@
 	
 }
 
-@media (min-width: 361px) and (max-width: 767px) {
+@media (min-width: 361px) and (max-width: 768px) {
 	#bs-example-navbar-collapse-1{
 		/*margin-top: 3.8%;*/
 	}
 }
-@media (min-width: 768px) and (min-device-width: 768px) and (max-width: 799px) and (max-device-width: 799px){
+@media (min-width: 769px) and (min-device-width: 769px) and (max-width: 800px) and (max-device-width: 800px){
 	.text, .icon{
 		font-size: 2.2em;
 	}
@@ -564,9 +581,56 @@
 	.navbar-default .navbar-nav > .active > a:hover{
 		font-size: 15px;
 	}
+		/*Cart*/
+	.shopping-cart{
+		width: 80%
+	}
+	#cart_title{
+		font-size: 16pt;
+	}
+	.cart_close{
+		margin-right: 2%;
+		margin-top: 2%;
+		z-index: 1033;
+		font-size: 13pt;
+	}
+
+	#deco{
+		width: 280px;
+		margin-left: -50px;
+	}
+	table.shopping tr th{
+		font-size: 12pt;
+	}
+	.cart_resp{
+		display: table-cell;
+		padding: 38px 0px;
+	}
+
+	table.shopping td {
+	    font-size: 18px;
+	}
+
+	
+	.paybutton{
+		margin-right: -10px;
+	}
+	.remove_prod{
+		font-size: 15pt;
+	}
+
+
+	/*Product info*/
+	.product_info{
+		width: 80%;
+	}
+	.qty2 {
+	    width: 50px;
+	    font-weight: normal;
+	    margin-left: -210px;
 }
 
-@media (min-width: 800px) and (min-device-width: 800px) and (max-width: 1023px) and (max-device-width: 1023px){
+@media (min-width: 801px) and (min-device-width: 801px) and (max-width: 980px) and (max-device-width: 980px){
 	.braggart_txt {
 	    font-size: 25pt;
 	}
@@ -599,9 +663,14 @@
 	.logo-slide {
 	    height: 180px;
 	}
+
+	#deco{
+		margin-left: -45px;
+	}
+	
 }
 
-@media (min-width: 1024px) and (min-device-width: 1024px){
+@media (min-width: 981px) and (min-device-width: 981px) and (max-width: 1024px) and (max-device-width: 1024px) {
 	.historia > p {
 	    font-size: 2em;
 	}
@@ -609,27 +678,25 @@
 	.us_desc{
 		margin-top:25%;
 	}
+	#deco{
+		width: 300px;
+	}
+	.cart_resp{
+		display: table-cell;
+		padding: 38px 0px;
+	}
+	
 }
 
-@media (min-width: 1024px) and (min-device-width: 1024px){
-	.historia > p {
-	    font-size: 2em;
-	}
 
-	.us_desc{
-		margin-top:25%;
-	}
-}
-
-
-@media (min-width: 1280px) and (min-device-width: 1280px){
+@media (min-width: 1025px) and (min-device-width: 1025px) and (max-width: 1280px) and (max-device-width: 1280px){
 	.us_desc{
 		margin-top:15%;
 	}
 	
 }
 
-@media (min-width: 1920px) and (min-device-width: 1920px){
+@media (min-width: 1281px) and (min-device-width: 1281px) and (max-width: 1920px) and (max-device-width: 1920px){
 	.historia > p {
 	    font-size: 3em;
 	}

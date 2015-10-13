@@ -738,7 +738,7 @@ function updateCart(){
 
             html_producto = '<tr>'+
                                 //'<td><div class="color-square-shirt-cart" style="background-color:#000;"></div></td>'+
-                                '<td class="shirt-name"><img src="imgProductos/'+img_principal+'" class="cart_shirt"><br><p class="cart_name">+ '+nombre+'</p></td>'+
+                                '<td class="shirt-name"><img src="imgProductos/'+img_principal+'" class="cart_shirt"><br><p class="cart_name cart_resp">+ '+nombre+'</p></td>'+
                                 '<td class="shirt-num">'+
                                 /*'<label class="select">'+
                                     '<select class="qty">'+

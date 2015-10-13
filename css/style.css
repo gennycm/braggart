@@ -453,6 +453,13 @@ div#deco{
 
 }
 
+/**
+#deco{
+	width: 300px;
+	margin-left:-35px;
+}
+*/
+
 div.text_toggle{
 	position:absolute;
 	top:70px;
@@ -1694,6 +1701,7 @@ span#xl-t{
 .cart_name{
 	clear: none;
     margin-top: 65px;
+   /* margin-top: 42px;*/
 }
 
 .center{
