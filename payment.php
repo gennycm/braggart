@@ -37,10 +37,10 @@
 ?>
 <div>    
         <div class="full_background pay">
-            <div class="background_black"></div>
-            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="margin-top:10%;position:relative;z-index:999;overflow:auto; ">
+            <div class="background_black" style="position:fixed;"></div>
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="margin-top:100px;position:relative;z-index:999;overflow:auto; ">
                 <form class="payment-form"  method="post" id="card-form" action="controller.php">
-                 <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 center">
+                 <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 center">
                     <div class="white_block">
                         <p id="paso1_title" class="center" style="width:100%; font-size:18pt; font-weight:bold;">PASO 1</p>
                         <svg id="paso1_deco" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="123px" height="15px" viewBox="0 0 123 15">
@@ -72,7 +72,8 @@
                         </table>
                     </div>
                 </div>
-                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 center">
+                <br class="visible-xs"><br style="visible-xs">
+                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 center">
                     <div class="white_block">
                         <p id="paso2_title" class="center" style="width:100%; font-size:18pt; font-weight:bold;">PASO 2</p>
                         <svg id="paso2_deco" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="123px" height="15px" viewBox="0 0 123 15">
@@ -89,44 +90,20 @@
                             </thead>
                             <tr>
                                 <td>
-                                 <!--<form class="payment-form"  method="post" onsubmit="" action="#">
-                                    <p>
-                                        <label class="select">
-                                            <select class="formPago">
-                                                <option selected>TARJETA DE CR&Eacute;DITO</option>
-                                                <option>TARJETA DE D&Eacute;BITO</option>
-                                            </select>
-                                        </label>
-                                      </p> 
-                                      <p>
-                                        <label class="select">
-                                            <select class="formPago">
-                                                <option selected>MASTERCARD</option>
-                                                <option>VISA</option>
-                                            </select>
-                                        </label>
-                                      </p> 
-                                      <p><label><i class="fa fa-credit-card fa-lg"></i></label><input name="numTarj" type="text" class="text" placeholder=" N&Uacute;MERO DE TARJETA" ></p>
-                                      <p><label><i class="fa fa-calendar fa-lg"></i></label><input name="expDt" type="text" class="text" placeholder=" FECHA DE EXPIRACI&Oacute;N" ></p>
-                                      <p><label><i class="fa fa-key fa-lg"></i></label><input name="segCod" type="text" class="text" placeholder=" C&Oacute;DIGO DE SEGURIDAD" ></p>
-                                       <p style="border:none"><button>LISTO</button></p> -->
-                                       <!--<form action="controller" method="POST" id="card-form">-->
-                                          <span class="card-errors"></span>
-                                          <p class="form"><label><i class="fa fa-user fa-lg"></i></label><input size="20" data-conekta="card[name]" type="text" class="text" placeholder="NOMBRE DEL TARJETAHABIENTE" ></p>
-                                          <p class="form"><label><i class="fa fa-credit-card fa-md"></i></label><input size="20" type="text" data-conekta="card[number]" class="text" placeholder=" # DE TARJETA" ></p>
-                                          <p class="form"><label><i class="fa fa-key fa-lg"></i></label><input size="4" data-conekta="card[cvc]" type="password" class="text" placeholder=" C&Oacute;DIGO DE SEGURIDAD" ></p>
-                                          <p class="form"><label><i class="fa fa-calendar fa-lg"></i></label><input size="2" data-conekta="card[exp_month]" type="text" class="text" placeholder=" MES DE EXPIRACI&Oacute;N 01, 02, 10" ></p>
-                                          <p class="form"><label><i class="fa fa-calendar fa-lg"></i></label><input size="4" data-conekta="card[exp_year]" type="text" class="text" placeholder=" AÑO DE EXPIRACI&Oacute;N 2016, 2017, 2020" ></p>
-                                          <p class="form" style="border:none"><button type="submit">LISTO</button></p>
-                                          <input type="hidden" name="operaciones" value="rp">
-                                      </form>
-     
+                                  <span class="card-errors"></span>
+                                  <p class="form"><label><i class="fa fa-user fa-lg"></i></label><input size="20" data-conekta="card[name]" type="text" class="text" placeholder="NOMBRE DEL TARJETAHABIENTE" ></p>
+                                  <p class="form"><label><i class="fa fa-credit-card fa-md"></i></label><input size="20" type="text" data-conekta="card[number]" class="text" placeholder=" # DE TARJETA" ></p>
+                                  <p class="form"><label><i class="fa fa-key fa-lg"></i></label><input size="4" data-conekta="card[cvc]" type="password" class="text" placeholder=" C&Oacute;DIGO DE SEGURIDAD" ></p>
+                                  <p class="form"><label><i class="fa fa-calendar fa-lg"></i></label><input size="2" data-conekta="card[exp_month]" type="text" class="text" placeholder=" MES DE EXPIRACI&Oacute;N 01, 02, 10" ></p>
+                                  <p class="form"><label><i class="fa fa-calendar fa-lg"></i></label><input size="4" data-conekta="card[exp_year]" type="text" class="text" placeholder=" AÑO DE EXPIRACI&Oacute;N 2016, 2017, 2020" ></p>
+                                  <p class="form" style="border:none"><button type="submit">LISTO</button></p>
+                                  <input type="hidden" name="operaciones" value="rp">     
                                 </td>
                             </tr>                          
-                            <tfoot></tfoot>
                         </table>
                     </div>
                 </div>
+                </form>
             </div>
 
 

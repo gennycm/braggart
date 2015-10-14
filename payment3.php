@@ -43,7 +43,7 @@
 <div>     
         <div class="full_background pay">
             <div class="background_black"></div>
-            <div class="col-lg-12 col-md-12 col-sm-12" style="margin-top:10%;position:relative;z-index:999;overflow:auto; ">
+            <div class="col-lg-12 col-md-12 col-sm-12" style="margin-top:100px;position:relative;z-index:999;overflow:auto; ">
                 <form class="payment-form"  method="post" id="card-form" action="controller.php">
                  <div class="col-lg-6 col-md-6 col-sm-6 center">
                     <div class="white_block">

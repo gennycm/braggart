@@ -228,7 +228,7 @@
 		font-size: 17pt;
 	}
 	#wishlist_body tr td{
-	    padding: 8px 35px 0px;
+	    padding: 8px 8px 0px;
 	}
 	#wishlist_body tr td .cart_shirt{
 		width: 100px;
@@ -405,7 +405,7 @@
 	}
 	/*Cart*/
 	.shopping-cart{
-		width: 80%
+		width: 100%
 	}
 	#cart_title{
 		font-size: 16pt;
@@ -454,7 +454,7 @@
 
 	/*Wishlist*/
 	.wishlist{
-		width: 80%;
+		width: 100%;
 	}
 	#wish_deco{
 		width: 200px;
@@ -471,7 +471,7 @@
 
 	/*Product info*/
 	.product_info{
-		width: 80%;
+		width: 100%;
 	}
 	.qty2 {
 	    width: 50px;

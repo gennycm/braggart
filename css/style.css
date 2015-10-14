@@ -140,6 +140,7 @@ div.full_background{
     left: 0px; 
     top: 0px; 
     /*z-index: -1;*/
+    overflow: auto;
     background-size: cover;
 	background-repeat: no-repeat;
 	background-position: center;
@@ -877,9 +878,21 @@ div.pedidos-background{
 .payment-form{
 	/*margin-left: 15%;
 	margin-top: 5%;*/
-	height:450px;
 	overflow: auto;
-	overflow-y:hidden;
+	/*overflow-y:hidden;*/
+}
+
+@media (min-width: 320px) and (max-width: 767px){
+	.payment-form{
+		height: auto;
+	}
+}
+
+@media(min-width: 768px){
+	.payment-form{
+		height:450px;
+		overflow-y:hidden;
+	}
 }
 
 .register-form > p,.login-form > p, .payment-form p.form{
@@ -1708,11 +1721,23 @@ span#xl-t{
 	text-align: center;
 }
 
+@media (min-width: 320px) and (max-width: 481px){
+	div.white_block{
+		width: 100%;
+		height:auto;
+	}
+}
+
+@media (min-width: 482px){
+	div.white_block{
+		width: 70%;
+		height: 450px;
+	}
+}
+
 div.white_block{
 	background-color: white;
 	opacity: 0.7;
-	width: 70%;
-	height: 450px;
 	z-index: 9999;
 	padding: 20px;
 	margin-left: auto;
