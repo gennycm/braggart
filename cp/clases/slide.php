@@ -35,7 +35,7 @@ class slide extends Archivo
 	
 	function insertaslide()
 	{
-		$sql = "insert into slide (ruta, titulo,urlvideo,status,texto) values ('".$this->ruta."','".$this->titulo."','".$this->urlvideo."',1,'".htmlspecialchars($this->texto,ENT_QUOTES)."');"; 
+		$sql = "insert into slide (ruta, titulo,urlvideo,status,texto) values ('".$this->ruta."','".$this->titulo."','".$this->urlvideo."',1,'".htmlspecialchars($this->texto,ENT_QUOTES)."');";
 		$con = new conexion();
 		$this -> idslide = $con->ejecutar_sentencia($sql);
 		$this -> subir_archivo();
@@ -98,7 +98,7 @@ class slide extends Archivo
 	function listarslideActivas()
 	{
 		$resultados=array();
-		$sql="select * from slide where status=0 order by orden DESC";
+		$sql="select * from slide where status = 1 order by orden DESC";
 		$con=new conexion();
 		$temporal= $con->ejecutar_sentencia($sql);
 		while ($fila=mysqli_fetch_array($temporal))
@@ -120,7 +120,7 @@ class slide extends Archivo
 	function listarslideDesactivadas()
 	{
 		$resultados=array();
-		$sql="select idslide, ruta, titulo, urlvideo, status from slide where status=0";
+		$sql="select idslide, ruta, titulo, urlvideo, status from slide where status = 0";
 		$con=new conexion();
 		$temporal= $con->ejecutar_sentencia($sql);
 		while ($fila=mysqli_fetch_array($temporal))
