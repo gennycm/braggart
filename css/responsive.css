@@ -117,7 +117,7 @@
 	.qty2 {
 	    width: 50px;
 	    font-weight: normal;
-	    margin-left: 150px;
+	    margin-left: -100px;
 	}
 	
 }
@@ -241,7 +241,7 @@
 	.qty2 {
 	    width: 50px;
 	    font-weight: normal;
-	    margin-left: 150px;
+		margin-left: -180px;
 	}
 
 }
@@ -360,7 +360,7 @@
 	.qty2 {
 	    width: 50px;
 	    font-weight: normal;
-	    margin-left: 0px;
+	    margin-left: -120px;
 	}
 }
 

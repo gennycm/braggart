@@ -1772,8 +1772,9 @@ select {
 }
 
 .qty2{
-	width: 100px;
+	width: 50px;
 	font-weight: normal;
+	margin-left: -220px;
 }
 
 .state, .formPago{
