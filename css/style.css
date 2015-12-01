@@ -346,6 +346,11 @@ nav{
 		width:auto;
 		margin-top: -5px;
 	}
+
+    .navbar-default .navbar-collapse, .navbar-default .navbar-form {
+        background: #fff;
+        opacity: 0.7;
+    }
 }
 
 .navbar-default .navbar-toggle:focus, .navbar-default .navbar-toggle:hover {
