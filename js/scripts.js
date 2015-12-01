@@ -1010,3 +1010,8 @@ element.animate({
             'fill-opacity': '1'
             },8000);
 }
+
+function openTerms(){
+    console.log('terms');
+    window.location.href = '#termsModal';
+}

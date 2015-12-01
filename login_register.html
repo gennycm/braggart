@@ -1,5 +1,9 @@
 <div class="login_sidebar" style="display:none;">
-    <i class="fa fa-times fa-2x" onclick="hide_login()"></i>
+  <div class="visible-xs col-xs-4 pull-right cart_close" style="padding-top:15px;">
+      <a href="#" class="times-icon" onclick="hide_login()" style="position:relative;bottom:auto;">
+          <i class="fa fa-times fa-lg"></i>
+       </a>
+  </div>
     <form class="register-form"  method="post" action="#">
       <p id="p-email">
         <label>
@@ -19,6 +23,7 @@
         </label>
         <input name="confPassword" type="password" class="text" placeholder=" CONFIRMA CONTRASE&Ntilde;A" >
       </p>
+      <p class="conditions">* Al registrarse, acepta que <b>ha leído y está de acuerdo </b>con los <span class="terms" data-toggle="modal" data-target="#termsModal">Términos y Condiciones</span>.</p>
       <a href="#" type="submit" onclick="validateUserRegister()" class=" btn hvr-sweep-to-right">Registrarse</a>
     </form>
     <p style="height:30%"></p>
