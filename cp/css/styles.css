@@ -867,7 +867,6 @@ ul button{
 }
 
 .limenuoptions{
-    width:100%;
 }
 
 .image-wrapper ul{
@@ -968,7 +967,7 @@ div.separator{
     left     : 0;
     height   : 50px;
     z-index  : 2;
-    background         : #5d5854;
+    background         : #fff;
     border             : none;
     opacity:0.8;
 	filter:alpha(opacity=40);

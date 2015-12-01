@@ -365,7 +365,7 @@ include'menu.php';//Contiene a todo el menu.
                                                             $temporal->listar_img_secundarias_producto();
                                                             foreach ($temporal->lista_imagenes_secundarias as $elementoImgS) {  
                                                 ?>
-                                                    <div class="col-lg-3 col-md-4 col-sm-12 col-xs-12" id="img2<?=$elementoImgS['id_img_producto']?>">
+                                                    <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12" id="img2<?=$elementoImgS['id_img_producto']?>">
                                                         <div class="image-wrapper" style="width:100%;">
                                                             <input type="checkbox" id="check<?=$elementoImgS['id_img_producto']?>" name="id_imagen[]" value="<?=$elementoImgS['id_img_producto']?>">
                                                             <label for="check<?=$elementoImgS['id_img_producto']?>"><span></span></label>
@@ -437,7 +437,7 @@ include'menu.php';//Contiene a todo el menu.
                                                 $temporal->listar_img_secundarias_producto();
                                                 foreach ($temporal->lista_imagenes_secundarias as $elementoImgS) {  
                                     ?>
-                                        <div class="col-lg-3 col-md-4 col-sm-12 col-xs-12" id="img2<?=$elementoImgS['id_img_producto']?>">
+                                        <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12" id="img<?=$elementoImgS['id_img_producto']?>">
                                             <div class="image-wrapper">
                                                 <span class="image-options">
                                                     <ul class="ulmenuoptions">
@@ -909,10 +909,10 @@ include 'javascripts.html';
 			dataType: "html",
 			contentType: "application/x-www-form-urlencoded",
 			url:"operaciones.php",
-			data:"idImg2="+id+"&operaciones=eliminarImgNoticia",
+			data:"idImg2="+id+"&operaciones=eliminarImgProducto",
 			success:function(data){	
 				// console.log(data)			
-				$("#img2"+id).fadeOut('slow');			
+				$("#img"+id).fadeOut();
 			},
 			cache:false
 		});		
