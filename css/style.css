@@ -110,9 +110,9 @@ div.wrap{
 }
 
 
-
-
-
+a, a:active, a:focus {
+	outline: none;
+}
 
 .rsOverflow{
 	min-height: 100%;
@@ -2140,4 +2140,8 @@ p.conditions{
 .pedidos-link{
 	color: black;
 	font-weight: bold;
+}
+
+p.payments{
+	font-size: 18px;
 }
