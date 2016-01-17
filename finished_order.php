@@ -26,7 +26,7 @@
                                   <p class="form">
                                       Se cobro a tu tarjeta la siguiente cantidad.<br><br>
                                       Tu compra se esta procesando, cuando sea revisada se te enviará un correo con los datos para que puedas rastrear tu paquete.<br><br>
-                                      Total: $ <?=$_SESSION["braggart_total_shop"]?>  MXN
+                                      <p class="payments"><b>Total: </b> <span class="total-payment">$ <?=$_SESSION["braggart_total_shop"]?>  MXN</span></p>
 
                                   </p>
                                   <p class="form" style="border:none"><a href="mis_pedidos.php"><button type="submit" class="button">MIS PEDIDOS</button></a></p>

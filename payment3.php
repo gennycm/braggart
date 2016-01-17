@@ -60,9 +60,9 @@
                             <tr>
                                 <td>
                                   <p class="form">
-                                      Camisas: $ <?=$precio_total?> MXN<br><br>
-                                      Transporte: $ <?=$rango_transporte -> cargo_por_envio?> MXN<br><br>
-                                      Total: $ <?=$total?>  MXN
+                                      <p class="payments"><b>Camisas:</b> $ <?=$precio_total?> MXN<br><br></p>
+                                      <p class="payments"><b>Transporte:</b> $ <?=$rango_transporte -> cargo_por_envio?> MXN<br><br></p>
+                                      <p class="payments"><b>Total:</b> <span class="total-payment">$ <?=$total?>  MXN</span></p>
                                   </p>
                                   <p class="form" style="border:none"><button type="submit">PAGAR</button></p>
                                   <input type="hidden" name="operaciones" value="ccc">
