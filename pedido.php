@@ -74,7 +74,8 @@
 
 <!--Cart Slidebar-->
 <?php include_once("cart.html");?>
-
+<!--Wishlist Slidebar-->
+<?php include_once("wishlist.html");?>
 <!--BODY-->
 <?php include_once("footer.html");?>
 <script>
