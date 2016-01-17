@@ -45,7 +45,7 @@
                         $rango_transporte -> obtener_rango_transporte();
                  ?>
                 <tr>
-                    <td><a href="pedido.php?id=<?=$pedido["idorden"];?>">Pedido No. <?=$pedido["idorden"]?></a></td>
+                    <td><a class="pedidos-link" href="pedido.php?id=<?=$pedido["idorden"];?>">Pedido No. <?=$pedido["idorden"]?></a></td>
                     <td>$<?=$pedido["total_productos"];?> MXN</td>
                     <td>$<?=$rango_transporte -> cargo_por_envio?> MXN</td>
                     <td><?=$pedido["estatus"];?></td>
