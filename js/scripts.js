@@ -736,7 +736,7 @@ function updateCart(){
                 }
             }*/
 
-            html_producto = '<tr>'+
+            html_producto = '<tr id="'+unique_id+'">'+
                                 //'<td><div class="color-square-shirt-cart" style="background-color:#000;"></div></td>'+
                                 '<td class="shirt-name"><img src="imgProductos/'+img_principal+'" class="cart_shirt"><br><p class="cart_name cart_resp">+ '+nombre+'</p></td>'+
                                 '<td class="shirt-num">'+
@@ -790,6 +790,7 @@ function deleteProductFromCart(unique_id){
             if(data.indexOf("true") != -1){
                 mensaje = "Se elimino el producto a tu carrito.";
                 updateCart();
+                $('#'+unique_id).remove();
             }
             if(data.indexOf("notfound") != -1){
                  mensaje = "No se encontró el producto en tu carrito, o ya expiró.";
