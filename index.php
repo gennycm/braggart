@@ -541,8 +541,8 @@
             }else{
                 tlTienda.add([
                     //La tienda front letters
-                    TweenMax.to(usPath.eq(0), 0.3, {strokeDashoffset: 0, delay: 0.0}), //L
-                    TweenMax.to(usPath.eq(1), 0.3, {strokeDashoffset: 0, delay: 0.3}), //A
+                    TweenMax.to(usPath.eq(0), 0.3, {strokeDashoffset: 0, delay: 0.4}), //L
+                    TweenMax.to(usPath.eq(1), 0.3, {strokeDashoffset: 0, delay: 0.4}), //A
                     TweenMax.to(usPath.eq(2), 0.3, {strokeDashoffset: 0, delay: 0.6}), //-
                     TweenMax.to(usPath.eq(3), 0.3, {strokeDashoffset: 0, delay: 0.9}),
                     TweenMax.to(usPath.eq(4), 0.3, {strokeDashoffset: 0, delay: 1.2}),
@@ -564,8 +564,8 @@
                     TweenMax.to(usPath.eq(20), 0.3, {strokeDashoffset: 0, delay: 5.9}),
 
                     //La tienda shadow
-                    TweenMax.to(usShadowPath.eq(0), 0.3, {strokeDashoffset: 0, delay: 0.0}),
-                    TweenMax.to(usShadowPath.eq(1), 0.3, {strokeDashoffset: 0, delay: 0.3}), //A
+                    TweenMax.to(usShadowPath.eq(0), 0.3, {strokeDashoffset: 0, delay: 0.4}),
+                    TweenMax.to(usShadowPath.eq(1), 0.3, {strokeDashoffset: 0, delay: 0.4}), //A
                     TweenMax.to(usShadowPath.eq(2), 0.3, {strokeDashoffset: 0, delay: 0.6}), //-
                     TweenMax.to(usShadowPath.eq(3), 0.3, {strokeDashoffset: 0, delay: 0.9}),
                     TweenMax.to(usShadowPath.eq(4), 0.3, {strokeDashoffset: 0, delay: 1.2}),
