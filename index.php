@@ -20,6 +20,11 @@
     if(isset($_GET["rp"]) && $_GET["rp"] == "invalidtoken"){
         $verify_token = true;
     }
+
+    if(isset($_GET['token']) && $_GET['token'] != ""){
+        $token = $_GET['token'];
+        $verify_account = userend::confirmar_cuenta($token);
+    }
 ?>
 
 <!--BODY-->
@@ -205,6 +210,18 @@
     if(verify_token){
         showMessage("Token invalido o expirado, realiza el proceso de renovación de contraseña de nuevo", "Reiniciar Contraseña");
     }
+
+    var verify_account = <?php echo json_encode($verify_account);?>
+    if(verify_account == "true"){
+        showMessage("Confirmación de cuenta exitosa.", "Confirmar Cuenta");
+    }
+    if(verify_account == "already"){
+        showMessage("Esta cuenta ya fue confirmada.", "Confirmar Cuenta");
+    }
+    if(verify_account == "false"){
+        showMessage("Confirmación de cuenta fallida.", "Confirmar Cuenta");
+    }
+
 </script>
 <script>
     /*Fix para el parallax en Chrome*/

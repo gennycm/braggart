@@ -42,6 +42,49 @@ class userend
 		$sql = "insert into userend (correo,password,status,token) values('".$this->correo."',MD5('".$this->password."'),".$this->status.",MD5('".$this->correo."'))";
 		$this -> iduserend = $conexion -> ejecutar_sentencia($sql);
 	}
+
+    public static function confirmar_cuenta($token){
+        $connection = new conexion();
+        $sql = "SELECT * FROM userend WHERE token = '".$token."'";
+
+        $result = $connection->ejecutar_sentencia($sql);
+        $user = new userend();
+
+        while($row=mysqli_fetch_array($result))
+        {
+            $user->iduserend = $row['iduserend'];
+            $user->obten_userend();
+        }
+        mysqli_free_result($result);
+
+        if($user->status == 0){
+            $sql = "UPDATE userend SET status = 2 WHERE iduserend = '".$user->iduserend."'";
+            $result = $connection->ejecutar_sentencia($sql);
+            return "true";
+        }
+        if($user->status == 2){
+            return "already";
+        }
+
+        return "false";
+    }
+
+    public static function obtener_usuario_por_token($token){
+        $connection = new conexion();
+        $sql = "SELECT * FROM userend WHERE token = '".$token."'";
+
+        $result = $connection->ejecutar_sentencia($sql);
+        $user = new userend();
+
+        while($row=mysqli_fetch_array($result))
+        {
+            $user->$iduserend = $row['iduserend'];
+            $user->obten_userend();
+        }
+        mysqli_free_result($result);
+
+        return $user;
+    }
 	
 	function modifica_userend()
 	{
