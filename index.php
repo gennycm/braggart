@@ -211,17 +211,22 @@
         showMessage("Token invalido o expirado, realiza el proceso de renovación de contraseña de nuevo", "Reiniciar Contraseña");
     }
 
-    var verify_account = <?php echo json_encode($verify_account);?>
-    if(verify_account == "true"){
-        showMessage("Confirmación de cuenta exitosa.", "Confirmar Cuenta");
-    }
-    if(verify_account == "already"){
-        showMessage("Esta cuenta ya fue confirmada.", "Confirmar Cuenta");
-    }
-    if(verify_account == "false"){
-        showMessage("Confirmación de cuenta fallida.", "Confirmar Cuenta");
-    }
-
+    <?
+        if(isset($verify_account)){
+    ?>
+            var verify_account = <?php echo json_encode($verify_account);?>
+            if(verify_account == "true"){
+                showMessage("Confirmación de cuenta exitosa.", "Confirmar Cuenta");
+            }
+            if(verify_account == "already"){
+                showMessage("Esta cuenta ya fue confirmada.", "Confirmar Cuenta");
+            }
+            if(verify_account == "false"){
+                showMessage("Confirmación de cuenta fallida.", "Confirmar Cuenta");
+            }
+    <?
+        }
+    ?>
 </script>
 <script>
     /*Fix para el parallax en Chrome*/
