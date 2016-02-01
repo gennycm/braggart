@@ -388,7 +388,7 @@ function logIn(){
                 updateWishlist();
             }
             if(data.indexOf("false") != -1){
-                mensaje = "Usuario o contraseña incorrectos, intentalo de nuevo.";
+                mensaje = "Usuario o contraseña incorrectos, inténtalo de nuevo.";
             }
 
             $("#header-modal").html("Inicio de Sesión");
@@ -421,7 +421,7 @@ function logOut(){
                 $(".sb-close").click();
             }
             if(data.indexOf("false") != -1){
-                mensaje = "No se pudo cerrar tu sesión, intentalo de nuevo.";
+                mensaje = "No se pudo cerrar tu sesión, inténtalo de nuevo.";
             }
 
             $("#header-modal").html("Cerrar Sesión");
@@ -636,7 +636,7 @@ function addProductToCart(id_product){
                 mensaje = "No se pudo agregar el producto al carrito. Inténtalo de nuevo.";
             }
             if(data.indexOf("true") != -1){
-                mensaje = "Se agrego el producto a tu carrito.";
+                mensaje = "Se agregó el producto a tu carrito.";
                 size = "none";
                 updateCart();
             }
@@ -788,7 +788,7 @@ function deleteProductFromCart(unique_id){
                 mensaje = "No se pudo eliminar el producto al carrito. Inténtalo de nuevo.";
             }
             if(data.indexOf("true") != -1){
-                mensaje = "Se elimino el producto a tu carrito.";
+                mensaje = "Se eliminó el producto a tu carrito.";
                 updateCart();
                 $('#'+unique_id).remove();
             }
@@ -848,7 +848,7 @@ function addWishlist(id_product){
                 mensaje = "No se pudo agregar el producto al wishlist. Inténtalo de nuevo.";
             }
             if(data.indexOf("true") != -1){
-                mensaje = "Se agrego el producto a tu wishlist.";
+                mensaje = "Se agregó el producto a tu wishlist.";
                 updateWishlist();
             }
             if(data.indexOf("login") != -1){
