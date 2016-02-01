@@ -1,7 +1,7 @@
 <?php 
 include("cp/lib/Conekta.php");
 function __autoload($nombre_clase) {
-	$nombre_clase = strtolower($nombre_clase);
+	//$nombre_clase = strtolower($nombre_clase);
     include 'cp/clases/'.$nombre_clase .'.php';
 }
 
@@ -141,29 +141,33 @@ switch ($operaciones) {
 		
 	break;
 	case "srp":
-		$email = $_POST["em"];
-		$user = new userend(0, $email);
-		if(!$user -> disponibilidadCorreo($email)){
-			$user -> obtener_userend_por_email();
-			$user -> genera_token_y_expiracion();
-			$correoRecu = new correoRecuperacion($user -> iduserend);
-			$correoRecu -> enviar();
-			echo json_encode("true");
-		}
-		else{
-			echo json_encode("false");
-		}
+        $email = $_POST["em"];
+        $user = new userend(0, $email);
+        if(!$user -> disponibilidadCorreo($email)){
+            $user -> obtener_userend_por_email();
+            $user -> genera_token_y_expiracion();
+            $correoRecu = new correoRecuperacion($user -> iduserend);
+            $correoRecu -> enviar();
+            echo json_encode("true");
+        }
+        else{
+            echo json_encode("false");
+        }
 	break;
 	case "rsp":
-		$new_password = (isset($_POST["password_1"]) && $_POST["password_1"] != 0)? $_POST["password_1"]: "";
-		$verify = (isset($_POST["vc"]) && $_POST["vc"] != 0)? $_POST["vc"]: "";
-		if($new_password != ""){
-			$userend = new userend();
-			$userend -> token = $verify;
-			$userend -> password = $new_password;
-			$userend -> modificar_password_por_token();
-		}
-
+    case "rsp":
+        $new_password = (isset($_POST["password_1"]) && $_POST["password_1"] != "")? $_POST["password_1"]: "";
+        $verify = (isset($_POST["vc"]) && $_POST["vc"] != 0)? $_POST["vc"]: "";
+        if($new_password != ""){
+            $userend = new userend();
+            $userend -> token = $verify;
+            $userend -> password = $new_password;
+            $userend -> modificar_password_por_token();
+            header("Location: index.php?success=passwordchanged");
+        }
+        else{
+            header("Location: index.php?success=passwordnotchanged");
+        }
 	break;
 	case "is":
 		$email = $_REQUEST["em"];

@@ -121,14 +121,14 @@ $this->correo->Body = '<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http:/
                                     </font>
                                 </td>
                                 <td width="10" style="padding:7px 0">
-                                    <a href="http://braggart.com.mx/index.php?token='.$this->userend->token.'">
+                                    <a href="http://brentheftye.mx/braggart/index.php?token='.$this->userend->token.'">
                                 </td>
                             </tr>
                             <tr>
                                 <td width="10" style="padding:7px 0">&nbsp;</td>
                                 <td style="padding:7px 0" colspan="2">
                                     <font size="2" face="Open-sans, sans-serif" color="#555454">
-                                        <a href="http://braggart.com.mx/index.php?token='.$this->userend->token.'" style="display:block;padding-top:15px;padding-bottom:15px;margin-right:15px;background-color:#333;color:#fff;text-decoration: none;text-align: center;">
+                                        <a href="http://brentheftye.mx/braggart/index.php?token='.$this->userend->token.'" style="display:block;padding-top:15px;padding-bottom:15px;margin-right:15px;background-color:#333;color:#fff;text-decoration: none;text-align: center;">
                                             Confirmar Cuenta
                                         </a>
                                     </font>

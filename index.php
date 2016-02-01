@@ -25,6 +25,17 @@
         $token = $_GET['token'];
         $verify_account = userend::confirmar_cuenta($token);
     }
+
+    $success_password = false;
+    $failed_password = false;
+
+    if(isset($_GET["success"]) && $_GET["success"] == "passwordchanged"){
+        $success_password = true;
+    }
+
+    if(isset($_GET["success"]) && $_GET["success"] == "passwordnotchanged"){
+        $failed_password = true;
+    }
 ?>
 
 <!--BODY-->
@@ -227,6 +238,16 @@
     <?
         }
     ?>
+
+    var success_password = <?php echo json_encode($success_password); ?>;
+    if(success_password){
+        showMessage("Contraseña modificada correctamente.", "Reiniciar Contraseña");
+    }
+
+    var failed_password = <?php echo json_encode($failed_password); ?>;
+    if(failed_password){
+        showMessage("Contraseña no se modificó correctamente, inténtelo de nuevo", "Reiniciar Contraseña");
+    }
 </script>
 <script>
     /*Fix para el parallax en Chrome*/

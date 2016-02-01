@@ -11,7 +11,7 @@ function Correo()
 
 $this->correo = new PHPMailer();
 $this->correo->Host='localhost';
-$this->correo->From='contacto@braggart.com.mx';
+$this->correo->From='brent@brentheftye.mx';
 $this->correo->FromName='Braggart | MADE FOR ME';
 $this->correo->AddCC='brent@brentheftye.mx, copia';    
 $this->correo->IsHTML(true);

@@ -7,7 +7,7 @@ class correoRecuperacion extends correo
 {
     var $usuario;
     var $datosusuario;
-    
+
 
     function correoRecuperacion($idusuario)
     {    
@@ -118,7 +118,6 @@ class correoRecuperacion extends correo
                                                                                     Detalles del mensaje:</p>
                                                                                 <span style="color:#777">
                                                                                     Hola, '.$this -> usuario -> nombre.' esta por comenzar el proceso para recuperar su contraseña. En caso de que no hayas sido tú quién inicio el proceso de recuperación de contraseña has caso omiso de este correo; tu cuenta no esta en riesgo.</br>
-                                                                                    <span style="color:#333"><strong>Para .</strong></span><br />
                                                                                 </span>
                                                                                 <p data-html-only="1" style="border-bottom:1px solid #D6D4D4;margin:3px 0 7px;font-weight:500;font-size:18px;padding-bottom:10px">
                                                                                     Recuperación de Contraseña:</p>
@@ -127,7 +126,7 @@ class correoRecuperacion extends correo
                                                                                     <h5>SOPORTE TECNICO BRAGGART</h5>
                                                                                     <p>Entre al siguiente link, y ahi usted podra crear una nueva contraseña... ¡Gracias!</p>
                                                                                     <p>Su nombre de usuario es: '.$this -> usuario -> correo.'</p>
-                                                                                    <a href="http://braggart.com.mx/reset_password.php?verify='.$this -> usuario -> token.'" target="_blank">Recuperar Contraseña</a>
+                                                                                    <a href="http://brentheftye.mx/braggart/reset_password.php?verify='.$this -> usuario -> token.'" target="_blank">Recuperar Contraseña</a>
                                                                                     <br/>
                                                                                     <br/>
                                                                                 </span>
