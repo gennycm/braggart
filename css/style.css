@@ -1710,7 +1710,7 @@ span#xl-t{
 }
 
 .cart_shirt{
-	width: 150px;
+	height: 110px;
 	margin: 20px;
 	margin-left:0;
 	float:left;
@@ -1719,7 +1719,7 @@ span#xl-t{
 .cart_name{
 	clear: none;
     /*margin-top: 65px;*/
-    margin-top: 35px;
+    margin-top: 42px;
 }
 
 .center{
