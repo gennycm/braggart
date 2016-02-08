@@ -114,7 +114,9 @@
             <ul class="nav navbar-nav navbar-right">
               <?php 
                 if($email != ""){
-                  echo '<li><a href="mis_pedidos.php" id="login-button">'.$email.'</a></li>'.
+                 // echo '<li><a href="mis_pedidos.php" id="login-button">'.$email.'</a></li>'.
+                 //      '<li><a href="#" onclick="logOut()">Cerrar Sesión</a></li>';
+                   echo '<li><a href="mis_pedidos.php" id="login-button"> Mis pedidos</a></li>'.
                        '<li><a href="#" onclick="logOut()">Cerrar Sesión</a></li>';
                 }
                 else{
