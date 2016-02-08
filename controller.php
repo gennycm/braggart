@@ -131,7 +131,7 @@ switch ($operaciones) {
 		$user = new userend(0, $email, $password);
 		if($user -> disponibilidadCorreo($email)){
 			$user -> inserta_userend();
-            $correoActivacion = new correodeactivacion($user->$iduserend);
+            $correoActivacion = new correodeactivacion($user->iduserend);
             $correoActivacion->enviar();
 			echo json_encode("true");
 		}
